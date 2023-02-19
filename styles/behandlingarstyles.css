@@ -1,0 +1,429 @@
+
+/* #region Intro */
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ta bort nedan om det inte gör ngt */
+body{
+  margin-top: 3rem;
+  width: 90%;
+}
+
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: fixed;
+  width:100%;
+  top:0;
+  padding: 2;
+  transition:250ms;
+  z-index:10;  
+  background-color:whitesmoke;
+}
+
+header h4{
+
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+#MainLogo
+{
+  color:black;
+}
+
+#MainLogo:hover
+{
+  color:#616466;
+  font-size: 20px; 
+}
+/* #endregion*/
+
+
+/*#region Nav*/
+
+
+#bokaText{
+    color:darkgreen;
+  }
+  #bokaText:hover{
+    color:lightgreen;
+  }
+
+
+.nav-links{
+
+    position:absolute;
+    right:0;
+    top: 5vh;
+    width: 60%;
+    height:70vh;
+    background: rgb(217, 213, 213);
+  
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation:menu_animation 500ms
+    ease-in-out;
+  }
+  
+  
+  .show-navlinks{
+  
+    display: flex;
+  
+  }
+  
+  
+  @keyframes menu_animation{
+  
+    from{
+  
+      opacity:0;
+      tranform:translateX(100%);
+  
+    }
+  
+    to{
+      opacity:1;
+      tranform:translateX(0%);
+    }
+  
+  }
+  
+  
+  .logoNav{
+  
+  
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 800;
+  
+    /*  */
+  
+    color:var(rgb(219, 210, 210));
+    transition: 250ms;
+  }
+  
+  header ul li{
+  
+    list-style:none;
+    margin:20px 0;
+  
+  }
+  
+  header ul li a{
+  
+    text-decoration: none;
+    padding:10px 30px;
+    font-size:1rem;
+    color:var(--grey);
+    transition: 250ms; 
+  }
+  
+  header ul li a:hover{
+  
+    color:var(--blue-dark);
+  
+  }
+  
+  
+  
+  .hamburger-on{
+      background: url('../assets/hamburger.svg');
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;  
+      cursor:pointer;
+      transition:250ms ease-in-out;
+      
+  }
+  
+  
+  .hamburger-off{
+  
+    padding:9px;
+    background:url('../assets/xsolid.svg');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    width: 25px;
+    height: 25px;
+    cursor:pointer;
+    transition:250ms ease-in-out;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* För större skärm */
+  
+  @media screen and (min-width:1000px){
+  
+    .nav-links{
+  
+      display:flex;
+      flex-direction: row;
+      position:unset;
+      width: auto;
+      height: auto;
+      background: none;
+  
+    }
+  
+    header ul{
+  
+      display:flex;
+  
+    }
+  
+    header ul li{
+  
+      margin:0;
+  
+    }
+  
+    header ul li a{
+  
+      padding:0;
+      margin:5px 20px;
+      font-size:22px;
+  
+    }
+  
+    .hamburger-on{
+      display:none;
+    }
+  
+    .logoNav{
+      font-size:23px;
+    }
+  
+    }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#endregion  */
+
+
+/* #region css utförs i sekvens med start från topp. DETTA ÄR HUVUDINNEHÅLL FÖR BEHANDLINGSSIDANS CSS*/
+#behandlingsRubrik
+{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.container1 {
+  position: relative;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.container1 #behandlingsRubrik
+  {
+    position: absolute;
+    top: 85%;
+    left: 20%;
+  }
+
+#niceHair
+  {
+    margin-top: 2%;
+    width: 100%;
+    
+
+  }
+
+#hairPic {
+  width: 90%;
+  height: 100%;
+  /* height: 60vh;
+  width: 100vh; */
+
+}
+
+#behandlingMainInfo
+{
+
+  margin-top: 2%;
+  margin-left: 0%;
+  width: 100%;
+  height: fit-content;
+  border: solid 1px;
+}
+
+#miniRubrik{
+  font-size: 22px;
+  margin-bottom: 0%;
+}
+
+#miniRubrik2
+{
+  font-size: 18px;
+}
+
+#textDiv{
+   font-size: 14px;
+}
+
+
+/* MobileDevice mode below */
+
+@media (max-width: 800px) {
+
+  #hairPic {
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+  }
+  #niceHair
+  {
+    margin-top: 8%;
+    width: 120%;
+    text-align: center;
+
+  }
+
+  #behandlingsRubrik
+  {
+    margin-top: 0%;
+    text-align: center;
+  }
+
+  .container1{  margin-left: 0%;
+  }
+
+  .container1 #behandlingsRubrik
+  {
+    position: absolute;
+    top: 80%;
+    left: 1%;
+  
+  }
+
+  #miniRubrik{
+    font-size: 22px;
+  }
+
+}
+
+
+
+/* #region BlurAnimation för behandlingar samt  fortsättning textinnehåll */
+
+
+.container
+{
+    
+    margin-left: 3%;
+}
+
+
+#infoCard
+{
+  margin-top: 10%;
+  height: fit-content;
+  color: #616466;
+}
+
+#blueText
+{
+  color:#616466;
+}
+
+#shortAbout
+{
+    margin-left: 0%;
+}
+
+
+#shortSection
+{
+    margin-top: 2%;
+    width: 110%;
+}
+
+#shortTextAbout {
+  width: 100%;
+  top: 10px;
+  animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+/* #endregion */
+
+
+
+/* #region Informationsbilder funnnyimage från lifetime */
+
+.funnyImage
+{
+
+  width: 25%;
+  height: auto;
+
+
+}
+.funnyImageTextDiv{
+  margin-top: 10%;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.funnyimageText
+{
+
+  font-size: 14px;
+}
+
+
+
+/* #endregion */
+
