@@ -17,8 +17,8 @@
 }
 
 /* Ta bort nedan om det inte gör ngt */
+/* nedanstående gör de svårt */
 body{
-  margin-top: 3rem;
   width: 90%;
 }
 
@@ -264,11 +264,54 @@ header ul li a:hover{
 
 /* #endregion */
 
+
+
+/* #region LinkBar */
+
+
+
+#linkBar{
+  margin-top: 0%;
+}
+
+#flags{
+  align-items: center;
+  text-align: end;
+}
+
+i{
+  color: black;
+}
+
+#links{
+  color: rgba(2, 3, 2, 0.781);
+  text-align: start;
+  align-items: center;
+}
+
+#btnFlag{
+  border: none;
+  background-color: white;
+}
+
+
+
+
+/* #endregion */
+
+
+
+
+
+
+
+
+
+
 /*#region Container Hemsidans första bild*/
 
 #mainPic
 {
-  margin-top: 0%;
   width: 100%;
   height: 100%;
 }
@@ -276,17 +319,26 @@ header ul li a:hover{
 .container {
   position: relative;
   width: 100%;
-  max-width: 400px;
-  margin-top: 15%;
+
 }
 
-.container img {
+/* .container img {
   width: 100%;
   height: auto;
-  justify-content: center;
   margin-left: 5%;
   margin-top: 10%;
+  
+
+} */
+
+#IdealClinicMainPic
+{
+  width: 100%;
+  height: 80vh;
 }
+
+
+
   
   /* Style the button and place it in the middle of the container/image */
   .container .button-33{
@@ -329,6 +381,12 @@ header ul li a:hover{
 
 
   @media (max-width: 600px) {
+
+    #IdealClinicMainPic
+  {
+  width: 100%;
+  height: 100%;
+  }
 
 
     .container img {
@@ -378,18 +436,17 @@ header ul li a:hover{
   {
 
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 7%;
     padding-top: 20px;
     padding-left: 10px;
     height: fit-content;
-    width: 100%;
+    width: 96%;
     background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
-
-
-
   }
+
+
 
 
 
@@ -414,13 +471,15 @@ header ul li a:hover{
 } 
 
 
+.rubrikbehandling
+{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  color:#616466;
 
-  .col
-  {
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    color:#616466;
-  }
+}
+
+
   .row{
 
     width: 100%;
@@ -452,6 +511,7 @@ header ul li a:hover{
 
   #behandlingsvalue{
     margin-top: 3%;
+    margin-left: 5%;
   }
 
   #bokaText{
@@ -488,7 +548,7 @@ header ul li a:hover{
  
   #behandlingarRubrik
   {
-    margin-left: 5%;
+    margin-left: 10%;
     margin-top: 5%;
     text-align: center;
     color:#616466;
@@ -518,9 +578,68 @@ header ul li a:hover{
 
 
   #certPic{
-    height: 10%;
-    width: auto;
+
+    margin-top: 5%;
+    height: 20%;
+    width: 25%;
   }
+
+  #folksamPic{
+    height: 50%;
+    width: 50%;
+
+  }
+
+  #juvePic{
+    height: 50%;
+    width: 50%;
+  }
+
+  @media (max-width: 600px) {
+
+
+    #certPic{
+
+      margin-top: 5%;
+      height:100%;
+      width: 100%;
+    }
+  
+    #folksamPic{
+      height: 100%;
+      width: 100%;
+  
+    }
+  
+    #juvePic{
+      height: 100%;
+      width: 100%;
+    }
+
+
+  }
+
+
+  #Info-Bot{
+    width: 100%;
+    margin-left: 6%;
+    
+  }
+
+  #gogoCol
+  {
+    margin-left: 5%;
+  }
+
+
+  #gogomaps{
+
+    width: auto;
+    height: auto;
+    
+  }
+
+  .list-group{font-size: 20px;}
  
 
 
@@ -530,13 +649,26 @@ header ul li a:hover{
 
 /* #region Footer */
 
-footer{ 
+
+#almostDone{
 
   width:100%;
+  margin-left:5%;
 
   height:200px;
 
+  
   border-top:solid 1px black;
+
+
+}
+
+
+
+footer{ 
+  margin-top: 0%;
+  width:111%;
+
 }
 
 
