@@ -16,6 +16,9 @@
     <script src="./js/app.js" defer></script>
     <script src="./js/behandlingar.js" defer></script>
     <link rel="stylesheet" href="./styles/behandlingarstyles.css">
+
+    
+    
 </head>
 <body>
 
@@ -30,6 +33,33 @@
           <li><a href="#">Kontakt </a></li>
         </ul> 
       </header>
+
+
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast toast-bottom-center" id="toast-example" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <!-- <img src="" class="rounded me-2" alt="..."> -->
+            <strong class="me-auto">Välkommen!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            30% rabatt på samtliga behandlingar hela mars!
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -129,7 +159,6 @@
                   <img class ="funnyImage" src="./images/VissteduAtt.png" alt="">
                   <p>Visste du att?</p>
 
-
                   <p class = "funnyimageText" id ="vissteduAtt"></p>
                   
 
@@ -149,60 +178,84 @@
 
 
 
+                <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button id = "dragspel1Rubrik" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
 
-             
+              <ul>
 
-
-
-        
-
-
-        
-
-
-
-
-
-
-
-
-
-
-       
-    
-
-      
+                <li id ="dragspelFirstTip"></li>
+                <li id ="dragspelSecondTip"></li>
+                <li id ="dragspelThirdTip"></li>
+                <li id ="dragspelForthTip"></li>
+                <li id ="dragspelFifthTip"></li>
+                <li id ="dragspelSixtTip"></li>
+                
+              </ul>
 
 
-
-
-            
-
-        
-
-      
-
-
-
-     
-
-
-    
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button id = "dragspel2Rubrik" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
 
 
 
+              <ul>
+
+                <li id ="dragspel2FirstTip"></li>
+                <li id ="dragspel2SecondTip"></li>
+                <li id ="dragspel2ThirdTip"></li>
+                <li id ="dragspel2ForthTip"></li>
+                <li id ="dragspel2FifthTip"></li>
+                <li id ="dragspel2SixtTip"></li>
+                
+              </ul>
 
 
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button  id = "dragspel3Rubrik"class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul>
 
+                <li id ="dragspel3FirstTip"></li>
+                <li id ="dragspel3SecondTip"></li>
+                <li id ="dragspel3ThirdTip"></li>
+                <li id ="dragspel3ForthTip"></li>
+                <li id ="dragspel3FifthTip"></li>
+                <li id ="dragspel3SixtTip"></li>
+                
+              </ul>
 
-      
-     
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <footer class="bg-dark text-white-50 text-start">
+        &copy; 2023 Ideal Clinic | All rights reserved. 
+      </footer>
 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-
-
-
-    
 </body>
 </html>

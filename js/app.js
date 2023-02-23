@@ -27,6 +27,11 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//Toaster för start!
+var toastEl = document.getElementById('toast-example')
+var toast = new bootstrap.Toast(toastEl)
+toast.show()
+
 //Kod för nav
 
 const header = document.querySelector("header");
