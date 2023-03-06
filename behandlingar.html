@@ -16,14 +16,11 @@
     <script src="./js/app.js" defer></script>
     <script src="./js/behandlingar.js" defer></script>
     <link rel="stylesheet" href="./styles/behandlingarstyles.css">
-
-    
-    
 </head>
 <body>
 
 <header>
-        <a href="index.html" id="MainLogo" class="logoNav">Ideal Clinic</a>
+        <a href="Genjutsu.html" id="MainLogo" class="logoNav">Ideal Clinic</a>
         <div class="hamburger-on"></div>
         <ul class="nav-links">
           <li><a id="bokaText" href="#">Boka </a></li>
@@ -39,7 +36,6 @@
       <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div class="toast toast-bottom-center" id="toast-example" role="alert" aria-live="assertive" aria-atomic="true">
           <div class="toast-header">
-            <!-- <img src="" class="rounded me-2" alt="..."> -->
             <strong class="me-auto">Välkommen!</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
@@ -49,26 +45,11 @@
         </div>
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div id ="niceHair" class="container1">
 
             <img id ="hairPic" src="./images/niceHair.jpg" alt="">
             <h5 id = "behandlingsRubrik"></h5>
         </div>
-
 
           <section id="shortSection">
               <div class="container">
@@ -98,20 +79,16 @@
                           <ul class="list-group list-group-flush">
                             <li class="list-group-item" id ="informationomRubrik"><h4>Information om:</h4><h6 id ="informationOm"></h6> </li>
                             <li class="list-group-item">Åldersgräns: 18</li>
-                            <li class="list-group-item">Pris: från 1500kr</li>
+                            <li class="list-group-item" id ="InfoCardPrice">Pris: från 1500kr</li>
                             <li class="list-group-item">Räntefri avbetalning: Upp till 24 månader</li>
+                            <li class="list-group-item"><button id ="infocardBooka">Boka</button></li>
+
                           </ul>
                         </div>
                     </table>
                 </div>
               </div>
           </section>
-
-
-
-
-
-
 
 
           <div class="row">
@@ -124,7 +101,7 @@
 
                   <img  class ="funnyImage" src="./images/EstimeradTid.png" alt="">
                   <p>Estimerad tid</p>
-                  <p class = "funnyimageText">tio minuter en kvart</p>
+                  <p class = "funnyimageText" id ="EstimeradTidText"></p>
 
                 </div>
 
@@ -141,7 +118,7 @@
                     <img class ="funnyImage" src="./images/KostandsfriKonsultation.png" alt="">
                     <p>Konstandsfri konsultation</p>
                     <!-- lägg href här t boka.se på boka -->
-                    <p class = "funnyimageText">För kostnadsfri konsultation vänligen kontakta oss på yeyeye eller klicka på "Boka"</p>
+                    <p class = "funnyimageText">För kostnadsfri konsultation vänligen kontakta oss på 010-333-3553 eller klicka på <a id ="bokaSneaky"href="https://www.bokadirekt.se/places/ideal-clinic-50596">Boka</a></p>
 
                 </div>
               
@@ -169,16 +146,10 @@
 
             </div>
 
-
-
-
-
           </div>
 
 
-
-
-                <div class="accordion" id="accordionExample">
+        <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button id = "dragspel1Rubrik" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -227,6 +198,7 @@
             </div>
           </div>
         </div>
+        
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
             <button  id = "dragspel3Rubrik"class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -243,12 +215,35 @@
                 <li id ="dragspel3ForthTip"></li>
                 <li id ="dragspel3FifthTip"></li>
                 <li id ="dragspel3SixtTip"></li>
-                
               </ul>
 
             </div>
           </div>
         </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            AVBOKNING</button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <ul>
+                <p>Om du inte kan komma till din bokade tid, vänligen avboka via Boka Direkt eller via E-post: info@idealclinic.se senast 24 timmar innan. Annars debiteras du med 30% av behandlingens kostnad. Vid sen avbokning av konsultationer och efterkontroller debiteras 500 SEK.</p>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
       </div>
 
       <footer class="bg-dark text-white-50 text-start">

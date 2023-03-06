@@ -19,8 +19,10 @@ let miniRubrik2 = document.querySelector("#miniRubrik2");
 let firststyckeText = document.querySelector("#firststyckeText");
 let informationOm = document.querySelector("#informationOm");
 
+let InfoCardPrice = document.querySelector("#InfoCardPrice");
 
 let vissteduAtt = document.querySelector("#vissteduAtt");
+let estimeradTidText = document.querySelector("#EstimeradTidText");
 
 
 let dragspel1Rubrik = document.querySelector("#dragspel1Rubrik");
@@ -59,26 +61,40 @@ if (treatment === "Hårborttagning") {
     informationOm.innerHTML ="Hårborttagning";
     miniRubrik.innerHTML = "Hårborttagning på Ideal Clinic";
     inledandeText.innerHTML ="Hårborttagning är en vanligt förekommande estetisk behandling som många människor väljer att genomgå för att bli av med oönskade hårväxt på olika delar av kroppen. På Ideal Clinic erbjuder vi hårborttagning med diodlaser, som är den snabbaste och mest effektiva metoden för permanent hårborttagning. Diodlaser används för att eliminera hårväxt för gott genom att skickar intensivt pulserat ljus till hårsäckarna. Diodlaser är en skonsam metod som är mindre smärtsam än andra traditionella hårborttagningsmetoder, tack vare ett kylt munstycke som kyler ner huden till hela -7 grader under behandlingen. På Ideal Clinic använder vi den mest kraftfulla maskinen på marknaden, Sapphire diodlaser, som ger marknadens bästa resultat och är den snabbaste vägen till att bli hårfri. För att uppnå permanent hårborttagning krävs vanligtvis flera behandlingar, eftersom bara en viss procent av hårstråna är i aktiv växtfas vid varje tillfälle. De hårstrån som förstörs vid hårborttagningsbehandlingen faller av efter några veckor, men nya strån som varit i vilofas växer upp efter ett par månader och det är då det är dags för en ny behandling."
-    miniRubrik2.innerHTML ="Behandling";
+    miniRubrik2.innerHTML ="Vad händer under en behandling med permanent hårborttagning med diodlaser?";
+    firststyckeText.innerHTML ="För att permanent ta bort hår med diodlaser, lägger man på en kall gel på huden och belyser den med synligt intensivt pulserat ljus. Ljusblixtarna vid behandlingen kan ibland kännas som en liten stöt, men behandlingen går snabbt och är inte särskilt smärtsam. Ibland kan man se en lätt hudrodnad efter behandlingen, men oftast syns det ingenting. Vi flyttar ljusprisman snabbt över hela det område där du önskar ta bort oönskad hårväxt. Behandlingen känns väldigt lite och är nära på smärtfri.";
     vissteduAtt.innerHTML = "Behandlingen utförs med marknadsledande Sapphire diodlaser för en skonsam och effektiv hårborttagning";
+    estimeradTidText.innerHTML ="10-150 minuter";
 
-    dragspel1Rubrik.innerHTML = 
-    dragspelFirstTip.innerHTML ="Efter en injektionsbehandling är det viktigt att inte röra vid det behandlade området under 6 timmar.";
-    dragspelSecondTip.innerHTML ="Du bör inte utföra någon annan typ av behandling på det aktuella området under 1 vecka.";
-    dragspelThirdTip.innerHTML ="Du bör inte träna samma dag som behandlingen.";
-    dragspelForthTip.innerHTML ="Du bör inte bada eller besöka ett bastu under 1 vecka.";
-    dragspelFifthTip.innerHTML ="Om du vill veta mer eller har fler frågor kan du alltid boka en tid för en konsultation med någon av våra läkare eller sjuksköterskor.";
-    dragspelSixtTip.innerHTML = "Du kommer att känna en effekt av behandlingen redan efter några få dagar,men för vissa kan det ta upp till 1 vecka. Svettningar under armhålorna kommer gradvis att minska i en naturlig process.";
+    
+    dragspel1Rubrik.innerHTML ="Vad ska man tänka på före behandlingen?";
 
-    dragspel2Rubrik.innerHTML ="";
+    dragspelFirstTip.innerHTML ="Undvik att sola en vecka före och en vecka efter en laserbehandling med Sapphire.";
+    dragspelSecondTip.innerHTML="Detta minskar risken för pigmentering i efterförloppet avsevärt.";
+    dragspelThirdTip.innerHTML="Undvik att plocka eller rycka bort dina hårstrån 4 veckor före behandlingen.";
+    dragspelForthTip.innerHTML="Var slätrakad 1-2 dagar innan behandlingen.";
+    dragspelFifthTip.innerHTML="Sola inte en vecka före eller efter behandlingen.";
+    dragspelSixtTip.innerHTML="Undvik att plocka eller rycka bort dina hårstrån 4 veckor före behandlingen, men var slätrakad 1-2 dagar innan behandlingen.";
 
-    dragspel2FirstTip.innerHTML ="";
-    dragspel2SecondTip.innerHTML="";
-    dragspel2ThirdTip.innerHTML="";
-    dragspel2ForthTip.innerHTML="";
-    dragspel2FifthTip.innerHTML="";
-    dragspel2SixtTip.innerHTML="";
+    dragspel2Rubrik.innerHTML ="Kan alla hårstrån behandlas? ";
 
+    dragspel2FirstTip.innerHTML ="Hårborttagning fungerar inte på ljusa eller väldigt tunna hårstrån.";
+    dragspel2SecondTip.innerHTML="Vid en konsultation kan vi bedöma om behandlingen fungerar för dig.";
+    dragspel2ThirdTip.innerHTML="Vid osäkra fall kan en liten provbehandling utföras.";
+    dragspel2ForthTip.innerHTML="Hårborttagning är inte lämplig för personer med mörk hud eller som är väldigt solbrända.";
+    dragspel2FifthTip.innerHTML="En tumregel är att det ska vara en tydlig färgskillnad mellan hårstråna som man vill ta bort och den omgivande huden.";
+    dragspel2SixtTip.innerHTML="Vid en konsultation kan vi avgöra om det finns tillräcklig färgskillnad mellan hårstråna och omgivande hud för att behandlingen ska vara effektiv.";
+
+    dragspel3Rubrik.innerHTML ="Är resultatet permanent?";
+
+    dragspel3FirstTip.innerHTML ="Antalet behandlingar som krävs kan variera beroende på området som behandlas och den individuella hårväxten.";
+    dragspel3SecondTip.innerHTML="Efter 8-10 behandlingar kan man vanligtvis förvänta sig att den mesta hårväxten på ett område har försvunnit.";
+    dragspel3ThirdTip.innerHTML="Behandlingar för att ta bort oönskad hårväxt har utförts i över 25 år. Under denna långa tid har det i extremt få fall sett hårväxten komma tillbaka. För att kallas permanent måste en förändring enligt medicinsk terminologi kunna observeras i minst 30 år, och så länge har inte laserborttagning av hår utförts i världen. Men många kallar oftast laserborttagning av hår för permanent eftersom man har sett att hårväxten inte har återkommit under en så lång tid.";
+    dragspel3ForthTip.innerHTML="Jämfört med andra hårborttagningsmetoder som rakning, vaxning och plockning av hårstrån, är laserborttagning av hår i allmänhet permanent.";
+    dragspel3FifthTip.innerHTML="Innan behandling med diodlaser bör man inte vaxa eller plocka hårstrån, men man kan raka eller klippa håret kort där det behövs.";
+    dragspel3SixtTip.innerHTML="Efter behandling kan det vara bra att undvika exponering för solen och att använda solskyddskräm på området för att skydda huden.";
+
+    
 
   }
    
@@ -91,6 +107,9 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="Behandling av Hyperhidros";
     firststyckeText.innerHTML = "Hyperhidros orsakas av överaktivitet hos svettkörtlarna, vanligtvis i händer, fötter och armhålor, men också i andra begränsade områden på kroppen. Tillståndet innebär en överdriven svettning som är mycket kraftig och har ingen naturlig funktion i kroppen. Svettningarna kan leda till att personen som lider av det har en försämrad livskvalitet och ibland undviker vardagssituationer, arbete och sociala kontakter medvetet. De områden på kroppen som vanligtvis påverkas är armhålor, handflator, fötter och pannan där svettbehandling med injektioner har varit den mest effektiva metoden. Med hjälp av injektioner kan detta slags svettning behandlas effektivt. Behandlingen blockerar svettkörtlarna i cirka 6-7 månader, därefter behövs en ny behandling. Effekten förlängs efter varje behandling eftersom svettkörtlarna inte återfår sin fulla aktivitet mellan varje injektion. Resultatet är mycket säkert och ger inga allvarliga biverkningar. Svettbehandling med injektioner har inneburit en stor revolution för patienter med hyperhidros. Behandlingen ges i form av injektioner under huden på det drabbade området. När händerna behandlas ger vi alltid bedövning. För andra områden är bedövning mycket sällan nödvändigt."
     vissteduAtt.innerHTML = "Svettbehandling med injektioner är det vanligaste tillvägagångssättet att behandla överdriven svettning";
+
+    estimeradTidText.innerHTML ="30-40 minuter";
+
     
     dragspel1Rubrik.innerHTML ="Vad bör man ta hänsyn till innan en svettbehandling?"
 
@@ -100,6 +119,7 @@ if (treatment === "Hårborttagning") {
     dragspelForthTip.innerHTML = "Om du har tagit mediciner som Magnecyl eller Ipren eller liknande, kan du lättare få blåmärken vid det område som ska behandlas.";
     dragspelFifthTip.innerHTML = "För att minska smärta kan du köpa Emla-salva på apoteket och applicera ett tjockt lager på det område som ska behandlas ca 1 timme innan behandlingen.";
     dragspelSixtTip.innerHTML = "Du bör inte träna samma dag som behandlingen utförs.";
+
 
     dragspel2Rubrik.innerHTML = "Vad bör man ta hänsyn till efter en svettbehandling?";
 
@@ -122,14 +142,29 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Ärrbehandling") 
   {
-    dragspel1Rubrik.innerHTML ="";
 
-    dragspelFirstTip.innerHTML ="";
-    dragspelSecondTip.innerHTML="";
-    dragspelThirdTip.innerHTML="";
-    dragspelForthTip.innerHTML="";
-    dragspelFifthTip.innerHTML="";
-    dragspelSixtTip.innerHTML="";
+    rubrik.innerHTML = "Microneedling - Ärrbehandling";
+    informationOm.innerHTML = "Ärrbehandling"
+    miniRubrik.innerHTML = "Ärrbehandling (Microneedling) på Ideal Clinic";
+    inledandeText.innerHTML = "Microneedling är en behandling som används för åtstramning av huden, förbättrad lyster och bildning av kollagen. Det är en mer djupgående behandling än kemisk peeling. Microneedling-pennan är utrustad med hundratals mikronålar, som tränger igenom huden och skapar tusentals mikrokanaler. Nåltätheten och diametern på nålarna gör att behandlingen blir skonsam och ger en god penetration."
+    miniRubrik2.innerHTML ="Vad är syftet med behandlingen?";
+    firststyckeText.innerHTML = "De små mikrokanalerna skapar en kontrollerad skada på huden, vilket startar en läkningsprocess med ett gynnsamt hudföryngringsresultat som följd. Via mikrokanalerna appliceras bioaktiva substanser som passar just din hud för att den ska se fräschare ut. Normalt når bara cirka 0,3% av hudvårdsprodukterna de djupare hudlagren. Men med Microneedling ökar upptaget av aktiva substanser till mer än 50%. Genom att starta den naturliga läkningsprocessen och med hjälp av bioaktiva substanser sker en nyproduktion av kollagen och elastin, vilket resulterar i en förbättrad hudkvalitet."
+   
+    InfoCardPrice.innerHTML ="Från 600kr";
+   
+    vissteduAtt.innerHTML = "Svettbehandling med injektioner är det vanligaste tillvägagångssättet att behandla överdriven svettning";
+    estimeradTidText.innerHTML ="Behandlingen tar mellan 20-60 minuter beroende på området.";
+
+
+
+    dragspel1Rubrik.innerHTML ="Vad är Microneedling?";
+
+    dragspelFirstTip.innerHTML ="Microneedling är en teknik för hudföryngring som involverar användning av en microneedling-penna med mikronålar.";
+    dragspelSecondTip.innerHTML="Syftet med behandlingen är att skapa små kanaler i huden som initierar en läkningsprocess som stimulerar tillväxt av nytt kollagen och elastin.";
+    dragspelThirdTip.innerHTML="Behandlingen är skonsam tack vare nåltätheten och diametern på nålarna, vilket möjliggör en effektiv penetration.";
+    dragspelForthTip.innerHTML="Vanligtvis krävs 3-5 behandlingar med 4 veckors mellanrum för att uppnå kraftfulla resultat vid behandling av acneärr.";
+    dragspelFifthTip.innerHTML="Eventuell rodnad och svullnad kan uppstå de första dagarna, men oftast behöver man bara vara hemma under behandlingsdagen.";
+    dragspelSixtTip.innerHTML="Microneedling är inte lämpligt för personer som har behandlats med Roaccutan de senaste 3 månaderna, tar kortison, är gravida eller ammande, har öppna eller infekterade sår, tar blodförtunnande läkemedel, har försämrad sårläkningsförmåga, har en kronisk hudsjukdom eller nervskada i det aktuella området, har genomgått strålbehandling under det senaste året eller har genomgått nyligen ansiktskirurgi eller laserbehandling.";
 
     dragspel2Rubrik.innerHTML ="";
 

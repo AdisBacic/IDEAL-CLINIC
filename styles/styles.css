@@ -302,121 +302,87 @@ i{
 
 
 
-
-
-
-
-
-
 /*#region Container Hemsidans första bild*/
 
-#mainPic
+#carouselExampleInterval {
+  margin-top: 5%;
+  width: 111%;
+}
+
+#carouselExampleInterval img {
+  height: 500px; /* adjust the height as desired */
+  width: 100%;
+  object-fit: cover; /* to ensure the image fills the container */
+}
+
+.Liseberg
 {
-  width: 100%;
-  height: 100%;
-}
-
-.container {
   position: relative;
-  width: 100%;
-
-}
-
-/* .container img {
+  margin-top: 5%;
   width: 100%;
   height: auto;
-  margin-left: 5%;
-  margin-top: 10%;
-  
+}
 
-} */
 
-#IdealClinicMainPic
-{
-  width: 100%;
-  height: 80vh;
+.text-div {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  text-align: center;
+  z-index: 1;
+}
+
+.introBtn {
+  cursor: pointer;
+  background-color: transparent;
+
 }
 
 
 
-  
-  /* Style the button and place it in the middle of the container/image */
-  .container .button-33{
-    position: absolute;
-    top: 60%;
-    left: 60%;
-    background-color: #cfcfcf;
-      border-radius: 100px;
-      box-shadow: rgba(118, 118, 118, 0.2) 0 -25px 18px -14px inset,rgba(132, 132, 132, 0.15) 0 1px 2px,rgba(110, 110, 110, 0.15) 0 2px 4px,rgba(118, 119, 119, 0.15) 0 4px 8px,rgba(133, 134, 134, 0.15) 0 8px 16px,rgba(146, 146, 146, 0.15) 0 16px 32px;
-      color: rgb(255, 255, 255);
-      cursor: pointer;
-      display: inline-block;
-      font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-      padding: 7px 20px;
-      text-align: center;
-      text-decoration: none;
-      transition: all 250ms;
-      border: 0;
-      font-size: 15px;
-  }
-
-
-  .button-33:hover {
-    box-shadow: rgba(#616466) 0 -25px 18px -14px inset,rgba(142, 142, 142, 0.25) 0 1px 2px,rgba(182, 183, 182, 0.25) 0 2px 4px,rgba(189, 189, 189, 0.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-    transform: scale(1.05) rotate(-1deg);
-  }
-
-  .container .monthlyGold
-  {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-
-  }
-  .monthlyGold:hover
-  {
-    transform: scale(1.05) rotate(-1deg);
-  }
-
-
-
-  @media (max-width: 600px) {
-
-    #IdealClinicMainPic
-  {
-  width: 100%;
-  height: 100%;
-  }
-
-
-    .container img {
-
-      margin-top: 18%;
-      width: 100%;
-      height: 100%;
-
-
-    }
-
-    .container .monthlyGold
-    {
-      font-size: 12px;
-      margin-top: 1%;
-  
-    }
 
 
 
 
-    .container .button-33 {
-
-      
-
-        font-size: 10px;
-        padding: 7px 14px;
-    }
+.Liseberg .button-33 {
+  position: absolute;
+  top: 50%; /* adjust as needed */
+  left: 30%; /* adjust as needed */
+  transform: translate(-50%, -50%); /* center the button */
+  background-color: #cfcfcf;
+  border-radius: 100px;
+  box-shadow: rgba(118, 118, 118, 0.2) 0 -25px 18px -14px inset,
+    rgba(132, 132, 132, 0.15) 0 1px 2px,
+    rgba(110, 110, 110, 0.15) 0 2px 4px,
+    rgba(118, 119, 119, 0.15) 0 4px 8px,
+    rgba(133, 134, 134, 0.15) 0 8px 16px,
+    rgba(146, 146, 146, 0.15) 0 16px 32px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 1.5vw; /* adjust as needed */
 }
 
+
+@media (max-width: 800px) {
+  .Liseberg .button-33 
+  {
+    
+    top: 20%; /* adjust as needed */
+    left: 50%; /* adjust as needed */
+    transform: translate(-50%, -70%); /* center the button */
+    font-size: 3vw; /* adjust as needed */
+    padding: 5px 10px; /* adjust as needed */
+  }
+}
 
 
 
@@ -647,6 +613,28 @@ i{
   /* #endregion */
 
 
+
+/* #region MonthlyOffer */
+
+
+.image-container {
+  width: 111%;
+  height: auto;
+  margin: 0 auto; /* centers the container horizontally */
+  margin-bottom: 10%;
+  text-align: center;
+
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* #endregion */
+
+
 /* #region Footer */
 
 
@@ -666,11 +654,13 @@ i{
 
 
 footer{ 
-  margin-top: 0%;
+  margin-top: 5%;
   width:111%;
 
 }
 
+
+/* #endregion */
 
 /* CSS specifikt för behandlingar */
 

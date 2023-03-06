@@ -13,6 +13,7 @@ body{
 }
 
 header{
+  
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -263,7 +264,7 @@ header h4{
 #niceHair
   {
     margin-top: 2%;
-    width: 100%;
+    width: 90%;
     height: 60%;
     background-color:rgb(234,233,239,255);
   }
@@ -271,7 +272,7 @@ header h4{
 #hairPic {
   width: 97vh; 
   height:60vh;
-  margin-left: 50%;
+  margin-left: 49%;
 }
 
 #behandlingMainInfo
@@ -304,14 +305,14 @@ header h4{
 @media (max-width: 800px) {
 
   #hairPic {
-    width: 100%;
+    width: 100vw;;
     height: 100%;
     margin-left: 0%;
   }
   #niceHair
   {
     margin-top: 8%;
-    width: 120%;
+    width: 90%;
     text-align: center;
 
   }
@@ -427,8 +428,31 @@ header h4{
   font-size: 14px;
 }
 
+
+#avbokningsBtn
+{
+  background-color: #616466;
+  font-size: 15px;
+  margin-left: 0%;
+
+}
+#avbokaBtnText
+{
+  font-size: 12px;
+  margin-left: 0%;
+}
+
+
+
+
+
+
+
+
+
 .accordion{
   margin-left:10%;
+  padding-bottom: 50px;
 }
 
 .accordion-button:not(.collapsed){
@@ -436,6 +460,19 @@ header h4{
   background: #616466;
   color: aliceblue;
   text-decoration: none;
+}
+
+
+#bokaSneaky
+{
+  text-decoration: none;
+}
+
+#bokaSneaky:hover{
+
+  font-size: large;
+  color: blue;
+
 }
 
 
