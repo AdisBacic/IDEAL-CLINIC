@@ -19,7 +19,7 @@
 /* Ta bort nedan om det inte gör ngt */
 /* nedanstående gör de svårt */
 body{
-  width: 90%;
+  width: 100%;
 }
 
 header{
@@ -41,7 +41,6 @@ header{
 header h4{
 
     position: absolute;
-    left: 10%;
     bottom: 1rem;
     font-size: 1.6rem;
 }
@@ -306,7 +305,7 @@ i{
 
 #carouselExampleInterval {
   margin-top: 5%;
-  width: 111%;
+  width: 100%;
 }
 
 #carouselExampleInterval img {
@@ -337,12 +336,10 @@ i{
 .introBtn {
   cursor: pointer;
   background-color: transparent;
+  text-decoration: none;
+  text-decoration-color: #616466;
 
 }
-
-
-
-
 
 
 
@@ -400,13 +397,11 @@ i{
 
   .beautylawBox
   {
-
     margin-top: 5%;
-    margin-left: 7%;
+    margin-left: 5%;
     padding-top: 20px;
-    padding-left: 10px;
     height: fit-content;
-    width: 96%;
+    width: 90%;
     background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
@@ -470,6 +465,7 @@ i{
 
   /*#region ID */
 
+
   #behandlingsvarde{
 
     margin-top: -5%;
@@ -477,7 +473,6 @@ i{
 
   #behandlingsvalue{
     margin-top: 3%;
-    margin-left: 5%;
   }
 
   #bokaText{
@@ -514,7 +509,6 @@ i{
  
   #behandlingarRubrik
   {
-    margin-left: 10%;
     margin-top: 5%;
     text-align: center;
     color:#616466;
@@ -588,13 +582,12 @@ i{
 
   #Info-Bot{
     width: 100%;
-    margin-left: 6%;
     
   }
 
   #gogoCol
   {
-    margin-left: 5%;
+    text-align: center;
   }
 
 
@@ -618,7 +611,7 @@ i{
 
 
 .image-container {
-  width: 111%;
+  width: 100%;
   height: auto;
   margin: 0 auto; /* centers the container horizontally */
   margin-bottom: 10%;
@@ -641,7 +634,6 @@ img {
 #almostDone{
 
   width:100%;
-  margin-left:5%;
 
   height:200px;
 
@@ -655,7 +647,7 @@ img {
 
 footer{ 
   margin-top: 5%;
-  width:111%;
+  width:100%;
 
 }
 

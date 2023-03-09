@@ -63,6 +63,7 @@ if (treatment === "Hårborttagning") {
     inledandeText.innerHTML ="Hårborttagning är en vanligt förekommande estetisk behandling som många människor väljer att genomgå för att bli av med oönskade hårväxt på olika delar av kroppen. På Ideal Clinic erbjuder vi hårborttagning med diodlaser, som är den snabbaste och mest effektiva metoden för permanent hårborttagning. Diodlaser används för att eliminera hårväxt för gott genom att skickar intensivt pulserat ljus till hårsäckarna. Diodlaser är en skonsam metod som är mindre smärtsam än andra traditionella hårborttagningsmetoder, tack vare ett kylt munstycke som kyler ner huden till hela -7 grader under behandlingen. På Ideal Clinic använder vi den mest kraftfulla maskinen på marknaden, Sapphire diodlaser, som ger marknadens bästa resultat och är den snabbaste vägen till att bli hårfri. För att uppnå permanent hårborttagning krävs vanligtvis flera behandlingar, eftersom bara en viss procent av hårstråna är i aktiv växtfas vid varje tillfälle. De hårstrån som förstörs vid hårborttagningsbehandlingen faller av efter några veckor, men nya strån som varit i vilofas växer upp efter ett par månader och det är då det är dags för en ny behandling."
     miniRubrik2.innerHTML ="Vad händer under en behandling med permanent hårborttagning med diodlaser?";
     firststyckeText.innerHTML ="För att permanent ta bort hår med diodlaser, lägger man på en kall gel på huden och belyser den med synligt intensivt pulserat ljus. Ljusblixtarna vid behandlingen kan ibland kännas som en liten stöt, men behandlingen går snabbt och är inte särskilt smärtsam. Ibland kan man se en lätt hudrodnad efter behandlingen, men oftast syns det ingenting. Vi flyttar ljusprisman snabbt över hela det område där du önskar ta bort oönskad hårväxt. Behandlingen känns väldigt lite och är nära på smärtfri.";
+    
     vissteduAtt.innerHTML = "Behandlingen utförs med marknadsledande Sapphire diodlaser för en skonsam och effektiv hårborttagning";
     estimeradTidText.innerHTML ="10-150 minuter";
 
@@ -106,8 +107,8 @@ if (treatment === "Hårborttagning") {
     inledandeText.innerHTML = "Extrem svettning (Hyperhidros) drabbar en liten del av befolkningen, ungefär 2%. Det brukar börja under puberteten eller tidig vuxenålder och i ungefär hälften av fallen är det medfött."
     miniRubrik2.innerHTML ="Behandling av Hyperhidros";
     firststyckeText.innerHTML = "Hyperhidros orsakas av överaktivitet hos svettkörtlarna, vanligtvis i händer, fötter och armhålor, men också i andra begränsade områden på kroppen. Tillståndet innebär en överdriven svettning som är mycket kraftig och har ingen naturlig funktion i kroppen. Svettningarna kan leda till att personen som lider av det har en försämrad livskvalitet och ibland undviker vardagssituationer, arbete och sociala kontakter medvetet. De områden på kroppen som vanligtvis påverkas är armhålor, handflator, fötter och pannan där svettbehandling med injektioner har varit den mest effektiva metoden. Med hjälp av injektioner kan detta slags svettning behandlas effektivt. Behandlingen blockerar svettkörtlarna i cirka 6-7 månader, därefter behövs en ny behandling. Effekten förlängs efter varje behandling eftersom svettkörtlarna inte återfår sin fulla aktivitet mellan varje injektion. Resultatet är mycket säkert och ger inga allvarliga biverkningar. Svettbehandling med injektioner har inneburit en stor revolution för patienter med hyperhidros. Behandlingen ges i form av injektioner under huden på det drabbade området. När händerna behandlas ger vi alltid bedövning. För andra områden är bedövning mycket sällan nödvändigt."
+    
     vissteduAtt.innerHTML = "Svettbehandling med injektioner är det vanligaste tillvägagångssättet att behandla överdriven svettning";
-
     estimeradTidText.innerHTML ="30-40 minuter";
 
     
@@ -143,7 +144,7 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Ärrbehandling") 
   {
 
-    rubrik.innerHTML = "Microneedling - Ärrbehandling";
+    rubrik.innerHTML = "Ärrbehandling";
     informationOm.innerHTML = "Ärrbehandling"
     miniRubrik.innerHTML = "Ärrbehandling (Microneedling) på Ideal Clinic";
     inledandeText.innerHTML = "Microneedling är en behandling som används för åtstramning av huden, förbättrad lyster och bildning av kollagen. Det är en mer djupgående behandling än kemisk peeling. Microneedling-pennan är utrustad med hundratals mikronålar, som tränger igenom huden och skapar tusentals mikrokanaler. Nåltätheten och diametern på nålarna gör att behandlingen blir skonsam och ger en god penetration."
@@ -166,55 +167,70 @@ if (treatment === "Hårborttagning") {
     dragspelFifthTip.innerHTML="Eventuell rodnad och svullnad kan uppstå de första dagarna, men oftast behöver man bara vara hemma under behandlingsdagen.";
     dragspelSixtTip.innerHTML="Microneedling är inte lämpligt för personer som har behandlats med Roaccutan de senaste 3 månaderna, tar kortison, är gravida eller ammande, har öppna eller infekterade sår, tar blodförtunnande läkemedel, har försämrad sårläkningsförmåga, har en kronisk hudsjukdom eller nervskada i det aktuella området, har genomgått strålbehandling under det senaste året eller har genomgått nyligen ansiktskirurgi eller laserbehandling.";
 
-    dragspel2Rubrik.innerHTML ="";
+    dragspel2Rubrik.innerHTML ="Acneärr och acnemärken?";
 
-    dragspel2FirstTip.innerHTML ="";
-    dragspel2SecondTip.innerHTML="";
-    dragspel2ThirdTip.innerHTML="";
-    dragspel2ForthTip.innerHTML="";
-    dragspel2FifthTip.innerHTML="";
-    dragspel2SixtTip.innerHTML="";
+    dragspel2FirstTip.innerHTML ="Det är svårt att helt och hållet ta bort djupa acneärr eftersom ärrvävnad är permanent.";
+    dragspel2SecondTip.innerHTML="Röda och bruna fläckar som orsakas av acne kan behandlas med kemisk peeling och microneedling.";
+    dragspel2ThirdTip.innerHTML="Kemisk peeling kan utföras när man har mild acne för att behandla röda och bruna fläckar.";
+    dragspel2ForthTip.innerHTML="För att undvika nya ärr och acne bör man vänta med behandling av ärr tills man blir av med acnen.";
+    dragspel2FifthTip.innerHTML="Trots att det är svårt att helt ta bort acneärr, kan man få en betydande förbättring.";
+    dragspel2SixtTip.innerHTML="Det är viktigt att konsultera en hudläkare eller skönhetsbehandlare för att få råd om vilken behandling som är lämplig för ens specifika acneärr.";
 
-    dragspel3Rubrik.innerHTML ="";
+    dragspel3Rubrik.innerHTML ="Vilka får inte utföra microneedling?";
 
-    dragspel3FirstTip.innerHTML ="";
-    dragspel3SecondTip.innerHTML="";
-    dragspel3ThirdTip.innerHTML="";
-    dragspel3ForthTip.innerHTML="";
-    dragspel3FifthTip.innerHTML="";
-    dragspel3SixtTip.innerHTML="";
+    dragspel3FirstTip.innerHTML ="Personer som tar Roaccutan eller andra acnemediciner bör undvika microneedling.";
+    dragspel3SecondTip.innerHTML="Gravida eller ammande kvinnor bör också undvika microneedling.";
+    dragspel3ThirdTip.innerHTML="Personer med öppna eller infekterade sår bör undvika microneedling.";
+    dragspel3ForthTip.innerHTML="Diabetiker bör undvika microneedling.";
+    dragspel3FifthTip.innerHTML="Personer med kronisk hudsjukdom, nervskada eller som har genomgått strålbehandling, ansiktskirurgi eller laserbehandling under det senaste året bör också undvika microneedling.";
+    dragspel3SixtTip.innerHTML="Det är viktigt att diskutera eventuella hälsoproblem och medicineringar med en hudläkare eller kvalificerad behandlare innan man genomgår microneedling.";
 
 
   }
 
   else if (treatment === "Hudbristning") 
   {
-    dragspel1Rubrik.innerHTML ="";
 
-    dragspelFirstTip.innerHTML ="";
-    dragspelSecondTip.innerHTML="";
-    dragspelThirdTip.innerHTML="";
-    dragspelForthTip.innerHTML="";
-    dragspelFifthTip.innerHTML="";
-    dragspelSixtTip.innerHTML="";
 
-    dragspel2Rubrik.innerHTML ="";
+    rubrik.innerHTML = "Hudbristning";
+    informationOm.innerHTML = "Hudbristning"
+    miniRubrik.innerHTML = "Retinol Peeling (Hudbristning) på Ideal Clinic";
+    inledandeText.innerHTML = "Retinol Peeling NeoStrata Retinol Peel är en unik peel som innehåller Retinol och volymgivande Aminofill för att förbättra hudens struktur, spänst, ge en jämnare hudton och minska linjer och rynkor. Peelingen är ytlig och kräver minimal återhämtningstid, och passar de flesta hudtyper. Det är en snabb, enkel och effektiv peeling som påbörjas på kliniken och avlägsnas hemma."
+    miniRubrik2.innerHTML ="Så här går det till";
+    firststyckeText.innerHTML = "Retinolpeeling från NeoStrata innehåller Vitamin E, Bisabolol, Aminofil, NeoCitriate och 3% Retinol. Aminofil och Retinol gör att huden exfolierar, det vill säga att den flagnar av. Behandlingen utförs på kliniken och avlägsnas av dig själv hemma efter 3-8 timmar. Du kommer inte att känna någon obehag efter appliceringen. Exfolieringsprocessen startar inom 2-4 dagar och pågår vanligtvis i en vecka. Efter exfoliering kommer du att märka förbättringar i hudens struktur, spänst, lyster och hudton."
+   
+    InfoCardPrice.innerHTML ="Från 600kr";
+   
+    vissteduAtt.innerHTML = "";
+    estimeradTidText.innerHTML ="Behandlingen tar mellan 20-60 minuter beroende på området.";
 
-    dragspel2FirstTip.innerHTML ="";
-    dragspel2SecondTip.innerHTML="";
-    dragspel2ThirdTip.innerHTML="";
-    dragspel2ForthTip.innerHTML="";
-    dragspel2FifthTip.innerHTML="";
-    dragspel2SixtTip.innerHTML="";
 
-    dragspel3Rubrik.innerHTML ="";
+    dragspel1Rubrik.innerHTML ="För vem passar behandlingen?";
 
-    dragspel3FirstTip.innerHTML ="";
-    dragspel3SecondTip.innerHTML="";
-    dragspel3ThirdTip.innerHTML="";
-    dragspel3ForthTip.innerHTML="";
-    dragspel3FifthTip.innerHTML="";
-    dragspel3SixtTip.innerHTML="";
+    dragspelFirstTip.innerHTML ="Personer med akne: Retinol peeling kan hjälpa till att minska akneutbrott genom att rensa porerna och minska inflammationen i huden.";
+    dragspelSecondTip.innerHTML="Personer med solskador: Retinol kan minska synliga tecken på solskador, såsom hyperpigmentering, rynkor och torrhet.";
+    dragspelThirdTip.innerHTML="Personer med ojämn hudton: Retinol peeling kan bidra till att jämna ut hudtonen och göra huden mer strålande.";
+    dragspelForthTip.innerHTML="Personer med rynkor och fina linjer: Retinol har anti-aging-egenskaper och kan hjälpa till att minska synligheten av rynkor och fina linjer.";
+    dragspelFifthTip.innerHTML="Personer med torr hud: Retinol peeling kan hjälpa till att återfukta och mjuka upp torr hud genom att öka produktionen av kollagen och elastin i huden.";
+    dragspelSixtTip.innerHTML="Personer som vill förbättra hudens övergripande hälsa: Retinol peeling kan bidra till att förbättra hudens hälsa genom att öka cellförnyelsen och minska orenheter i huden.";
+
+    dragspel2Rubrik.innerHTML ="Vilka områden kan behandlas? ";
+
+    dragspel2FirstTip.innerHTML ="Retinol peeling kan utföras på ansikte, hals, dekolletage och handryggar.";
+    dragspel2SecondTip.innerHTML="Behandlingen reducerar ålderstecken, aktiv acne, pigmentförändringar och ojämn hudton.";
+    dragspel2ThirdTip.innerHTML="Retinol peeling tar bort gamla hudceller och återställer hudens kvalitet.";
+    dragspel2ForthTip.innerHTML="Behandlingen reducerar mindre rynkor, stramar upp huden, reducerar ärr, hudbristningar och acne, minskar porer och dämpar pigmentförändringar och solskador.";
+    dragspel2FifthTip.innerHTML="Det är ett bra alternativ för den som vill åtgärda flera problem på en gång.";
+    dragspel2SixtTip.innerHTML="Ny och friskare hud uppnås genom en effektiv och djupgående behandling med Retinol peeling, där olika lösningar appliceras på huden för att avlägsna det yttre döda cellagret och stimulera till nybildning av nya celler.";
+
+    dragspel3Rubrik.innerHTML ="Att tänka på efter behandlingen:";
+
+    dragspel3FirstTip.innerHTML ="Undvik hudvårdsprodukter med retinoider eller andra exfolierande produkter en vecka innan behandlingen.";
+    dragspel3SecondTip.innerHTML="Undvik att utsätta de behandlade områdena för solen under 3-4 veckor efter behandlingen.";
+    dragspel3ThirdTip.innerHTML="Om du gör flera behandlingar, bör du vänta 6-8 veckor mellan varje behandling.";
+    dragspel3ForthTip.innerHTML="Retinolbehandlingen kan utföras som en enskild behandling.";
+    dragspel3FifthTip.innerHTML="Efter behandlingen kan det uppstå lätt rodnad i några dagar.";
+    dragspel3SixtTip.innerHTML="Det är viktigt att följa de rekommendationer som ges för att minimera risken för biverkningar och för att uppnå bästa möjliga resultat av behandlingen.";
 
   }
 
