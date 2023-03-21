@@ -236,67 +236,136 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Profhilo") 
   {
-    dragspel1Rubrik.innerHTML ="";
 
-    dragspelFirstTip.innerHTML ="";
-    dragspelSecondTip.innerHTML="";
-    dragspelThirdTip.innerHTML="";
-    dragspelForthTip.innerHTML="";
-    dragspelFifthTip.innerHTML="";
-    dragspelSixtTip.innerHTML="";
+    rubrik.innerHTML = "Profhilo";
+    informationOm.innerHTML = "Profhilo"
+    miniRubrik.innerHTML = "Profhilo på Ideal Clinic";
+    inledandeText.innerHTML = "Bio-remodelling är en revolutionerande och innovativ estetisk behandling som riktar sig direkt på slapp hud och fokuserar på att bygga vävnad. PROFHILO® är den första hyaluronsyra-baserade produkten som helt saknar kemiska tvärbindningsmedel (BDDE) och är unik i sin förmåga att återskapa förlorad vävnad.";
+    miniRubrik2.innerHTML ="Varför Profhilo?";
+    firststyckeText.innerHTML = "PROFHILO är en mycket ren produkt som består av hyaluronsyra som har producerats genom biofermentering. På grund av sin höga renhet och frånvaro av tillsatser erbjuder PROFHILO ökad säkerhet och därmed färre biverkningar. Den patenterade tekniken för PROFHILO återskapar även förlorad vävnad, vilket inte är möjligt med filler eller Skinbooster.";
+   
+    InfoCardPrice.innerHTML ="Från 3000kr";
+   
+    vissteduAtt.innerHTML = "Ideal Clinic har en eller flera behandlare som är certifierade för estetisk injicering av Estetiska Injektionsrådet. Certifieringen är en trovärdig kvalitetsstämpel för behandlande läkare, sjuksköterskor och tandläkare och ger patienterna möjlighet att göra upplysta och trygga val.";
+    estimeradTidText.innerHTML ="30 Minuter";
 
-    dragspel2Rubrik.innerHTML ="";
+    dragspel1Rubrik.innerHTML ="För vem är denna behandling lämplig?";
 
-    dragspel2FirstTip.innerHTML ="";
-    dragspel2SecondTip.innerHTML="";
-    dragspel2ThirdTip.innerHTML="";
-    dragspel2ForthTip.innerHTML="";
-    dragspel2FifthTip.innerHTML="";
-    dragspel2SixtTip.innerHTML="";
+    dragspelFirstTip.innerHTML ="Profhilo-behandlingen är lämplig för personer som har upplevt förlust av volym och spänst i ansiktet, vilket kan leda till en trött eller åldrad utseende.";
+    dragspelSecondTip.innerHTML="Det är också lämpligt för personer som vill återfå en ungdomligare look genom att återställa volymen och fylligheten i ansiktet.";
+    dragspelThirdTip.innerHTML="Behandlingen kan vara lämplig för personer som är runt 30 år eller för de som upplever ålderstecken tidigt.";
+    dragspelForthTip.innerHTML="Profhilo passar bäst för personer som vill ha en naturlig och subtil förbättring av sitt utseende, utan att det blir för dramatiskt eller påfallande.";
+    dragspelFifthTip.innerHTML="Det är också lämpligt för personer som inte vill genomgå en mer invasiv kosmetisk behandling, som till exempel kirurgi.";
+    dragspelSixtTip.innerHTML="Profhilo-behandlingen passar för både män och kvinnor och kan utföras på de flesta hudtyper.";
 
-    dragspel3Rubrik.innerHTML ="";
+    dragspel2Rubrik.innerHTML ="Hjälper Profhilo mot torr hud?";
 
-    dragspel3FirstTip.innerHTML ="";
-    dragspel3SecondTip.innerHTML="";
-    dragspel3ThirdTip.innerHTML="";
-    dragspel3ForthTip.innerHTML="";
-    dragspel3FifthTip.innerHTML="";
-    dragspel3SixtTip.innerHTML="";
+    dragspel2FirstTip.innerHTML ="Profhilo-behandlingen har en återfuktande effekt på huden, vilket kan hjälpa till att motverka torr hud.";
+    dragspel2SecondTip.innerHTML="Behandlingen innehåller hyaluronsyra, som är en naturlig fuktgivare som hjälper till att binda fukt i huden.";
+    dragspel2ThirdTip.innerHTML="Hyaluronsyra är också känd för att kunna stärka hudens skyddande barriär och minska fuktavdunstning, vilket kan bidra till att förhindra torr hud.";
+    dragspel2ForthTip.innerHTML="Profhilo-behandlingen kan öka hudens elasticitet och spänst, vilket kan minska risken för att huden torkar ut och blir stram och obehaglig.";
+    dragspel2FifthTip.innerHTML="Genom att återställa volymen i ansiktet kan Profhilo-behandlingen också bidra till att strama upp huden, vilket kan minska risken för torrhet och linjer i ansiktet.";
+    dragspel2SixtTip.innerHTML="Profhilo-behandlingen kan vara ett bra komplement till en hudvårdsrutin som innehåller återfuktande produkter för att maximera effekten av återfuktning på huden.";
+
+    dragspel3Rubrik.innerHTML ="När kan jag se en skillnad?";
+
+    dragspel3FirstTip.innerHTML ="De flesta personer kan se en skillnad i huden redan efter en eller två behandlingar med Profhilo.";
+    dragspel3SecondTip.innerHTML="Eftersom behandlingen har en gradvis verkan, kan det ta upp till två till tre veckor innan de första resultaten blir tydliga.";
+    dragspel3ThirdTip.innerHTML="Efter en fullständig behandlingsserie på två sessioner kan man förvänta sig att se en märkbar skillnad i huden och dess struktur.";
+    dragspel3ForthTip.innerHTML="Resultaten av behandlingen varierar från person till person beroende på faktorer som hudtyp, ålder och livsstil.";
+    dragspel3FifthTip.innerHTML="De flesta personer kan förvänta sig att se en ökad lyster och fräschhet i huden, samt en mer ungdomlig och fyllig look.";
+    dragspel3SixtTip.innerHTML="Effekten av Profhilo-behandlingen kan vara långvarig, men det är vanligtvis rekommenderat att upprepa behandlingen efter sex till tolv månader för att upprätthålla resultatet.";
 
   }
   else if (treatment === "Filler") 
   {
-    dragspel1Rubrik.innerHTML ="";
 
-    dragspelFirstTip.innerHTML ="";
-    dragspelSecondTip.innerHTML="";
-    dragspelThirdTip.innerHTML="";
-    dragspelForthTip.innerHTML="";
-    dragspelFifthTip.innerHTML="";
-    dragspelSixtTip.innerHTML="";
 
-    dragspel2Rubrik.innerHTML ="";
 
-    dragspel2FirstTip.innerHTML ="";
-    dragspel2SecondTip.innerHTML="";
-    dragspel2ThirdTip.innerHTML="";
-    dragspel2ForthTip.innerHTML="";
-    dragspel2FifthTip.innerHTML="";
-    dragspel2SixtTip.innerHTML="";
+    rubrik.innerHTML = "Fillers";
+    informationOm.innerHTML = "Fillers"
+    miniRubrik.innerHTML = "Fillers på Ideal Clinic";
+    inledandeText.innerHTML = "Vilka områden kan behandlas med fillers? Fillers kan användas för att förbättra läpparna, kindbenen, och näsan, jämna ut nasolabialvecken och påsar under ögonen, definiera haka och käklinjen, och reducera fina linjer. De kan även användas för att återställa fyllighet och ungdomliga konturer i områden på ansiktet som har förlorat volym på grund av åldrande. Många väljer fillers framför kirurgi för att korrigera en krokig eller sned näsa eftersom de erbjuder en mer kostnadseffektiv och icke-invasiv alternativ. Resultat med fillers är ofta omedelbara, och kan hjälpa dig att uppnå ett ungdomligare och uppfriskat utseende.";
+    miniRubrik2.innerHTML ="Vad kan jag behandla med fillers?";
+    firststyckeText.innerHTML = "Vi på Ideal Clinic arbetar med bland annat Juvederm, som är det mest framstående märket av fillers som finns på marknaden. Dessa injiceras i valda delar av ansiktet för att fylla ut rynkor, nasolabialvecken, kindbenen, näsan, eller för att fylla ut läpparna. Behandlingen syftar till att strama upp, bygga volym, och göra ansiktet jämnare. Vi strävar alltid efter ett naturligt resultat som gör att du blir ännu vackrare och känner dig ännu mer nöjd med din hud och ditt utseende.";
+   
+    InfoCardPrice.innerHTML ="Från 2500kr";
+   
+    vissteduAtt.innerHTML = "Hyaluronsyra, som våra fillers består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
+    estimeradTidText.innerHTML ="30-40 Minuter";
 
-    dragspel3Rubrik.innerHTML ="";
 
-    dragspel3FirstTip.innerHTML ="";
-    dragspel3SecondTip.innerHTML="";
-    dragspel3ThirdTip.innerHTML="";
-    dragspel3ForthTip.innerHTML="";
-    dragspel3FifthTip.innerHTML="";
-    dragspel3SixtTip.innerHTML="";
+
+
+
+    dragspel1Rubrik.innerHTML ="Hur många sprutor behövs?";
+
+    dragspelFirstTip.innerHTML ="För en förstoring av läpparna med fillers brukar det som regel behövas en ampull på 1 ml.";
+    dragspelSecondTip.innerHTML="Volymen av filler som behövs för andra områden varierar beroende på hur mycket volym som behöver byggas upp eller hur djup en rynka är.";
+    dragspelThirdTip.innerHTML="Vid första behandlingen räcker det vanligtvis med en spruta för att få en större läpp, men om man vill ha en mer markant förstoring kan det behövas fler sprutor vid kommande behandlingar.";
+    dragspelForthTip.innerHTML="Många väljer att endast få en mindre uppfräschning med mer markerade läppar som resultat, istället för för stora läppar.";
+    dragspelFifthTip.innerHTML="För att få en naturlig balans fördelas vanligtvis mängden filler mellan över- och underläpp, med en litet större underläpp.";
+    dragspelSixtTip.innerHTML="Om man har en ojämnhet eller snedhet kan detta också försökas korrigeras under behandlingen.";
+
+    dragspel2Rubrik.innerHTML ="Hur många behandlingar behövs?";
+
+    dragspel2FirstTip.innerHTML ="Fillers är inte en permanent lösning för att få en ungdomligare look, utan resultatet är tillfälligt.";
+    dragspel2SecondTip.innerHTML="För att behålla effekten av behandlingen behöver man upprepa den efter ca 3-4 månader efter första gången man gör en injektionsbehandling.";
+    dragspel2ThirdTip.innerHTML="Ju fler behandlingar man gör, desto mer varaktigt blir resultatet och man kan också förebygga nya rynkor.";
+    dragspel2ForthTip.innerHTML="Att göra fillers vid endast ett tillfälle kan dock vara ett bra alternativ för personer som endast vill prova på behandlingen eller som vill ha ett tillfälligt resultat.";
+    dragspel2FifthTip.innerHTML="Fillers kan också vara ett bra alternativ för personer som vill ha ett mer flexibelt alternativ till en permanent operation.";
+    dragspel2SixtTip.innerHTML="Fillers är en populär kosmetisk behandling och kan hjälpa till att minska rynkor, förbättra ansiktskonturering och ge volym och fyllighet till olika områden på ansiktet.";
+
+    dragspel3Rubrik.innerHTML ="Hur långvarig är effekten?";
+
+    dragspel3FirstTip.innerHTML ="Effekten av fillers varierar beroende på vilken typ av filler som används och vilket område som behandlas.";
+    dragspel3SecondTip.innerHTML="Generellt kan effekten av fillers vara från sex månader upp till två år eller mer.";
+    dragspel3ThirdTip.innerHTML="Faktorer som kan påverka hur länge effekten varar inkluderar patientens ålder, livsstil och metabolism.";
+    dragspel3ForthTip.innerHTML="Fillers som innehåller högre koncentrationer av hyaluronsyra tenderar att vara mer hållbara än fillers med lägre koncentrationer.";
+    dragspel3FifthTip.innerHTML="För att bibehålla resultatet av behandlingen rekommenderas upprepade behandlingar med fillers.";
+    dragspel3SixtTip.innerHTML="Innan du genomgår en fillerbehandling är det viktigt att diskutera med din läkare eller kosmetiska injektionspecialist om hur länge du kan förvänta dig att effekten av behandlingen ska vara och om upprepade behandlingar är nödvändiga för att upprätthålla resultatet.";
 
   }
 
   else if (treatment === "Behandling mot dubbelhaka") 
   {
+
+    rubrik.innerHTML = "Behandling mot dubbelhaka";
+    informationOm.innerHTML = "Fillers"
+    miniRubrik.innerHTML = "Fillers på Ideal Clinic";
+    inledandeText.innerHTML = "Vilka områden kan behandlas med fillers? Fillers kan användas för att förbättra läpparna, kindbenen, och näsan, jämna ut nasolabialvecken och påsar under ögonen, definiera haka och käklinjen, och reducera fina linjer. De kan även användas för att återställa fyllighet och ungdomliga konturer i områden på ansiktet som har förlorat volym på grund av åldrande. Många väljer fillers framför kirurgi för att korrigera en krokig eller sned näsa eftersom de erbjuder en mer kostnadseffektiv och icke-invasiv alternativ. Resultat med fillers är ofta omedelbara, och kan hjälpa dig att uppnå ett ungdomligare och uppfriskat utseende.";
+    miniRubrik2.innerHTML ="Vad kan jag behandla med fillers?";
+    firststyckeText.innerHTML = "Vi på Ideal Clinic arbetar med bland annat Juvederm, som är det mest framstående märket av fillers som finns på marknaden. Dessa injiceras i valda delar av ansiktet för att fylla ut rynkor, nasolabialvecken, kindbenen, näsan, eller för att fylla ut läpparna. Behandlingen syftar till att strama upp, bygga volym, och göra ansiktet jämnare. Vi strävar alltid efter ett naturligt resultat som gör att du blir ännu vackrare och känner dig ännu mer nöjd med din hud och ditt utseende.";
+   
+    InfoCardPrice.innerHTML ="Från 2500kr";
+   
+    vissteduAtt.innerHTML = "Hyaluronsyra, som våra fillers består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
+    estimeradTidText.innerHTML ="30-40 Minuter";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     dragspel1Rubrik.innerHTML ="";
 
     dragspelFirstTip.innerHTML ="";
