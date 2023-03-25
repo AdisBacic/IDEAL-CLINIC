@@ -16,8 +16,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Ta bort nedan om det inte gör ngt */
-/* nedanstående gör de svårt */
+
 body{
   width: 100%;
 }
@@ -146,7 +145,6 @@ header h4{
   font-size: 1.3rem;
   font-weight: 800;
 
-  /*  */
 
   color:var(rgb(219, 210, 210));
   transition: 250ms;
@@ -308,7 +306,7 @@ i{
 /*#region Container Hemsidans första bild*/
 
 #carouselExampleInterval {
-  margin-top: 5%;
+  margin-top: 0%;
   width: 100%;
 }
 
@@ -321,7 +319,7 @@ i{
 .Liseberg
 {
   position: relative;
-  margin-top: 5%;
+  margin-top: 4%;
   width: 100%;
   height: auto;
 }
@@ -329,7 +327,7 @@ i{
 
 .text-div {
   position: absolute;
-  top: 30%;
+  top: 80%;
   left: 30%;
   transform: translate(-50%, -50%);
   font-size: 18px;
@@ -371,6 +369,10 @@ i{
   border: 0;
   font-size: 1.5vw; /* adjust as needed */
 }
+.a {
+  color: black;
+  text-decoration: none;
+}
 
 
 @media (max-width: 800px) {
@@ -382,6 +384,7 @@ i{
     transform: translate(-50%, -70%); /* center the button */
     font-size: 3vw; /* adjust as needed */
     padding: 5px 10px; /* adjust as needed */
+    text-decoration: none;
 
   }
 

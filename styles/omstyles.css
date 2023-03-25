@@ -1,0 +1,178 @@
+/* #region Intro */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Ta bort nedan om det inte gör ngt */
+  body{
+  width: 100%;
+  }
+  
+  header{
+  
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: fixed;
+  width:100%;
+  top:0;
+  padding: 2;
+  transition:250ms;
+  z-index:10;  
+  background-color:whitesmoke;
+  }
+  
+  header h4{
+  
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+  }
+  
+  #MainLogo
+  {
+  color:black;
+  }
+  
+  #MainLogo:hover
+  {
+  color:#616466;
+  font-size: 20px; 
+  }
+  /* #endregion*/
+  
+  
+  /*#region Nav*/
+  
+  
+  #bokaText{
+    color:darkgreen;
+  }
+  #bokaText:hover{
+    color:lightgreen;
+  }
+  
+  
+  .nav-links{
+  
+    position:absolute;
+    right:0;
+    top: 5vh;
+    width: 60%;
+    height:70vh;
+    background: rgb(217, 213, 213);
+  
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation:menu_animation 500ms
+    ease-in-out;
+  }
+  
+  
+  .show-navlinks{
+  
+    display: flex;
+  
+  }
+  
+  
+  @keyframes menu_animation{
+  
+    from{
+  
+      opacity:0;
+      tranform:translateX(100%);
+  
+    }
+  
+    to{
+      opacity:1;
+      tranform:translateX(0%);
+    }
+  
+  }
+  
+  
+  .logoNav{
+  
+  
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 800;
+  
+    /*  */
+  
+    color:var(rgb(219, 210, 210));
+    transition: 250ms;
+  }
+  
+  header ul li{
+  
+    list-style:none;
+    margin:20px 0;
+  
+  }
+  
+  header ul li a{
+  
+    text-decoration: none;
+    padding:10px 30px;
+    font-size:1rem;
+    color:var(--grey);
+    transition: 250ms; 
+  }
+  
+  header ul li a:hover{
+  
+    color:var(--blue-dark);
+  
+  }
+  
+  
+  
+  .hamburger-on{
+      background: url('../assets/hamburger.svg');
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;  
+      cursor:pointer;
+      transition:250ms ease-in-out;
+      
+  }
+  
+  
+  .hamburger-off{
+  
+    padding:9px;
+    background:url('../assets/xsolid.svg');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    width: 25px;
+    height: 25px;
+    cursor:pointer;
+    transition:250ms ease-in-out;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* För större skärm */
+
+  
+  /* #endregion */

@@ -343,29 +343,6 @@ if (treatment === "Hårborttagning") {
     estimeradTidText.innerHTML ="30-40 Minuter";
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     dragspel1Rubrik.innerHTML ="";
 
     dragspelFirstTip.innerHTML ="";
