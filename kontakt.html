@@ -1,12 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"rel="stylesheet"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmOss-IdealClinic</title>
+    <link rel="stylesheet" href="styles/omstyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <script src="./js/app.js" defer></script>
+    <script src="./js/behandlingar.js" defer></script>
+    <script src="./js/omoss.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-HZuXMlz/2k7CJ/6G9V7NlY6UjhKzlUuJ6GrdeVSKuLKglZK2QZuG1I9CB7VvSp6/mk+x6yIwDwzU6bRzKjSfrA==" crossorigin="anonymous" />
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-kmCEv+RdrnW8HpLUMjw28SwMkZENp90piASBcNlBz9XhjvDrcnz2yzawTmFTdGjimL80h+n3ndqgJrDtpxStlw==" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+      <header>
+        <a href="Index.html" id="MainLogo" class="logoNav">Ideal Clinic</a>
+        <div class="hamburger-on"></div>
+        <ul class="nav-links">
+          <li><a id="bokaText" href="https://www.bokadirekt.se/places/ideal-clinic-50596"> Boka </a></li>
+          <li><a href="index.html">Behandlingar </a></li>
+          <li><a href="priser.html">Priser </a></li>
+          <li><a href="omoss.html">Om oss </a></li>
+          <li><a href="kontakt.html">Kontakt </a></li>
+        </ul>
+      </header>
+
+      <div class="toast-container position-absolute top-0 end-0 p-3"></div>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast toast-bottom-center" id="toast-example" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <!-- <img src="" class="rounded me-2" alt="..."> -->
+            <strong class="me-auto">Vid frågor maila:</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Info@idealclinic.se
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="image-wrapper">
+        <img src="./images/sunasfixar.jpg" alt="Description of image">
+      </div>
+  
+
+
+      <div id="KontaktRubrik">
+        
+        <h2>Kontakt</h2>
+      
+      </div>
+      <section id="Info-Bot">
+
+        
+        <div class="container text-center">
+          <div class="row">
+           
+            <div class="col-lg-4 col-md-6 col-sm-12">
+
+              <div class="container">  
+                <form id="contact" action="https://formspree.io/sinedragi@outlook.com" method="post">
+                  <h3>Kontaktforumlär</h3>
+                  <h4>Skriv idag, få svar inom 24 timmar!</h4>
+                  <fieldset>
+                    <input name="name" placeholder="Namn" type="text" tabindex="1" required autofocus>
+                  </fieldset>
+                  <fieldset>
+                    <input name="email" placeholder="Email" type="email" tabindex="2" required>
+                  </fieldset>
+                  <fieldset>
+                    <input name="phone" placeholder="Telefon" type="tel" tabindex="3" required>
+                  </fieldset>
+                  <fieldset>
+                    <textarea name="message" placeholder="Skriv ditt meddelande..." tabindex="5" required></textarea>
+                  </fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Skickar">Skicka</button>
+                  </fieldset>
+                </form> 
+              </div>
+             </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <h5 class="text-center">PLATS:</h5>
+              <iframe 
+                src="https://maps.google.com/maps?q=Smedjegatan%207,%20722%2013%20V%C3%A4ster%C3%A5s&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                width="500" 
+                id="gogomaps" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+  
+           
+           <div class="col-lg-4 col-md-6 col-sm-12" id ="infocol">
+            <h5 class="text-center">KONTAKT INFO:</h5>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="fw-bold">Adress:</span> Smedjegatan 7
+                722 13 Västerås
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Mobil:</span> 010-333-3553
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Email:</span> Info@idealclinic.se
+              </li>
+            </ul>
+            <h5 class="text-center">ÖPPETTIDER:</h5>
+            <ul class="list-group" class = "text-center">
+              <li class="list-group-item">Måndag: 08:00–19:00</li>
+              <li class="list-group-item">Tisdag: 08:00–19:00</li>
+              <li class="list-group-item">Onsdag: 08:00–19:00</li>
+              <li class="list-group-item">Torsdag: 08:00–19:00</li>
+              <li class="list-group-item">Fredag: 08:00–19:00</li>
+              <li class="list-group-item">Helg: Varierande</li>
+            </ul>
+          </div>
+
+          </div>
+        </div>
+      </section>
+      
+
+
+
+     
+
+
+
+      <script>
+        window.addEventListener("DOMContentLoaded", function() {
+      
+          // get the form element
+          var form = document.getElementById("contact");
+      
+          // set up an event listener for the form submission
+          form.addEventListener("submit", function(event) {
+            event.preventDefault(); // prevent the form from submitting normally
+      
+            // submit the form via Formspree
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", form.action);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.onreadystatechange = function() {
+              if (xhr.readyState !== XMLHttpRequest.DONE) return;
+              if (xhr.status === 200) {
+                form.reset();
+                alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.");
+              } else {
+                alert("Det uppstod ett fel. Vänligen försök igen senare.");
+              }
+            };
+            xhr.send(new FormData(form));
+          });
+        });
+      </script>
+
+    <footer class="bg-dark text-white-50 text-start"> 
+        &copy; 2023 Ideal Clinic | All rights reserved. 
+      </footer>
+
+    <!--Boostrap animation länk -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+
+
 </body>
 </html>

@@ -229,7 +229,7 @@ header h4{
 /* #region css utförs i sekvens med start från topp. DETTA ÄR HUVUDINNEHÅLL FÖR BEHANDLINGSSIDANS CSS*/
 #behandlingsRubrik
 {
-  text-align: center;
+  margin-left: 5%;
   padding-top: 20px;
 }
 
@@ -393,7 +393,45 @@ header h4{
 #shortAbout
 {
     margin-left: 0%;
+} 
+#shortAboutDol
+{
+  padding-left: 10%;
 }
+
+
+/* Mobile */
+
+
+
+@media (max-width: 800px) 
+{
+
+
+  #shortAboutDol
+  {
+
+    padding-left: 5%;
+
+  }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
 
 
 #shortSection
@@ -468,10 +506,18 @@ padding-bottom: 50px;
 }
 
 
+
+
+
+
 .accordion{
   padding-bottom: 50px;
-  width: 100%;
+  width: 70%;
+  margin-left: 17%;
 }
+
+
+
 
 .accordion-button:not(.collapsed){
   color:inherit;
@@ -479,6 +525,8 @@ padding-bottom: 50px;
   color: aliceblue;
   text-decoration: none;
 }
+
+
 
 
 #bokaSneaky
