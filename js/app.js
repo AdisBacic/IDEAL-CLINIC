@@ -1,35 +1,39 @@
-let intro = document.querySelector(".intro");
-let logo = document.querySelector(".logo-header");
-let logoSpan = document.querySelectorAll(".logo");
+const intro = document.querySelector(".intro");
+const logo = document.querySelector(".logo-header");
+const logoSpan = document.querySelectorAll(".logo");
+
+const expirationTime = 30 * 1000; // 5 min
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (!localStorage.getItem("introShown")) {
+  const introShownTimestamp = localStorage.getItem("introShownTimestamp");
+  const currentTime = new Date().getTime();
+
+  if (!introShownTimestamp || currentTime - introShownTimestamp > expirationTime) {
+    logoSpan.forEach((span, idx) => {
+      setTimeout(() => {
+        span.classList.add("active");
+      }, (idx + 1) * 400);
+    });
+
     setTimeout(() => {
       logoSpan.forEach((span, idx) => {
         setTimeout(() => {
-          span.classList.add("active");
-        }, (idx + 1) * 400);
+          span.classList.remove("active");
+          span.classList.add("fade");
+        }, (idx + 1) * 50);
       });
+    }, 2000);
 
-      setTimeout(() => {
-        logoSpan.forEach((span, idx) => {
-          setTimeout(() => {
-            span.classList.remove("active");
-            span.classList.add("fade");
-          }, (idx + 1) * 50);
-        });
-      }, 2000);
+    setTimeout(() => {
+      intro.style.top = "-100vh";
+    }, 2300);
 
-      setTimeout(() => {
-        intro.style.top = "-100vh";
-      }, 2300);
-
-      localStorage.setItem("introShown", true);
-    }, 1000);
+    localStorage.setItem("introShownTimestamp", currentTime);
   } else {
     intro.style.display = "none";
   }
 });
+
 
 
 //Toaster för start!
