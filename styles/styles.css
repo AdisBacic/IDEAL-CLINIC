@@ -456,6 +456,26 @@ i{
     width: 100%;
   }
 
+
+
+
+@media (max-width: 800px) 
+{
+  #behandlingsrowOne
+  {
+    margin-left: 1%;
+
+  } 
+  #behandlingsrowTwo
+  {
+    margin-left: 1%;
+
+  } 
+  }
+
+
+
+
   .behandlingsvarde{
     font-size:22px;
 
@@ -565,6 +585,31 @@ i{
     width: 50%;
   }
 
+  
+
+
+  #Info-Bot{
+    width: 100%;
+  }
+
+  #gogoCol
+  {
+    text-align: center;
+  }
+
+
+  #gogomaps{
+
+    width: auto;
+    height: auto;
+    
+  }
+
+  .list-group{font-size: 20px;}
+ 
+
+
+
   @media (max-width: 600px) {
 
 
@@ -587,30 +632,14 @@ i{
     }
 
 
+
+    #Info-Bot
+    {
+      margin-left: 3%;
+    }
+
+
   }
-
-
-  #Info-Bot{
-    width: 100%;
-    
-  }
-
-  #gogoCol
-  {
-    text-align: center;
-  }
-
-
-  #gogomaps{
-
-    width: auto;
-    height: auto;
-    
-  }
-
-  .list-group{font-size: 20px;}
- 
-
 
 
   /* #endregion */
