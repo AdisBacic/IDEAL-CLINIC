@@ -57,6 +57,10 @@ let dragspel3SixtTip = document.querySelector("#dragspel3SixtTip");
 
 if (treatment === "Hårborttagning") {
     // Display content specific to Hårborttagning
+
+    //STATUS: ONGOING.
+
+
     rubrik.innerHTML =  "Hårborttagning";
     informationOm.innerHTML ="Hårborttagning";
     miniRubrik.innerHTML = "Hårborttagning på Ideal Clinic";
@@ -67,33 +71,93 @@ if (treatment === "Hårborttagning") {
     vissteduAtt.innerHTML = "Behandlingen utförs med marknadsledande Sapphire diodlaser för en skonsam och effektiv hårborttagning";
     estimeradTidText.innerHTML ="10-150 minuter";
 
+
     
-    dragspel1Rubrik.innerHTML ="Vad ska man tänka på före behandlingen?";
+    // Får du raka håret före behandlingen?
+    dragspel1Rubrik.innerHTML = "Får du raka håret före behandlingen?";
+    dragspelFirstTip.innerHTML = "Ja, du bör raka håret 1-2 dagar innan du gör en hårborttagning med diodlaser. Däremot bör du inte plocka bort hårstråna med pincett eller dra ut dem med tråd eller liknande, eftersom själva hårroten måste finnas kvar inne i huden för att behandlingen ska fungera. Kvinnor bör inte raka sitt ansikte inför en behandling.";
 
-    dragspelFirstTip.innerHTML ="Undvik att sola en vecka före och en vecka efter en laserbehandling med Sapphire.";
-    dragspelSecondTip.innerHTML="Detta minskar risken för pigmentering i efterförloppet avsevärt.";
-    dragspelThirdTip.innerHTML="Undvik att plocka eller rycka bort dina hårstrån 4 veckor före behandlingen.";
-    dragspelForthTip.innerHTML="Var slätrakad 1-2 dagar innan behandlingen.";
-    dragspelFifthTip.innerHTML="Sola inte en vecka före eller efter behandlingen.";
-    dragspelSixtTip.innerHTML="Undvik att plocka eller rycka bort dina hårstrån 4 veckor före behandlingen, men var slätrakad 1-2 dagar innan behandlingen.";
+    // Kan alla hårstrån behandlas?
+    dragspel2Rubrik.innerHTML = "Kan alla hårstrån behandlas?";
+    dragspelSecondTip.innerHTML = "Nej, hårborttagning fungerar inte på ljusa eller väldigt tunna hårstrån. Vid en konsultation kan vi bedöma om behandlingen fungerar för dig. Vid osäkra fall kan du också göra en liten provbehandling.";
 
-    dragspel2Rubrik.innerHTML ="Kan alla hårstrån behandlas? ";
+    // Kan alla göra permanent hårborttagning?
+    dragspel3Rubrik.innerHTML = "Kan alla göra permanent hårborttagning?";
+    dragspelThirdTip.innerHTML = "Nej, om du har mörk hud eller är väldigt solbränd kan du inte göra hårborttagning. En tumregel är att det ska vara en tydlig färgskillnad mellan hårstråna som du vill ta bort och den omgivande huden.";
 
-    dragspel2FirstTip.innerHTML ="Hårborttagning fungerar inte på ljusa eller väldigt tunna hårstrån.";
-    dragspel2SecondTip.innerHTML="Vid en konsultation kan vi bedöma om behandlingen fungerar för dig.";
-    dragspel2ThirdTip.innerHTML="Vid osäkra fall kan en liten provbehandling utföras.";
-    dragspel2ForthTip.innerHTML="Hårborttagning är inte lämplig för personer med mörk hud eller som är väldigt solbrända.";
-    dragspel2FifthTip.innerHTML="En tumregel är att det ska vara en tydlig färgskillnad mellan hårstråna som man vill ta bort och den omgivande huden.";
-    dragspel2SixtTip.innerHTML="Vid en konsultation kan vi avgöra om det finns tillräcklig färgskillnad mellan hårstråna och omgivande hud för att behandlingen ska vara effektiv.";
+    // Hur många behandlingar behövs?
+    dragspel4Rubrik.innerHTML = "Hur många behandlingar behövs?";
+    dragspelForthTip.innerHTML = "Alla hårsäckar har inte hårstrå i sig. Man säger att de har olika växtfaser, de som har hårstrå är i växtfas, de som saknar hårstrå ligger i vilofas. Det är bara 20-30% av alla hårstrån som är i växtfas samtidigt. Ljuset påverkar bara hårsäcken när den är i växtfas, därför behövs det mer än en behandling.";
 
-    dragspel3Rubrik.innerHTML ="Är resultatet permanent?";
+    // Vi behandlar många olika områden på kroppen
+    dragspel5Rubrik.innerHTML = "Vi behandlar många olika områden på kroppen";
+    dragspelFifthTip.innerHTML = "Vi behandlar många olika områden på kroppen, till exempel ansikte, armhålor, bikinilinje, ben och rygg på både kvinnor och män. Ja, i stort sett hela kroppen kan behandlas. Ljuset passerar genom huden till hårsäcken där hårroten förstörs. Behandlingen tar säkerligen bort hundratals hårstrån på bara någon sekund.";
 
-    dragspel3FirstTip.innerHTML ="Antalet behandlingar som krävs kan variera beroende på området som behandlas och den individuella hårväxten.";
-    dragspel3SecondTip.innerHTML="Efter 8-10 behandlingar kan man vanligtvis förvänta sig att den mesta hårväxten på ett område har försvunnit.";
-    dragspel3ThirdTip.innerHTML="Behandlingar för att ta bort oönskad hårväxt har utförts i över 25 år. Under denna långa tid har det i extremt få fall sett hårväxten komma tillbaka. För att kallas permanent måste en förändring enligt medicinsk terminologi kunna observeras i minst 30 år, och så länge har inte laserborttagning av hår utförts i världen. Men många kallar oftast laserborttagning av hår för permanent eftersom man har sett att hårväxten inte har återkommit under en så lång tid.";
-    dragspel3ForthTip.innerHTML="Jämfört med andra hårborttagningsmetoder som rakning, vaxning och plockning av hårstrån, är laserborttagning av hår i allmänhet permanent.";
-    dragspel3FifthTip.innerHTML="Innan behandling med diodlaser bör man inte vaxa eller plocka hårstrån, men man kan raka eller klippa håret kort där det behövs.";
-    dragspel3SixtTip.innerHTML="Efter behandling kan det vara bra att undvika exponering för solen och att använda solskyddskräm på området för att skydda huden.";
+    // Hur lång tid tar behandlingen?
+    dragspel6Rubrik.innerHTML = "Hur lång tid tar behandlingen?";
+    dragspelSixtTip.innerHTML = "Stora ytor som armar och ben kan behandlas snabbt. Hela ben eller armar behandlas på 30-60 minuter. Ansiktsregionen som överläpp och haka behandlas på bara ett par minuter.";
+
+    // Försvinner alla hårstrån direkt?
+    dragspel7Rubrik.innerHTML = "Försvinner alla hårstrån direkt?";
+    dragspelSeventhTip.innerHTML = "En del hårstrån faller bort direkt, en del hårstrån faller bort under de kommande veckorna. Du bör inte vaxa eller plocka hårstrån före behandling med diodlaser. Däremot kan du raka eller klippa ner hårstråna så att de är korta där du har hårväxt. Efter 8-10 behandlingar är du oftast av med den mesta hårväxten på ett område.";
+
+    // Vilka typer av hår kan behandlas?
+    dragspel8Rubrik.innerHTML = "Vilka typer av hår kan behandlas?";
+    dragspelEighthTip.innerHTML = "Hårborttagning fungerar på alla hårstrån som är mörka och innehåller pigment så länge huden inte är för mörk. Du bör inte vara alltför solbränd vid hårborttagning och det finns en rad läkemedel som du inte får ta när du gör behandling med diodlaser. Vita hårstrån går oftast inte att ta bort.";
+
+    // Hygien?
+    dragspel9Rubrik.innerHTML = "Hygien?";
+    dragspelNinthTip.innerHTML = "Viktigt att du är nyduschad och fräsch inför din behandling.";
+
+    // Behandlar ni alla delar på kroppen?
+    dragspel10Rubrik.innerHTML = "Behandlar ni alla delar på kroppen?";
+    dragspelTenthTip.innerHTML = "Vi behandlar i stort sett hela kroppen med vissa undantag där det kan finnas slemhinnor.";
+
+    // Vilka maskiner använder ni vid hårborttagning?
+    dragspel11Rubrik.innerHTML = "Vilka maskiner använder ni vid hårborttagning?";
+    dragspelEleventhTip.innerHTML = "Vi använder Sapphire diodlaser vid behandling. Sapphire är den senaste lasertekniken och är marknadens kraftfullaste lasermaskin med 2400W och ger mellan 10Hz-15Hz per sekund i uteffekt vilken ingen annan diodlaser når upp till. Det är också det som avgör hur många behandlingar du behöver göra. Stora ytor kan behandlas snabbt och skonsamt vilket innebär att du får en effektiv och snabb behandling med mycket goda dokumenterade resultat.";
+
+    // Hur ofta ska behandlingarna ske?
+    dragspel12Rubrik.innerHTML = "Hur ofta ska behandlingarna ske?";
+    dragspelTwelfthTip.innerHTML = "Vanligtvis sker behandlingarna med 1-2 månaders mellanrum, beroende på lokalisation och hur snabb hårväxt du har, vilket är individuellt och dessutom helt beroende på vilken del på kroppen det gäller. I armhålor, bikinilinje och underben samt ansikte så kommer håret tillbaka fortare än på andra ställen. En del patienter har så snabb och intensiv hårväxt att du kan göra behandling var tredje vecka, hos andra kan ett intervall på 6-8 veckor vara bäst. Det är dags att behandla igen när du upplever att tillräckligt med nya hårstrån kommit upp igen. Har du bara fått ett litet antal nya hårstrån är det bättre att vänta något.";
+
+    // Vilken effekt får jag av behandlingen?
+    dragspel13Rubrik.innerHTML = "Vilken effekt får jag av behandlingen?";
+    dragspelThirteenthTip.innerHTML = "Hur många behandlingar som krävs är beroende av en mängd faktorer såsom färg på hårstrån (mörka hår svarar bättre än ljusa och grå), hudfärg (ljusare hud är lättare att behandla än mörkare hud), grovlek på hårstrån (tjockare hårstrån är lättare att behandla än tunna). Tidigare behandling med plockning och kan påverka behandlingsresultatet.";
+
+    // Gör det ont?
+    dragspel14Rubrik.innerHTML = "Gör det ont?";
+    dragspelFourteenthTip.innerHTML = "Ljuset kommer i snabba impulser så att du bara känner att det hettar till i huden. Det är en stickande känsla men inte så att det gör ont, även om vissa områden kan vara känsligare än andra.";
+
+    // Är resultatet permanent?
+    dragspel15Rubrik.innerHTML = "Är resultatet permanent?";
+    dragspelFifteenthTip.innerHTML = "Behandlingar för att ta bort oönskad hårväxt har utförts i över 25 år. Under denna långa tid har det i extremt få fall sett hårväxten komma tillbaka. För att kallas permanent måste en förändring enligt medicinsk terminologi kunna observeras i minst 30 år, och så länge har inte laserborttagning av hår utförts i världen. Men många kallar oftast laserborttagning av hår för permanent eftersom man har sett att hårväxten inte har återkommit under en så lång tid. Särskilt om man jämför med andra behandlingar som rakning, vaxning och plockning av hårstrån är laserborttagning av hår permanent.";
+
+    // Vilka komplikationer kan du få?
+    dragspel16Rubrik.innerHTML = "Vilka komplikationer kan du få?";
+    dragspelSixteenthTip.innerHTML = "Komplikationer är mycket sällsynta. Rodnad, blåsor och lätt klåda kan ibland uppstå, men brukar försvinna inom några dagar. I sällsynta fall kan huden tillfälligt bli ljusare eller mörkare (hyperpigmenterad). Denna hyperpigmentering uppstår hos mindre än 1% av våra kunder och är tillfällig och försvinner efter en eller några månader.";
+
+    // Vad ska du tänka på före behandlingen?
+    dragspel17Rubrik.innerHTML = "Vad ska du tänka på före behandlingen?";
+    dragspelSeventeenthTip.innerHTML = "Du ska inte sola 1 vecka innan och 1 vecka efter en laserbehandling med Sapphire diodlaser. Vid behandling i ansiktet bör du ha några dagars skäggväxt så att håren syns. Du ska inte använda solningsspray eller brun utan sol krämer innan din behandling. Du ska inte använda starka kortisonkrämer före eller efter behandlingen. Om du har brännmärken, skrubbsår eller blåsor i det område du vill behandla kan vi inte behandla där.";
+
+    // Vad ska du tänka på efter behandlingen?
+    dragspel18Rubrik.innerHTML = "Vad ska du tänka på efter behandlingen?";
+    dragspelEighteenthTip.innerHTML = "Du ska undvika att sola och använda solarium, inte vara i starkt solljus eller i varmt vatten, bada i pool eller hav samt träna på 48 timmar efter behandlingen. Du ska också undvika starka krämer och smink. Du ska skydda behandlingsområdet mot sol genom att använda solskyddskräm med minst faktor 30.";
+
+    // Kan man ta sol innan behandling?
+    dragspel19Rubrik.innerHTML = "Kan man ta sol innan behandling?";
+    dragspelNineteenthTip.innerHTML = "Nej, du bör inte sola 1 vecka innan behandlingen med diodlaser. Eftersom huden inte får vara solbränd och det ska vara en tydlig färgskillnad mellan hårstråna och huden.";
+
+    // Kan man träna efter behandlingen?
+    dragspel20Rubrik.innerHTML = "Kan man träna efter behandlingen?";
+    dragspelTwentiethTip.innerHTML = "Vi rekommenderar att du undviker träning och andra aktiviteter som gör att du svettas i 48 timmar efter behandlingen. Svettning kan irritera huden och eventuellt orsaka infektioner.";
+
+    // Hur länge varar behandlingseffekten?
+    dragspel21Rubrik.innerHTML = "Hur länge varar behandlingseffekten?";
+    dragspelTwentyFirstTip.innerHTML = "Efter att du har genomgått hela behandlingsprogrammet så kan håret vara borta för alltid. Men om du har hormonell obalans eller kroppen förändras av någon annan anledning så kan nya hårsäckar bildas. Därför kan man behöva göra någon enstaka behandling igen efter några år.";
+
+
 
     
 
@@ -374,32 +438,21 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Skinbooster") 
   {
-    dragspel1Rubrik.innerHTML ="";
+    
+    rubrik.innerHTML = "Skinbooster";
+    informationOm.innerHTML = "Skinbooster"
+    miniRubrik.innerHTML = "Skinbooster på Ideal Clinic";
+    inledandeText.innerHTML = "Vilka områden kan behandlas med Skinbooster? Fillers kan användas för att förbättra läpparna, kindbenen, och näsan, jämna ut nasolabialvecken och påsar under ögonen, definiera haka och käklinjen, och reducera fina linjer. De kan även användas för att återställa fyllighet och ungdomliga konturer i områden på ansiktet som har förlorat volym på grund av åldrande. Många väljer fillers framför kirurgi för att korrigera en krokig eller sned näsa eftersom de erbjuder en mer kostnadseffektiv och icke-invasiv alternativ. Resultat med fillers är ofta omedelbara, och kan hjälpa dig att uppnå ett ungdomligare och uppfriskat utseende.";
+    miniRubrik2.innerHTML ="Vad kan jag behandla med fillers?";
+    firststyckeText.innerHTML = "Vi på Ideal Clinic arbetar med bland annat Juvederm, som är det mest framstående märket av fillers som finns på marknaden. Dessa injiceras i valda delar av ansiktet för att fylla ut rynkor, nasolabialvecken, kindbenen, näsan, eller för att fylla ut läpparna. Behandlingen syftar till att strama upp, bygga volym, och göra ansiktet jämnare. Vi strävar alltid efter ett naturligt resultat som gör att du blir ännu vackrare och känner dig ännu mer nöjd med din hud och ditt utseende.";
+   
+    InfoCardPrice.innerHTML ="Från 200kr";
+   
+    vissteduAtt.innerHTML = "Hyaluronsyra, som våra skinboosters består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
+    estimeradTidText.innerHTML ="30-40 Minuter";
 
-    dragspelFirstTip.innerHTML ="";
-    dragspelSecondTip.innerHTML="";
-    dragspelThirdTip.innerHTML="";
-    dragspelForthTip.innerHTML="";
-    dragspelFifthTip.innerHTML="";
-    dragspelSixtTip.innerHTML="";
 
-    dragspel2Rubrik.innerHTML ="";
-
-    dragspel2FirstTip.innerHTML ="";
-    dragspel2SecondTip.innerHTML="";
-    dragspel2ThirdTip.innerHTML="";
-    dragspel2ForthTip.innerHTML="";
-    dragspel2FifthTip.innerHTML="";
-    dragspel2SixtTip.innerHTML="";
-
-    dragspel3Rubrik.innerHTML ="";
-
-    dragspel3FirstTip.innerHTML ="";
-    dragspel3SecondTip.innerHTML="";
-    dragspel3ThirdTip.innerHTML="";
-    dragspel3ForthTip.innerHTML="";
-    dragspel3FifthTip.innerHTML="";
-    dragspel3SixtTip.innerHTML="";
+  
 
   }
   else if (treatment === "Retinol peelin") 
