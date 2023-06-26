@@ -246,19 +246,14 @@ header h4{
     top: 85%;
   }
 
-#niceHair
-  {
-    margin-top: 2%;
-    width: 100%;
-    height: 60%;
-    background-color:rgb(234,233,239,255);
-  }
 
-#hairPic {
-  width: auto;
-  margin-left: 45%;
-  height:60vh;
-}
+  #hairPic {
+    width: 100vw;;
+    height: 50vh;
+    object-fit: cover;
+  }
+  
+  
 
 #behandlingMainInfo
 {
@@ -285,6 +280,14 @@ header h4{
 }
 
 
+@media (min-width: 769px) {
+  #textDiv {
+    font-size: 18px;
+
+  }
+}
+
+
 /* MobileDevice mode below */
 
 @media (max-width: 800px) {
@@ -294,13 +297,7 @@ header h4{
     height: 100%;
     margin-left: 0%;
   }
-  #niceHair
-  {
-    margin-top: 8%;
-    width: 90%;
-    text-align: center;
 
-  }
 
   #behandlingsRubrik
   {
@@ -396,27 +393,9 @@ header h4{
 {
     margin-left: 0%;
 } 
-#shortAboutDol
-{
-  padding-left: 10%;
-}
-
-
-/* Mobile */
 
 
 
-@media (max-width: 800px) 
-{
-
-
-  #shortAboutDol
-  {
-
-    padding-left: 5%;
-
-  }
-}
 
 
 
@@ -452,38 +431,36 @@ header h4{
 /* #region Informationsbilder funnnyimage från lifetime */
 
 
-.row
-{
-width: 100%;
-padding-bottom: 50px;
+.row {
+  width: 100%;
+  padding-bottom: 50px;
 }
 
-.funnyImage
-{
-
+.funnyImage {
   width: 20%;
   height: auto;
-
-
 }
-.funnyImageTextDiv{
+
+.funnyImageTextDiv {
   margin-top: 10%;
   text-align: center;
 }
 
-#konsultationstext
-{
-
+#konsultationstext {
   margin-left: 2%;
 }
 
-
-
-.funnyimageText
-{
-
+.funnyimageText {
   font-size: 14px;
 }
+
+/* Media query for big screens */
+@media only screen and (min-width: 1200px) {
+  .funnyImage {
+    width: 10%; /* Adjust the width to your desired size for big screens */
+  }
+}
+
 
 
 #avbokningsBtn

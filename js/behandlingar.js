@@ -11,6 +11,8 @@ for (var i = 0; i < behandlingsvardeElements.length; i++) {
 var params = new URLSearchParams(window.location.search);
 var treatment = params.get("treatment");
 
+var hairPic = document.getElementById('hairPic');
+
 
 let rubrik = document.querySelector("#behandlingsRubrik");
 let miniRubrik = document.querySelector("#miniRubrik");
@@ -26,13 +28,11 @@ let miniRubrik5 = document.querySelector("#miniRubrik5");
 let fourthstyckeText = document.querySelector("#fourthstyckeText");
 
 let informationOm = document.querySelector("#informationOm");
-
 let InfoCardPrice = document.querySelector("#InfoCardPrice");
-
 let vissteduAtt = document.querySelector("#vissteduAtt");
 let estimeradTidText = document.querySelector("#EstimeradTidText");
 
-
+//#region Accordion
 let dragspel1Rubrik = document.querySelector("#dragspel1Rubrik");
 let dragspelFirstTip = document.querySelector("#dragspelFirstTip");
 
@@ -105,14 +105,16 @@ let dragspel20FirstTip = document.querySelector("#dragspel20FirstTip");
 let dragspel21Rubrik = document.querySelector("#dragspel21Rubrik");
 let dragspel21FirstTip = document.querySelector("#dragspel21FirstTip");
 
-
+//#endregion
 
 
 
 if (treatment === "Hårborttagning") {
     // Display content specific to Hårborttagning
 
-    //STATUS: Complete
+    hairPic.src = './images/Laser.png';
+
+
 
     rubrik.innerHTML =  "Hårborttagning";
     informationOm.innerHTML ="Hårborttagning";
@@ -217,6 +219,9 @@ if (treatment === "Hårborttagning") {
     // Display content specific to Svettbehandling
     // STATUS: Completed
 
+
+    hairPic.src = './images/Laser.png';
+
     rubrik.innerHTML =  "Svettbehandling";
     informationOm.innerHTML = "Svettbehandling"
     miniRubrik.innerHTML = "Svettbehandling på Ideal Clinic";
@@ -263,6 +268,9 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Ärrbehandling") 
   {
     //Status: Completed *Not tested*
+
+    hairPic.src = './images/Micro needling klar.jpg';
+
 
     rubrik.innerHTML = "Ärrbehandling";
     informationOm.innerHTML = "Ärrbehandling"
