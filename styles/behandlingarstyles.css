@@ -271,6 +271,11 @@ header h4{
   font-size: 18px;
 }
 
+#miniRubrik5{
+  font-size: 18px;
+  margin-bottom: 2%;
+}
+
 #textDiv{
    font-size: 14px;
 }
@@ -382,7 +387,7 @@ header h4{
 
 #blueText
 {
-  color:#616466;
+  color:#000000;
 }
 
 #shortAbout

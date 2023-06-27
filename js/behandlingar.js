@@ -13,6 +13,9 @@ var treatment = params.get("treatment");
 
 var hairPic = document.getElementById('hairPic');
 
+var toastBody = document.querySelector('.toast-body');
+
+
 
 let rubrik = document.querySelector("#behandlingsRubrik");
 let miniRubrik = document.querySelector("#miniRubrik");
@@ -114,6 +117,7 @@ if (treatment === "Hårborttagning") {
 
     hairPic.src = './images/Laser.png';
 
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
 
     rubrik.innerHTML =  "Hårborttagning";
@@ -216,8 +220,8 @@ if (treatment === "Hårborttagning") {
   }
    
   else if (treatment === "Svettbehandling") {
-    // Display content specific to Svettbehandling
-    // STATUS: Completed
+  
+    toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling";
 
 
     hairPic.src = './images/Laser.png';
@@ -270,6 +274,8 @@ if (treatment === "Hårborttagning") {
     //Status: Completed *Not tested*
 
     hairPic.src = './images/Micro needling klar.jpg';
+
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
 
     rubrik.innerHTML = "Ärrbehandling";
@@ -326,6 +332,8 @@ if (treatment === "Hårborttagning") {
   {
     //Status: Completed *Not tested*
 
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
+
     rubrik.innerHTML = "Hudbristning";
     informationOm.innerHTML = "Hudbristning"
     miniRubrik.innerHTML = "Retinol Peeling (Hudbristning) på Ideal Clinic";
@@ -376,7 +384,7 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Profhilo") 
   {
-    //Status: Completed *Not tested*
+    toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "Profhilo";
     informationOm.innerHTML = "Profhilo"
@@ -430,7 +438,9 @@ if (treatment === "Hårborttagning") {
   }
   else if (treatment === "Filler") 
   {
-    //Status: Completed *Not tested*
+
+    toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
+
 
     rubrik.innerHTML = "Fillers";
     informationOm.innerHTML = "Fillers"
@@ -481,7 +491,7 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Behandling mot dubbelhaka") 
   {
-    //Status: Completed *Not tested*
+    toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "Belkyra";
     informationOm.innerHTML = "Behandling mot dubbelhaka";
@@ -536,8 +546,9 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Skinbooster") 
   {
-    //Status: Completed *Not tested*
-    
+
+    toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
+
     rubrik.innerHTML = "Skinbooster";
     informationOm.innerHTML = "Skinbooster"
     miniRubrik.innerHTML = "Skinbooster på Ideal Clinic";
@@ -590,6 +601,10 @@ if (treatment === "Hårborttagning") {
   {
     //Status: Completed *Not tested* Kolla struktur o infofördelning m Elias!
     
+
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
+
+
     rubrik.innerHTML = "Retinol peeling";
     informationOm.innerHTML = "Retinol peeling";
     miniRubrik.innerHTML = "Retinol Peeling på Ideal Clinic";
@@ -644,7 +659,7 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "MicroTox") 
   {
 
-    //Status Complete
+    toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "MicroTox";
     informationOm.innerHTML = "MicroTox";
@@ -691,7 +706,9 @@ if (treatment === "Hårborttagning") {
   }
   else if (treatment === "PRX-T33") 
   {
-    //Status Complete 
+
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
+
     rubrik.innerHTML = "PRX-T33";
     informationOm.innerHTML = "PRX-T33";
     miniRubrik.innerHTML = "PRX-T33: En revolutionerande behandling";
@@ -774,6 +791,8 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Klassisk ansiktsbehandling") 
   {
  
+
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "Klassisk ansiktsbehandling";
     informationOm.innerHTML = "Klassisk ansiktsbehandling";
@@ -863,6 +882,8 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Rynkbehandling Botox") 
   {
+    toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
+
     rubrik.innerHTML = "Rynkbehandling Botox";
     informationOm.innerHTML = "Rynkbehandling Botox";
     miniRubrik.innerHTML = "Rynkbehandling på Ideal Clinic";
@@ -873,15 +894,15 @@ if (treatment === "Hårborttagning") {
     estimeradTidText.innerHTML ="30-40 Minuter";
 
         // Hållbarhet:
-    dragspel1Rubrik.innerHTML = "Hållbarhet:";
+    dragspel1Rubrik.innerHTML = "Hållbarhet";
     dragspelFirstTip.innerHTML = "Behandlingen innebär att en liten mängd av det aktiva ämnet injiceras i den underliggande mimikmuskulaturen i det område som ska behandlas. Behandlingen är snabb och nästan helt smärtfri. Resultaten syns ofta redan efter ett par dagar och håller i sig i upp till 4-6 månader.";
 
     // Alltid rätt till efterkontroll:
-    dragspel2Rubrik.innerHTML = "Alltid rätt till efterkontroll:";
+    dragspel2Rubrik.innerHTML = "Alltid rätt till efterkontroll";
     dragspel2FirstTip.innerHTML = "Efter utförd behandling har du rätt till en kostnadsfri touch-up inom 12-18 dagar där du tillsammans med behandlaren går igenom vad som har gjorts och följer upp med eventuella korrigeringar.";
 
     // Att tänka på inför din behandling:
-    dragspel3Rubrik.innerHTML = "Att tänka på inför din behandling:";
+    dragspel3Rubrik.innerHTML = "Att tänka på inför din behandling";
     dragspel3FirstTip.innerHTML = "Du ska inte ha någon infektion eller feber eller känna dig sjuk.";
 
     var newTip = document.createElement("li");
@@ -911,7 +932,7 @@ if (treatment === "Hårborttagning") {
 
 
     // Att tänka på efter din behandling:
-    dragspel4Rubrik.innerHTML = "Att tänka på efter din behandling:";
+    dragspel4Rubrik.innerHTML = "Att tänka på efter din behandling";
     dragspel4FirstTip.innerHTML = "Behandlingsresultatet kan tidigast börja ses efter ca 3-4 dagar och varar generellt upp till 3-6 månader.";
 
     var newTip7 = document.createElement("li");
@@ -946,6 +967,7 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Microneedling") 
   {
+
     rubrik.innerHTML = "Microneedling";
     informationOm.innerHTML = "Microneedling";
     miniRubrik.innerHTML = "Microneedling på Ideal Clinic";
@@ -965,7 +987,7 @@ dragspel1Rubrik.innerHTML = "Vad är microneedling?";
 dragspelFirstTip.innerHTML = "Microneedling är en hudföryngringsteknik där en microneedling-penna med mikronålar används för att skapa mikrokanaler i huden. Detta startar en läkningsprocess som leder till bildning av nytt kollagen och elastin. Nåltätheten och diametern på nålarna gör att behandlingen blir skonsam och ger en god penetration.";
 
 // Vid behandling av acneärr görs ofta 3-5 behandlingar med 4 veckors mellanrum...
-dragspel2Rubrik.innerHTML = "Vid behandling av acneärr...";
+dragspel2Rubrik.innerHTML = "Vid behandling av acneärr";
 dragspel2FirstTip.innerHTML = "Vid behandling av acneärr görs ofta 3-5 behandlingar med 4 veckors mellanrum, vilket ger kraftfulla resultat med ett minimum av konvalescens. Första dagarna kan du ha lätt rodnad och/eller svullnad, men man brukar bara behöva vara hemma under behandlingsdagen.";
 
 // Vilka områden kan behandlas?
@@ -1004,18 +1026,17 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
   }
   else if (treatment === "Kemisk peeling") 
   {
+
     rubrik.innerHTML = "Kemisk peeling";
     informationOm.innerHTML = "Kemisk Peeling";
     miniRubrik.innerHTML = "Vad är kemisk peeling?";
-    inledandeText.innerHTML = "Kemisk peeling är en hudföryngringsteknik som använder olika lösningar för att avlägsna det yttre döda cellagret och stimulera till nybildning av nya celler. Det ger en synbar föryngring av huden, där den blir slätare, lenare och får ett fräschare utseende. Pigmentförändringar och fina linjer reduceras och porerna dras ihop. På Ideal Clinic använder vi endast det patenterade och originala AHA-syran för kemisk peeling, vilket gör behandlingen så effektiv som möjligt. Behandlingen är skonsam och kan användas för att åtgärda flera problem samtidigt, som rynkor, pigmentförändringar och grova porer.";
+    inledandeText.innerHTML = "Kemisk peeling är en effektiv hudföryngringsteknik som använder olika lösningar för att avlägsna det yttre döda cellagret och främja nybildning av fräschare, mer ungdomliga hudceller. Denna behandling ger synliga resultat genom att göra huden slätare, lenare och ge den ett friskare utseende. Med hjälp av kemisk peeling kan pigmentförändringar och fina linjer reduceras samtidigt som porerna dras ihop. På Ideal Clinic använder vi endast den patenterade och originala AHA-syran för kemisk peeling, vilket garanterar en så effektiv behandling som möjligt. Vår behandling är skonsam och kan användas för att behandla flera problem samtidigt, exempelvis rynkor, pigmentförändringar och förstorade porer.";
     miniRubrik2.innerHTML ="Hur går behandlingen till vid kemisk peeling?";
-    firststyckeText.innerHTML = "Behandlingen går ut på att applicera olika lösningar på huden, beroende på vilken styrka du väljer och vilket resultat du vill uppnå. Vi väljer styrkan utifrån vilka besvär som ska åtgärdas och hur lång återhämtningstid du kan tänka dig. En lite svagare blandning ger en obetydlig eller ingen konvalescens, medan en starkare peeling går djupare ner i hudlagret och kräver några dagars konvalescens.";
+    firststyckeText.innerHTML = "Vid kemisk peeling applicerar vi olika lösningar på huden, beroende på vilken styrka du väljer och vilket resultat du vill uppnå. Vi anpassar styrkan utifrån de specifika hudproblem du vill behandla samt den återhämtningstid du är beredd att ha. En mildare peeling ger minimal eller ingen konvalescens, medan en starkare peeling tränger djupare ner i hudlagren och kan kräva några dagars återhämtning. Kemisk peeling kan användas på ansikte, hals, dekolletage och handryggar för att förbättra hudens utseende och kvalitet.";
 
-    miniRubrik4.innerHTML ="Vilka områden kan behandlas vid kemisk peeling?";
-    thirdstyckeText.innerHTML = "Kemisk peeling kan användas på ansikte, hals, dekoltage och handryggar.";
 
     miniRubrik5.innerHTML ="Naturligt resultat med kemisk peeling:";
-    fourthstyckeText.innerHTML = "Genom att kombinera olika metoder kan vi ofta få ett överlägset resultat med mindre kontraster efter ingreppet och en kortare återhämtningstid, samt lägre totalkostnader. För oss handlar det inte bara om ingreppet i sig, utan också om att ge dig en personlig omsorg under hela behandlingsprocessen, där uppföljningen är lika viktig för dig som för oss.";
+    fourthstyckeText.innerHTML = "Genom att kombinera olika metoder kan vi ofta uppnå överlägsna resultat med mindre kontraster efter ingreppet samt kortare återhämtningstid och lägre totalkostnader. För oss handlar det inte bara om själva ingreppet, utan också om att erbjuda personlig vård under hela behandlingsprocessen. Vi lägger lika stor vikt vid uppföljning för att säkerställa din nöjdhet och välbefinnande som du gör.";
 
     InfoCardPrice.innerHTML ="Från 2500kr";
    
@@ -1127,6 +1148,8 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
   }
   else if (treatment === "Migränbehandling") 
   {
+    toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
+
     rubrik.innerHTML = "Migränbehandling";
     informationOm.innerHTML = "Migränbehandling";
     miniRubrik.innerHTML = "Migränbehandling på Ideal Clinic";
@@ -1152,7 +1175,8 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
 
   else if (treatment === "PRP") 
   {
-    
+    toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
+
     rubrik.innerHTML = "PRP";
     informationOm.innerHTML = "PRP (Platelet-Rich Plasma)";
     miniRubrik.innerHTML = "PRP på Ideal Clinic";
@@ -1160,16 +1184,13 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
     miniRubrik2.innerHTML ="Här är några fördelar med PRP för håret:    ";
     firststyckeText.innerHTML = "\
     <ul>\
-    <li>Naturlig metod: PRP för hår är en naturlig behandling eftersom den använder patientens eget blod för att extrahera blodplättar och tillväxtfaktorer. Det finns ingen användning av kemikalier eller syntetiska ämnen, vilket minskar risken för biverkningar eller allergiska reaktioner.</li>\
-    <li>Främjar hårtillväxt: PRP innehåller höga nivåer av tillväxtfaktorer som främjar hårtillväxt och stimulerar vilande hårfolliklar. Genom att injicera PRP i områden med tunnhårighet eller håravfall kan man öka blodcirkulationen, näringsupptaget och stimulera hårfolliklarna för att producera tjockare, friskare hårstrån.Främjar hårtillväxt: PRP innehåller höga nivåer av tillväxtfaktorer som främjar hårtillväxt och stimulerar vilande hårfolliklar. Genom att injicera PRP i områden med tunnhårighet eller håravfall kan man öka blodcirkulationen, näringsupptaget och stimulera hårfolliklarna för att producera tjockare, friskare hårstrån.</li>\
-    <li>Förbättrar hårets kvalitet: PRP-behandlingar förbättrar inte bara hårtillväxten, utan också hårets övergripande kvalitet. De tillväxtfaktorer och proteiner som finns i PRP hjälper till att stärka hårsäckarna, öka hårets elasticitet och förbättra dess struktur och glans. Det kan också minska håravfall och brytning av hårstrån.</li>\
-    <li>Snabb och enkel procedur: PRP-behandlingar för håret är relativt snabba och enkla att genomföra. En liten mängd blod tas från patienten, och blodet centrifugeras för att separera plasma med hög koncentration av blodplättar och tillväxtfaktorer. Detta PRP-serum injiceras sedan i det område som ska behandlas. Hela processen tar vanligtvis bara några timmar och kräver minimal återhämtningstid.</li>\
-    <li>Låg risk och minimala biverkningar: Eftersom PRP använder patientens eget blod minskas risken för allergiska reaktioner eller avstötning. Det är en icke-kirurgisk behandling och har minimala biverkningar såsom tillfällig rodnad eller svullnad i injektionsområdet, vilket vanligtvis försvinner inom några timmar eller dagar.</li>\
-    <li>Kompletterar andra behandlingar: PRP-behandlingar kan användas som en kompletterande terapi för personer som genomgår andra håråterväxtbehandlingar, såsom hårtransplantationer eller medicinsk behandling mot håravfall. Det kan förbättra resultaten av dessa behandlingar genom att stimulera hårtillväxt och förbättra hårets övergripande hälsa.</li>\
+    <li>Naturlig metod: PRP för hår är en naturlig behandling eftersom den använder patientens eget blod för att extrahera blodplättar och tillväxtfaktorer. Det finns ingen användning av kemikalier eller syntetiska ämnen, vilket minskar risken för biverkningar eller allergiska reaktioner.</li> <br>\
+    <li>Främjar hårtillväxt: PRP innehåller höga nivåer av tillväxtfaktorer som främjar hårtillväxt och stimulerar vilande hårfolliklar. Genom att injicera PRP i områden med tunnhårighet eller håravfall kan man öka blodcirkulationen, näringsupptaget och stimulera hårfolliklarna för att producera tjockare, friskare hårstrån.Främjar hårtillväxt: PRP innehåller höga nivåer av tillväxtfaktorer som främjar hårtillväxt och stimulerar vilande hårfolliklar. Genom att injicera PRP i områden med tunnhårighet eller håravfall kan man öka blodcirkulationen, näringsupptaget och stimulera hårfolliklarna för att producera tjockare, friskare hårstrån.</li> <br>\
+    <li>Förbättrar hårets kvalitet: PRP-behandlingar förbättrar inte bara hårtillväxten, utan också hårets övergripande kvalitet. De tillväxtfaktorer och proteiner som finns i PRP hjälper till att stärka hårsäckarna, öka hårets elasticitet och förbättra dess struktur och glans. Det kan också minska håravfall och brytning av hårstrån.</li> <br>\
+    <li>Snabb och enkel procedur: PRP-behandlingar för håret är relativt snabba och enkla att genomföra. En liten mängd blod tas från patienten, och blodet centrifugeras för att separera plasma med hög koncentration av blodplättar och tillväxtfaktorer. Detta PRP-serum injiceras sedan i det område som ska behandlas. Hela processen tar vanligtvis bara några timmar och kräver minimal återhämtningstid.</li> <br>\
+    <li>Låg risk och minimala biverkningar: Eftersom PRP använder patientens eget blod minskas risken för allergiska reaktioner eller avstötning. Det är en icke-kirurgisk behandling och har minimala biverkningar såsom tillfällig rodnad eller svullnad i injektionsområdet, vilket vanligtvis försvinner inom några timmar eller dagar.</li> <br>\
+    <li>Kompletterar andra behandlingar: PRP-behandlingar kan användas som en kompletterande terapi för personer som genomgår andra håråterväxtbehandlingar, såsom hårtransplantationer eller medicinsk behandling mot håravfall. Det kan förbättra resultaten av dessa behandlingar genom att stimulera hårtillväxt och förbättra hårets övergripande hälsa.</li> <br>\
     </ul>";
-
-    miniRubrik4.innerHTML ="Vad är PRP bra för?";
-    thirdstyckeText.innerHTML = "PRP-behandlingen ses som ett sätt att få tillbaka ungdomlig hudstruktur genom att återställa elasticiteten och förbättra hudens förmåga att behålla fukt. Det är mest effektivt mot problem som gråaktig hud utan lyster, mörka ringar under ögonen, håravfall, slapp, solskadad och åldrad hy, djupa ärr och ojämn hudstruktur och grov och porig hud.";
 
     miniRubrik5.innerHTML ="Att tänka på efter behandlingen:";
     fourthstyckeText.innerHTML = "Du bör undvik hudvårdsprodukter som innehåller retinoider eller andra exfolierande produkter en vecka innan behandlingen. Du bör inte utsätta de behandlade områdena för solen under 3-4 veckor efter behandlingen. Om du gör flera behandlingar, bör du vänta 6-8 veckor mellan varje behandling. Retinol behandlingen kan göras som en enskild behandling. Efter behandlingen kan det uppstå lätt rodnad i några dagar.";

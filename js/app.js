@@ -37,10 +37,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 //Toaster för start!
-var toastEl = document.getElementById('toast-example')
-var toast = new bootstrap.Toast(toastEl)
-toast.show()
-
+var toastEl = document.getElementById('toast-example');
+var options = {
+  autohide: true,
+  delay: 8000 // 8 sekunder innan den försvinner.
+};
+var toast = new bootstrap.Toast(toastEl, options);
+toast.show();
 //Kod för nav
 
 const header = document.querySelector("header");
