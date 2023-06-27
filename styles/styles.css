@@ -462,7 +462,7 @@ i{
   
   @media screen and (min-width: 1200px) {
     .beautylawBox {
-      font-size: 28px;
+      font-size: 22px;
     }
   }
 
@@ -492,7 +492,7 @@ i{
 
 .rubrikbehandling
 {
-  font-size: 30px;
+  font-size: 35px;
   font-family: 'Times New Roman', Times, serif;
   color:#616466;
 
@@ -658,28 +658,22 @@ i{
 
 
   #Info-Bot{
-    width: 100%;
+    width: 90%;
   }
 
-  #gogoCol {
-    text-align: center;
-  }
-  
   #gogomaps {
-    width: 400px;
+    width: 100%;
     height: 250px;
   }
   
   @media screen and (min-width: 768px) {
     #gogomaps {
-      width: 600px;
       height: 400px;
     }
   }
   
   @media screen and (min-width: 1200px) {
     #gogomaps {
-      width: 800px;
       height: 500px;
     }
   }
