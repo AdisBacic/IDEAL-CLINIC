@@ -108,6 +108,9 @@ let dragspel20FirstTip = document.querySelector("#dragspel20FirstTip");
 let dragspel21Rubrik = document.querySelector("#dragspel21Rubrik");
 let dragspel21FirstTip = document.querySelector("#dragspel21FirstTip");
 
+let dragspel22Rubrik = document.querySelector("#dragspel22Rubrik");
+let dragspel22FirstTip = document.querySelector("#dragspel22FirstTip");
+
 //#endregion
 
 
@@ -118,6 +121,8 @@ if (treatment === "Hårborttagning") {
     hairPic.src = './images/Laser.png';
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
+
+    
 
 
     rubrik.innerHTML =  "Hårborttagning";
@@ -216,13 +221,15 @@ if (treatment === "Hårborttagning") {
     dragspel21Rubrik.innerHTML = "Hur länge varar behandlingseffekten?";
     dragspel21FirstTip.innerHTML = "Efter att du har genomgått hela behandlingsprogrammet så kan håret vara borta för alltid. Men om du har hormonell obalans eller kroppen förändras av någon annan anledning så kan nya hårsäckar bildas. Därför kan man behöva göra någon enstaka behandling igen efter några år.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
+
     //#endregion
   }
    
   else if (treatment === "Svettbehandling") {
   
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling";
-
 
     hairPic.src = './images/Laser.png';
 
@@ -253,6 +260,8 @@ if (treatment === "Hårborttagning") {
       dragspel4Rubrik.innerHTML = "Hur länge håller botox i armhålorna?";
       dragspel4FirstTip.innerHTML = "Resultaten håller normalt i sig i upp till 4-6 månader, men Botox i armhålorna kan ofta vara längre hållbar hos vissa personer och kan hålla upp till 9-12 månader.";
 
+      dragspel22Rubrik.innerHTML = "Konsultation";
+      dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
 
 
       let accordions = document.getElementsByClassName("accordion-item");
@@ -313,6 +322,8 @@ if (treatment === "Hårborttagning") {
     dragspel5Rubrik.innerHTML = "Acneärr och acnemärken?";
     dragspel5FirstTip.innerHTML = "Det är svårt att få bort djupa acneärr helt och hållet eftersom ärrvävnad är permanent. Däremot kan du få en stor förbättring. Röda och bruna fläckar kan behandlas med kemisk peeling och microneedling. Men om du har mild acne så kan du utföra kemisk peeling. Det rekommenderas att du väntar med behandling av ärr tills du blir av med acnen, för att undvika nya ärr och acne. Annars så kan du utföra kemisk peeling när du har mild acne.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
     let accordions = document.getElementsByClassName("accordion-item");
     // Convert the HTMLCollection to an array
     let accordionArray = Array.from(accordions);
@@ -366,6 +377,8 @@ if (treatment === "Hårborttagning") {
     dragspel5Rubrik.innerHTML = "Behandlar man alla pigmentförändringar på samma sätt?";
     dragspel5FirstTip.innerHTML = "Nej, hur man behandlar en pigmentförändring beror på dess djup och typ. Det finns epidermala, dermala eller mixade förändringar, epidermala är lättare att ta bort än dermala. Pigmentförändringar kan också vara intra eller extracellulära.<br>Handryggar: Pigmentfläckar på handryggarna kan också behandlas.<br>Vilken typ av förändring det är kan du få reda på genom ett besök på kliniken, där gör hudterapeuten en bedömning och föreslår vilken metod som är lämplig att ta bort pigmentförändringen.<br>Test behandling: Det kan också vara lämpligt att göra en testbehandling för att se om pigmentfläcken svarar på behandlingen.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
 
     
     let accordions = document.getElementsByClassName("accordion-item");
@@ -422,6 +435,9 @@ if (treatment === "Hårborttagning") {
     dragspel5Rubrik.innerHTML = "Hjälper Profhilo mot torr hud?";
     dragspel5FirstTip.innerHTML = "Profhilo har en återfuktande effekt och hjälper din hud att få mer fukt och lyster på ett effektivt sätt. Men om du önskar mer återfuktning så kan Skinbooster vara ett bättre alternativ, detta bör dock diskuteras under en konsultation vilket alltid är kostnadsfritt här på Ideal Clinic.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
+    
     let accordions = document.getElementsByClassName("accordion-item");
     // Convert the HTMLCollection to an array
     let accordionArray = Array.from(accordions);
@@ -474,7 +490,10 @@ if (treatment === "Hårborttagning") {
     dragspel4Rubrik.innerHTML = "Hur många behandlingar behövs?";
     dragspel4FirstTip.innerHTML = "Läppar har en snabbare absorptionsförmåga av fillers i förhållande till andra delar av ansiktet, därför krävs det ofta en uppbyggnadsfas för att uppnå bästa möjliga resultat. Uppbyggnadsfasen kräver oftast 2 till 3 behandlingar beroende på individ. Som regel behövs påfyllning en till två månader efter första besöket för att bibehålla och uppnå ett långvarigt och naturligt resultat.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
     let accordions = document.getElementsByClassName("accordion-item");
+
     // Convert the HTMLCollection to an array
     let accordionArray = Array.from(accordions);
     
@@ -527,6 +546,8 @@ if (treatment === "Hårborttagning") {
     dragspel5Rubrik.innerHTML = "Vilka eventuella biverkningar kan uppstå?";
     dragspel5FirstTip.innerHTML = "Efter behandlingen kan man få blåmärken vid det behandlade området. Minskad känslighet, smärta och svullnad/vätskeansamling är andra biverkningar som kan uppstå. Dessa effekter är i allmänhet tillfälliga och försvinner vanligtvis av sig själva.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
     let accordions = document.getElementsByClassName("accordion-item");
     // Convert the HTMLCollection to an array
     let accordionArray = Array.from(accordions);
@@ -583,6 +604,8 @@ if (treatment === "Hårborttagning") {
     dragspel6Rubrik.innerHTML = "Kan Skinbooster göras på hals och händer?";
     dragspel6FirstTip.innerHTML = "Ja, Skinbooster är en effektiv metod för att förnya huden på hals och händer. Det är lämpligt för personer som har bra vävnad på dessa områden och önskar den återfuktande effekten. Men om du har tappat vävnad på hals och händer, rekommenderar vi istället att använda Profhilo på dessa områden.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
     let accordions = document.getElementsByClassName("accordion-item");
     // Convert the HTMLCollection to an array
     let accordionArray = Array.from(accordions);
@@ -640,6 +663,8 @@ if (treatment === "Hårborttagning") {
     dragspel4Rubrik.innerHTML = "Test behandling";
     dragspel4FirstTip.innerHTML = "Det kan också vara lämpligt att göra en testbehandling för att se om pigmentfläcken svarar på behandlingen.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
 
 
     let accordions = document.getElementsByClassName("accordion-item");
@@ -658,7 +683,6 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "MicroTox") 
   {
-
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "MicroTox";
@@ -692,6 +716,9 @@ if (treatment === "Hårborttagning") {
     dragspel3Rubrik.innerHTML = "Finns det biverkningar?";
     dragspel3FirstTip.innerHTML = "Likt som vid andra injektionsbehandlingar kan du uppleva biverkningar efter Microtox-behandlingen, som viss smärta, rodnad, svullnad, blåmärken eller minskad känslighet i huden. Dessa biverkningar är oftast tillfälliga och övergående.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
+    
     let accordions = document.getElementsByClassName("accordion-item");
     // Convert the HTMLCollection to an array
     let accordionArray = Array.from(accordions);
@@ -757,6 +784,8 @@ if (treatment === "Hårborttagning") {
     dragspel8Rubrik.innerHTML = "Att tänka på:";
     dragspel8FirstTip.innerHTML = "Undvik att använda produkter som innehåller retinol 1-2 veckor innan behandlingen.";
     
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
 
     var newTip = document.createElement("li");
     newTip.innerHTML = "Undvik solning under 48 timmar efter behandlingen.";
@@ -791,7 +820,6 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Klassisk ansiktsbehandling") 
   {
  
-
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "Klassisk ansiktsbehandling";
@@ -823,6 +851,9 @@ if (treatment === "Hårborttagning") {
       dragspel4Rubrik.innerHTML = "Ser jag resultat direkt?";
       dragspel4FirstTip.innerHTML = "Ja, huden kommer att upplevas ren, återfuktad, mjuk och lätt uppstramad efter behandlingen.";
 
+      dragspel22Rubrik.innerHTML = "Konsultation";
+      dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
+
       let accordions = document.getElementsByClassName("accordion-item");
       // Convert the HTMLCollection to an array
       let accordionArray = Array.from(accordions);
@@ -839,6 +870,9 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Djuprengöring") 
   {
+
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
+
     rubrik.innerHTML = "Djuprengöring";
     informationOm.innerHTML = "Djuprengöring";
     miniRubrik.innerHTML = "Djuprengöring på Ideal Clinic";
@@ -867,6 +901,8 @@ if (treatment === "Hårborttagning") {
     dragspel4Rubrik.innerHTML = "Ser jag resultat direkt?";
     dragspel4FirstTip.innerHTML = "Ja, huden kommer att kännas lugn, ren och med minskade porer.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
     let accordions = document.getElementsByClassName("accordion-item");
       // Convert the HTMLCollection to an array
       let accordionArray = Array.from(accordions);
@@ -952,6 +988,9 @@ if (treatment === "Hårborttagning") {
     newTip10.innerHTML = "Du ska inte basta samma dag.";
     tipList.appendChild(newTip10);
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
+    
     let accordions = document.getElementsByClassName("accordion-item");
       // Convert the HTMLCollection to an array
       let accordionArray = Array.from(accordions);
@@ -968,6 +1007,8 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Microneedling") 
   {
 
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
+
     rubrik.innerHTML = "Microneedling";
     informationOm.innerHTML = "Microneedling";
     miniRubrik.innerHTML = "Microneedling på Ideal Clinic";
@@ -980,19 +1021,17 @@ if (treatment === "Hårborttagning") {
     vissteduAtt.innerHTML = "Hyaluronsyra, som våra fillers består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
     estimeradTidText.innerHTML ="20-60 Minuter beroende på området";
 
+        // Vad är microneedling?
+    dragspel1Rubrik.innerHTML = "Vad är microneedling?";
+    dragspelFirstTip.innerHTML = "Microneedling är en hudföryngringsteknik där en microneedling-penna med mikronålar används för att skapa mikrokanaler i huden. Detta startar en läkningsprocess som leder till bildning av nytt kollagen och elastin. Nåltätheten och diametern på nålarna gör att behandlingen blir skonsam och ger en god penetration.";
 
+    // Vid behandling av acneärr görs ofta 3-5 behandlingar med 4 veckors mellanrum...
+    dragspel2Rubrik.innerHTML = "Vid behandling av acneärr";
+    dragspel2FirstTip.innerHTML = "Vid behandling av acneärr görs ofta 3-5 behandlingar med 4 veckors mellanrum, vilket ger kraftfulla resultat med ett minimum av konvalescens. Första dagarna kan du ha lätt rodnad och/eller svullnad, men man brukar bara behöva vara hemma under behandlingsdagen.";
 
-    // Vad är microneedling?
-dragspel1Rubrik.innerHTML = "Vad är microneedling?";
-dragspelFirstTip.innerHTML = "Microneedling är en hudföryngringsteknik där en microneedling-penna med mikronålar används för att skapa mikrokanaler i huden. Detta startar en läkningsprocess som leder till bildning av nytt kollagen och elastin. Nåltätheten och diametern på nålarna gör att behandlingen blir skonsam och ger en god penetration.";
-
-// Vid behandling av acneärr görs ofta 3-5 behandlingar med 4 veckors mellanrum...
-dragspel2Rubrik.innerHTML = "Vid behandling av acneärr";
-dragspel2FirstTip.innerHTML = "Vid behandling av acneärr görs ofta 3-5 behandlingar med 4 veckors mellanrum, vilket ger kraftfulla resultat med ett minimum av konvalescens. Första dagarna kan du ha lätt rodnad och/eller svullnad, men man brukar bara behöva vara hemma under behandlingsdagen.";
-
-// Vilka områden kan behandlas?
-dragspel3Rubrik.innerHTML = "Vilka områden kan behandlas?";
-dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekolletage och kropp.";
+    // Vilka områden kan behandlas?
+    dragspel3Rubrik.innerHTML = "Vilka områden kan behandlas?";
+    dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekolletage och kropp.";
 
   // För vilka lämpar sig inte microneedling?
   dragspel4Rubrik.innerHTML = "För vilka lämpar sig inte microneedling?";
@@ -1008,6 +1047,9 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
   <li>Har genomgått strålbehandling under det senaste året</li>\
   <li>Har genomgått nyligen ansiktskirurgi eller laserbehandling</li>\
   </ul>";
+
+  dragspel22Rubrik.innerHTML = "Konsultation";
+  dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
 
   let accordions = document.getElementsByClassName("accordion-item");
   // Convert the HTMLCollection to an array
@@ -1026,6 +1068,8 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
   }
   else if (treatment === "Kemisk peeling") 
   {
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
+
 
     rubrik.innerHTML = "Kemisk peeling";
     informationOm.innerHTML = "Kemisk Peeling";
@@ -1043,6 +1087,8 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
     vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
     estimeradTidText.innerHTML ="30-40 Minuter";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
 
     let accordions = document.getElementsByClassName("accordion-item");
     // Convert the HTMLCollection to an array
@@ -1059,6 +1105,8 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
 
   else if (treatment === "Tandblekning") 
   {
+    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
+
     rubrik.innerHTML = "Tandblekning";
     informationOm.innerHTML = "Tandblekning";
     miniRubrik.innerHTML = "Tandblekning på Ideal Clinic";
@@ -1134,6 +1182,9 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
     dragspel11Rubrik.innerHTML = "Vilka missfärgningar kan blekas?";
     dragspel11FirstTip.innerHTML = "Det är lättare att bleka tänder som är missfärgade i varma färger som brunt och gult, än de som går i kalla färger, det vill säga grått och blått. Missfärgningar som kommer från kost och ålder går till exempel i varma färger, medan de som kan uppstå från tandfyllningar och vissa mediciner går i grått, det hör även vissa antibiotika till så kallade tetracykliner.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
+
     let accordions = document.getElementsByClassName("accordion-item");
     // Convert the HTMLCollection to an array
     let accordionArray = Array.from(accordions);
@@ -1159,6 +1210,9 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
    
     vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
     estimeradTidText.innerHTML ="30-40 Minuter";
+
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
 
     let accordions = document.getElementsByClassName("accordion-item");
     // Convert the HTMLCollection to an array
@@ -1230,6 +1284,9 @@ dragspel3FirstTip.innerHTML = "Microneedling kan användas på ansikte, dekollet
     dragspel7Rubrik.innerHTML = "Finns det biverkningar?";
     dragspel7FirstTip.innerHTML = "Liksom vid andra injektionsbehandlingar, kan du uppleva biverkningar efter en PRP-behandling, såsom smärta, rodnad, svullnad, blåmärken eller minskad känslighet på huden. Dessa biverkningar är oftast tillfälliga och övergående.";
 
+    dragspel22Rubrik.innerHTML = "Konsultation";
+    dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
+    
     let accordions = document.getElementsByClassName("accordion-item");
     // Convert the HTMLCollection to an array
     let accordionArray = Array.from(accordions);
