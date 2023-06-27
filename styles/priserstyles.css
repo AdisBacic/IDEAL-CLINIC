@@ -61,14 +61,12 @@ font-size: 20px;
 
 
 .nav-links{
-
   position:absolute;
   right:0;
   top: 5vh;
-  width: 60%;
-  height:70vh;
-  background: rgb(217, 213, 213);
-
+  width: 40%;
+  height:60vh;
+  background: whitesmoke;
   display:none;
   flex-direction: column;
   justify-content: center;

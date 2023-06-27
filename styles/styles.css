@@ -35,7 +35,6 @@ header{
   background-color:whitesmoke;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 
-
 }
 header h4{
 
@@ -55,7 +54,7 @@ header h4{
     top:0;
     width: 100%;
     height: 100vh;
-    background-color: #616466;
+    background-image: linear-gradient(#616466, rgb(252, 252, 252));
     transition: 1s;
 
 }
@@ -97,14 +96,12 @@ header h4{
 
 
 .nav-links{
-
   position:absolute;
   right:0;
   top: 5vh;
-  width: 50%;
-  height:70vh;
-  background: rgb(217, 213, 213);
-
+  width: 40%;
+  height:60vh;
+  background: whitesmoke;
   display:none;
   flex-direction: column;
   justify-content: center;
@@ -574,18 +571,11 @@ i{
     font-size: 20px; 
   }
 
-  /* Linjen på loggan */
-  #logoLine{
-    font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
-    font-size: 100px;
-    bottom: -2.5rem;
-    font-stretch: ultra-expanded;
-  
-  }
+
   /* Clinic på intro */
   #logoCText{
     top: 40px;
-    right: 45%;
+    right: 50%;
   }
  
   #behandlingarRubrik
