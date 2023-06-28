@@ -38,13 +38,13 @@ header h4{
 
 #MainLogo
 {
-color:black;
+  color:black;
 }
 
 #MainLogo:hover
 {
-color:#616466;
-font-size: 20px; 
+  color:#616466;
+  font-size: 20px; 
 }
 /* #endregion*/
 
@@ -65,7 +65,7 @@ font-size: 20px;
   position:absolute;
   right:0;
   top: 5vh;
-  width: 40%;
+  width: 45%;
   height:60vh;
   background: whitesmoke;
   display:none;
@@ -103,13 +103,9 @@ font-size: 20px;
 
 .logoNav{
 
-
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 800;
-
-  /*  */
-
   color:var(rgb(219, 210, 210));
   transition: 250ms;
 }
@@ -213,28 +209,72 @@ header ul li a:hover{
   }
 
   .logoNav{
-    font-size:23px;
+    font-size:20px;
   }
-
- 
-
 }
-
 
 @media (max-width: 984px) 
 {
-
-
   .nav-links{
 
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
     border-radius: 10px;
   
   }
-
- 
-
 }
+
+.images
+{
+  width: 50%;
+  height: auto;
+}
+
+.lead{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card {
+  width: 80%; /* Adjust the width value as needed */
+  margin: 0 auto; /* Center the card horizontally */
+}
+
+#reviewCarousel {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  font-size: 12px;
+  text-align: left;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 
 
 
@@ -254,11 +294,7 @@ header ul li a:hover{
   flex-wrap: wrap;
 }
 
-.card {
-  width: 100%;
-  max-width: 18rem;
-  margin: 1rem;
-}
+
 
 @media only screen and (min-width: 768px) {
   .card {

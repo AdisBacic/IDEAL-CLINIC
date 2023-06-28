@@ -38,13 +38,13 @@ header h4{
 
 #MainLogo
 {
-color:black;
+  color:black;
 }
 
 #MainLogo:hover
 {
-color:#616466;
-font-size: 20px; 
+  color:#616466;
+  font-size: 20px; 
 }
 /* #endregion*/
 
@@ -64,7 +64,7 @@ font-size: 20px;
   position:absolute;
   right:0;
   top: 5vh;
-  width: 40%;
+  width: 45%;
   height:60vh;
   background: whitesmoke;
   display:none;
@@ -136,7 +136,6 @@ font-size: 20px;
   font-size: 1.3rem;
   font-weight: 800;
 
-  /*  */
 
   color:var(rgb(219, 210, 210));
   transition: 250ms;
@@ -241,11 +240,8 @@ header ul li a:hover{
   }
 
   .logoNav{
-    font-size:23px;
+    font-size:20px;
   }
-
- 
-
 }
 
 
@@ -274,7 +270,7 @@ header ul li a:hover{
 
 
 
-@media (max-width: 800px) 
+@media (max-width: 1000px) 
 {
 
 
@@ -345,11 +341,6 @@ img {
     text-align: center;
     width: 100%;
   }
-
-
-
-
-
 
 }
 

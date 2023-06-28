@@ -7,7 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Ta bort nedan om det inte gör ngt */
 body{
   width: 100%;
 }
@@ -37,16 +36,16 @@ header h4{
     font-size: 1.6rem;
 }
 
-#MainLogo
-{
-  color:black;
-}
+ #MainLogo
+  {
+    color:black;
+  }
 
-#MainLogo:hover
-{
-  color:#616466;
-  font-size: 20px; 
-}
+  #MainLogo:hover
+  {
+    color:#616466;
+    font-size: 20px; 
+  }
 /* #endregion*/
 
 
@@ -66,7 +65,7 @@ header h4{
     position:absolute;
     right:0;
     top: 5vh;
-    width: 40%;
+    width: 45%;
     height:60vh;
     background: whitesmoke;
     display:none;
@@ -101,12 +100,12 @@ header h4{
   
   
   .logoNav{
-  
+
+
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 800;
   
-    /*  */
   
     color:var(rgb(219, 210, 210));
     transition: 250ms;
@@ -172,7 +171,7 @@ header h4{
   /* För större skärm */
   
   @media screen and (min-width:1000px){
-  
+
     .nav-links{
   
       display:flex;
@@ -209,14 +208,8 @@ header h4{
     }
   
     .logoNav{
-      font-size:23px;
+      font-size:20px;
     }
-  
-  
-    /* Mobilainställningar ;) */
-  
-  
-  
   }
   
   
@@ -224,31 +217,34 @@ header h4{
 /*#endregion  */
 
 
-/* #region css utförs i sekvens med start från topp. DETTA ÄR HUVUDINNEHÅLL FÖR BEHANDLINGSSIDANS CSS*/
-#behandlingsRubrik
-{
-  margin-left: 5%;
-  padding-top: 20px;
-}
 
+/* HÄR ÄR JAG NU DETTA ÄR BRA */
+
+/* #region css utförs i sekvens med start från topp. DETTA ÄR HUVUDINNEHÅLL FÖR BEHANDLINGSSIDANS CSS*/
 .container1 {
   position: relative;
   width: 100%;
+  height: 70vh; /* set the height to 70% of the viewport height */
+  overflow: hidden;
+  text-align: center;
 }
 
-.container1 #behandlingsRubrik
-  {
-    position: absolute;
-    top: 85%;
-  }
+#behandlingsRubrik {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  color: white;
+  background-color: rgba(61, 60, 60, 0.5);
+  width: auto;
+}
 
-
-  #hairPic {
-    width: 100vw;;
-    height: 50vh;
-    object-fit: cover;
-  }
-  
+#hairPic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
   
 
 #behandlingMainInfo
@@ -289,12 +285,39 @@ header h4{
 }
 
 
+/* #region Testar nybildhantering för behandlingar här */
+
+
+.image-wrapper {
+  width: 100%;
+  height: 70vh; /* set the height to 30% of the viewport height */
+  overflow: hidden;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .image-wrapper {
+    height: 50vh;
+  }
+
+}
+
+/* #endregion */
+
+
+
 /* MobileDevice mode below */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 
   #hairPic {
-    width: 100vw;;
+    width: 100%;;
     height: 100%;
     margin-left: 0%;
   }
@@ -303,20 +326,14 @@ header h4{
   #behandlingsRubrik
   {
     margin-top: 0%;
-    margin-left: 5%;
+    margin-left: 0%;
   }
 
   .container1{  
     margin-left: 0%;
   }
 
-  .container1 #behandlingsRubrik
-  {
-    position: absolute;
-    top: 80%;
-    left: 1%;
   
-  }
 
   #miniRubrik{
     font-size: 22px;

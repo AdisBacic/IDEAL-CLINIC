@@ -99,7 +99,7 @@ header h4{
   position:absolute;
   right:0;
   top: 5vh;
-  width: 40%;
+  width: 45%;
   height:60vh;
   background: whitesmoke;
   display:none;
@@ -141,7 +141,6 @@ header h4{
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 800;
-
 
   color:var(rgb(219, 210, 210));
   transition: 250ms;
@@ -207,10 +206,6 @@ header ul li a:hover{
 /* För större skärm */
 
 @media screen and (min-width:1000px){
-
-
-
-
 
   .nav-links{
 
@@ -304,11 +299,7 @@ i{
 }
 
 
-
-
 /* #endregion */
-
-
 
 
 /*#region Container Hemsidans första bild*/
@@ -337,7 +328,7 @@ i{
 @media only screen and (min-width: 1200px) {
  
   #carouselExampleInterval img {
-    height: 60vh; /* adjust the height as desired */
+    height: 70vh; /* adjust the height as desired */
     width: 100%;
   }
     .Liseberg
@@ -347,10 +338,28 @@ i{
 }
 
 
+@media screen and (max-width: 768px) {
+  #carouselExampleInterval img {
+    height: 70vh; /* adjust the height as desired */
+    width: 100%;
+  }
+  .Liseberg
+  {
+    margin-top:3%;
+  }
+
+}
+
+
+
+
+
+
+
 
 .text-div {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 30%;
   transform: translate(-50%, -50%);
   font-size: 18px;
@@ -400,7 +409,7 @@ i{
     padding-bottom: 10%;
   }
   .text-div{
-    top: 70%;
+    top: 80%;
   }
 }
 
@@ -420,7 +429,7 @@ i{
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 
     /* 3D EFFECT på hamburgarmenyn*/
   .nav-links

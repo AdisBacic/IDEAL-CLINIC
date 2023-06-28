@@ -121,10 +121,7 @@ if (treatment === "Hårborttagning") {
     hairPic.src = './images/Laser.png';
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
-
-    
-
-
+  
     rubrik.innerHTML =  "Hårborttagning";
     informationOm.innerHTML ="Hårborttagning";
     miniRubrik.innerHTML = "Hårborttagning på Ideal Clinic";
@@ -132,6 +129,7 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="Vad händer under en behandling med permanent hårborttagning med diodlaser?";
     firststyckeText.innerHTML ="För att permanent ta bort hår med diodlaser, lägger man på en kall gel på huden och belyser den med synligt intensivt pulserat ljus. Ljusblixtarna vid behandlingen kan ibland kännas som en liten stöt, men behandlingen går snabbt och är inte särskilt smärtsam. Ibland kan man se en lätt hudrodnad efter behandlingen, men oftast syns det ingenting. Vi flyttar ljusprisman snabbt över hela det område där du önskar ta bort oönskad hårväxt. Behandlingen känns väldigt lite och är nära på smärtfri.";
     
+    InfoCardPrice.innerHTML ="Från 180kr";
     vissteduAtt.innerHTML = "Behandlingen utförs med marknadsledande Sapphire diodlaser för en skonsam och effektiv hårborttagning";
     estimeradTidText.innerHTML ="10-150 minuter";
 
@@ -240,8 +238,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="Behandling av Hyperhidros";
     firststyckeText.innerHTML = "Hyperhidros orsakas av överaktivitet hos svettkörtlarna, vanligtvis i händer, fötter och armhålor, men också i andra begränsade områden på kroppen. Tillståndet innebär en överdriven svettning som är mycket kraftig och har ingen naturlig funktion i kroppen. Svettningarna kan leda till att personen som lider av det har en försämrad livskvalitet och ibland undviker vardagssituationer, arbete och sociala kontakter medvetet. De områden på kroppen som vanligtvis påverkas är armhålor, handflator, fötter och pannan där svettbehandling med injektioner har varit den mest effektiva metoden. Med hjälp av injektioner kan detta slags svettning behandlas effektivt. Behandlingen blockerar svettkörtlarna i cirka 6-7 månader, därefter behövs en ny behandling. Effekten förlängs efter varje behandling eftersom svettkörtlarna inte återfår sin fulla aktivitet mellan varje injektion. Resultatet är mycket säkert och ger inga allvarliga biverkningar. Svettbehandling med injektioner har inneburit en stor revolution för patienter med hyperhidros. Behandlingen ges i form av injektioner under huden på det drabbade området. När händerna behandlas ger vi alltid bedövning. För andra områden är bedövning mycket sällan nödvändigt. Ideal Clinic har en eller flera behandlare som är Certifierade för estetiska injektioner. Certifieringen utfärdas av Estetiska Injektionsrådet och utgör en trovärdig kvalitetsstämpel för behandlande läkare, sjuksköterskor och tandläkare som erbjuder dig som patient möjlighet att göra upplysta och trygga val. Kliniker som använder loggan ”Certifierad för estetisk injicering” har personal som har gått igenom denna examinationen. Alla som har rätt medicinsk utbildning och arbetar med estetiska injektionsbehandlingar kan certifiera sig och förväntas följa det etiska kontraktet som de förbinder sig till vid certifieringen."
     
+    InfoCardPrice.innerHTML ="Från 4500kr";
+
     vissteduAtt.innerHTML = "Svettbehandling med injektioner är det vanligaste tillvägagångssättet att behandla överdriven svettning";
-    estimeradTidText.innerHTML ="30-40 minuter";
+    estimeradTidText.innerHTML ="40 minuter";
 
 
           // Vad bör du ta hänsyn till innan en svettbehandling?
@@ -280,7 +280,6 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Ärrbehandling") 
   {
-    //Status: Completed *Not tested*
 
     hairPic.src = './images/Micro needling klar.jpg';
 
@@ -299,7 +298,7 @@ if (treatment === "Hårborttagning") {
     InfoCardPrice.innerHTML ="Från 500kr";
    
     vissteduAtt.innerHTML = "Våra specialister har en lång erfarenhet av behandling av acneärr och kan hjälpa dig att välja den bästa behandlingen för dina ärr vid en konsultation.";
-    estimeradTidText.innerHTML ="Behandlingen tar mellan 20-60 minuter beroende på området.";
+    estimeradTidText.innerHTML ="Behandlingen tar mellan 20-40 minuter beroende på området.";
 
 
         // Vad är microneedling?
@@ -343,6 +342,8 @@ if (treatment === "Hårborttagning") {
   {
     //Status: Completed *Not tested*
 
+    hairPic.src = './images/Laser.png';
+
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "Hudbristning";
@@ -352,10 +353,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="Så här går det till";
     firststyckeText.innerHTML = "Retinolpeeling från NeoStrata innehåller Vitamin E, Bisabolol, Aminofil, NeoCitriate och 3% Retinol. Aminofil och Retinol gör att huden exfolierar, det vill säga att den flagnar av. Behandlingen utförs på kliniken och avlägsnas av dig själv hemma efter 3-8 timmar. Du kommer inte att känna någon obehag efter appliceringen. Exfolieringsprocessen startar inom 2-4 dagar och pågår vanligtvis i en vecka. Efter exfoliering kommer du att märka förbättringar i hudens struktur, spänst, lyster och hudton."
    
-    InfoCardPrice.innerHTML ="Från 600kr";
+    InfoCardPrice.innerHTML ="Från 1500kr";
    
-    vissteduAtt.innerHTML = "skriv något här";
-    estimeradTidText.innerHTML ="Behandlingen tar mellan 20-60 minuter beroende på området.";
+    vissteduAtt.innerHTML = "Ideal Clinic har en eller flera behandlare som är certifierade för estetisk injicering av Estetiska Injektionsrådet. Certifieringen är en trovärdig kvalitetsstämpel för behandlande läkare, sjuksköterskor och tandläkare och ger patienterna möjlighet att göra upplysta och trygga val.";
+    estimeradTidText.innerHTML ="Behandlingen tar mellan 30-60 minuter beroende på området.";
 
         // För vem passar behandlingen?
     dragspel1Rubrik.innerHTML = "För vem passar behandlingen?";
@@ -397,6 +398,10 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Profhilo") 
   {
+
+    hairPic.src = './images/hello.png';
+
+
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "Profhilo";
@@ -410,7 +415,7 @@ if (treatment === "Hårborttagning") {
     miniRubrik3.innerHTML ="Varför Profhilo?";
     secondstyckeText.innerHTML = "PROFHILO är en mycket ren produkt som består av hyaluronsyra som har producerats genom biofermentering. På grund av sin höga renhet och frånvaro av tillsatser erbjuder PROFHILO ökad säkerhet och därmed färre biverkningar. Den patenterade tekniken för PROFHILO återskapar även förlorad vävnad, vilket inte är möjligt med filler eller Skinbooster. Ideal Clinic har en eller flera behandlare som är certifierade för estetisk injicering av Estetiska Injektionsrådet. Certifieringen är en trovärdig kvalitetsstämpel för behandlande läkare, sjuksköterskor och tandläkare och ger patienterna möjlighet att göra upplysta och trygga val. Kliniker som använder loggan Certifierad för estetisk injicering har personal som har genomgått denna examination. All personal med rätt medicinsk utbildning som arbetar med estetiska injektions behandlingar kan certifiera sig och förväntas följa det etiska kontrakt som de förbinder sig till vid certifieringen. För mer information besök www.estetiskainjektionsradet.se Är du intresserad av en behandling – eller vill du veta mer? Välkommen att höra av dig till oss på Ideal Clinic!";
 
-    InfoCardPrice.innerHTML ="Från 3000kr";
+    InfoCardPrice.innerHTML ="Från 3400kr";
    
     vissteduAtt.innerHTML = "Ideal Clinic har en eller flera behandlare som är certifierade för estetisk injicering av Estetiska Injektionsrådet. Certifieringen är en trovärdig kvalitetsstämpel för behandlande läkare, sjuksköterskor och tandläkare och ger patienterna möjlighet att göra upplysta och trygga val.";
     estimeradTidText.innerHTML ="30 Minuter";
@@ -455,6 +460,10 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Filler") 
   {
 
+
+      hairPic.src = './images/Fillers.png';
+
+
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
 
@@ -469,10 +478,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik4.innerHTML ="Hur går en behandling till?";
     thirdstyckeText.innerHTML = "Vi börjar alltid behandlingen med att rengöra området som ska behandlas. Därefter injicerar vi fillern med en tunn nål. Du kan känna en stickande känsla och en känsla av spänning i huden under injiceringen. Fillern lyfter därefter upp rynkan eller bygger volym, beroende på vad som önskas, vilket ger ett omedelbart synligt resultat. Om du ska behandla läpparna kan du känna smärta, så vi erbjuder lokalbedövning kostnadsfritt för den som vill ha det.";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 2300kr";
    
     vissteduAtt.innerHTML = "Hyaluronsyra, som våra fillers består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="30-60 Minuter";
 
         // Hur många sprutor behövs?
     dragspel1Rubrik.innerHTML = "Hur många sprutor behövs?";
@@ -510,6 +519,11 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Behandling mot dubbelhaka") 
   {
+
+    hairPic.src = './images/Fillers.png';
+
+
+
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "Belkyra";
@@ -521,10 +535,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik4.innerHTML ="Behandling av överflödigt fett under hakan";
     thirdstyckeText.innerHTML = "Överflödigt fett under hakan kan uppstå av olika anledningar. De vanligaste orsakerna är ärftliga faktorer, åldrande eller viktuppgång. Trots träning och kost kan det envisa fettet under hakan kvarstå, vilket kan vara psykiskt påfrestande. En behandling med Belkyra är alltid individuellt anpassad och resultatet är permanent.";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 8500kr";
    
     vissteduAtt.innerHTML = "Hyaluronsyra, som våra fillers består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="40 Minuter";
 
         // Hur går behandlingen till?
     dragspel1Rubrik.innerHTML = "Hur går behandlingen till?";
@@ -568,6 +582,9 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Skinbooster") 
   {
 
+    hairPic.src = './images/sunasfixar.jpg';
+
+
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "Skinbooster";
@@ -575,10 +592,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik.innerHTML = "Skinbooster på Ideal Clinic";
     inledandeText.innerHTML = "Skinbooster ger djupgående återfuktning, förbättrar hudens kvalitet och ger den en naturlig lyster. Det innehåller en speciell form av hyaluronsyra som är ett naturligt förekommande ämne i kroppen och har förmågan att binda vatten. Behandlingen innebär att hyaluronsyran injiceras i mikrodoser under huden och drar till sig vatten för att ge långvarig återfuktning. Denna behandling syftar till att göra huden mjuk, slät och återfuktad istället för att bygga volym som vanliga fillers gör. Skinbooster innehåller även ett antioxidantmedel som hjälper till att skydda huden mot fria radikaler och förlänger effekten av behandlingen.";
   
-    InfoCardPrice.innerHTML ="Från 200kr";
+    InfoCardPrice.innerHTML ="Från 3400kr";
    
     vissteduAtt.innerHTML = "Hyaluronsyra, som våra skinboosters består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="30 Minuter";
 
           // När bör du börja behandla dig?
     dragspel1Rubrik.innerHTML = "När bör du börja behandla dig?";
@@ -622,7 +639,6 @@ if (treatment === "Hårborttagning") {
   }
   else if (treatment === "Retinol peelin") 
   {
-    //Status: Completed *Not tested* Kolla struktur o infofördelning m Elias!
     
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
@@ -641,10 +657,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik5.innerHTML ="Att tänka på efter behandlingen:";
     fourthstyckeText.innerHTML = "Du bör undvik hudvårdsprodukter som innehåller retinoider eller andra exfolierande produkter en vecka innan behandlingen. Du bör inte utsätta de behandlade områdena för solen under 3-4 veckor efter behandlingen. Om du gör flera behandlingar, bör du vänta 6-8 veckor mellan varje behandling. Retinol behandlingen kan göras som en enskild behandling. Efter behandlingen kan det uppstå lätt rodnad i några dagar.";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 1300kr";
    
     vissteduAtt.innerHTML = "Hyaluronsyra, som våra fillers består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="20-40 Minuter";
 
 
         // Behandlar man alla pigmentförändringar på samma sätt?
@@ -683,6 +699,9 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "MicroTox") 
   {
+    hairPic.src = './images/sunasfixar.jpg';
+
+
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "MicroTox";
@@ -698,10 +717,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik5.innerHTML ="Effekter:";
     fourthstyckeText.innerHTML = "Microtox ger många positiva effekter som associeras med ett fräscht yttre och är ofta en av de mest prisvärda behandlingarna för att snabbt se fräsch och pigg ut. Behandlingen är mest effektiv mot Fina linjer Stora porer Förebyggande mot åldrande Jämnare och slätare helhetsintryck";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 3000kr";
    
     vissteduAtt.innerHTML = "En Microtox-behandling har effekt i ca 2-4 månader.";
-    estimeradTidText.innerHTML ="Behandlingen tar ungefär 20-30 minuter beroende på behandlingsområdets storlek. Konsultationen är också inkluderad i den totala tidsåtgången.";
+    estimeradTidText.innerHTML ="Behandlingen tar ungefär 30 minuter beroende på behandlingsområdets storlek. Konsultationen är också inkluderad i den totala tidsåtgången.";
 
 
         // Hur många behandlingar behöver jag göra?
@@ -734,6 +753,12 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "PRX-T33") 
   {
 
+
+    hairPic.src = './images/KemiskPeeling.png';
+
+
+
+    
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "PRX-T33";
@@ -746,10 +771,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik4.innerHTML ="Behandlingsområden:";
     thirdstyckeText.innerHTML = "Ansiktet: Rynkor och linjer, förstorade porer, förlorad spänst och fyllighet, ojämn hy och glåmighet, pigmenteringar, åldersfläckar, ärrbildningar och torrhet. Kroppen: Åldrad hud och/eller förlorad spänst på hals, dekolletage och handrygg, bristningar och ärr.";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 1800kr";
    
     vissteduAtt.innerHTML = "En Microtox-behandling har effekt i ca 2-4 månader.";
-    estimeradTidText.innerHTML ="Behandlingen tar ungefär 20-30 minuter beroende på behandlingsområdets storlek. Konsultationen är också inkluderad i den totala tidsåtgången.";
+    estimeradTidText.innerHTML ="Behandlingen tar ungefär 40-50 minuter beroende på behandlingsområdets storlek. Konsultationen är också inkluderad i den totala tidsåtgången.";
 
 
         // Hur många behandlingar behöver jag göra?
@@ -819,7 +844,10 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Klassisk ansiktsbehandling") 
   {
- 
+    hairPic.src = './images/Tandblekning.png';
+
+
+
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "Klassisk ansiktsbehandling";
@@ -829,10 +857,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="Anpassad hudvårdsbehandling - Uppfyller dina specifika behov";
     firststyckeText.innerHTML = "Eftersom huden är i konstant förändring och har olika behov beroende på årstid, livsstil, ålder och annan behandling är denna behandling perfekt att unna sig med jämna mellanrum. Med hjälp av 11 olika oljor, serum, krämer, peelingar och masker tillgodoser denna behandling, på en innovativ bioteknologisk nivå, det som din hud behöver.";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 1195kr";
    
     vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="60-80 Minuter";
 
 
           // Hur många behandlingar behöver jag göra?
@@ -871,6 +899,10 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Djuprengöring") 
   {
 
+    hairPic.src = './images/Tandblekning.png';
+
+
+
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "Djuprengöring";
@@ -880,10 +912,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="Behandlingen inkluderar:";
     firststyckeText.innerHTML = "-Reglering av talgproduktionen -Portömning -Fräschör -Grundlig rengöring";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 1095kr";
    
     vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="60-80 Minuter";
 
     // Hur många behandlingar behöver jag?
     dragspel1Rubrik.innerHTML = "Hur många behandlingar behöver jag?";
@@ -918,16 +950,22 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Rynkbehandling Botox") 
   {
+
+    hairPic.src = './images/hello.png';
+
+
+    hairPic.src = './images/hello.png';
+
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "Rynkbehandling Botox";
     informationOm.innerHTML = "Rynkbehandling Botox";
     miniRubrik.innerHTML = "Rynkbehandling på Ideal Clinic";
     inledandeText.innerHTML = "Injektionsbehandlingar är den mest populära formen av estetiska behandlingar idag. De hjälper till att motverka rynkor och fina linjer genom att injicera en substans i utvalda områden för att jämna ut rynkor. Detta är en smidig och smärtfri behandling som tar cirka 10–20 minuter. De områden som kan behandlas inkluderar horisontella rynkor i pannan, bekymmersrynkan mellan ögonbrynen, kråksparkar, ögonbrynslyft, näsrynkor, apelsinhaka, gummy smile, läpplyft även kallad lipflip och halslyft (behandling av platysma). Injektionerna är så tunna och mängden som injiceras är så liten att obehaget för patienten är minimal. Om önskat kan vi även lokalbedöva området före behandlingen. Resultatet av behandlingen syns normalt sett inom 3-10 dagar, men i vissa fall kan det ta upp till två veckor. Resultatet varar normalt sett i 3–6 månader, men varaktigheten kan öka vid varje upprepad behandling. På Ideal Clinic har vi certifierats för estetisk injicering från Estetiska Injektionsrådet, vilket ger en trovärdig kvalitetsstämpel för våra behandlande läkare, sjuksköterskor och tandläkare. Välkommen att kontakta oss på via telefon på 010–33 33 553 eller via E-post: info@idealclinic.se för mer information och bokning av behandling.";
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 2000kr";
    
     vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="30 Minuter";
 
         // Hållbarhet:
     dragspel1Rubrik.innerHTML = "Hållbarhet";
@@ -1007,6 +1045,11 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Microneedling") 
   {
 
+
+
+    hairPic.src = 'images/Micro needling klar.jpg';
+
+
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "Microneedling";
@@ -1016,10 +1059,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="Vad är syftet med behandlingen?";
     firststyckeText.innerHTML = "De små mikrokanalerna skapar en kontrollerad skada på huden, vilket startar en läkningsprocess med ett gynnsamt hudföryngringsresultat som följd. Via mikrokanalerna appliceras bioaktiva substanser som passar just din hud för att den ska se fräschare ut. Normalt når bara cirka 0,3% av hudvårdsprodukterna de djupare hudlagren. Men med Microneedling ökar upptaget av aktiva substanser till mer än 50%. Genom att starta den naturliga läkningsprocessen och med hjälp av bioaktiva substanser sker en nyproduktion av kollagen och elastin, vilket resulterar i en förbättrad hudkvalitet.";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 1495kr";
    
     vissteduAtt.innerHTML = "Hyaluronsyra, som våra fillers består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
-    estimeradTidText.innerHTML ="20-60 Minuter beroende på området";
+    estimeradTidText.innerHTML ="40 Minuter beroende på området";
 
         // Vad är microneedling?
     dragspel1Rubrik.innerHTML = "Vad är microneedling?";
@@ -1062,12 +1105,14 @@ if (treatment === "Hårborttagning") {
     }
   });
 
-  
 
 
   }
   else if (treatment === "Kemisk peeling") 
   {
+
+    hairPic.src = 'images/KemiskPeeling.png';
+
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
 
@@ -1082,10 +1127,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik5.innerHTML ="Naturligt resultat med kemisk peeling:";
     fourthstyckeText.innerHTML = "Genom att kombinera olika metoder kan vi ofta uppnå överlägsna resultat med mindre kontraster efter ingreppet samt kortare återhämtningstid och lägre totalkostnader. För oss handlar det inte bara om själva ingreppet, utan också om att erbjuda personlig vård under hela behandlingsprocessen. Vi lägger lika stor vikt vid uppföljning för att säkerställa din nöjdhet och välbefinnande som du gör.";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 700kr";
    
     vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="40 Minuter";
 
     dragspel22Rubrik.innerHTML = "Konsultation";
     dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
@@ -1105,6 +1150,10 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Tandblekning") 
   {
+
+    hairPic.src = './images/Tandblekning.png';
+
+
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "Tandblekning";
@@ -1130,10 +1179,10 @@ if (treatment === "Hårborttagning") {
     <li>Prime Protect gör att du kan äta och dricka vad som helst redan 2 timmar efter behandlingen</li>\
     </ul>";
 
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 1195kr";
    
     vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="70 Minuter";
 
 
      // Inför behandlingen:
@@ -1199,6 +1248,10 @@ if (treatment === "Hårborttagning") {
   }
   else if (treatment === "Migränbehandling") 
   {
+
+    hairPic.src = './images/sunasfixar.jpg';
+
+
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "Migränbehandling";
@@ -1206,10 +1259,10 @@ if (treatment === "Hårborttagning") {
     miniRubrik.innerHTML = "Migränbehandling på Ideal Clinic";
     inledandeText.innerHTML = "Många personer som lider av migrän och spänningshuvudvärk kan få lindring genom en injektionsbehandling. Migrän är en vanlig sjukdom som kan utlösas av faktorer som stress, sömnbrist, fasta, kost och hormonförändringar. Behandlingen görs med injektioner. Migrän och spänningshuvudvärk kan påverka livskvaliteten hos många och är en vanlig orsak till sjukskrivning. Genom att använda Botox, kan 7 av 10 få hjälp. Det är dock inte möjligt att botade migrän med injektioner, men det kan lindra symptomen. Många individer som behandlas med oss upplever att migrän attackerna blir mildare, färre eller helt försvinner under tiden substansen är aktiv i muskeln. Injektioner görs i musklerna mellan ögonbrynen, pannan och ibland i temporala muskler och muskler på bakhuvudet. Resultatet av behandlingen märks efter ungefär en vecka och varar mellan 3- 6 månader.";
     
-    InfoCardPrice.innerHTML ="Från 2500kr";
+    InfoCardPrice.innerHTML ="Från 5000kr";
    
     vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
-    estimeradTidText.innerHTML ="30-40 Minuter";
+    estimeradTidText.innerHTML ="30-45 Minuter";
 
     dragspel22Rubrik.innerHTML = "Konsultation";
     dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
@@ -1229,6 +1282,11 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "PRP") 
   {
+
+    hairPic.src = './images/Tandblekning.png';
+
+
+
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
 
     rubrik.innerHTML = "PRP";
