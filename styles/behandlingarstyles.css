@@ -274,12 +274,15 @@ header h4{
 
 #textDiv{
    font-size: 14px;
+   margin-left: 5%;
+
 }
 
 
 @media (min-width: 769px) {
   #textDiv {
     font-size: 18px;
+    margin-left: 5%;
 
   }
 }
@@ -398,8 +401,10 @@ img {
 
 }
 
-
-
+#shortH2
+{
+  margin-left: 5%;
+}
 
 
 #blueText
@@ -472,13 +477,17 @@ img {
   font-size: 14px;
 }
 
+
+
+
+
+
 /* Media query for big screens */
 @media only screen and (min-width: 1200px) {
   .funnyImage {
-    width: 10%; /* Adjust the width to your desired size for big screens */
+    width: 20%; /* Adjust the width to your desired size for big screens */
   }
 }
-
 
 
 #avbokningsBtn

@@ -1,0 +1,513 @@
+/* #region Intro */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body{
+  width: 100%;
+  }
+  
+  header{
+  
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: fixed;
+  width:100%;
+  top:0;
+  padding: 2;
+  transition:250ms;
+  z-index:10;  
+  background-color:whitesmoke;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  
+  }
+  
+  header h4{
+  
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+  }
+  
+  #MainLogo
+  {
+    color:black;
+  }
+  
+  #MainLogo:hover
+  {
+    color:#616466;
+    font-size: 20px; 
+  }
+  /* #endregion*/
+  
+  
+  /*#region Nav*/
+  
+  
+  #bokaText{
+    color:darkgreen;
+  }
+  #bokaText:hover{
+    color:lightgreen;
+  }
+  
+  
+  .nav-links{
+  
+    position:absolute;
+    right:0;
+    top: 5vh;
+    width: 45%;
+    height:60vh;
+    background: whitesmoke;
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation:menu_animation 500ms
+    ease-in-out;
+  }
+  
+  
+  .show-navlinks{
+    display: flex;
+  }
+  
+  
+  @keyframes menu_animation{
+  
+    from{
+  
+      opacity:0;
+      tranform:translateX(100%);
+  
+    }
+  
+    to{
+      opacity:1;
+      tranform:translateX(0%);
+    }
+  
+  }
+  
+  
+  .logoNav{
+  
+  
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 800;
+  
+  
+    color:var(rgb(219, 210, 210));
+    transition: 250ms;
+  }
+  
+  header ul li{
+  
+    list-style:none;
+    margin:20px 0;
+  
+  }
+  
+  header ul li a{
+  
+    text-decoration: none;
+    padding:10px 30px;
+    font-size:1rem;
+    color:var(--grey);
+    transition: 250ms; 
+  }
+  
+  header ul li a:hover{
+  
+    color:var(--blue-dark);
+  
+  }
+  
+  
+  
+  .hamburger-on{
+      background: url('../assets/hamburger.svg');
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;  
+      cursor:pointer;
+      transition:250ms ease-in-out;
+      
+  }
+  
+  
+  .hamburger-off{
+  
+    padding:9px;
+    background:url('../assets/xsolid.svg');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    width: 25px;
+    height: 25px;
+    cursor:pointer;
+    transition:250ms ease-in-out;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* För större skärm */
+  
+  @media screen and (min-width:1000px){
+  
+    .nav-links{
+  
+      display:flex;
+      flex-direction: row;
+      position:unset;
+      width: auto;
+      height: auto;
+      background: none;
+    }
+  
+    header ul{
+  
+      display:flex;
+  
+    }
+  
+    header ul li{
+  
+      margin:0;
+  
+    }
+  
+    header ul li a{
+  
+      padding:0;
+      margin:5px 20px;
+      font-size:22px;
+    }
+  
+    .hamburger-on{
+      display:none;
+    }
+  
+    .logoNav{
+      font-size:20px;
+    }
+  }
+  
+  
+  @media (max-width: 984px) 
+  {
+    .nav-links{
+  
+      box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+      border-radius: 10px;
+    
+    }
+  
+    .images
+    {
+      width: 50%;
+      height: auto;
+    } 
+  }
+  
+  .images
+  {
+    width: 80%;
+    height: auto;
+  }
+  
+  
+  
+  
+  .lead{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .card {
+    width: 80%; /* Adjust the width value as needed */
+    margin: 0 auto; /* Center the card horizontally */
+  }
+  
+  #reviewCarousel {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .carousel-inner {
+    font-size: 12px;
+    text-align: left;
+  }
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  
+  .rubrik{
+    text-align: center;
+    margin-top: 7%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+  }
+  
+  
+  
+  .container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  
+  @media only screen and (min-width: 768px) {
+    .card {
+      width: calc(50% - 2rem);
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .card {
+      width: calc(33.33% - 2rem);
+    }
+  }
+  
+  .elias {
+    margin-left: 0;
+  }
+  
+  
+  #foot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  @media (max-width: 800px) 
+  {
+  
+    .rubrik{
+  
+      margin-top: 15%;
+    }
+  
+  }
+  
+  
+  
+  #Info-Bot{
+    margin-top: 5%;
+    width: 100%;
+    margin-bottom: 3%;
+    
+  }
+  
+  #gogoCol
+  {
+    text-align: center;
+  }
+  
+  
+  #gogomaps{
+  
+    width: fit-content;
+    
+  }
+  
+  .list-group{
+    font-size: 20px;
+    width: 100%;
+    font-size: 15px;
+  }
+  
+  .row{
+    width: 100%;
+  }
+  
+  
+  
+  .image-wrapper {
+    width: 100%;
+    height: 70vh; /* set the height to 30% of the viewport height */
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .image-wrapper {
+      height: 50vh;
+    }
+  }
+  
+  
+  #KontaktRubrik
+  {
+  
+      margin-top: 2%;
+      text-align: center;
+  }
+  
+  
+  
+  /* #region Contact Form */
+  
+  
+  .container {
+    max-width:400px;
+    width:100%;
+    margin:0 auto;
+    position:relative;
+    margin-top: -5%;
+  }
+  
+  #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+  
+  #contact {
+    background:#F9F9F9;
+    padding:25px;
+    margin:50px 0;
+  }
+  
+  #contact h3 {
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  
+  #contact h4 {
+    margin:5px 0 15px;
+    display:block;
+    font-size:13px;
+  }
+  
+  fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  
+  #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+    width:100%;
+    border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+  }
+  
+  #contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+    -webkit-transition:border-color 0.3s ease-in-out;
+    -moz-transition:border-color 0.3s ease-in-out;
+    transition:border-color 0.3s ease-in-out;
+    border:1px solid #AAA;
+  }
+  
+  #contact textarea {
+    height:100px;
+    max-width:100%;
+    resize:none;
+  }
+  
+  #contact button[type="submit"] {
+    background-color: rgba(207, 207, 207, 0.5);
+    border-radius: 100px;
+    box-shadow: rgba(118, 118, 118, 0.2) 0 -25px 18px -14px inset,
+      rgba(132, 132, 132, 0.15) 0 1px 2px,
+      rgba(110, 110, 110, 0.15) 0 2px 4px,
+      rgba(118, 119, 119, 0.15) 0 4px 8px,
+      rgba(133, 134, 134, 0.15) 0 8px 16px,
+      rgba(146, 146, 146, 0.15) 0 16px 32px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 60px;
+    text-decoration: none;
+    transition: all 250ms;
+    border:0;
+    font-size: 12px;
+  }
+  
+  #contact button[type="submit"]:hover {
+    background:lightgreen;
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+  }
+  
+  #contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+  
+  #contact input:focus, #contact textarea:focus {
+    outline:0;
+    border:1px solid #999;
+  }
+  ::-webkit-input-placeholder {
+   color:#888;
+  }
+  :-moz-placeholder {
+   color:#888;
+  }
+  ::-moz-placeholder {
+   color:#888;
+  }
+  :-ms-input-placeholder {
+   color:#888;
+  }
+  
+  
+  
+  /* #endregion */
+  
+  
+  
