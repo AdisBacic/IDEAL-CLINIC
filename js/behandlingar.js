@@ -950,7 +950,6 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Rynkbehandling Botox") 
   {
-
     hairPic.src = './images/hello.png';
 
 
@@ -961,7 +960,7 @@ if (treatment === "Hårborttagning") {
     rubrik.innerHTML = "Rynkbehandling Botox";
     informationOm.innerHTML = "Rynkbehandling Botox";
     miniRubrik.innerHTML = "Rynkbehandling på Ideal Clinic";
-    inledandeText.innerHTML = "Injektionsbehandlingar är den mest populära formen av estetiska behandlingar idag. De hjälper till att motverka rynkor och fina linjer genom att injicera en substans i utvalda områden för att jämna ut rynkor. Detta är en smidig och smärtfri behandling som tar cirka 10–20 minuter. De områden som kan behandlas inkluderar horisontella rynkor i pannan, bekymmersrynkan mellan ögonbrynen, kråksparkar, ögonbrynslyft, näsrynkor, apelsinhaka, gummy smile, läpplyft även kallad lipflip och halslyft (behandling av platysma). Injektionerna är så tunna och mängden som injiceras är så liten att obehaget för patienten är minimal. Om önskat kan vi även lokalbedöva området före behandlingen. Resultatet av behandlingen syns normalt sett inom 3-10 dagar, men i vissa fall kan det ta upp till två veckor. Resultatet varar normalt sett i 3–6 månader, men varaktigheten kan öka vid varje upprepad behandling. På Ideal Clinic har vi certifierats för estetisk injicering från Estetiska Injektionsrådet, vilket ger en trovärdig kvalitetsstämpel för våra behandlande läkare, sjuksköterskor och tandläkare. Välkommen att kontakta oss på via telefon på 010–33 33 553 eller via E-post: info@idealclinic.se för mer information och bokning av behandling.";
+    inledandeText.innerHTML = "Injektionsbehandlingar är den mest populära formen av estetiska behandlingar idag. De hjälper till att motverka rynkor och fina linjer genom att injicera Botulinumtoxin typ A i utvalda områden för att jämna ut rynkor. Detta är en smidig och smärtfri behandling som tar cirka 10–20 minuter. De områden som kan behandlas inkluderar horisontella rynkor i pannan, bekymmersrynkan mellan ögonbrynen, kråksparkar, ögonbrynslyft, näsrynkor, apelsinhaka, gummy smile, läpplyft även kallad lipflip och halslyft (behandling av platysma). Injektionerna är så tunna och mängden som injiceras är så liten att obehaget för patienten är minimal. Om önskat kan vi även lokalbedöva området före behandlingen. Resultatet av behandlingen syns normalt inom 3-10 dagar, men i vissa fall kan det ta upp till två veckor. Resultatet varar normalt i 3–6 månader, men varaktigheten kan öka vid varje upprepad behandling. På Ideal Clinic har vi certifierats för estetisk injicering från Estetiska Injektionsrådet, vilket ger en trovärdig kvalitetsstämpel för våra behandlande läkare, sjuksköterskor och tandläkare. Välkommen att kontakta oss via telefon på 010–33 33 553 eller via E-post: info@idealclinic.se för mer information och bokning av behandling.";
     InfoCardPrice.innerHTML ="Från 2000kr";
    
     vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
