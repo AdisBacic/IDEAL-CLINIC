@@ -82,6 +82,15 @@ hamburger.addEventListener("click", function () {
 });
 
 
+//Kod för att ta bort text efter att kontaktformuläret är skickat.
+
+document.getElementById("contact").addEventListener("submit", function() {
+  // Clear input fields
+  document.getElementById("contact").reset();
+
+});
+
+
 
 
 
