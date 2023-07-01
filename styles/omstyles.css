@@ -298,7 +298,10 @@ header ul li a:hover{
   flex-wrap: wrap;
 }
 
-
+#lustig
+{
+  margin-right: 2%;
+}
 
 @media only screen and (min-width: 768px) {
   .card {

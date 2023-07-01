@@ -246,11 +246,11 @@ if (treatment === "Hårborttagning") {
 
           // Vad bör du ta hänsyn till innan en svettbehandling?
       dragspel1Rubrik.innerHTML = "Vad bör du ta hänsyn till innan en svettbehandling?";
-      dragspelFirstTip.innerHTML = "Du bör inte ha utslag eller finnar på det område som ska behandlas.<br>Du skall inte ha någon pågående herpesinfektion i kroppen eller på det område som ska behandlas.<br>Du skall inte vara gravid eller amma.<br>Om du har tagit mediciner som Treo eller Ipren eller liknande, kan du lättare få blåmärken vid det område som ska behandlas.<br>För att minska smärta kan du köpa Emla-salva på apoteket och applicera ett tjockt lager på det område som ska behandlas ca 1 timme innan behandlingen.<br>Du bör inte träna samma dag som behandlingen utförs.";
+      dragspelFirstTip.innerHTML = "Du bör inte ha utslag eller finnar på det område som ska behandlas.<li>\Du skall inte ha någon pågående herpesinfektion i kroppen eller på det område som ska behandlas.<li>\Du skall inte vara gravid eller amma.<li>\Om du har tagit mediciner som Treo eller Ipren eller liknande, kan du lättare få blåmärken vid det område som ska behandlas.<li>\För att minska smärta kan du köpa Emla-salva på apoteket och applicera ett tjockt lager på det område som ska behandlas ca 1 timme innan behandlingen.<li>\Du bör inte träna samma dag som behandlingen utförs.";
 
       // Vad bör du ta hänsyn till efter efter svettbehandling? 
       dragspel2Rubrik.innerHTML = "Vad bör du ta hänsyn till efter efter svettbehandling?";
-      dragspel2FirstTip.innerHTML = "Efter en injektionsbehandling är det viktigt att inte röra vid det behandlade området under 6 timmar. Följande punkter är också viktiga att tänka på efter en svettbehandling:<br>Du bör inte utföra någon annan typ av behandling på det aktuella området under 1 vecka.<br>Du ska inte träna samma dag som behandlingen.<br>Du ska undvika bastu och solarium under 1 vecka.<br>Om du vill veta mer eller har fler frågor kan du alltid boka en tid för en konsultation med någon av våra behandlare vilket alltid är kostnadsfritt.";
+      dragspel2FirstTip.innerHTML = "Efter en injektionsbehandling är det viktigt att inte röra vid det behandlade området under 6 timmar.<br>\<br> <strong> Följande punkter är också viktiga att tänka på efter en svettbehandling: </strong>\ <br>\<br>\ <li>\Du bör inte utföra någon annan typ av behandling på det aktuella området under 1 vecka.<li>\ Du ska inte träna samma dag som behandlingen.<li>\ Du ska undvika bastu och solarium under 1 vecka. <li>\Om du vill veta mer eller har fler frågor kan du alltid boka en tid för en konsultation med någon av våra behandlare vilket alltid är kostnadsfritt.";
 
       // När bör du märka resultat efter en svettbehandling?
       dragspel3Rubrik.innerHTML = "När bör du märka resultat efter en svettbehandling?";
@@ -291,7 +291,7 @@ if (treatment === "Hårborttagning") {
     miniRubrik.innerHTML = "Ärrbehandling (Microneedling) på Ideal Clinic";
     inledandeText.innerHTML = "Microneedling, även känt som mikronålning, är en av de mest effektiva behandlingarna för att minska synligheten av acneärr och andra ärr. Behandlingen utförs med en nål-försedd penna som innehåller hundratals mikronålar. När nålarna penetrerar huden skapas tusentals mikrokanaler djupt ner i huden. Varje punkt stimulerar till en ökning av kollagen och elasticitet, vilket resulterar i en jämnare och slätare hud med mindre synliga ärr. Microneedling ger utmärkta resultat i ansiktet, speciellt vid behandling av acneärr."
     miniRubrik2.innerHTML ="Vad är syftet med behandlingen?";
-    firststyckeText.innerHTML = "Syftet med behandlingen är att orsaka en kontrollerad skada på huden, som i sin tur startar en läkningsprocess som leder till ett gynnsamt hudföryngringsresultat. Genom mikrokanalerna som skapas under behandlingen, kan bioaktiva substanser som innehåller hyaluronsyra och en vitamin-cocktail tränga in djupt i huden och ge den näring som den behöver. Detta ökar upptaget av aktiva ingredienser och kan öka effekten av hudvårdsprodukter upp till 70%, jämfört med den vanliga 0,3% som normalt når de djupare hudlagren."
+    firststyckeText.innerHTML = "Syftet med behandlingen är att orsaka en kontrollerad skada på huden, som i sin tur startar en läkningsprocess som leder till ett gynnsamt hudföryngringsresultat. Genom mikrokanalerna som skapas under behandlingen, kan bioaktiva substanser som innehåller hyaluronsyra och en vitamin-cocktail tränga in djupt i huden och ge den näring som den behöver. Detta ökar upptaget av aktiva ingredienser och kan öka effekten av hudvårdsprodukter upp till 50%, jämfört med den vanliga 0,3% som normalt når de djupare hudlagren."
     secondstyckeText.innerHTML = "För att behandla fördjupningar och gropar i acneärr, kan Microneedling kombineras med Skinbooster för att lyfta upp dessa områden. I dessa fall kan vi använda en kombination av tunnflytande Skinboosters, såsom Juvederm Volite eller Restylane Vital. Om acneärr är milda och mindre framträdande, kan kemisk peeling vara ett lämpligt och prisvärt alternativ.";
     thirdstyckeText.innerHTML ="För att få ut så mycket som möjligt av en behandling med microneedling, är det viktigt att du tillför serum till huden som innehåller en hög koncentration av hyaluronsyra, samt vitaminer och antioxidanter. Detta är nödvändigt för att huden ska kunna dra full nytta av de mikrokanaler som skapats under behandlingen, eftersom huden lättare kan ta upp de aktiva ingredienserna. På Ideal Clinic använder vi oss av serumet Skinko, som innehåller marknadens högsta koncentration av hyaluronsyra - det viktigaste ämnet som ett microneedling-serum ska innehålla. Hyaluronsyra är det mest värdefulla ämnet i ett serum, då det hjälper till att återfukta och ge näring till huden. Efter behandlingen, du får även en återfuktande ansiktsmask som lugnar ner huden, för att ytterligare hjälpa huden att återhämta sig. Vi på Ideal Clinic har en lång erfarenhet av behandling av acneärr och vi kan hjälpa dig att välja den bästa behandlingen för dina ärr vid en konsultation."
 
@@ -311,7 +311,7 @@ if (treatment === "Hårborttagning") {
 
     // Vilka får inte utföra microneedling?
     dragspel3Rubrik.innerHTML = "Vilka får inte utföra microneedling?";
-    dragspel3FirstTip.innerHTML = "Personer som tar Roaccutan eller andra acnemediciner.<br>Gravida eller ammande.<br>Personer med öppna eller infekterade sår.<br>Diabetiker.<br>Personer med kronisk hudsjukdom, nervskada, eller personer som har strålbehandlats eller genomgått ansiktskirurgi eller laserbehandling under det senaste året bör också undvika microneedling.";
+    dragspel3FirstTip.innerHTML = "Personer som tar Roaccutan eller andra acnemediciner.<li>\Gravida eller ammande.<li>\Personer med öppna eller infekterade sår.<li>\Diabetiker.<li>\Personer med kronisk hudsjukdom, nervskada, eller personer som har strålbehandlats eller genomgått ansiktskirurgi eller laserbehandling under det senaste året bör också undvika microneedling.";
 
     // Hur lång tid tar behandlingen?
     dragspel4Rubrik.innerHTML = "Hur lång tid tar behandlingen?";
@@ -338,17 +338,15 @@ if (treatment === "Hårborttagning") {
 
   }
 
-  else if (treatment === "Hudbristning") 
+  else if (treatment === "Retinol Peeling") 
   {
-    //Status: Completed *Not tested*
-
     hairPic.src = './images/Laser.png';
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
-    rubrik.innerHTML = "Hudbristning";
+    rubrik.innerHTML = "Retinol Peeling";
     informationOm.innerHTML = "Hudbristning"
-    miniRubrik.innerHTML = "Retinol Peeling (Hudbristning) på Ideal Clinic";
+    miniRubrik.innerHTML = "Retinol Peeling på Ideal Clinic";
     inledandeText.innerHTML = "Retinol Peeling NeoStrata Retinol Peel är en unik peel som innehåller Retinol och volymgivande Aminofill för att förbättra hudens struktur, spänst, ge en jämnare hudton och minska linjer och rynkor. Peelingen är ytlig och kräver minimal återhämtningstid, och passar de flesta hudtyper. Det är en snabb, enkel och effektiv peeling som påbörjas på kliniken och avlägsnas hemma."
     miniRubrik2.innerHTML ="Så här går det till";
     firststyckeText.innerHTML = "Retinolpeeling från NeoStrata innehåller Vitamin E, Bisabolol, Aminofil, NeoCitriate och 3% Retinol. Aminofil och Retinol gör att huden exfolierar, det vill säga att den flagnar av. Behandlingen utförs på kliniken och avlägsnas av dig själv hemma efter 3-8 timmar. Du kommer inte att känna någon obehag efter appliceringen. Exfolieringsprocessen startar inom 2-4 dagar och pågår vanligtvis i en vecka. Efter exfoliering kommer du att märka förbättringar i hudens struktur, spänst, lyster och hudton."
@@ -368,11 +366,11 @@ if (treatment === "Hårborttagning") {
 
     // Reducera ålderstecken, aktiv acne, pigmentförändringar och ojämn hudton
     dragspel3Rubrik.innerHTML = "Reducera ålderstecken, aktiv acne, pigmentförändringar och ojämn hudton";
-    dragspel3FirstTip.innerHTML = "Retinol peeling tar bort gamla hudceller och återställer hudens kvalitet. Den reducerar mindre rynkor, stramar upp huden, reducerar ärr, hudbristningar och acne, minskar porer och dämpar pigmentförändringar och solskador. Det är ett bra alternativ för den som vill åtgärda flera problem på en gång. Ny och friskare hud uppnås genom en effektiv och djupgående behandling med Retinol peeling. Vi applicerar olika lösningar på huden för att avlägsna det yttre döda cellagret och stimulera till nybildning av nya celler.";
+    dragspel3FirstTip.innerHTML = "Retinol peeling tar bort gamla hudceller och återställer hudens kvalitet. Den reducerar mindre rynkor, stramar upp huden, reducerar ärr, hudbristningar och acne, minskar porer och dämpar pigmentförändringar och solskador. Det är ett bra alternativ för den som vill åtgärda flera problem på en gång. Ny och friskare hud uppnås genom en effektiv och djupgående behandling med Retinol peeling. Vi applicerar olika lösningar på huden för att avlägsna det yttre döda lagret och stimulera till nybildning av nya celler.";
 
     // Att tänka på efter behandlingen
     dragspel4Rubrik.innerHTML = "Att tänka på efter behandlingen";
-    dragspel4FirstTip.innerHTML = "Du bör undvik hudvårdsprodukter som innehåller retinoider eller andra exfolierande produkter en vecka innan behandlingen. Du bör inte utsätta de behandlade områdena för solen under 3-4 veckor efter behandlingen. Om du gör flera behandlingar bör du vänta 6-8 veckor mellan varje behandling. Retinol behandlingen kan göras som en enskild behandling. Efter behandlingen kan det uppstå lätt rodnad i några dagar.";
+    dragspel4FirstTip.innerHTML = "Du bör undvik hudvårdsprodukter som innehåller retinoider eller andra exfolierande produkter en vecka innan behandlingen. <li>\ Du bör inte utsätta de behandlade områdena för solen under 3-4 veckor efter behandlingen.<li>\Om du gör flera behandlingar bör du vänta 6-8 veckor mellan varje behandling.<li>\ Retinol behandlingen kan göras som en enskild behandling.<li>\Efter behandlingen kan det uppstå lätt rodnad i några dagar.";
 
     // Behandlar man alla pigmentförändringar på samma sätt?
     dragspel5Rubrik.innerHTML = "Behandlar man alla pigmentförändringar på samma sätt?";
@@ -407,13 +405,14 @@ if (treatment === "Hårborttagning") {
     rubrik.innerHTML = "Profhilo";
     informationOm.innerHTML = "Profhilo"
     miniRubrik.innerHTML = "Profhilo på Ideal Clinic";
-    inledandeText.innerHTML = "Bio-remodelling är en revolutionerande och innovativ estetisk behandling som riktar sig direkt på slapp hud och fokuserar på att bygga vävnad. PROFHILO® är den första hyaluronsyra-baserade produkten som helt saknar kemiska tvärbindningsmedel (BDDE) och är unik i sin förmåga att återskapa förlorad vävnad.";
+    inledandeText.innerHTML = "Profhilo är en revolutionerande och innovativ estetisk behandling som riktar sig direkt på slapp hud och fokuserar på att bygga vävnad. PROFHILO® är den första hyaluronsyra-baserade produkten som helt saknar kemiska tvärbindningsmedel (BDDE) och är unik i sin förmåga att återskapa förlorad vävnad.";
     
     miniRubrik2.innerHTML ="Minskning av slapp hud.";
     firststyckeText.innerHTML = "Den åtstramande effekten är ett resultat av hyaluronsyrans höga molekylvikt som neutraliserar slapp hud och ger en lätt lyftning. PROFHILO® är din nya allierade mot åldrande som ger näring till hudceller och återställer fasthet i huden, med en förlängd hållbarhet. Det är en produkt med mycket god vävnadsintegration, som består av mycket ren kvalitetshyaluronsyra producerad genom biofermentering. På grund av sin höga renhet och frånvaro av tillsatser, inklusive BDDE som många andra fillers innehåller, erbjuder PROFHILO® större säkerhet och därför färre biverkningar. Den patenterade tekniken för PROFHILO® ger en förlängd hållbarhet. Bara fem injektioner krävs för att erbjuda en maximal komfortabel behandling med synliga resultat efter bara två sessioner. 5-punktsbehandling (BAP-teknik).BAP-tekniken (Bio Aesthetic Points), som granskats och utvecklats av IBSA, baseras på fem injektionsställen som särskilt väljs för att minimera riskerna och maximera spridningen av produkten i ansiktet. Faktum är att PROFHILO® är speciellt utformad för behandling av hudens slapphet i malar- och submalarområdena. Det injiceras i det djupa hudlagret. Hybridkombinationen möjliggör återstabilisering av fysiologiska nivåer av endogen hyaluronsyra och förbättring av hudens fukt.";
    
     miniRubrik3.innerHTML ="Varför Profhilo?";
-    secondstyckeText.innerHTML = "PROFHILO är en mycket ren produkt som består av hyaluronsyra som har producerats genom biofermentering. På grund av sin höga renhet och frånvaro av tillsatser erbjuder PROFHILO ökad säkerhet och därmed färre biverkningar. Den patenterade tekniken för PROFHILO återskapar även förlorad vävnad, vilket inte är möjligt med filler eller Skinbooster. Ideal Clinic har en eller flera behandlare som är certifierade för estetisk injicering av Estetiska Injektionsrådet. Certifieringen är en trovärdig kvalitetsstämpel för behandlande läkare, sjuksköterskor och tandläkare och ger patienterna möjlighet att göra upplysta och trygga val. Kliniker som använder loggan Certifierad för estetisk injicering har personal som har genomgått denna examination. All personal med rätt medicinsk utbildning som arbetar med estetiska injektions behandlingar kan certifiera sig och förväntas följa det etiska kontrakt som de förbinder sig till vid certifieringen. För mer information besök www.estetiskainjektionsradet.se Är du intresserad av en behandling – eller vill du veta mer? Välkommen att höra av dig till oss på Ideal Clinic!";
+    secondstyckeText.innerHTML = "PROFHILO är en mycket ren produkt som består av hyaluronsyra som har producerats genom biofermentering. På grund av sin höga renhet och frånvaro av tillsatser erbjuder PROFHILO ökad säkerhet och därmed färre biverkningar. Den patenterade tekniken för PROFHILO återskapar även förlorad vävnad, vilket inte är möjligt med filler eller Skinbooster.";
+    thirdstyckeText.innerHTML="Ideal Clinic har en eller flera behandlare som är certifierade för estetisk injicering av Estetiska Injektionsrådet. Certifieringen är en trovärdig kvalitetsstämpel för behandlande läkare, sjuksköterskor och tandläkare och ger patienterna möjlighet att göra upplysta och trygga val. Kliniker som använder loggan Certifierad för estetisk injicering har personal som har genomgått denna examination. All personal med rätt medicinsk utbildning som arbetar med estetiska injektions behandlingar kan certifiera sig och förväntas följa det etiska kontrakt som de förbinder sig till vid certifieringen. För mer information besök www.estetiskainjektionsradet.se Är du intresserad av en behandling – eller vill du veta mer? Välkommen att höra av dig till oss på Ideal Clinic!";
 
     InfoCardPrice.innerHTML ="Från 3400kr";
    
@@ -637,66 +636,7 @@ if (treatment === "Hårborttagning") {
   
 
   }
-  else if (treatment === "Retinol peelin") 
-  {
-    
-
-    toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
-
-
-    rubrik.innerHTML = "Retinol peeling";
-    informationOm.innerHTML = "Retinol peeling";
-    miniRubrik.innerHTML = "Retinol Peeling på Ideal Clinic";
-    inledandeText.innerHTML = "Retinol Peeling NeoStrata Retinol Peel är en unik peel som innehåller Retinol och volymgivande Aminofill för att förbättra hudens struktur, spänst, ge en jämnare hudton och minska linjer och rynkor. Peelingen är ytlig och kräver minimal återhämtningstid, och passar de flesta hudtyper. Det är en snabb, enkel och effektiv peeling som påbörjas på kliniken och avlägsnas hemma. Så här går det till: Retinolpeeling från NeoStrata innehåller Vitamin E, Bisabolol, Aminofil, NeoCitriate och 3% Retinol. Aminofil och Retinol gör att huden exfolierar, det vill säga att den flagnar av. Behandlingen utförs på kliniken och avlägsnas av dig själv hemma efter 3-8 timmar. Du kommer inte att känna något obehag efter appliceringen. Exfolieringsprocessen startar inom 2-4 dagar och pågår vanligtvis i en vecka. Efter exfoliering kommer du att märka förbättringar i hudens struktur, spänst, lyster och hudton.";
-    miniRubrik2.innerHTML ="För vem passar behandlingen?";
-    firststyckeText.innerHTML = "Retinol peelingen passar de flesta hudtyper och toner, särskilt: Personer med aktiv acne Personer med orenheter eller ojämn hudton Personer med pigmentförändringar på huden";
-
-    miniRubrik4.innerHTML ="Vilka områden kan behandlas?";
-    thirdstyckeText.innerHTML = "Behandlingen kan utföras på ansikte, hals, dekolletage och handryggar. Reducera ålderstecken, aktiv acne, pigmentförändringar och ojämn hudton Retinol peeling tar bort gamla hudceller och återställer hudens kvalitet. Den reducerar mindre rynkor, stramar upp huden, reducerar ärr, hudbristningar och acne, minskar porer och dämpar pigmentförändringar och solskador. Det är ett bra alternativ för den som vill åtgärda flera problem på en gång. Ny och friskare hud uppnås genom en effektiv och djupgående behandling med Retinol peeling. Vi applicerar olika lösningar på huden för att avlägsna det yttre döda cellagret och stimulera till nybildning av nya celler.";
-
-    miniRubrik5.innerHTML ="Att tänka på efter behandlingen:";
-    fourthstyckeText.innerHTML = "Du bör undvik hudvårdsprodukter som innehåller retinoider eller andra exfolierande produkter en vecka innan behandlingen. Du bör inte utsätta de behandlade områdena för solen under 3-4 veckor efter behandlingen. Om du gör flera behandlingar, bör du vänta 6-8 veckor mellan varje behandling. Retinol behandlingen kan göras som en enskild behandling. Efter behandlingen kan det uppstå lätt rodnad i några dagar.";
-
-    InfoCardPrice.innerHTML ="Från 1300kr";
-   
-    vissteduAtt.innerHTML = "Hyaluronsyra, som våra fillers består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
-    estimeradTidText.innerHTML ="20-40 Minuter";
-
-
-        // Behandlar man alla pigmentförändringar på samma sätt?
-    dragspel1Rubrik.innerHTML = "Behandlar man alla pigmentförändringar på samma sätt?";
-    dragspelFirstTip.innerHTML = "Nej, hur man behandlar en pigmentförändring beror på dess djup och typ. Det finns epidermala, dermala eller mixade förändringar, epidermala är lättare att ta bort än dermala. Pigmentförändringar kan också vara intra eller extracellulära.";
-
-    // Handryggar
-    dragspel2Rubrik.innerHTML = "Handryggar";
-    dragspel2FirstTip.innerHTML = "Pigmentfläckar på handryggarna kan också behandlas.";
-
-    // Vilken typ av förändring det är kan du få reda på genom ett besök på kliniken, där gör hudterapeuten en bedömning och föreslår vilken metod som är lämplig att ta bort pigment förändringen.
-    dragspel3Rubrik.innerHTML = "Vilken typ av förändring det är kan du få reda på genom ett besök på kliniken";
-    dragspel3FirstTip.innerHTML = "Vilken typ av förändring det är kan du få reda på genom ett besök på kliniken, där gör hudterapeuten en bedömning och föreslår vilken metod som är lämplig att ta bort pigmentförändringen.";
-
-    // Test behandling
-    dragspel4Rubrik.innerHTML = "Test behandling";
-    dragspel4FirstTip.innerHTML = "Det kan också vara lämpligt att göra en testbehandling för att se om pigmentfläcken svarar på behandlingen.";
-
-    dragspel22Rubrik.innerHTML = "Konsultation";
-    dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
-
-
-    let accordions = document.getElementsByClassName("accordion-item");
-    // Convert the HTMLCollection to an array
-    let accordionArray = Array.from(accordions);
-    
-    accordionArray.forEach(accordion => {
-      // Check if the accordion has no text content
-      if (accordion.textContent.trim().length === 0) {
-        // Remove the accordion from the DOM
-        accordion.parentNode.removeChild(accordion);
-      }
-    });
-
-  }
-
+  
   else if (treatment === "MicroTox") 
   {
     hairPic.src = './images/sunasfixar.jpg';
@@ -846,8 +786,6 @@ if (treatment === "Hårborttagning") {
   {
     hairPic.src = './images/Tandblekning.png';
 
-
-
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "Klassisk ansiktsbehandling";
@@ -968,7 +906,7 @@ if (treatment === "Hårborttagning") {
 
         // Hållbarhet:
     dragspel1Rubrik.innerHTML = "Hållbarhet";
-    dragspelFirstTip.innerHTML = "Behandlingen innebär att en liten mängd av det aktiva ämnet injiceras i den underliggande mimikmuskulaturen i det område som ska behandlas. Behandlingen är snabb och nästan helt smärtfri. Resultaten syns ofta redan efter ett par dagar och håller i sig i upp till 4-6 månader.";
+    dragspelFirstTip.innerHTML = "Behandlingen innebär att en liten mängd av Botulinumtoxin typ A injiceras i den underliggande mimikmuskulaturen i det område som ska behandlas. Behandlingen är snabb och nästan helt smärtfri. Resultaten syns ofta redan efter ett par dagar och håller i sig i upp till 4-6 månader.";
 
     // Alltid rätt till efterkontroll:
     dragspel2Rubrik.innerHTML = "Alltid rätt till efterkontroll";
@@ -992,7 +930,7 @@ if (treatment === "Hårborttagning") {
     tipList.appendChild(newTip3);
 
     var newTip4 = document.createElement("li");
-    newTip4.innerHTML = "Om du har tagit treo eller Ipren eller liknande läkemedel kan man lättare få blåmärken i injektionsområdet.";
+    newTip4.innerHTML = "Om du har tagit treo, Ipren eller liknande läkemedel kan blåmärken uppkomma lättare på injektionsområdet.";
     tipList.appendChild(newTip4);
 
     var newTip5 = document.createElement("li");
@@ -1006,10 +944,10 @@ if (treatment === "Hårborttagning") {
 
     // Att tänka på efter din behandling:
     dragspel4Rubrik.innerHTML = "Att tänka på efter din behandling";
-    dragspel4FirstTip.innerHTML = "Behandlingsresultatet kan tidigast börja ses efter ca 3-4 dagar och varar generellt upp till 3-6 månader.";
+    dragspel4FirstTip.innerHTML = "Behandlingsresultatet kan tidigast börja synas efter ca 3-4 dagar och varar generellt upp till 3-6 månader.";
 
     var newTip7 = document.createElement("li");
-    newTip7.innerHTML = "Du ska inte utföra peeling eller massage av ansiktet samma dag.";
+    newTip7.innerHTML = "Du ska inte utföra peeling eller massage på ansiktet samma dag.";
     var tipList = dragspel4FirstTip.parentNode;
     tipList.appendChild(newTip7);
 
@@ -1041,7 +979,7 @@ if (treatment === "Hårborttagning") {
 
   }
 
-  else if (treatment === "Microneedling") 
+  else if (treatment === "Microneedling/Hudbristning") 
   {
 
 
@@ -1051,7 +989,7 @@ if (treatment === "Hårborttagning") {
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
-    rubrik.innerHTML = "Microneedling";
+    rubrik.innerHTML = "Microneedling/Hudbristning";
     informationOm.innerHTML = "Microneedling";
     miniRubrik.innerHTML = "Microneedling på Ideal Clinic";
     inledandeText.innerHTML = "Microneedling är en behandling som används för åtstramning av huden, förbättrad lyster och bildning av kollagen. Det är en mer djupgående behandling än kemisk peeling. Microneedling-pennan är utrustad med hundratals mikronålar, som tränger igenom huden och skapar tusentals mikrokanaler. Nåltätheten och diametern på nålarna gör att behandlingen blir skonsam och ger en god penetration.";
@@ -1060,7 +998,7 @@ if (treatment === "Hårborttagning") {
 
     InfoCardPrice.innerHTML ="Från 1495kr";
    
-    vissteduAtt.innerHTML = "Hyaluronsyra, som våra fillers består av, är en bindvävssubstans som finns naturligt i vår kropp och har en stark förmåga att binda vatten. Det är denna förmåga som ger huden volym och fräschhet efter en fillerbehandling.";
+    vissteduAtt.innerHTML = "Vi har en kundnöjdhet på 4.9 av 5 stjärnor på Bokadirekt";
     estimeradTidText.innerHTML ="40 Minuter beroende på området";
 
         // Vad är microneedling?
@@ -1083,7 +1021,7 @@ if (treatment === "Hårborttagning") {
   <li>Tar Kortison</li>\
   <li>Är gravida eller ammande</li>\
   <li>Har öppna eller infekterade sår, som Herpes Simplex</li>\
-  <li>Har blodförtunnande läkemedel, inklusive naturläkemedel</li>\
+  <li>Tar blodförtunnande läkemedel, inklusive vissa typer av naturläkemedel</li>\
   <li>Har försämrad sårläkningsförmåga, som diabetes</li>\
   <li>Har en kronisk hudsjukdom eller nervskada i aktuellt område</li>\
   <li>Har genomgått strålbehandling under det senaste året</li>\
@@ -1298,13 +1236,12 @@ if (treatment === "Hårborttagning") {
     <li>Naturlig metod: PRP för hår är en naturlig behandling eftersom den använder patientens eget blod för att extrahera blodplättar och tillväxtfaktorer. Det finns ingen användning av kemikalier eller syntetiska ämnen, vilket minskar risken för biverkningar eller allergiska reaktioner.</li> <br>\
     <li>Främjar hårtillväxt: PRP innehåller höga nivåer av tillväxtfaktorer som främjar hårtillväxt och stimulerar vilande hårfolliklar. Genom att injicera PRP i områden med tunnhårighet eller håravfall kan man öka blodcirkulationen, näringsupptaget och stimulera hårfolliklarna för att producera tjockare, friskare hårstrån.Främjar hårtillväxt: PRP innehåller höga nivåer av tillväxtfaktorer som främjar hårtillväxt och stimulerar vilande hårfolliklar. Genom att injicera PRP i områden med tunnhårighet eller håravfall kan man öka blodcirkulationen, näringsupptaget och stimulera hårfolliklarna för att producera tjockare, friskare hårstrån.</li> <br>\
     <li>Förbättrar hårets kvalitet: PRP-behandlingar förbättrar inte bara hårtillväxten, utan också hårets övergripande kvalitet. De tillväxtfaktorer och proteiner som finns i PRP hjälper till att stärka hårsäckarna, öka hårets elasticitet och förbättra dess struktur och glans. Det kan också minska håravfall och brytning av hårstrån.</li> <br>\
-    <li>Snabb och enkel procedur: PRP-behandlingar för håret är relativt snabba och enkla att genomföra. En liten mängd blod tas från patienten, och blodet centrifugeras för att separera plasma med hög koncentration av blodplättar och tillväxtfaktorer. Detta PRP-serum injiceras sedan i det område som ska behandlas. Hela processen tar vanligtvis bara några timmar och kräver minimal återhämtningstid.</li> <br>\
+    <li>Snabb och enkel procedur: PRP-behandlingar för håret är relativt snabba och enkla att genomföra. En liten mängd blod tas från patienten, och blodet centrifugeras för att separera plasma med hög koncentration av blodplättar och tillväxtfaktorer. Detta PRP-serum injiceras sedan i det område som ska behandlas. Hela processen tar cirka en timme och kräver minimal återhämtningstid.</li> <br>\
     <li>Låg risk och minimala biverkningar: Eftersom PRP använder patientens eget blod minskas risken för allergiska reaktioner eller avstötning. Det är en icke-kirurgisk behandling och har minimala biverkningar såsom tillfällig rodnad eller svullnad i injektionsområdet, vilket vanligtvis försvinner inom några timmar eller dagar.</li> <br>\
-    <li>Kompletterar andra behandlingar: PRP-behandlingar kan användas som en kompletterande terapi för personer som genomgår andra håråterväxtbehandlingar, såsom hårtransplantationer eller medicinsk behandling mot håravfall. Det kan förbättra resultaten av dessa behandlingar genom att stimulera hårtillväxt och förbättra hårets övergripande hälsa.</li> <br>\
+    <li>Kompletterar andra behandlingar: PRP-behandlingar kan användas som en kompletterande behandling för personer som genomgår andra håråterväxtbehandlingar, såsom hårtransplantationer eller medicinsk behandling mot håravfall. Det kan förbättra resultaten av dessa behandlingar genom att stimulera hårtillväxt och förbättra hårets övergripande hälsa.</li> <br>\
     </ul>";
 
-    miniRubrik5.innerHTML ="Att tänka på efter behandlingen:";
-    fourthstyckeText.innerHTML = "Du bör undvik hudvårdsprodukter som innehåller retinoider eller andra exfolierande produkter en vecka innan behandlingen. Du bör inte utsätta de behandlade områdena för solen under 3-4 veckor efter behandlingen. Om du gör flera behandlingar, bör du vänta 6-8 veckor mellan varje behandling. Retinol behandlingen kan göras som en enskild behandling. Efter behandlingen kan det uppstå lätt rodnad i några dagar.";
+  
 
     InfoCardPrice.innerHTML ="Från 2500kr";
    

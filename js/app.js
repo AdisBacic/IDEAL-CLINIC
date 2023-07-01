@@ -2,7 +2,7 @@ const intro = document.querySelector(".intro");
 const logo = document.querySelector(".logo-header");
 const logoSpan = document.querySelectorAll(".logo");
 
-const expirationTime = 60 * 1000; // 5 min
+const expirationTime = 60 * 1000; // 1 minute
 
 window.addEventListener("DOMContentLoaded", () => {
   const introShownTimestamp = localStorage.getItem("introShownTimestamp");
