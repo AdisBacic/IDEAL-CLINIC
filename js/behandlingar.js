@@ -669,7 +669,7 @@ if (treatment === "Hårborttagning") {
 
     // Vem kan behandla sig med Microtox?
     dragspel2Rubrik.innerHTML = "Vem kan behandla sig med Microtox?";
-    dragspel2FirstTip.innerHTML = "Alla, oavsett hudtyp, kan behandla sig med Microtox för att dra nytta av dess effekter. Likt andra injektionsbehandlingar, behandlar vi inte gravida eller ammande personer. Dessutom rekommenderar vi att du inte är förkyld, har feber, akne eller herpesutslag på ansiktet och att du har avslutat eventuella Tetralysal-kurer senast 14 dagar innan behandlingen. Du bör också inte ha använt produkter/behandlingar som innehåller Retin-A och BHA/AHA-syror under en vecka innan behandlingen.";
+    dragspel2FirstTip.innerHTML = "Alla, oavsett hudtyp, kan behandla sig med Microtox för att dra nytta av dess effekter. Likt andra injektionsbehandlingar, behandlar vi inte gravida eller ammande personer. Dessutom rekommenderar vi att du inte är förkyld, har feber, akne eller herpesutslag på ansiktet och att du har avslutat eventuella Tetralysal-kurer senast 14 dagar innan behandlingen.<li\> Du bör också inte ha använt produkter/behandlingar som innehåller Retin-A och BHA/AHA-syror under en vecka innan behandlingen.";
 
     // Finns det biverkningar?
     dragspel3Rubrik.innerHTML = "Finns det biverkningar?";

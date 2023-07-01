@@ -580,8 +580,24 @@ i{
     margin-top: 5%;
     text-align: center;
     color:#616466;
-
+    margin-bottom: 5%;
   }
+
+  .col-md-4 {
+    margin-bottom: 50px; /* Adjust the margin as per your preference */
+  }
+
+  @media (max-width: 767px) {
+    .col-md-4 {
+      margin-bottom: 50px; /* Adjust the margin as per your preference */
+    }
+    #behandlingarRubrik{
+      margin-bottom: 10%;
+    }
+  }
+
+
+
 
   #beautylawBoxRubrik
   {
