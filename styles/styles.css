@@ -147,6 +147,7 @@ header h4{
 
 header ul li{
 
+  
   list-style:none;
   margin:20px 0;
 
@@ -561,13 +562,13 @@ i{
   /* Huvudlogga uppe vänster */
   #MainLogo
   {
+    font-size: 25px;
     color:black;
   }
 
   #MainLogo:hover
   {
     color:#616466;
-    font-size: 20px; 
   }
 
 

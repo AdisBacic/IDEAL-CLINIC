@@ -37,13 +37,13 @@ header h4{
 
 #MainLogo
 {
+  font-size: 25px;
   color:black;
 }
 
 #MainLogo:hover
 {
   color:#616466;
-  font-size: 20px; 
 }
 /* #endregion*/
 
@@ -197,7 +197,7 @@ header ul li a:hover{
 
     padding:0;
     margin:5px 20px;
-    font-size:28px;
+    font-size:22px;
   }
 
   .hamburger-on{
@@ -332,8 +332,6 @@ header ul li a:hover{
 
 @media (max-width: 800px) 
 {
-
-
 
 
   .rubrik{
