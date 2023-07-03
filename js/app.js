@@ -84,10 +84,26 @@ hamburger.addEventListener("click", function () {
 
 //Kod för att ta bort text efter att kontaktformuläret är skickat.
 
-document.getElementById("contact").addEventListener("submit", function() {
-  // Clear input fields
-  document.getElementById("contact").reset();
+document.addEventListener("DOMContentLoaded", function() {
+  // Check if form data is present in sessionStorage
+  if (sessionStorage.getItem("formSubmitted")) {
+    // Clear form fields
+    document.getElementById("contact").reset();
 
+    // Remove form data from sessionStorage
+    sessionStorage.removeItem("formSubmitted");
+  }
+});
+
+document.getElementById("contact").addEventListener("submit", function(event) {
+  // Prevent the form from submitting immediately
+  event.preventDefault();
+
+  // Submit the form
+  document.getElementById("contact").submit();
+
+  // Store form submission flag in sessionStorage
+  sessionStorage.setItem("formSubmitted", true);
 });
 
 

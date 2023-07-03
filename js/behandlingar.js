@@ -483,25 +483,28 @@ if (treatment === "Hårborttagning") {
     estimeradTidText.innerHTML ="30-60 Minuter";
 
         // Hur många sprutor behövs?
-    dragspel1Rubrik.innerHTML = "Hur många sprutor behövs?";
-    dragspelFirstTip.innerHTML = "Som regel behövs en ampull, dvs 1 ml, för att göra en förstoring av läpparna. Andra områden beror helt på hur mycket volym som behöver byggas upp eller hur djup en rynka är. Vanligtvis räcker det med en spruta för att få en större läpp vid första behandlingen. Men om du vill ha en mer markant förstoring kan det behövas fler sprutor vid kommande behandlingar. Många vill dock inte ha för stora läppar utan nöjer sig med en mindre uppfräschning med mer markerade läppar som resultat. För att åstadkomma rätt balans och ett naturligt resultat fördelas en större del av injiceringen vid underläppen i jämförelse med överläppen. Har du en ojämnhet eller snedhet kan vi också försöka korrigera detta under behandlingen.";
+    dragspel1Rubrik.innerHTML = "Syftet med behandlingen";
+    dragspelFirstTip.innerHTML = "<li> Bygga volym </li>\ <li> Reducera rynkor </li>\ <li> Skulptera ansiktsformer </li>\ <li> Kompensera för förlorad vävnad </li>\ ";
 
     // Gör det ont?
-    dragspel2Rubrik.innerHTML = "Gör det ont?";
-    dragspel2FirstTip.innerHTML = "De fillers som vi använder innehåller oftast lokalbedövning vilket gör att behandlingen känns väldigt lite. För den som önskar kan vi erbjuda lokalbedövning i form av salva med minst 10% Lidokain för att minska smärta.";
+    dragspel2Rubrik.innerHTML = "Behandlingsområden";
+    dragspel2FirstTip.innerHTML = "<li> Läppar </li>\<li> Kinder </li>\ <li>  Näsa </li>\ <li>  Haka </li>\ <li>  Nasolabialveck </li>\ <li>  Under ögonen </li>\ <li>  Marionettlinjer </li>\ "; 
 
     // Hur känns det efteråt?
-    dragspel3Rubrik.innerHTML = "Hur känns det efteråt?";
-    dragspel3FirstTip.innerHTML = "Läpparna svullnar ofta lite efter behandlingen och det kan ta ett par dagar innan svullnaden har lagt sig helt. Det kan därför vara bra att inte planera något viktigt samma dag som behandlingen görs. Det kan kännas lite bedövat runt läpparna efter behandlingen, detta beror på bedövningen och försvinner efter någon timme.";
+    dragspel3Rubrik.innerHTML = "Att tänka på innan behandlingen";
+    dragspel3FirstTip.innerHTML = "<li> Du bör ej vara förkyld eller ha feber </li>\ <li>  Undvik blodförtunnande medel 1 dag innan behandling (ex, ipren, alkohol och omega-3) </li>\ <li>  Avslutat antibiotikakur minst 2 veckor innan. </li>\ <li> Du ska ej vara gravid eller amma </li>\ ";
 
     // Hur många behandlingar behövs?
-    dragspel4Rubrik.innerHTML = "Hur många behandlingar behövs?";
-    dragspel4FirstTip.innerHTML = "Läppar har en snabbare absorptionsförmåga av fillers i förhållande till andra delar av ansiktet, därför krävs det ofta en uppbyggnadsfas för att uppnå bästa möjliga resultat. Uppbyggnadsfasen kräver oftast 2 till 3 behandlingar beroende på individ. Som regel behövs påfyllning en till två månader efter första besöket för att bibehålla och uppnå ett långvarigt och naturligt resultat.";
+    dragspel4Rubrik.innerHTML = "Behandling";
+    dragspel4FirstTip.innerHTML = "<li> Hyaluron syran i våra fillers påminner om den vi har naturligt i våra kroppar. </li>\ <li>  Behandligen har en föryngrande effekt och håller dig fräsch. </li>\ <li>  I genomsnitt håller produkten några veckor upp till 3 månader första gången. </li>\ <li>  Efter 3 behandlingar är det vanligt med en hållbarhet om 12-16 månader. </li>\<li>  Hållbarheten är individuell och vi garanterar ingen hållbarhet </li>\ ";
 
-    dragspel22Rubrik.innerHTML = "Konsultation";
-    dragspel22FirstTip.innerHTML = "Kära kunder, framöver behöver du boka en konsultation minst 48 timmar innan din behandling om du inte har varit hos oss inom de senaste 6 månaderna.";
+    dragspel5Rubrik.innerHTML = "Efter behandlingen är det normalt med";
+    dragspel5FirstTip.innerHTML = "<li> Svullnad i upp till 1 vecka. Resultatet kan upplevas ojämnt till svullnaden lägger sig </li>\ <li> Blåmärken </li>\ <li>  Ömhet </li>\ <li> Rodnad </li>\ <li>  Man kan känna av produkten vid rörelse i upp till 1-2 månader. </li>\ <li>  I vissa fall huvudväk </li>\ ";
+
+    dragspel6Rubrik.innerHTML = "Att tänka på efter din behandlingen";
+    dragspel6FirstTip.innerHTML = "<li> Peta inte på deet behandlade området kommande 6 timmar </li>\ <li> Ingen träning på 24 timmar </li>\ <li> Ej använda smink på behandlat område på 24 timmar efter behandling </li>\ <li>  Inte utsätta hyn för sol/bastu på 1 vecka </li>\ <li>  Drick mycket vatten kommande 4 dagar för bästa resultat. </li>\ ";
     let accordions = document.getElementsByClassName("accordion-item");
-
+ 
     // Convert the HTMLCollection to an array
     let accordionArray = Array.from(accordions);
     
