@@ -94,13 +94,9 @@
   
   
   .logoNav{
-  
-  
     text-decoration: none;
     font-size: 1.3rem;
-    font-weight: 800;
-  
-  
+    font-weight: 600;
     color:var(rgb(219, 210, 210));
     transition: 250ms;
   }
