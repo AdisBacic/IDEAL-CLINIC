@@ -83,6 +83,7 @@ header h4{
 
 }
 
+
 @keyframes menu_animation{
   from{
     opacity:0;
@@ -93,7 +94,6 @@ header h4{
     transform:translateX(0%);
   }
 }
-
 
 
 .button-link {
@@ -225,7 +225,7 @@ header ul li a:hover{
 
     padding:0;
     margin:5px 20px;
-    font-size:1rem;
+    font-size:22px;
 
   }
 
