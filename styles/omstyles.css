@@ -90,7 +90,7 @@ header h4{
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(rgb(219, 210, 210));
+  color:var(rgb(219, 210, 210));
   transition: 250ms;
 }
 
@@ -111,16 +111,16 @@ header ul li a:hover{
   color:var(--blue-dark);
 }
 
-.hamburger-on {
+.hamburger-on{
   background: url('../assets/hamburger.svg');
   width: 30px;
   height: 30px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; /* Center the icon */
-  margin-right: 0; /* Remove any margin-right */
-  cursor: pointer;
-  transition: 250ms ease-in-out;
+  background-position: center;  
+  cursor:pointer;
+  transition:250ms ease-in-out;
+  
 }
 
 .hamburger-off{
@@ -136,29 +136,44 @@ header ul li a:hover{
 }
 
 /* För större skärm */
+
 @media screen and (min-width:1000px){
+
   .nav-links{
+
     display:flex;
     flex-direction: row;
     position:unset;
     width: auto;
     height: auto;
     background: none;
+
   }
+
   header ul{
+
     display:flex;
+
   }
+
   header ul li{
+
     margin:0;
+
   }
+
   header ul li a{
+
     padding:0;
     margin:5px 20px;
     font-size:22px;
+
   }
+
   .hamburger-on{
     display:none;
   }
+
   .logoNav{
     font-size:20px;
   }
