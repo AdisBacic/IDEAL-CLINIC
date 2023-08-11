@@ -118,7 +118,7 @@ let dragspel22FirstTip = document.querySelector("#dragspel22FirstTip");
 if (treatment === "Hårborttagning") {
     // Display content specific to Hårborttagning
 
-    hairPic.src = './images/Laser.png';
+    hairPic.src = './images/HårbortaggningNYBILDZ.png';
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
   
@@ -293,7 +293,7 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="Vad är syftet med behandlingen?";
     firststyckeText.innerHTML = "Syftet med behandlingen är att orsaka en kontrollerad skada på huden, som i sin tur startar en läkningsprocess som leder till ett gynnsamt hudföryngringsresultat. Genom mikrokanalerna som skapas under behandlingen, kan bioaktiva substanser som innehåller hyaluronsyra och en vitamin-cocktail tränga in djupt i huden och ge den näring som den behöver. Detta ökar upptaget av aktiva ingredienser och kan öka effekten av hudvårdsprodukter upp till 50%, jämfört med den vanliga 0,3% som normalt når de djupare hudlagren."
     secondstyckeText.innerHTML = "För att behandla fördjupningar och gropar i acneärr, kan Microneedling kombineras med Skinbooster för att lyfta upp dessa områden. I dessa fall kan vi använda en kombination av tunnflytande Skinboosters, såsom Juvederm Volite eller Restylane Vital. Om acneärr är milda och mindre framträdande, kan kemisk peeling vara ett lämpligt och prisvärt alternativ.";
-    thirdstyckeText.innerHTML ="För att få ut så mycket som möjligt av en behandling med microneedling, är det viktigt att du tillför serum till huden som innehåller en hög koncentration av hyaluronsyra, samt vitaminer och antioxidanter. Detta är nödvändigt för att huden ska kunna dra full nytta av de mikrokanaler som skapats under behandlingen, eftersom huden lättare kan ta upp de aktiva ingredienserna. På Ideal Clinic använder vi oss av serumet Skinko, som innehåller marknadens högsta koncentration av hyaluronsyra - det viktigaste ämnet som ett microneedling-serum ska innehålla. Hyaluronsyra är det mest värdefulla ämnet i ett serum, då det hjälper till att återfukta och ge näring till huden. Efter behandlingen, du får även en återfuktande ansiktsmask som lugnar ner huden, för att ytterligare hjälpa huden att återhämta sig. Vi på Ideal Clinic har en lång erfarenhet av behandling av acneärr och vi kan hjälpa dig att välja den bästa behandlingen för dina ärr vid en konsultation."
+    thirdstyckeText.innerHTML ="För att få ut så mycket som möjligt av en behandling med microneedling, är det viktigt att du tillför serum till huden som innehåller en hög koncentration av hyaluronsyra, samt vitaminer och antioxidanter. Detta är nödvändigt för att huden ska kunna dra full nytta av de mikrokanaler som skapats under behandlingen, eftersom huden lättare kan ta upp de aktiva ingredienserna. På Ideal Clinic använder vi oss av serumet Skinko, som innehåller marknadens högsta koncentration av hyaluronsyra - det viktigaste ämnet som ett microneedling-serum ska innehålla. Hyaluronsyra är det mest värdefulla ämnet i ett serum, då det hjälper till att återfukta och ge näring till huden. Efter behandlingen, får du även en återfuktande ansiktsmask som lugnar ner huden, för att ytterligare hjälpa huden att återhämta sig. Vi på Ideal Clinic har en lång erfarenhet av behandling av acneärr och vi kan hjälpa dig att välja den bästa behandlingen för dina ärr vid en konsultation."
 
     InfoCardPrice.innerHTML ="Från 500kr";
    
@@ -303,11 +303,11 @@ if (treatment === "Hårborttagning") {
 
         // Vad är microneedling?
     dragspel1Rubrik.innerHTML = "Vad är microneedling?";
-    dragspelFirstTip.innerHTML = "Microneedling är en behandling som använder mikronålar för att skapa mikrokanaler i huden. Nåltätheten och den genomtänkta konstruktionen av nålarnas diameter gör att behandlingen är skonsam och ger en god penetration och jämn tryckfördelning. Vid behandling av acneärr gör vi oftast 3 till 5 behandlingar med en månads mellanrum, vilket ger kraftfulla resultat med en kort återhämtningstid. Efter behandlingen kan du ha en lätt rodnad och svullnad i huden, men det räcker med att vara hemma under behandlingsdagen för att rodnaden ska minska.";
+    dragspelFirstTip.innerHTML = "Microneedling är en behandling som använder mikronålar för att skapa mikrokanaler i huden. Nåltätheten och den genomtänkta konstruktionen av nålarnas diameter gör att behandlingen är skonsam och ger en god penetration och jämn tryckfördelning. Vid behandling av acneärr gör vi oftast 3 till 5 behandlingar med en månads mellanrum, vilket ger ökade resultat med en kort återhämtningstid. Efter behandlingen kan du ha en lätt rodnad och svullnad i huden, men det räcker med att vara hemma på behandlingsdagen för att rodnaden ska minska.";
 
     // Vilka områden kan behandlas?
     dragspel2Rubrik.innerHTML = "Vilka områden kan behandlas?";
-    dragspel2FirstTip.innerHTML = "Microneedling kan användas på flera olika områden såsom:<br>Ansikte<br>Dekolletage<br>Kropp";
+    dragspel2FirstTip.innerHTML = "Microneedling kan användas på flera olika områden såsom:<ul>\ <li> Ansikte </li> <li>Dekolletage </li> <li>Kropp</li> </ul>";
 
     // Vilka får inte utföra microneedling?
     dragspel3Rubrik.innerHTML = "Vilka får inte utföra microneedling?";
@@ -345,7 +345,7 @@ if (treatment === "Hårborttagning") {
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
     rubrik.innerHTML = "Retinol Peeling";
-    informationOm.innerHTML = "Hudbristning"
+    informationOm.innerHTML = "Retinol Peeling";
     miniRubrik.innerHTML = "Retinol Peeling på Ideal Clinic";
     inledandeText.innerHTML = "Retinol Peeling NeoStrata Retinol Peel är en unik peel som innehåller Retinol och volymgivande Aminofill för att förbättra hudens struktur, spänst, ge en jämnare hudton och minska linjer och rynkor. Peelingen är ytlig och kräver minimal återhämtningstid, och passar de flesta hudtyper. Det är en snabb, enkel och effektiv peeling som påbörjas på kliniken och avlägsnas hemma."
     miniRubrik2.innerHTML ="Så här går det till";
@@ -672,7 +672,7 @@ if (treatment === "Hårborttagning") {
 
     // Vem kan behandla sig med Microtox?
     dragspel2Rubrik.innerHTML = "Vem kan behandla sig med Microtox?";
-    dragspel2FirstTip.innerHTML = "Alla, oavsett hudtyp, kan behandla sig med Microtox för att dra nytta av dess effekter. Likt andra injektionsbehandlingar, behandlar vi inte gravida eller ammande personer. Dessutom rekommenderar vi att du inte är förkyld, har feber, akne eller herpesutslag på ansiktet och att du har avslutat eventuella Tetralysal-kurer senast 14 dagar innan behandlingen.<li\> Du bör också inte ha använt produkter/behandlingar som innehåller Retin-A och BHA/AHA-syror under en vecka innan behandlingen.";
+    dragspel2FirstTip.innerHTML = "Alla, oavsett hudtyp, kan behandla sig med Microtox för att dra nytta av dess effekter. Likt andra injektionsbehandlingar, behandlar vi inte: <strong> <ul>\ <li> Gravida eller Ammande personer. </li> <li>Dessutom rekommenderar vi att du inte är förkyld, har feber, akne eller herpesutslag på ansiktet och att du har avslutat eventuella Tetralysal-kurer senast 14 dagar innan behandlingen.</li> <li> Du bör också inte ha använt produkter/behandlingar som innehåller Retin-A och BHA/AHA-syror under en vecka innan behandlingen. </li>  <ul> </strong> ";
 
     // Finns det biverkningar?
     dragspel3Rubrik.innerHTML = "Finns det biverkningar?";
@@ -707,16 +707,16 @@ if (treatment === "Hårborttagning") {
     rubrik.innerHTML = "PRX-T33";
     informationOm.innerHTML = "PRX-T33";
     miniRubrik.innerHTML = "PRX-T33: En revolutionerande behandling";
-    inledandeText.innerHTML = "PRX-T33 är en behandling som kallas för den nya generationens TCA-peeling, eftersom den ger liknande resultat som en TCA-peeling men utan sociala begränsningar. Den är effektiv och resultatinriktad och verkar på cellulär nivå, vilket ger din hudegenskaper som tidigare inte varit möjliga.";
+    inledandeText.innerHTML = "PRX-T33 är en behandling som kallas för den nya generationens TCA-peeling, eftersom den ger liknande resultat som en TCA-peeling men utan sociala begränsningar. Den är effektiv och verkar på cellulär nivå, vilket ger din hudegenskaper som tidigare inte varit möjliga.";
     miniRubrik2.innerHTML ="Vilka områden och vad kan jag behandla med PRX-T33?";
     firststyckeText.innerHTML = "PRX-T33 är en nålfri behandling som använder sig av de aktiva substanserna TCA (triklorättiksyra och väteperoxid) för att aktivera cellförnyelsen. Behandlingen verkar på cellulär nivå och stimulerar hudens egna tillväxtfaktorer, vilket ger synliga resultat direkt efter behandlingen. Du kommer att känna och se skillnaden i form av uppstramning, lyster, jämnare hudton och färre linjer. Till skillnad från vanliga peelingar ger PRX-T33 knappt någon rodnad eller fjällning. Behandlingen kan även utföras året runt eftersom det inte ger ljuskänslighet, men det rekommenderas alltid att använda solskydd. PRX-T33 är även lämplig att kombinera med andra behandlingar såsom Dermapen, Botox, fillers, PRP och Profhilo.";
 
     miniRubrik4.innerHTML ="Behandlingsområden:";
-    thirdstyckeText.innerHTML = "Ansiktet: Rynkor och linjer, förstorade porer, förlorad spänst och fyllighet, ojämn hy och glåmighet, pigmenteringar, åldersfläckar, ärrbildningar och torrhet. Kroppen: Åldrad hud och/eller förlorad spänst på hals, dekolletage och handrygg, bristningar och ärr.";
+    thirdstyckeText.innerHTML = "<strong> Ansiktet: </strong> Rynkor och linjer, förstorade porer, förlorad spänst och fyllighet, ojämn hy och glåmighet, pigmenteringar, åldersfläckar, ärrbildningar och torrhet.<br> <br>  <strong>Kroppen: </strong> Åldrad hud och/eller förlorad spänst på hals, dekolletage och handrygg, bristningar och ärr.";
 
     InfoCardPrice.innerHTML ="Från 1800kr";
    
-    vissteduAtt.innerHTML = "En Microtox-behandling har effekt i ca 2-4 månader.";
+    vissteduAtt.innerHTML = "En PRX-T33 behandling har effekt i ca 2-4 månader.";
     estimeradTidText.innerHTML ="Behandlingen tar ungefär 40-50 minuter beroende på behandlingsområdets storlek. Konsultationen är också inkluderad i den totala tidsåtgången.";
 
 
@@ -725,12 +725,12 @@ if (treatment === "Hårborttagning") {
     dragspelFirstTip.innerHTML = "Resultatet av behandlingen varierar mellan individer. Men för att behålla effekterna brukar de flesta göra 3-4 behandlingar per år.";
 
     // Vem kan behandla sig med Microtox?
-    dragspel2Rubrik.innerHTML = "Vem kan behandla sig med Microtox?";
-    dragspel2FirstTip.innerHTML = "Alla, oavsett hudtyp, kan behandla sig med Microtox för att dra nytta av dess effekter. Likt andra injektionsbehandlingar, behandlar vi inte gravida eller ammande personer. Dessutom rekommenderar vi att du inte är förkyld, har feber, akne eller herpesutslag på ansiktet och att du har avslutat eventuella Tetralysal-kurer senast 14 dagar innan behandlingen. Du bör också inte ha använt produkter/behandlingar som innehåller Retin-A och BHA/AHA-syror under en vecka innan behandlingen.";
+    dragspel2Rubrik.innerHTML = "Vem kan behandla sig med PRX-T33?";
+    dragspel2FirstTip.innerHTML = "Alla, oavsett hudtyp, kan behandla sig med PRX-T33 för att dra nytta av dess effekter. Likt andra injektionsbehandlingar, behandlar vi inte: <strong> <ul>\ <li> Gravida eller Ammande personer. </li> <li>Dessutom rekommenderar vi att du inte är förkyld, har feber, akne eller herpesutslag på ansiktet och att du har avslutat eventuella Tetralysal-kurer senast 14 dagar innan behandlingen.</li> <li> Du bör också inte ha använt produkter/behandlingar som innehåller Retin-A och BHA/AHA-syror under en vecka innan behandlingen. </li>  <ul> </strong> ";
 
     // Finns det biverkningar?
     dragspel3Rubrik.innerHTML = "Finns det biverkningar?";
-    dragspel3FirstTip.innerHTML = "Likt som vid andra injektionsbehandlingar kan du uppleva biverkningar efter Microtox-behandlingen, som viss smärta, rodnad, svullnad, blåmärken eller minskad känslighet i huden. Dessa biverkningar är oftast tillfälliga och övergående.";
+    dragspel3FirstTip.innerHTML = "Likt andra ansiktsbehandlingar kan du uppleva biverkningar efter PRX-T33 behandlingen, som viss smärta, rodnad, svullnad, blåmärken eller minskad känslighet i huden. Dessa biverkningar är oftast tillfälliga och övergående.";
 
     // Hur många behandlingar behövs?
     dragspel4Rubrik.innerHTML = "Hur många behandlingar behövs?";
@@ -756,7 +756,7 @@ if (treatment === "Hårborttagning") {
     dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
 
     var newTip = document.createElement("li");
-    newTip.innerHTML = "Undvik solning under 48 timmar efter behandlingen.";
+    newTip.innerHTML = "Undvik solning 48 timmar efter behandlingen.";
     var tipList = dragspel8FirstTip.parentNode;
     tipList.appendChild(newTip);
 
@@ -814,7 +814,7 @@ if (treatment === "Hårborttagning") {
 
       // Kan jag agera normalt efter behandlingen?
       dragspel3Rubrik.innerHTML = "Kan jag agera normalt efter behandlingen?";
-      dragspel3FirstTip.innerHTML = "Ja, du kan agera som vanligt efter behandlingen, men vi rekommenderar att du låter huden vila från makeup under 24 timmar efter behandlingen.";
+      dragspel3FirstTip.innerHTML = "Ja, du kan agera som vanligt efter behandlingen, men vi rekommenderar att du låter huden vila från smink under 24 timmar efter behandlingen.";
 
       // Ser jag resultat direkt?
       dragspel4Rubrik.innerHTML = "Ser jag resultat direkt?";
@@ -849,9 +849,11 @@ if (treatment === "Hårborttagning") {
     rubrik.innerHTML = "Djuprengöring";
     informationOm.innerHTML = "Djuprengöring";
     miniRubrik.innerHTML = "Djuprengöring på Ideal Clinic";
-    inledandeText.innerHTML = "Djuprengöring Lider du av glåmighet, oren hy, eller förstorade porer? På LTC kan vi med hjälp av den senaste teknologin med ultraljud erbjuda dig en effektiv och skonsam djuprengöring av dina problemområden. Resultatet blir en ren, lugnad, uppstramad hud med en fräschör som är redo att möta våren och sommaren.";
+    inledandeText.innerHTML = "Lider du av glåmighet, oren hy, eller förstorade porer? På Ideal Clinic kan vi med hjälp av den senaste teknologin med ultraljud erbjuda dig en effektiv och skonsam djuprengöring av dina problemområden. Resultatet blir en ren, lugnad, uppstramad hud med en fräschör som är redo att möta våren och sommaren.";
     miniRubrik2.innerHTML ="Behandlingen inkluderar:";
-    firststyckeText.innerHTML = "-Reglering av talgproduktionen -Portömning -Fräschör -Grundlig rengöring";
+    firststyckeText.innerHTML = "<ul>\ <li> Reglering av talgproduktionen </li>\  <li> Portömning </li>\ <li> Fräschör </li>\ <li> Grundlig rengöring </li>\ </ul>";
+
+
 
     InfoCardPrice.innerHTML ="Från 1095kr";
    
@@ -1091,7 +1093,7 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Tandblekning") 
   {
 
-    hairPic.src = './images/Tandblekning.png';
+    hairPic.src = './images/TandblekningNYBILDZ.png';
 
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
@@ -1101,7 +1103,7 @@ if (treatment === "Hårborttagning") {
     miniRubrik.innerHTML = "Tandblekning på Ideal Clinic";
     inledandeText.innerHTML = "Att bleka tänderna är idag en mycket populär behandling och det finns flera metoder att välja mellan. Dock är inte alla metoder lämpliga för alla typer av tänder. De metoder som ger bra resultat är laserblekning, ultraljudsblekning, men den metod som är mest effektiv och skonsam mot tänderna, och också den senaste inom tandblekning, är plasmaljusblekning (LED). Inte alla har lika bra kvalitet på tänder eller naturligt vita tänder från början. Därför lider många av missfärgade tänder på grund av mat, medicinering, dryck eller rökning. Färgen på tänderna kan variera av många olika anledningar, men det vanligaste är att de naturligt blir mörkare med åren.";
     miniRubrik2.innerHTML ="SENASTE TEKNIKEN";
-    firststyckeText.innerHTML = "Att bleka tänderna är idag en mycket populär behandling och det finns flera metoder att välja mellan. Dock är inte alla metoder lämpliga för alla typer av tänder. De metoder som ger bra resultat är laserblekning, ultraljudsblekning, men den metod som är mest effektiv och skonsam mot tänderna, och också den senaste inom tandblekning, är plasmaljusblekning (LED). Med senaste plasmateknologin (LED) erbjuder vi dig en snabb och enkel lösning för vitare tänder. Denna metod gör också att tänderna och emaljen blir starkare. Metoden är ledande för säker och effektiv tandblekning där man kan se tydliga resultat, vilket i genomsnitt motsvarar 7 nyanser vitare på ett behandlingstillfälle enligt Vitapan Classic's nyansnivåer. Normalt krävs inte fler behandlingar för att uppnå ett tillfredsställande resultat. Vår klinikbehandling är perfekt för dig som vill ha effektiva och snabba resultat på ett behagligt sätt. Behandlingen utförs på våra kliniker under ett och samma tillfälle och tar totalt 40-60 minuter beroende på om du väljer en Full Smile eller Fast Smile. Gelen som vi använder innehåller 6% väteperoxid.";
+    firststyckeText.innerHTML = "Med senaste plasmateknologin (LED) erbjuder vi dig en snabb och enkel lösning för vitare tänder. Denna metod gör också att tänderna och emaljen blir starkare. Metoden är ledande för säker och effektiv tandblekning där man kan se tydliga resultat, vilket i genomsnitt motsvarar 7 nyanser vitare på ett behandlingstillfälle enligt Vitapan Classic's nyansnivåer. Normalt krävs inte fler behandlingar för att uppnå ett tillfredsställande resultat. Vår klinikbehandling är perfekt för dig som vill ha effektiva och snabba resultat på ett behagligt sätt. Behandlingen utförs på vår kliniker under ett och samma tillfälle och tar totalt 40-60 minuter beroende på om du väljer en Full Smile eller Fast Smile. Gelen som vi använder innehåller 6% väteperoxid.";
 
     miniRubrik4.innerHTML ="Skonsamt mot tänderna:";
     thirdstyckeText.innerHTML = "Det avgörande för om en tandblekning är skonsam eller inte är gelen och ljusmetoden som används. Båda kan skada tänderna. Därför använder vi en gel med ett neutralt pH-värde (7), vilket innebär att blekningen inte förändrar emaljmolekylernas struktur eller tandytan. Gelen innehåller också ämnen som motverkar ilningar, reparerar skador och stärker tänderna. Detta gör att du får starkare och friskare tänder efter en tandblekning hos oss. En annan orsak till ilningar och sensibilitet vid tandblekning är ljusblekning med värmeproducerande lampor, som lasermetoden. Detta är mycket smärtsamt och kan skada tandnerven permanent. Metoden vi använder, plasmaljus (LED), är effektiv utan att avge värme och är fri från UV-ljus och skadliga våglängder. Detta gör att biverkningar är mer sällsynta vid tandblekning med vår metod. Ilningar som förekommer är tillfälliga och ofarliga.";
@@ -1111,7 +1113,7 @@ if (treatment === "Hårborttagning") {
     <ul>\
     <li>Den senaste metoden på marknaden</li>\
     <li>Ämnen som stärker emaljen och motverkar ilningar</li>\
-    <li>Resultat direkt i våra kliniker</li>\
+    <li>Resultat direkt i vår klinik</li>\
     <li>Fyra till 10 nyanser vitare tänder</li>\
     <li>LED-ljuset avger inte värme</li>\
     <li>PH-neutral gel skadar inte tänderna</li>\
@@ -1126,25 +1128,25 @@ if (treatment === "Hårborttagning") {
 
 
      // Inför behandlingen:
-    dragspel1Rubrik.innerHTML = "Inför behandlingen:";
-    dragspelFirstTip.innerHTML = "Det är viktigt att rådfråga din tandläkare innan du utför tandblekning om du tidigare har haft tandställning de senaste sex månaderna. Detta beror på att tandblekningsprodukter kan påverka tandställningens resultat och eventuellt orsaka ojämna resultat på tänderna. Personer under 18 år, gravida eller ammande kvinnor får inte bleka sina tänder eftersom det finns osäkerhet kring eventuella biverkningar.";
+    dragspel1Rubrik.innerHTML = "Inför behandlingen";
+    dragspelFirstTip.innerHTML = "Det är viktigt att rådfråga din tandläkare innan du utför tandblekning om du tidigare har haft tandställning de senaste sex månaderna. Detta beror på att tandblekningsprodukter kan påverka tandställningens resultat och eventuellt orsaka ojämna resultat på tänderna. <br> <br> <strong> <ul>\ <li>Personer under 18 år </li> <li> Gravida </li> <li> Ammande kvinnor </li>  Får inte bleka sina tänder eftersom det finns osäkerhet kring eventuella biverkningar. </strong> <ul>";
 
     // Hur går behandlingen till:
-    dragspel2Rubrik.innerHTML = "Hur går behandlingen till:";
+    dragspel2Rubrik.innerHTML = "Hur går behandlingen till";
     dragspel2FirstTip.innerHTML = "Vi börjar med att rengöra tänderna för att ta bort ytliga beläggningar och fläckar. Därefter applicerar vi en skyddande salva längs med tandköttskanten för att skydda tandköttet från gelen. Gel med väteperoxid appliceras direkt på tänderna och aktiveras med blått plasmaljus. Ljuset i sig bleker inte tänderna utan dess syfte är att påskynda blekningsprocessen genom att aktivera gelen.\
     <br><br>\
     Det som bleker bort missfärgningarna i tandens emalj är en oxidationsreduktionsreaktion som delar upp långa färgande molekyler till mindre färglösa. Dessa molekyler bryts sedan ner till koldioxid (CO2) och vatten. Väteperoxid eller annat oxiderande ämne frigör 'ensamma' syreatomer, så kallade fria radikaler. Dessa 'söker upp' organiska molekyler och bryter ner dem, vilket ger ljusare tänder.";
 
     // PRIME PROTECT:
-    dragspel3Rubrik.innerHTML = "PRIME PROTECT:";
+    dragspel3Rubrik.innerHTML = "PRIME PROTECT";
     dragspel3FirstTip.innerHTML = "Efter själva tandblekningen rekommenderar vi Prime Protect som är en produkt som förseglar och skyddar emaljen direkt efter blekningen. Då kan du äta och dricka som vanligt utan att riskera resultatet från behandlingen. Produkten är det senaste komplementet till tandblekning. Högt rekommenderat för dem som använder tobak eller konsumerar viss typ av mat med röda nyanser. Förseglingen minskar risken för ilningar.";
 
     // Efter behandlingen:
-    dragspel4Rubrik.innerHTML = "Efter behandlingen:";
-    dragspel4FirstTip.innerHTML = "Efter behandlingen är det vanligt med ilningar eller irriterat tandkött, men besvären brukar försvinna inom något dygn. Det är viktigt att vara extra noggrann med kosten, särskilt om du inte valt att använda Prime Protect som extra skydd mot missfärgningar.";
+    dragspel4Rubrik.innerHTML = "Efter behandlingen";
+    dragspel4FirstTip.innerHTML = "Efter behandlingen är det vanligt med ilningar eller irriterat tandkött, men besvären brukar försvinna inom något dygn. <br> <br> <strong>Det är viktigt att vara extra noggrann med kosten, särskilt om du inte valt att använda Prime Protect som extra skydd mot missfärgningar. <strong>";
 
     // Blekningstiden:
-    dragspel5Rubrik.innerHTML = "Blekningstiden:";
+    dragspel5Rubrik.innerHTML = "Blekningstiden";
     dragspel5FirstTip.innerHTML = "Varierar mellan 20-40 minuter, beroende på om du väljer en fullbehandling eller en refresh. Därtill tar det 20 minuter extra för genomgång och konsultation. Tandblekning med plasma teknologi (LED) är en skonsam och bekväm behandling som utförs av våra certifierade tandblekningsexperter.";
 
     // Är det säkert?
@@ -1161,7 +1163,7 @@ if (treatment === "Hårborttagning") {
 
     // Vilka resultat kan garanteras?
     dragspel9Rubrik.innerHTML = "Vilka resultat kan garanteras?";
-    dragspel9FirstTip.innerHTML = "Resultatet syns genast. Resultaten varierar beroende på individen, men i genomsnitt blir tänderna 4-10 nyanser vitare. Man rekommenderas att göra en refresh efter ca 3 månader för att behålla resultatet. Kan inte bleka metallfyllningar eller tänder som utsatts för skada. Resultatet på kronor är också svårt att bleka pga. det kan inte bleka kronor själva, men det går att bleka tänderna runt om kronan för att få tänderna ljusare.";
+    dragspel9FirstTip.innerHTML = "Resultatet syns genast. Resultaten varierar beroende på individen, men i genomsnitt blir tänderna 4-10 nyanser vitare. Man rekommenderas att göra en refresh efter ca 3 månader för att behålla resultatet. <br> <br> <ul>\ <li> Man kan inte bleka metallfyllningar eller tänder som utsatts för skada. </li> <li> Resultatet på kronor är också svårt att bleka pga. det kan inte bleka kronor själva, men det går att bleka tänderna runt om kronan för att få tänderna ljusare. </li> </ul>";
 
     // Kan man bleka kronor?
     dragspel10Rubrik.innerHTML = "Kan man bleka kronor?";
@@ -1169,7 +1171,7 @@ if (treatment === "Hårborttagning") {
 
     // Vilka missfärgningar kan blekas?
     dragspel11Rubrik.innerHTML = "Vilka missfärgningar kan blekas?";
-    dragspel11FirstTip.innerHTML = "Det är lättare att bleka tänder som är missfärgade i varma färger som brunt och gult, än de som går i kalla färger, det vill säga grått och blått. Missfärgningar som kommer från kost och ålder går till exempel i varma färger, medan de som kan uppstå från tandfyllningar och vissa mediciner går i grått, det hör även vissa antibiotika till så kallade tetracykliner.";
+    dragspel11FirstTip.innerHTML = "Det är lättare att bleka tänder som är missfärgade i varma färger som brunt och gult, än de som går i kalla färger, det vill säga grått och blått. Missfärgningar som kommer från kost och ålder går till exempel i varma färger, medan de som kan uppstå från tandfyllningar och vissa mediciner ger tänderna gråa nyanser, det gör även viss antibiotika till så kallade tetracykliner.";
 
     dragspel22Rubrik.innerHTML = "Konsultation";
     dragspel22FirstTip.innerHTML = "Innan du börjar en behandling, rekommenderar vi att du kommer in på en kostnadsfri konsultation. Då träffar du en av våra certifierade behandlare som går igenom dina önskemål och vad du vill ha hjälp med. <br> <a href='https://www.bokadirekt.se/boka-tjanst/ideal-clinic-50596/konsultation-injektion-forstagangsbesok-2046921'>Boka Konsultation</a> <br> <br> Under konsultationen skräddarsyr vi en behandling som passar dig och berättar också om möjligheter och risker med behandlingen. På plats tar ni tillsammans ett beslut om en behandling ska utföras.";
@@ -1197,7 +1199,7 @@ if (treatment === "Hårborttagning") {
     rubrik.innerHTML = "Migränbehandling";
     informationOm.innerHTML = "Migränbehandling";
     miniRubrik.innerHTML = "Migränbehandling på Ideal Clinic";
-    inledandeText.innerHTML = "Många personer som lider av migrän och spänningshuvudvärk kan få lindring genom en injektionsbehandling. Migrän är en vanlig sjukdom som kan utlösas av faktorer som stress, sömnbrist, fasta, kost och hormonförändringar. Behandlingen görs med injektioner. Migrän och spänningshuvudvärk kan påverka livskvaliteten hos många och är en vanlig orsak till sjukskrivning. Genom att använda Botox, kan 7 av 10 få hjälp. Det är dock inte möjligt att botade migrän med injektioner, men det kan lindra symptomen. Många individer som behandlas med oss upplever att migrän attackerna blir mildare, färre eller helt försvinner under tiden substansen är aktiv i muskeln. Injektioner görs i musklerna mellan ögonbrynen, pannan och ibland i temporala muskler och muskler på bakhuvudet. Resultatet av behandlingen märks efter ungefär en vecka och varar mellan 3- 6 månader.";
+    inledandeText.innerHTML = "Många personer som lider av migrän och spänningshuvudvärk kan få lindring genom en injektionsbehandling. Migrän är en vanlig sjukdom som kan utlösas av faktorer som stress, sömnbrist, fasta, kost och hormonförändringar. Behandlingen görs med injektioner. Migrän och spänningshuvudvärk kan påverka livskvaliteten hos många och är en vanlig orsak till sjukskrivning. Genom att använda Botox, kan 7 av 10 få hjälp. Det är dock inte möjligt att botade migrän med injektioner, men det kan lindra symptomen. Många individer som behandlas hos oss upplever att migrän attackerna blir mildare, färre eller helt försvinner under tiden substansen är aktiv i muskeln. Injektioner görs i musklerna mellan ögonbrynen, pannan och ibland i temporala muskler och muskler på bakhuvudet. Resultatet av behandlingen märks efter ungefär en vecka och varar mellan 3- 6 månader.";
     
     InfoCardPrice.innerHTML ="Från 5000kr";
    

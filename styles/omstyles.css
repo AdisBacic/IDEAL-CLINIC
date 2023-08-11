@@ -10,21 +10,20 @@ body{
 width: 100%;
 }
 
-header{
 
-display:flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px 30px;
-position: fixed;
-width:100%;
-top:0;
-padding: 2;
-transition:250ms;
-z-index:10;  
-background-color:whitesmoke;
-box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 2;
+  transition: 250ms;
+  z-index: 10;
+  background-color: whitesmoke;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
 header h4{
@@ -58,9 +57,7 @@ header h4{
   color:lightgreen;
 }
 
-
 .nav-links{
-
   position:absolute;
   right:0;
   top: 5vh;
@@ -71,54 +68,38 @@ header h4{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation:menu_animation 500ms
-  ease-in-out;
+  animation:menu_animation 500ms ease-in-out;
 }
-
 
 .show-navlinks{
   display: flex;
 }
 
-
 @keyframes menu_animation{
-
   from{
-
     opacity:0;
-    tranform:translateX(100%);
-
+    transform:translateX(100%);
   }
-
   to{
     opacity:1;
-    tranform:translateX(0%);
+    transform:translateX(0%);
   }
-
 }
 
-
 .logoNav{
-
-
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 800;
-
-
-  color:var(rgb(219, 210, 210));
+  color: var(rgb(219, 210, 210));
   transition: 250ms;
 }
 
 header ul li{
-
   list-style:none;
   margin:20px 0;
-
 }
 
 header ul li a{
-
   text-decoration: none;
   padding:10px 30px;
   font-size:1rem;
@@ -127,52 +108,36 @@ header ul li a{
 }
 
 header ul li a:hover{
-
   color:var(--blue-dark);
-
 }
 
-
-
-.hamburger-on{
-    background: url('../assets/hamburger.svg');
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;  
-    cursor:pointer;
-    transition:250ms ease-in-out;
-    
+.hamburger-on {
+  background: url('../assets/hamburger.svg');
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; /* Center the icon */
+  margin-right: 0; /* Remove any margin-right */
+  cursor: pointer;
+  transition: 250ms ease-in-out;
 }
-
 
 .hamburger-off{
-
   padding:9px;
   background:url('../assets/xsolid.svg');
   background-size:contain;
   background-repeat:no-repeat;
-  background-position:center;
+  background-position: center; /* Center the icon */
   width: 25px;
   height: 25px;
   cursor:pointer;
   transition:250ms ease-in-out;
-  
 }
 
-
-
-
-
-
-
 /* För större skärm */
-
 @media screen and (min-width:1000px){
-
   .nav-links{
-
     display:flex;
     flex-direction: row;
     position:unset;
@@ -180,55 +145,39 @@ header ul li a:hover{
     height: auto;
     background: none;
   }
-
   header ul{
-
     display:flex;
-
   }
-
   header ul li{
-
     margin:0;
-
   }
-
   header ul li a{
-
     padding:0;
     margin:5px 20px;
-    font-size:22px;
+    font-size:26px;
   }
-
   .hamburger-on{
     display:none;
   }
-
   .logoNav{
-    font-size:25px;
+    font-size:20px;
   }
 }
-
 
 @media (max-width: 984px) 
 {
-  .nav-links{
 
+  .nav-links{
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
     border-radius: 10px;
-  
   }
-
-  .images
-  {
+  .images{
     width: 50%;
     height: auto;
   } 
-
 }
 
-.images
-{
+.images{
   width: 80%;
   height: auto;
 }

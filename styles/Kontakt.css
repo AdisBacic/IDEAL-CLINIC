@@ -82,19 +82,14 @@
   
   
   @keyframes menu_animation{
-  
     from{
-  
       opacity:0;
-      tranform:translateX(100%);
-  
+      transform:translateX(100%);
     }
-  
     to{
       opacity:1;
-      tranform:translateX(0%);
+      transform:translateX(0%);
     }
-  
   }
   
   
