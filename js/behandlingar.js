@@ -229,7 +229,7 @@ if (treatment === "Hårborttagning") {
   
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling";
 
-    hairPic.src = './images/Laser.png';
+    hairPic.src = './images/HårbortaggningNYBILDZ.png';
 
     rubrik.innerHTML =  "Svettbehandling";
     informationOm.innerHTML = "Svettbehandling"
@@ -460,7 +460,7 @@ if (treatment === "Hårborttagning") {
   {
 
 
-      hairPic.src = './images/Fillers.png';
+      hairPic.src = './images/ModelNYBILDZ.jpg';
 
 
     toastBody.innerHTML = "Ny kund eller inte utfört injektionsbehandling på 6 månader, glöm inte din obligatoriska konsultation minst 48h innan behandling</div>";
@@ -787,7 +787,7 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Klassisk ansiktsbehandling") 
   {
-    hairPic.src = './images/Tandblekning.png';
+    hairPic.src = './images/AnsiktskrämNYBILDZ.png';
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
@@ -840,7 +840,7 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Djuprengöring") 
   {
 
-    hairPic.src = './images/Tandblekning.png';
+    hairPic.src = './images/AnsiktskrämNYBILDZ.png';
 
 
 
@@ -989,7 +989,7 @@ if (treatment === "Hårborttagning") {
 
 
 
-    hairPic.src = 'images/Micro needling klar.jpg';
+    hairPic.src = 'images/HudbristningNYBILDZ.png';
 
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
@@ -1053,7 +1053,7 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "Kemisk peeling") 
   {
 
-    hairPic.src = 'images/KemiskPeeling.png';
+    hairPic.src = 'images/acneärrNYBILDZ.png';
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
@@ -1225,7 +1225,7 @@ if (treatment === "Hårborttagning") {
   else if (treatment === "PRP") 
   {
 
-    hairPic.src = './images/Tandblekning.png';
+    hairPic.src = './images/HårNYBILDZ.png';
 
 
 

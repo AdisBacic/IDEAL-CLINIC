@@ -58,7 +58,7 @@ header h4{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack the content vertically */
+    flex-direction: column; 
 
 }
 
