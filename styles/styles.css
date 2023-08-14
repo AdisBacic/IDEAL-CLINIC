@@ -46,52 +46,47 @@ header h4{
 
 .intro{
 
-    /* z-index är 1 mer än header(se ovan). Introt överlappar alltså menyn och menyn (header) överlappar allt innehåll i sidan som bilder osv.. */
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(#616466, rgb(252, 252, 252));
-    transition: 1s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
+  /* z-index är 1 mer än header(se ovan). Introt överlappar alltså menyn och menyn (header) överlappar allt innehåll i sidan som bilder osv.. */
+  position:fixed;
+  z-index: 100;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#616466, rgb(252, 252, 252));
+  transition: 1s;
 
 }
 
 .logo-header{
 
-    position: relative;
-    color: #ffff;
-    font-size: 70px;
-    display: flex;
-    flex-direction: column; /* Stack the words vertically */
-    align-items: center; /* Center the words horizontally */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 70px;
+  transform: translate(-50%,-50%);
+  color: #ffff;
 }
 
 .logo{
 
-    position: relative;
-    display: inline-block;
-    bottom: -20px;
-    opacity: 0;
-    font-family: 'Poppins', sans-serif;
+  position:relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
 }
 
 .logo.active{
-    bottom: -20px; /* Adjust the positioning */
-    opacity: 1;
-    transition: ease-in-out 0.5s;
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
 }
 
 .logo.fade{
 
-    bottom: 30px; /* Adjust the positioning */
-    opacity: 0;
-    transition: ease-in-out 0.5s;
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
 
 }
 /* #endregion*/
@@ -136,12 +131,9 @@ header h4{
 
 
 .logoNav{
-
-
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 500;
-
   color:var(rgb(219, 210, 210));
   transition: 250ms;
 }
@@ -759,9 +751,47 @@ i{
 
 }
 
+#kampanjbildtext {
+  flex: 1; /* Take up remaining space */
+  position: relative; /* Position the text container relative to the parent */
+}
+
+#kampanjbildtext1 {
+  position: absolute; /* Position the text absolutely */
+  margin-top: 10%; /* Position the text container */
+  left: 0; /* Position at the left */
+  background-color: gradient; /* Add a semi-transparent background */
+  padding: 10px; /* Add padding for better readability */
+  width: 40%;
+  margin-left: 7%;
+}
+
 img {
   width: 100%;
   height: auto;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 875px) {
+
+
+  #kampanjbildtext1 {
+    font-size: 12px; /* Adjust font size for smaller screens */
+    margin-top: 2%; /* Position the text container */
+  }
+  #kampanjrubrik1
+  {
+    font-size: 15px;
+  }
+  #kampanjrubrik2
+  {
+    font-size: 15px;
+  }
+  #kampanjrubrik3
+  {
+    font-size: 10px;
+  }
+
 }
 
 
