@@ -58,28 +58,28 @@ const pic = document.getElementById("mainPic");
 const navLinks = document.querySelector(".nav-links");
 let hamburgerOpen = false;
 
-// hamburger.addEventListener("click", function () {
-//   if (!hamburgerOpen) {
-//     navLinks.classList.toggle("show-navlinks");
-//     hamburger.classList.toggle("hamburger-off");
+hamburger.addEventListener("click", function () {
+  if (!hamburgerOpen) {
+    navLinks.classList.toggle("show-navlinks");
+    hamburger.classList.toggle("hamburger-off");
 
-//     //Kod för knapparna, gömmer sig när hamburgarmenyn öppnas.
-//     if (div.style.display === "none") {
-//       div.style.display = "block";
+    //Kod för knapparna, gömmer sig när hamburgarmenyn öppnas.
+    if (div.style.display === "none") {
+      div.style.display = "block";
 
-//       //Om hamburgaren inte är på så kommer bilden att hamna under hamburgarmenyn, dvs dess prop ändras.
-//       pic.style.position = "relative";
-//     } else {
-//       div.style.display = "none";
+      //Om hamburgaren inte är på så kommer bilden att hamna under hamburgarmenyn, dvs dess prop ändras.
+      pic.style.position = "relative";
+    } else {
+      div.style.display = "none";
 
-//       //Om hamburgaren är öppen så blir containern static.
-//       pic.style.position = "static";
-//     }
-//   } else {
-//     hamburger.classList.remove("show-navlinks");
-//     hamburger.classList.remove("hamburger-off");
-//   }
-// });
+      //Om hamburgaren är öppen så blir containern static.
+      pic.style.position = "static";
+    }
+  } else {
+    hamburger.classList.remove("show-navlinks");
+    hamburger.classList.remove("hamburger-off");
+  }
+});
 
 
 //Kod för att ta bort text efter att kontaktformuläret är skickat.
