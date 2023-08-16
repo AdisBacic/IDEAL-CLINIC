@@ -724,6 +724,10 @@ i{
       width: 100%;
     }
 
+    .idealPic{
+      height: 100%;
+      width: 100%;
+    }
 
 
     #Info-Bot
@@ -807,7 +811,6 @@ img {
 
   height:200px;
 
-  
   border-top:solid 1px black;
 
 
