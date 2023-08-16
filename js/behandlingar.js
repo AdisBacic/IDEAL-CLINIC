@@ -118,7 +118,7 @@ let dragspel22FirstTip = document.querySelector("#dragspel22FirstTip");
 if (treatment === "Hårborttagning") {
     // Display content specific to Hårborttagning
 
-    hairPic.src = './images/HårbortaggningNYBILDZ.png';
+    hairPic.src = './images/Laser.png';
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
   
@@ -340,7 +340,7 @@ if (treatment === "Hårborttagning") {
 
   else if (treatment === "Retinol Peeling") 
   {
-    hairPic.src = './images/Laser.png';
+    hairPic.src = 'images/acneärrNYBILDZ.png';
 
     toastBody.innerHTML = "Mycket text? Glöm inte att vi erbjuder kostnadsfria konsultationer!";
 
