@@ -492,10 +492,7 @@ i{
 }
 
 
-  .row{
-
-    width: 100%;
-  }
+ 
 
 
 
@@ -639,25 +636,31 @@ i{
   #footerDiv
   {
     margin-top: 0%;
-
+    margin-bottom:10%;
+  }
+  .idealPic{
+    margin-top:5%;
   }
 
 
-  #certPic{
+  .certPic{
 
-    margin-top: 5%;
-    height: 20%;
-    width: 25%;
+    height: auto;
+    width: 40%;
   }
 
+  #qliro {
+    /* Adjust the height and width to your desired values */
+    height: auto; /* You can use auto to maintain aspect ratio */
+    max-width: 70%; /* Adjust this value as needed */
+  }
   #folksamPic{
-    height: 50%;
-    width: 50%;
-
+    height: auto;
+    width: 70%;
   }
 
   #juvePic{
-    height: 50%;
+    height: auto;
     width: 50%;
   }
 
@@ -683,6 +686,10 @@ i{
       margin: 0 auto;
 
     }
+
+    #Info-Bot{
+      
+    }
   }
   
   @media screen and (min-width: 1200px) {
@@ -690,53 +697,18 @@ i{
       width: 100%;
       height: 500px;
       margin: 0 auto;
-
     }
   }
   
-
-
-
-
   .list-group{font-size: 20px;}
  
-
-
-
-  @media (max-width: 600px) {
-
-
-    #certPic{
-
-      margin-top: 5%;
-      height:100%;
-      width: 100%;
+  @media (max-width: 700px) {
+    .col-sm {
+        flex-basis: 80%;
+        max-width: 80%;
+        text-align: center;
     }
-  
-    #folksamPic{
-      height: 100%;
-      width: 100%;
-  
-    }
-  
-    #juvePic{
-      height: 100%;
-      width: 100%;
-    }
-
-    .idealPic{
-      height: 100%;
-      width: 100%;
-    }
-
-
-    #Info-Bot
-    {
-      margin-left: 3%;
-    }
-
-
-  }
+}
 
 
   /* #endregion */
@@ -750,7 +722,7 @@ i{
   width: 100%;
   height: auto;
   margin: 0 auto; /* centers the container horizontally */
-  margin-bottom: 10%;
+  margin-bottom: 4%;
   text-align: center;
 
 }
@@ -806,14 +778,9 @@ img {
 
 
 #almostDone{
-
   width:100%;
-
   height:200px;
-
   border-top:solid 1px black;
-
-
 }
 
 

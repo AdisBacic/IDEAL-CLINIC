@@ -220,25 +220,56 @@ header ul li a:hover{
   }
 }
 
-.card {
-  width: 80%; /* Adjust the width value as needed */
-  margin: 0 auto; /* Center the card horizontally */
+
+
+#reviewCarousel 
+{
+  width: 100%;
+  max-width: 100%;
+  margin-top: 5rem;
+
+  
 }
 
-#reviewCarousel {
+.reviewBox
+{
+
+  margin-top: 2rem;
+  margin-bottom: 0;
+
+
+}
+
+.review-container 
+{
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-inner {
   font-size: 19px;
   text-align: left;
+  height: 100%;
 }
 
 .carousel-item {
+  height: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  width: 100%; /* Add this to ensure full width */
+  opacity: 0;
+  margin-right: -15px; /* Add negative margin to counteract any potential margin added by content */
+  transition: opacity 0.5s ease;
+  box-sizing: border-box; /* Include padding and border in the item's total width */
+}
+
+.carousel-item.active {
+  opacity: 1;
 }
 
 .card {
