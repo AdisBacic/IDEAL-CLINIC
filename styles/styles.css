@@ -719,27 +719,22 @@ i{
 
 
 .image-container {
+  position: relative;
   width: 100%;
-  height: auto;
-  margin: 0 auto; /* centers the container horizontally */
+  margin: 0 auto;
   margin-bottom: 4%;
   text-align: center;
-
 }
 
 #kampanjbildtext {
-  flex: 1; /* Take up remaining space */
-  position: relative; /* Position the text container relative to the parent */
+  position: relative;
 }
 
 #kampanjbildtext1 {
-  position: absolute; /* Position the text absolutely */
-  margin-top: 10%; /* Position the text container */
-  left: 0; /* Position at the left */
-  background-color: gradient; /* Add a semi-transparent background */
-  padding: 10px; /* Add padding for better readability */
+  position: absolute;
+  top: 35%;
+  left: 5%;
   width: 40%;
-  margin-left: 7%;
 }
 
 img {
@@ -747,28 +742,49 @@ img {
   height: auto;
 }
 
+#kampanjrubrik3 {
+  font-style: italic;
+  font-size: 30px;
+  color: red;
+  text-decoration: underline;
+}
+
+#smallkampanjtext {
+  position: relative;
+  padding: 5px;
+}
+
+
 /* Media queries for responsiveness */
 @media screen and (max-width: 875px) {
-
-
   #kampanjbildtext1 {
-    font-size: 12px; /* Adjust font size for smaller screens */
-    margin-top: 2%; /* Position the text container */
+    top: 10%;
+    font-size: 10px; /* Reset font size for smaller screens */
+    margin-top: 0; 
+    left: 0%; /* Reset left positioning */
+    padding: 0px; /* Reset padding */
+    width: 45%; /* Reset width */
   }
-  #kampanjrubrik1
+  #kampanjrubrik1,
+  #kampanjrubrik2,
+  #kampanjrubrik4 {
+    font-size: 12px; /* Reset font size */
+  }
+  #kampanjrubrik3 {
+    font-size: 20px; /* Reset font size */
+  }
+  #smallkampanjtext
   {
-    font-size: 15px;
+    margin-top: 20px; /* Add margin to move the element down */
   }
-  #kampanjrubrik2
-  {
-    font-size: 15px;
-  }
-  #kampanjrubrik3
-  {
-    font-size: 10px;
-  }
-
 }
+
+
+
+
+
+
+
 
 
 /* #endregion */

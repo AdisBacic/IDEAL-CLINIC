@@ -233,11 +233,8 @@ header ul li a:hover{
 
 .reviewBox
 {
-
   margin-top: 2rem;
   margin-bottom: 0;
-
-
 }
 
 .review-container 
@@ -256,16 +253,16 @@ header ul li a:hover{
 }
 
 .carousel-item {
-  height: 100%;
+  height: 235px;
   display: flex;
   align-items: center;
   position: absolute;
   left: 0;
-  width: 100%; /* Add this to ensure full width */
+  width: 100%;
   opacity: 0;
-  margin-right: -15px; /* Add negative margin to counteract any potential margin added by content */
+  margin-right: -15px;
   transition: opacity 0.5s ease;
-  box-sizing: border-box; /* Include padding and border in the item's total width */
+  box-sizing: border-box;
 }
 
 .carousel-item.active {
