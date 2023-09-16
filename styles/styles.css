@@ -321,7 +321,7 @@ i{
 @media only screen and (min-width: 1200px) {
  
   #carouselExampleInterval img {
-    height: 70vh; /* adjust the height as desired */
+    height:75vh; /* adjust the height as desired */
     width: 100%;
   }
     .Liseberg
