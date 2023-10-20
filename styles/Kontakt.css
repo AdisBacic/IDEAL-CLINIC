@@ -26,6 +26,48 @@
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   
   }
+
+  #linkBar{
+    margin-top: 0%;
+  }
+  
+  #flags{
+    align-items: center;
+    text-align: end;
+  }
+  
+  i{
+    color: black;
+  }
+  
+  #links{
+    color: rgba(2, 3, 2, 0.781);
+    text-align: start;
+    align-items: center;
+  }
+  
+  #btnFlag{
+    border: none;
+    background-color: white;
+  }
+  
+  @media screen and (min-width: 768px) {
+    #linkBar {
+      font-size: 17px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    #linkBar {
+      font-size: 17px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    #linkBar{
+      font-size: 22px;
+    }
+  }
   
   header h4{
   

@@ -275,6 +275,48 @@ header ul li a:hover{
   margin: 0 auto;
 }
 
+#linkBar{
+  margin-top: 0%;
+}
+
+#flags{
+  align-items: center;
+  text-align: end;
+}
+
+i{
+  color: black;
+}
+
+#links{
+  color: rgba(2, 3, 2, 0.781);
+  text-align: start;
+  align-items: center;
+}
+
+#btnFlag{
+  border: none;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  #linkBar {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #linkBar {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #linkBar{
+    font-size: 22px;
+  }
+}
+
 
 .rubrik{
   text-align: center;
