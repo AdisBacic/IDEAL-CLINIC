@@ -89,6 +89,49 @@ header h4{
   transition: ease-in-out 0.5s;
 
 }
+
+
+
+.snowfall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear;
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh);
+  }
+}
+
+
+
+
+
+
+
+
 /* #endregion*/
 
 
@@ -344,16 +387,11 @@ i{
 }
 
 
-
 #clickherelink:hover{
-
   color: #616466;
   transition: ease-in-out 0.5s;
   font-size: 20px;
-
 }
-
-
 
 
 .text-div {
