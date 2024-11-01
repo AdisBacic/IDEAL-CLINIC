@@ -677,39 +677,42 @@ i{
     }
   }
 
-  #footerDiv
-  {
+  #footerDiv {
     margin-top: 0%;
-    margin-bottom:10%;
-  }
-  .idealPic{
-    margin-top:5%;
-  }
+    margin-bottom: 10%;
+}
 
-
-  .certPic{
-
-    height: auto;
-    width: 40%;
-  }
-
-  #qliro {
-    /* Adjust the height and width to your desired values */
-    height: auto; /* You can use auto to maintain aspect ratio */
-    max-width: 70%; /* Adjust this value as needed */
-  }
-  #folksamPic{
+.idealPic {
+    margin-top: 5%;
     height: auto;
     width: 70%;
-  }
+}
 
-  #juvePic{
+.certPic {
+    height: auto;
+    width: 40%;
+}
+
+#qliro {
+    height: auto; 
+    max-width: 70%;
+}
+
+#folksamPic {
+    height: auto;
+    width: 70%;
+}
+
+#neostrataPic {
+    width: 150%;
+    height: auto;
+    max-width: 170px;
+}
+
+#juvePic {
     height: auto;
     width: 50%;
-  }
-
-  
-
+}
 
   #Info-Bot{
     width: 100%;
