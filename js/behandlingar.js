@@ -711,7 +711,7 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="Vilka områden och vad kan jag behandla med PRX-T33?";
     firststyckeText.innerHTML = "PRX-T33 är en nålfri behandling som använder sig av de aktiva substanserna TCA (triklorättiksyra och väteperoxid) för att aktivera cellförnyelsen. Behandlingen verkar på cellulär nivå och stimulerar hudens egna tillväxtfaktorer, vilket ger synliga resultat direkt efter behandlingen. Du kommer att känna och se skillnaden i form av uppstramning, lyster, jämnare hudton och färre linjer. Till skillnad från vanliga peelingar ger PRX-T33 knappt någon rodnad eller fjällning. Behandlingen kan även utföras året runt eftersom det inte ger ljuskänslighet, men det rekommenderas alltid att använda solskydd. PRX-T33 är även lämplig att kombinera med andra behandlingar såsom Dermapen, Botox, fillers, PRP och Profhilo.";
 
-    miniRubrik4.innerHTML ="Behandlingsområden:";
+    miniRubrik3.innerHTML ="Behandlingsområden:";
     thirdstyckeText.innerHTML = "<strong> Ansiktet: </strong> Rynkor och linjer, förstorade porer, förlorad spänst och fyllighet, ojämn hy och glåmighet, pigmenteringar, åldersfläckar, ärrbildningar och torrhet.<br> <br>  <strong>Kroppen: </strong> Åldrad hud och/eller förlorad spänst på hals, dekolletage och handrygg, bristningar och ärr.";
 
     InfoCardPrice.innerHTML ="Från 1800kr";
@@ -1105,7 +1105,7 @@ if (treatment === "Hårborttagning") {
     miniRubrik2.innerHTML ="SENASTE TEKNIKEN";
     firststyckeText.innerHTML = "Med senaste plasmateknologin (LED) erbjuder vi dig en snabb och enkel lösning för vitare tänder. Denna metod gör också att tänderna och emaljen blir starkare. Metoden är ledande för säker och effektiv tandblekning där man kan se tydliga resultat, vilket i genomsnitt motsvarar 7 nyanser vitare på ett behandlingstillfälle enligt Vitapan Classic's nyansnivåer. Normalt krävs inte fler behandlingar för att uppnå ett tillfredsställande resultat. Vår klinikbehandling är perfekt för dig som vill ha effektiva och snabba resultat på ett behagligt sätt. Behandlingen utförs på vår kliniker under ett och samma tillfälle och tar totalt 40-60 minuter beroende på om du väljer en Full Smile eller Fast Smile. Gelen som vi använder innehåller 6% väteperoxid.";
 
-    miniRubrik4.innerHTML ="Skonsamt mot tänderna:";
+    miniRubrik3.innerHTML ="Skonsamt mot tänderna:";
     thirdstyckeText.innerHTML = "Det avgörande för om en tandblekning är skonsam eller inte är gelen och ljusmetoden som används. Båda kan skada tänderna. Därför använder vi en gel med ett neutralt pH-värde (7), vilket innebär att blekningen inte förändrar emaljmolekylernas struktur eller tandytan. Gelen innehåller också ämnen som motverkar ilningar, reparerar skador och stärker tänderna. Detta gör att du får starkare och friskare tänder efter en tandblekning hos oss. En annan orsak till ilningar och sensibilitet vid tandblekning är ljusblekning med värmeproducerande lampor, som lasermetoden. Detta är mycket smärtsamt och kan skada tandnerven permanent. Metoden vi använder, plasmaljus (LED), är effektiv utan att avge värme och är fri från UV-ljus och skadliga våglängder. Detta gör att biverkningar är mer sällsynta vid tandblekning med vår metod. Ilningar som förekommer är tillfälliga och ofarliga.";
 
     miniRubrik5.innerHTML ="Varför du ska bleka tänderna med plasmaljus(led):";

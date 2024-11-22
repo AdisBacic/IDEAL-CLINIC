@@ -1,546 +1,591 @@
-/* #region Intro */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  body{
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
   width: 100%;
-  }
-  
-  header{
-  
-  display:flex;
+  background-color: #f8f9fa;
+}
+
+/* Keeping original header/navbar styles */
+/* Navbar styles */
+header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 30px;
   position: fixed;
-  width:100%;
-  top:0;
+  width: 100%;
+  top: 0;
   padding: 2;
-  transition:250ms;
-  z-index:10;  
-  background-color:whitesmoke;
+  transition: 250ms;
+  z-index: 10;
+  background-color: whitesmoke;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-  
+}
+
+.nav-links {
+  position: absolute;
+  right: 0;
+  top: 5vh;
+  width: 45%;
+  height: 60vh;
+  background: whitesmoke;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: menu_animation 500ms ease-in-out;
+}
+
+.show-navlinks {
+  display: flex;
+}
+
+@keyframes menu_animation {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.logoNav {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(rgb(219, 210, 210));
+  transition: 250ms;
+}
+
+#MainLogo {
+  font-size: 25px;
+  color: black;
+}
+
+#MainLogo:hover {
+  color: #616466;
+}
+
+#bokaText {
+  color: darkgreen;
+}
+
+#bokaText:hover {
+  color: lightgreen;
+}
+
+header ul li {
+  list-style: none;
+  margin: 20px 0;
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: var(--grey);
+  transition: 250ms;
+}
+
+header ul li a:hover {
+  color: var(--blue-dark);
+}
+
+.hamburger-on {
+  background: url('../assets/hamburger.svg');
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.hamburger-off {
+  padding: 9px;
+  background: url('../assets/xsolid.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: unset;
+    width: auto;
+    height: auto;
+    background: none;
   }
 
-  #linkBar{
-    margin-top: 0%;
-  }
-  
-  #flags{
-    align-items: center;
-    text-align: end;
-  }
-  
-  i{
-    color: black;
-  }
-  
-  #links{
-    color: rgba(2, 3, 2, 0.781);
-    text-align: start;
-    align-items: center;
-  }
-  
-  #btnFlag{
-    border: none;
-    background-color: white;
-  }
-  
-  @media screen and (min-width: 768px) {
-    #linkBar {
-      font-size: 17px;
-    }
-  }
-  
-  @media screen and (min-width: 1024px) {
-    #linkBar {
-      font-size: 17px;
-    }
-  }
-  
-  @media screen and (min-width: 1200px) {
-    #linkBar{
-      font-size: 22px;
-    }
-  }
-  
-  header h4{
-  
-    position: absolute;
-    left: 10%;
-    bottom: 1rem;
-    font-size: 1.6rem;
-  }
-  
-  #MainLogo
-  {
-    font-size: 25px;
-    color:black;
-  }
-  
-  #MainLogo:hover
-  {
-    color:#616466;
-  }
-  /* #endregion*/
-  
-  
-  /*#region Nav*/
-  
-  
-  #bokaText{
-    color:darkgreen;
-  }
-  #bokaText:hover{
-    color:lightgreen;
-  }
-  
-  
-  .nav-links{
-  
-    position:absolute;
-    right:0;
-    top: 5vh;
-    width: 45%;
-    height:60vh;
-    background: whitesmoke;
-    display:none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation:menu_animation 500ms
-    ease-in-out;
-  }
-  
-  
-  .show-navlinks{
+  header ul {
     display: flex;
   }
-  
-  
-  @keyframes menu_animation{
-    from{
-      opacity:0;
-      transform:translateX(100%);
-    }
-    to{
-      opacity:1;
-      transform:translateX(0%);
-    }
+
+  header ul li {
+    margin: 0;
   }
-  
-  
-  .logoNav{
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 500;
-    color:var(rgb(219, 210, 210));
-    transition: 250ms;
+
+  header ul li a {
+    padding: 0;
+    margin: 5px 20px;
+    font-size: 22px;
   }
-  
-  header ul li{
-  
-    list-style:none;
-    margin:20px 0;
-  
+
+  .hamburger-on {
+    display: none;
   }
-  
-  header ul li a{
-  
-    text-decoration: none;
-    padding:10px 30px;
-    font-size:1rem;
-    color:var(--grey);
-    transition: 250ms; 
-  }
-  
-  header ul li a:hover{
-  
-    color:var(--blue-dark);
-  
-  }
-  
-  
-  
-  .hamburger-on{
-      background: url('../assets/hamburger.svg');
-      width: 30px;
-      height: 30px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;  
-      cursor:pointer;
-      transition:250ms ease-in-out;
-      
-  }
-  
-  
-  .hamburger-off{
-  
-    padding:9px;
-    background:url('../assets/xsolid.svg');
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center;
-    width: 25px;
-    height: 25px;
-    cursor:pointer;
-    transition:250ms ease-in-out;
-    
-  }
-  
-  
-  
-  
-  
-  
-  
-  /* För större skärm */
-  
-  @media screen and (min-width:1000px){
-  
-    .nav-links{
-  
-      display:flex;
-      flex-direction: row;
-      position:unset;
-      width: auto;
-      height: auto;
-      background: none;
-    }
-  
-    header ul{
-  
-      display:flex;
-  
-    }
-  
-    header ul li{
-  
-      margin:0;
-  
-    }
-  
-    header ul li a{
-  
-      padding:0;
-      margin:5px 20px;
-      font-size:22px;
-    }
-  
-    .hamburger-on{
-      display:none;
-    }
-  
-    .logoNav{
-      font-size:20px;
-    }
-  }
-  
-  
-  @media (max-width: 984px) 
-  {
-    .nav-links{
-  
-      box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
-      border-radius: 10px;
-    
-    }
-  
-    .images
-    {
-      width: 50%;
-      height: auto;
-    } 
-  }
-  
-  .images
-  {
-    width: 80%;
-    height: auto;
-  }
-  
-  
-  
-  
-  .lead{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  
-  .fade-in {
-    opacity: 0;
-    animation: fadeInAnimation 1s ease-in forwards;
-  }
-  
-  @keyframes fadeInAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .card {
-    width: 80%; /* Adjust the width value as needed */
-    margin: 0 auto; /* Center the card horizontally */
-  }
-  
-  #reviewCarousel {
-    width: 100%;
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  
-  .carousel-inner {
-    font-size: 12px;
-    text-align: left;
-  }
-  
-  .carousel-item {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .card {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  
-  
-  .rubrik{
-    text-align: center;
-    margin-top: 7%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-  }
-  
-  
-  
-  .container {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  
-  
-  @media only screen and (min-width: 768px) {
-    .card {
-      width: calc(50% - 2rem);
-    }
-  }
-  
-  @media only screen and (min-width: 992px) {
-    .card {
-      width: calc(33.33% - 2rem);
-    }
-  }
-  
-  .elias {
-    margin-left: 0;
-  }
-  
-  
-  #foot {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-  }
-  
-  @media (max-width: 800px) 
-  {
-  
-    .rubrik{
-  
-      margin-top: 15%;
-    }
-  
-  }
-  
-  
-  
-  #Info-Bot{
-    margin-top: 5%;
-    width: 100%;
-    margin-bottom: 3%;
-    
-  }
-  
-  #gogoCol
-  {
-    text-align: center;
-  }
-  
-  
-  #gogomaps{
-  
-    width: fit-content;
-    
-  }
-  
-  .list-group{
+
+  .logoNav {
     font-size: 20px;
-    width: 100%;
-    font-size: 15px;
   }
-  
-  .row{
-    width: 100%;
+}
+
+@media (max-width: 984px) {
+  .nav-links {
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+    border-radius: 10px;
   }
-  
-  
-  
+}
+
+#linkBar {
+  margin-top: 0%;
+}
+
+#flags {
+  align-items: center;
+  text-align: end;
+}
+
+i {
+  color: black;
+}
+
+#links {
+  color: rgba(2, 3, 2, 0.781);
+  text-align: start;
+  align-items: center;
+}
+
+/* Enhanced image wrapper */
+/* Keep all existing navbar styles as is */
+
+/* Enhanced Image Wrapper */
+.image-wrapper {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+  margin-top: 76px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Enhanced Link Bar */
+#linkBar {
+  background: white;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+#links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2rem;
+}
+
+#links a {
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+#links a:hover {
+  transform: translateY(-2px);
+}
+
+#links i {
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* Contact Section Styling */
+#KontaktRubrik {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  background: linear-gradient(to bottom, #f8f9fa, white);
+}
+
+#KontaktRubrik h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+#KontaktRubrik h2::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: #27ae60;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Enhanced Contact Form */
+#contact {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+#contact:hover {
+  transform: translateY(-5px);
+}
+
+#contact h3 {
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#contact h4 {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+#contact input:hover,
+#contact textarea:hover {
+  background: white;
+  border-color: #ddd;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #27ae60;
+  background: white;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+#contact button[type="submit"] {
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2);
+}
+
+#contact button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+}
+
+/* Map and Info Sections */
+#gogoCol h5,
+#infocol h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#gogomaps {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#gogomaps:hover {
+  transform: translateY(-5px);
+}
+
+.list-group {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.list-group-item {
+  padding: 1.2rem;
+  border: none;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  background: #f8f9fa;
+  padding-left: 1.5rem;
+}
+
+.list-group-item .fw-bold {
+  color: #2c3e50;
+  margin-right: 0.5rem;
+}
+
+/* Footer Enhancement */
+#foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
   .image-wrapper {
-    width: 100%;
-    height: 70vh; /* set the height to 30% of the viewport height */
-    overflow: hidden;
-    text-align: center;
+    height: 40vh;
   }
-  
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .image-wrapper {
-      height: 50vh;
-    }
-  }
-  
-  
-  #KontaktRubrik
-  {
-  
-      margin-top: 2%;
-      text-align: center;
-  }
-  
-  
-  
-  /* #region Contact Form */
-  
-  
-  .container {
-    max-width:400px;
-    width:100%;
-    margin:0 auto;
-    position:relative;
-    margin-top: -5%;
-  }
-  
-  #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
   
   #contact {
-    background:#F9F9F9;
-    padding:25px;
-    margin:50px 0;
+    padding: 1.5rem;
   }
   
-  #contact h3 {
-    color: rgb(0, 0, 0);
-    display: block;
-    font-size: 30px;
-    font-weight: 400;
+  #KontaktRubrik h2 {
+    font-size: 2rem;
   }
   
-  #contact h4 {
-    margin:5px 0 15px;
-    display:block;
-    font-size:13px;
+  #links {
+    justify-content: center;
+    padding: 0 1rem;
+    gap: 1.5rem;
   }
   
-  fieldset {
-    border: medium none !important;
-    margin: 0 0 10px;
-    min-width: 100%;
-    padding: 0;
-    width: 100%;
+  .list-group-item {
+    padding: 1rem;
   }
-  
-  #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
-    width:100%;
-    border:1px solid #CCC;
-    background:#FFF;
-    margin:0 0 5px;
-    padding:10px;
+}
+
+/* Added Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  #contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
-    -webkit-transition:border-color 0.3s ease-in-out;
-    -moz-transition:border-color 0.3s ease-in-out;
-    transition:border-color 0.3s ease-in-out;
-    border:1px solid #AAA;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  #contact textarea {
-    height:100px;
-    max-width:100%;
-    resize:none;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Phone link styles */
+.phone-link {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.phone-link i {
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover i {
+  color: #27ae60;
+}
+
+.phone-link .tooltip {
+  position: absolute;
+  background: rgba(44, 62, 80, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.phone-link .tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent rgba(44, 62, 80, 0.9) transparent;
+}
+
+/* Show tooltip on hover for desktop only */
+@media (hover: hover) {
+  .phone-link:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    bottom: -45px;
   }
-  
-  #contact button[type="submit"] {
-    background-color: rgba(207, 207, 207, 0.5);
-    border-radius: 100px;
-    box-shadow: rgba(118, 118, 118, 0.2) 0 -25px 18px -14px inset,
-      rgba(132, 132, 132, 0.15) 0 1px 2px,
-      rgba(110, 110, 110, 0.15) 0 2px 4px,
-      rgba(118, 119, 119, 0.15) 0 4px 8px,
-      rgba(133, 134, 134, 0.15) 0 8px 16px,
-      rgba(146, 146, 146, 0.15) 0 16px 32px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-    padding: 7px 60px;
-    text-decoration: none;
-    transition: all 250ms;
-    border:0;
-    font-size: 12px;
+}
+
+/* Success message styles */
+.copy-success {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #27ae60;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  z-index: 1000;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -20px); }
+  15% { opacity: 1; transform: translate(-50%, 0); }
+  85% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -20px); }
+}
+
+
+
+/* Opening Hours Banner */
+.opening-hours-banner {
+  background: white;
+  padding: 1rem 0;
+  margin-top: 76px; /* Adjust this to match your header height */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hours-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hours-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.hours-title i {
+  font-size: 1.2rem;
+  color: #27ae60;
+}
+
+.hours-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hours-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.hours-item .day {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.hours-item .time {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.hours-item.weekend {
+  background: #e8f5e9;
+}
+
+/* Update image-wrapper margin */
+.image-wrapper {
+  margin-top: 0; /* Remove the top margin since we now have the opening hours banner */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .opening-hours-banner {
+    padding: 0.5rem 0;
   }
-  
-  #contact button[type="submit"]:hover {
-    background:lightgreen;
-    -webkit-transition:background 0.3s ease-in-out;
-    -moz-transition:background 0.3s ease-in-out;
-    transition:background-color 0.3s ease-in-out;
+
+  .hours-wrapper {
+    gap: 1rem;
   }
-  
-  #contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
-  
-  #contact input:focus, #contact textarea:focus {
-    outline:0;
-    border:1px solid #999;
+
+  .hours-list {
+    gap: 1rem;
   }
-  ::-webkit-input-placeholder {
-   color:#888;
+
+  .hours-item {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
   }
-  :-moz-placeholder {
-   color:#888;
-  }
-  ::-moz-placeholder {
-   color:#888;
-  }
-  :-ms-input-placeholder {
-   color:#888;
-  }
-  
-  
-  
-  /* #endregion */
-  
-  
-  
+}

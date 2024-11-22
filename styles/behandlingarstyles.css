@@ -540,3 +540,74 @@ footer{
 
 /* #endregion */
 
+/* Phone link styles */
+.phone-link {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.phone-link i {
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover i {
+  color: #27ae60;
+}
+
+.phone-link .tooltip {
+  position: absolute;
+  background: rgba(44, 62, 80, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.phone-link .tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent rgba(44, 62, 80, 0.9) transparent;
+}
+
+/* Show tooltip on hover for desktop only */
+@media (hover: hover) {
+  .phone-link:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    bottom: -45px;
+  }
+}
+
+/* Success message styles */
+.copy-success {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #27ae60;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  z-index: 1000;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -20px); }
+  15% { opacity: 1; transform: translate(-50%, 0); }
+  85% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -20px); }
+}
