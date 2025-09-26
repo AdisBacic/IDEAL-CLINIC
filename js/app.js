@@ -76,6 +76,31 @@ var options = {
 };
 var toast = new bootstrap.Toast(toastEl, options);
 toast.show();
+
+// Dropdown functionality for mobile
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdown = document.querySelector(".dropdown");
+
+  if (dropdownToggle && dropdown) {
+    dropdownToggle.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      // Only toggle on mobile (when hamburger menu is visible)
+      if (window.innerWidth <= 999) {
+        dropdown.classList.toggle("active");
+      }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function(e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("active");
+      }
+    });
+  }
+});
+
 //Kod för nav
 
 const header = document.querySelector("header");
