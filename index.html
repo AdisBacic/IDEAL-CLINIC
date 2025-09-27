@@ -5,9 +5,11 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.brew install --cask iterm2om" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/2025logo.png">
     <title>Ideal Clinic</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -28,17 +30,20 @@
       </div>
 
       <header>
-        <a href="index.html" id="MainLogo" class="logoNav">Ideal Clinic</a>
+        <div class="logo-container">
+          <img src="./images/2025logo.png" alt="Ideal Clinic Logo" class="company-logo">
+          <a href="index.html" id="MainLogo">Ideal Clinic</a>
+        </div>
         <div class="hamburger-on"></div>
         <ul class="nav-links">
           <li class="dropdown">
-            <a id="bokaText" href="#" class="dropdown-toggle"> Boka </a>
+            <a id="bokaText" href="#" class="dropdown-toggle">Boka</a>
             <ul class="dropdown-menu">
               <li><a href="https://www.bokadirekt.se/places/ideal-clinic-50596">Västerås</a></li>
               <li><a href="https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696">Stockholm</a></li>
             </ul>
           </li>
-          <li><a href="#behandlingarAnchor">Behandlingar </a></li>
+          <li><a href="#treatments-section">Behandlingar </a></li>
           <li> <a href = "priser.html" >Priser</a> </li>
           <li><a href="https://www.neostrata.se/#clinic=2606&link=9f23739e">Webbshop</a></li>
           <li><a href="omoss.html">Om oss </a></li>
@@ -47,36 +52,20 @@
         </ul>
       </header>
 
-      <div class ="Liseberg">
-
-        <div class="text-div" id ="introBtnBox">
-
-          <!--<button class ="introBtn"><a href="#monthlyAnchor" style="color: black; text-decoration: none;">Månadens Kampanj</a> </button> -->
-          <button class ="introBtn"><a href="#nyalagenAnchor" style="color: black; text-decoration: none;">Nya skönhetslagen</a> </button>
-          <button class ="introBtn"><a href="#behandlingarAnchor" style="color: black; text-decoration: none;">Våra behandlingar</a> </button>
-
+      <div class="hero-section">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1 class="hero-title">Välkommen till Ideal Clinic</h1>
+            <p class="hero-subtitle">Professionell estetisk behandling med legitimerad sjukvårdspersonal</p>
+            <div class="hero-buttons">
+              <a href="#treatments-section" class="hero-btn primary">Våra behandlingar</a>
+              <a href="#nyalagenAnchor" class="hero-btn secondary">Nya skönhetslagen</a>
+            </div>
+          </div>
         </div>
 
-          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="4000">
-                <img src="./images/hello.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-bs-interval="4000">
-                <img src="./images/Tandblekning.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./images/Micro needling klar.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          <div class="hero-image-container">
+            <img src="./images/kaisoum.png" class="hero-background-image" alt="Ideal Clinic Hero Image">
           </div>
 
       </div>
@@ -89,6 +78,9 @@
               <a href="https://www.instagram.com/idealclinic.se/"><i class="bi bi-instagram"></i></a>
               <a href="tel:010-333-3553" class="phone-link" onclick="handlePhoneClick(event)">
                 <i class="bi bi-telephone-fill"></i>
+              </a>
+              <a href="mailto:info@idealclinic.se">
+                <i class="bi bi-envelope-fill"></i>
               </a>
             </div>
           </div>
@@ -114,96 +106,137 @@
 
 
     </div>
-      <p id="nyalagenAnchor"></p>
-
-      <div class="beautylawBox">
-
-        <p id ="rubrikbeautyLaw">Ny skönhetslag</p>
-
-        <br><br>
-
-          <p id ="cuteText"> På IDEAL CLINIC välkomnar vi den nya lagen, eftersom den ger ökad säkerhet och trygghet för dig som patient. 
-          Från och med den 1 juli 2021 kan endast legitimerade sjukvårdspersonal utföra estetiska injektionsbehandlingar.</p>
-          <br>
-
-
-          <p> Den nya lagen innebär att du måste genomgå en konsultation, antingen digitalt eller fysiskt, 
-            innan du utför en injektionsbehandling. Du kan tidigast utföra en injektionsbehandling 2 dagar efter konsultationen. 
-            Detta gäller för dig som är en ny patient eller inte har utfört injektionsbehandling på det område som önskas behandlas
-            inom de senaste 6 månaderna. Vi rekommenderar en konsultation på plats men det går även att få digitalt via telefon.</p>
-            <p id="behandlingarAnchor">	</p>
-
-      </div>
-
-
-      <h1 id ="behandlingarRubrik">Våra behandlingar</h1>
-      
-        <div id="behandlingsvalue" class="container text-center">
-          <div class="row gx-5" id="behandlingsrowOne">
-
-            <div class="col-md-4">
-              <p class="rubrikbehandling">Spänst</p>
-              <table>
-                <p class="behandlingsvarde">Rynkbehandling Botox</p>
-                <p class="behandlingsvarde">Microneedling/Hudbristning</p>
-                <p class="behandlingsvarde">Kemisk peeling</p>
-              </table>
+      <section id="nyalagenAnchor" class="beauty-law-section">
+        <div class="container">
+          <div class="beauty-law-content">
+            <div class="law-header">
+              <div class="law-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h2 class="law-title">Ny skönhetslag</h2>
+              <div class="law-badge">Säkerhet först</div>
             </div>
 
-           
+            <div class="law-text">
+              <p class="law-intro">På IDEAL CLINIC välkomnar vi den nya lagen, eftersom den ger ökad säkerhet och trygghet för dig som patient. Från och med den 1 juli 2021 kan endast legitimerade sjukvårdspersonal utföra estetiska injektionsbehandlingar.</p>
 
-            <div class="col-md-4">
-              <p class="rubrikbehandling">Lyster</p>
-              <table>
-                <p class="behandlingsvarde">Skinbooster</p>
-                <p class="behandlingsvarde">Retinol Peeling</p>
-                <p class="behandlingsvarde">MicroTox</p>
-              </table>
+              <div class="law-details">
+                <h3>Vad innebär den nya lagen?</h3>
+                <p>Den nya lagen innebär att du måste genomgå en konsultation, antingen digitalt eller fysiskt, innan du utför en injektionsbehandling. Du kan tidigast utföra en injektionsbehandling 2 dagar efter konsultationen.</p>
+
+                <!-- <div class="law-points">
+                  <div class="law-point">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Gäller för nya patienter</span>
+                  </div>
+                  <div class="law-point">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Behandling inom nya områden</span>
+                  </div>
+                  <div class="law-point">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Senaste behandling över 6 månader sedan</span>
+                  </div>
+                </div> -->
+
+                <p class="law-recommendation">Vi rekommenderar en konsultation på plats men det går även att få digitalt via telefon.</p>
+              </div>
             </div>
-
-            <div class="col-md-4">
-              <p class="rubrikbehandling">Kontur</p>
-              <table>
-                <p class="behandlingsvarde">Profhilo</p>
-                <p class="behandlingsvarde">Filler</p>
-                <p class="behandlingsvarde">Behandling mot dubbelhaka</p>
-              </table>
-            </div>
-          </div>
-
-          <div class="row gx-5" id="behandlingsrowTwo">
-            <div class="col-md-4">
-              <p class="rubrikbehandling">Hår</p>
-              <table>
-                <p class="behandlingsvarde">Hårborttagning</p>
-                <p class="behandlingsvarde">PRP</p>
-              </table>
-            </div>
-
-            <div class="col-md-4">
-              <p class="rubrikbehandling">Kropp</p>
-              <table>
-                <p class="behandlingsvarde">Svettbehandling</p>
-                <p class="behandlingsvarde">Ärrbehandling</p>
-                <p class="behandlingsvarde">PRX-T33</p>
-              </table>
-            </div>
-
-            <div class="col-md-4">
-              <p class="rubrikbehandling">Övrigt</p>
-              <table>
-                <p class="behandlingsvarde">Djuprengöring</p>
-                <p class="behandlingsvarde">Tandblekning</p>
-                <p class="behandlingsvarde">Migränbehandling</p>
-                <p class="behandlingsvarde">Klassisk ansiktsbehandling</p>
-              </table>
-              <p id="monthlyAnchor"></p>
-
-            </div>
-
-
           </div>
         </div>
+        <p id="behandlingarAnchor"></p>
+      </section>
+
+
+      <section id="treatments-section" class="treatments-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Våra behandlingar</h2>
+            <p class="section-subtitle">Professionella estetiska behandlingar för alla dina behov</p>
+          </div>
+
+          <div class="treatments-grid">
+            <div class="treatment-card" data-category="spanst">
+              <div class="card-icon">
+                <i class="bi bi-lightning"></i>
+              </div>
+              <h3 class="card-title">Spänst</h3>
+              <ul class="card-list">
+                <li class="treatment-item behandlingsvarde">Rynkbehandling Botox</li>
+                <li class="treatment-item behandlingsvarde">Microneedling/Hudbristning</li>
+                <li class="treatment-item behandlingsvarde">Kemisk peeling</li>
+              </ul>
+              <div class="card-gradient"></div>
+            </div>
+
+            <div class="treatment-card" data-category="lyster">
+              <div class="card-icon">
+                <i class="bi bi-gem"></i>
+              </div>
+              <h3 class="card-title">Lyster</h3>
+              <ul class="card-list">
+                <li class="treatment-item behandlingsvarde">Skinbooster</li>
+                <li class="treatment-item behandlingsvarde">Retinol Peeling</li>
+                <li class="treatment-item behandlingsvarde">MicroTox</li>
+              </ul>
+              <div class="card-gradient"></div>
+            </div>
+
+            <div class="treatment-card" data-category="kontur">
+              <div class="card-icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <h3 class="card-title">Kontur</h3>
+              <ul class="card-list">
+                <li class="treatment-item behandlingsvarde">Profhilo</li>
+                <li class="treatment-item behandlingsvarde">Filler</li>
+                <li class="treatment-item behandlingsvarde">Behandling mot dubbelhaka</li>
+              </ul>
+              <div class="card-gradient"></div>
+            </div>
+
+            <div class="treatment-card" data-category="har">
+              <div class="card-icon">
+                <i class="bi bi-scissors"></i>
+              </div>
+              <h3 class="card-title">Hår</h3>
+              <ul class="card-list">
+                <li class="treatment-item behandlingsvarde">Hårborttagning</li>
+                <li class="treatment-item behandlingsvarde">PRP</li>
+              </ul>
+              <div class="card-gradient"></div>
+            </div>
+
+            <div class="treatment-card" data-category="kropp">
+              <div class="card-icon">
+                <i class="bi bi-person"></i>
+              </div>
+              <h3 class="card-title">Kropp</h3>
+              <ul class="card-list">
+                <li class="treatment-item behandlingsvarde">Svettbehandling</li>
+                <li class="treatment-item behandlingsvarde">Ärrbehandling</li>
+                <li class="treatment-item behandlingsvarde">PRX-T33</li>
+              </ul>
+              <div class="card-gradient"></div>
+            </div>
+
+            <div class="treatment-card" data-category="ovrigt">
+              <div class="card-icon">
+                <i class="bi bi-plus-circle"></i>
+              </div>
+              <h3 class="card-title">Övrigt</h3>
+              <ul class="card-list">
+                <li class="treatment-item behandlingsvarde">Djuprengöring</li>
+                <li class="treatment-item behandlingsvarde">Tandblekning</li>
+                <li class="treatment-item behandlingsvarde">Migränbehandling</li>
+                <li class="treatment-item behandlingsvarde">Klassisk ansiktsbehandling</li>
+              </ul>
+              <div class="card-gradient"></div>
+            </div>
+          </div>
+        </div>
+        <p id="monthlyAnchor"></p>
+      </section>
 
 
               <!-- <div class="image-container">

@@ -1,31 +1,55 @@
 
+:root{
+  --grey:rgb(36, 30, 30);
+  --blue-dark:rgb(29, 132, 55);
+  --primary: #4a5568;
+  --primary-light: #718096;
+  --primary-dark: #2d3748;
+  --accent: #667eea;
+  --accent-light: #764ba2;
+  --grey-light: #f7fafc;
+  --grey-medium: #e2e8f0;
+  --grey-dark: #4a5568;
+  --white: #ffffff;
+  --black: #1a202c;
+  --text-dark: #2d3748;
+  --text-medium: #718096;
+  --text-light: #a0aec0;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --gradient-primary: linear-gradient(135deg, #667eea, #764ba2);
+  --gradient-secondary: linear-gradient(135deg, #4a5568, #718096);
+  --gradient-accent: linear-gradient(135deg, #667eea, #764ba2);
+}
+
 /* #region Intro */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-body{
-  width: 100%;
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
 }
 
 header{
-  
   display:flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 15px 30px;
   position: fixed;
   width:100%;
   top:0;
-  padding: 2;
-  transition:250ms;
-  z-index:10;  
-  background-color:whitesmoke;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-
+  transition: all 0.3s ease;
+  z-index: 1001;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 header h4{
@@ -36,27 +60,60 @@ header h4{
     font-size: 1.6rem;
 }
 
- #MainLogo
-  {
-    font-size: 25px;
-    color:black;
-  }
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-  #MainLogo:hover
-  {
-    color:#616466;
-  }
+.company-logo {
+  height: 40px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.company-logo:hover {
+  transform: scale(1.05);
+}
+
+#MainLogo {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 2px;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+#MainLogo:hover {
+  color: var(--accent);
+}
 /* #endregion*/
 
 
 /*#region Nav*/
 
 
-#bokaText{
-    color:darkgreen;
+  /* Desktop styling for bokaText - should match other nav items */
+  @media screen and (min-width: 1000px) {
+    #bokaText {
+      color: var(--grey) !important;
+    }
+    #bokaText:hover {
+      color: var(--blue-dark) !important;
+    }
   }
-  #bokaText:hover{
-    color:lightgreen;
+
+  /* Mobile styling for bokaText */
+  @media screen and (max-width: 999px) {
+    #bokaText {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+    #bokaText:hover {
+      color: white !important;
+    }
   }
 
   #bokaText::after {
@@ -64,16 +121,19 @@ header h4{
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: 6px;
+    margin-left: -10px;
     vertical-align: middle;
-    border-top: 4px solid currentColor;
+    border-top: 5px solid currentColor;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
-    opacity: 0.7;
-    transition: transform 0.2s ease;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+    position: relative;
+    top: -1px;
   }
 
-  .dropdown:hover #bokaText::after {
+  .dropdown:hover #bokaText::after,
+  .dropdown.active #bokaText::after {
     transform: rotate(180deg);
   }
 
@@ -90,16 +150,28 @@ header h4{
     background: whitesmoke;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     border-radius: 8px;
-    min-width: 120px;
-    z-index: 20;
+    min-width: 140px;
+    z-index: 1000;
     list-style: none;
     margin: 0;
-    padding: 5px 0;
-    margin-top: 5px;
+    padding: 8px 0;
+    margin-top: 8px;
   }
 
-  .dropdown:hover .dropdown-menu {
+  .dropdown:hover .dropdown-menu,
+  .dropdown.active .dropdown-menu {
     display: block;
+  }
+
+  /* Add a small invisible bridge between button and dropdown to prevent closing */
+  .dropdown::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 8px;
+    z-index: 999;
   }
 
   .dropdown-menu li {
@@ -123,43 +195,115 @@ header h4{
 
   /* Mobile dropdown styles */
   @media screen and (max-width: 999px) {
+    /* Hide the dropdown arrow icon in mobile */
+    #bokaText::after {
+      display: none !important;
+    }
+
+    /* Give dropdown container more spacing to prevent conflicts */
+    header ul li.dropdown {
+      margin: 12px 0 !important;
+    }
+
     .dropdown-menu {
-      position: static;
-      box-shadow: none;
-      background: none;
+      position: static !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      backdrop-filter: blur(10px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
       display: none;
-      margin-top: 0;
-      padding: 0;
+      margin: 5px 0 15px 0 !important;
+      padding: 6px 0 !important;
       min-width: auto;
+      border-radius: 8px !important;
+      overflow: hidden;
+      list-style: none !important;
+      z-index: 100 !important;
     }
 
     .dropdown.active .dropdown-menu {
-      display: block;
+      display: block !important;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .dropdown-menu li {
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      position: relative !important;
     }
 
     .dropdown-menu li a {
-      padding: 10px 30px !important;
-      font-size: 1rem !important;
-      margin: 5px 0 !important;
+      padding: 8px 18px !important;
+      font-size: 0.95rem !important;
+      margin: 0 !important;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      color: rgba(255, 255, 255, 0.95) !important;
+      font-weight: 400 !important;
+      transition: all 300ms ease !important;
+      position: relative !important;
+      display: block !important;
+      text-align: left !important;
+      text-decoration: none !important;
+      line-height: 1.4 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .dropdown-menu li:last-child a {
+      border-bottom: none !important;
+    }
+
+    .dropdown-menu li a:hover {
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: white !important;
+      transform: translateX(5px) !important;
+      border: none !important;
+      box-shadow: none !important;
+      text-decoration: none !important;
+    }
+
+    /* Ensure dropdown doesn't interfere with other menu items */
+    .dropdown {
+      position: relative !important;
+    }
+
+    /* Add some spacing for the dropdown container */
+    header ul li.dropdown {
+      margin-bottom: 5px !important;
     }
   }
 
 
   .nav-links{
-
-    position:absolute;
-    right:0;
-    top: 5vh;
-    width: 45%;
-    height:60vh;
-    background: whitesmoke;
-    display:none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation:menu_animation 500ms
-    ease-in-out;
-  }
+  position:fixed;
+  right:0;
+  top: 0;
+  width: 100%;
+  height:100vh;
+  background: linear-gradient(135deg, rgba(96, 100, 100, 0.95), rgba(74, 85, 104, 0.98));
+  backdrop-filter: blur(20px);
+  display:none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation:menu_animation 400ms ease-out;
+  z-index: 1002;
+  padding-top: 80px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
   
   
   .show-navlinks{
@@ -168,15 +312,17 @@ header h4{
   
     
   @keyframes menu_animation{
-    from{
-      opacity:0;
-      transform:translateX(100%);
-    }
-    to{
-      opacity:1;
-      transform:translateX(0%);
-    }
+  from{
+    opacity:0;
+    transform:translateY(-20px);
+    backdrop-filter: blur(0px);
   }
+  to{
+    opacity:1;
+    transform:translateY(0);
+    backdrop-filter: blur(20px);
+  }
+}
   
   .logoNav{
     text-decoration: none;
@@ -187,105 +333,249 @@ header h4{
   }
   
   header ul li{
-  
-    list-style:none;
-    margin:20px 0;
-  
+  list-style:none;
+  margin:8px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInNav 0.5s ease-out forwards;
+}
+
+header ul li:nth-child(1) { animation-delay: 0.1s; }
+header ul li:nth-child(2) { animation-delay: 0.15s; }
+header ul li:nth-child(3) { animation-delay: 0.2s; }
+header ul li:nth-child(4) { animation-delay: 0.25s; }
+header ul li:nth-child(5) { animation-delay: 0.3s; }
+header ul li:nth-child(6) { animation-delay: 0.35s; }
+header ul li:nth-child(7) { animation-delay: 0.4s; }
+
+@keyframes slideInNav {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
   
   header ul li a{
-  
-    text-decoration: none;
-    padding:10px 30px;
-    font-size:1rem;
-    color:var(--grey);
-    transition: 250ms; 
-  }
-  
-  header ul li a:hover{
-  
-    color:var(--blue-dark);
-  
-  }
+  text-decoration: none;
+  padding: 8px 25px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 300ms ease;
+  border-radius: 0;
+  display: block;
+  text-align: center;
+  background: none;
+  border: none;
+  backdrop-filter: none;
+  margin: 2px 10px;
+  box-shadow: none;
+  position: relative;
+}
+
+  header ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 300ms ease;
+  transform: translateX(-50%);
+}
+
+header ul li a:hover{
+  color: white;
+  background: none;
+  border: none;
+  transform: none;
+  box-shadow: none;
+}
+
+header ul li a:hover::after {
+  width: 80%;
+}
   
   
   
   .hamburger-on{
-      background: url('../assets/hamburger.svg');
-      width: 30px;
-      height: 30px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;  
-      cursor:pointer;
-      transition:250ms ease-in-out;
-      
-  }
+     width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3), 0 2px 8px rgba(118, 75, 162, 0.2);
+    z-index: 1003;
+}
+
+.hamburger-on:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hamburger-on::before,
+.hamburger-on::after,
+.hamburger-on {
+    background-image: none;
+}
+
+.hamburger-on::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2.5px;
+    background: linear-gradient(135deg, #4a5568, #2d3748);
+    border-radius: 2px;
+    box-shadow: 0 6px 0 #4a5568, 0 12px 0 #4a5568;
+    transition: all 300ms ease;
+    top: 40%;
+    transform: translateY(-50%);
+}
   
   
   .hamburger-off{
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3), 0 2px 8px rgba(118, 75, 162, 0.2);
+    z-index: 1003;
+}
+
+.hamburger-off::before,
+.hamburger-off::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2.5px;
+    background: white;
+    border-radius: 2px;
+    transition: all 300ms ease;
+}
+
+.hamburger-off::before {
+    transform: rotate(45deg);
+}
+
+.hamburger-off::after {
+    transform: rotate(-45deg);
+}
   
-    padding:9px;
-    background:url('../assets/xsolid.svg');
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center;
-    width: 25px;
-    height: 25px;
-    cursor:pointer;
-    transition:250ms ease-in-out;
-    
+  
+  
+  
+
+
+@media (max-width: 999px) {
+  .nav-links {
+    border-radius: 0;
   }
-  
-  
-  
-  
-  
-  
-  
+
+  /* Reset animations for mobile */
+  header ul li {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .show-navlinks header ul li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInNav 0.5s ease-out forwards;
+  }
+}
+
   /* För större skärm */
-  
+
   @media screen and (min-width:1000px){
 
-    .nav-links{
-  
-      display:flex;
-      flex-direction: row;
-      position:unset;
-      width: auto;
-      height: auto;
-      background: none;
-  
-    }
-  
-    header ul{
-  
-      display:flex;
-  
-    }
-  
-    header ul li{
-  
-      margin:0;
-  
-    }
-  
-    header ul li a{
-  
-      padding:0;
-      margin:5px 20px;
-      font-size:22px;
-  
-    }
-  
-    .hamburger-on{
-      display:none;
-    }
-  
-    .logoNav{
-      font-size:20px;
-    }
+  .nav-links{
+    display:flex;
+    flex-direction: row;
+    position:unset;
+    width: auto;
+    height: auto;
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    padding-top: 0;
   }
+
+  header ul{
+    display:flex;
+  }
+
+  header ul li{
+    margin:0;
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  header ul li a{
+    padding:0;
+    margin:5px 20px;
+    font-size:22px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    backdrop-filter: none;
+    color: var(--grey);
+    font-weight: normal;
+  }
+
+  header ul li a:hover{
+    color: var(--blue-dark);
+    background: none;
+    transform: none;
+    box-shadow: none;
+    border: none;
+  }
+
+  /* Desktop dropdown adjustments */
+  .dropdown-menu li a {
+    font-size: 18px !important;
+    padding: 8px 15px !important;
+    margin: 0 !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    color: #241e1e !important;
+    font-weight: normal !important;
+  }
+
+  .dropdown-menu li a:hover {
+    background-color: rgba(29, 132, 55, 0.1) !important;
+    color: #1d8437 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .hamburger-on, .hamburger-off{
+    display:none;
+  }
+
+  .logoNav{
+    font-size:20px;
+  }
+}
   
   
 
@@ -293,337 +583,432 @@ header h4{
 
 
 
-/* HÄR ÄR JAG NU DETTA ÄR BRA */
+/* Modern Treatment Page Styles */
 
-/* #region css utförs i sekvens med start från topp. DETTA ÄR HUVUDINNEHÅLL FÖR BEHANDLINGSSIDANS CSS*/
-.container1 {
+/* Hero Section */
+.treatment-hero {
   position: relative;
-  width: 100%;
-  height: 70vh; /* set the height to 70% of the viewport height */
+  height: 70vh;
+  min-height: 500px;
   overflow: hidden;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
 }
 
-#behandlingsRubrik {
+.hero-image-container {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  margin: 0;
-  padding: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(74, 85, 104, 0.85), rgba(45, 55, 72, 0.85));
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
   color: white;
-  background-color: rgba(61, 60, 60, 0.5);
-  width: auto;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
-#hairPic {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
 }
-  
 
-#behandlingMainInfo
-{
+.hero-breadcrumb {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-top: 1rem;
+}
 
-  margin-top: 2%;
-  margin-left: 0%;
-  width: 100%;
+.hero-breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.hero-breadcrumb a:hover {
+  opacity: 0.8;
+}
+
+/* Main Content */
+.treatment-content {
+  padding: 80px 0;
+  background: var(--grey-light);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-content {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.accent-text {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 3rem;
+}
+
+.content-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-block {
+  border-left: 4px solid var(--primary);
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-block:empty,
+.content-block .block-title:empty,
+.content-block .block-text:empty {
+  display: none;
+}
+
+.content-block .block-title:empty + .block-text:empty {
+  display: none;
+}
+
+.content-block:has(.block-title:empty, .block-text:empty) {
+  display: none;
+}
+
+.block-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.8rem;
+}
+
+.block-text {
+  color: var(--text-medium);
+  line-height: 1.7;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 100px;
   height: fit-content;
-  border: solid 1px;
 }
 
-#miniRubrik{
-  font-size: 22px;
-  margin-bottom: 0%;
-}
-
-#miniRubrik2
-{
-  font-size: 18px;
-}
-
-#miniRubrik5{
-  font-size: 18px;
-  margin-bottom: 2%;
-}
-
-#textDiv{
-   font-size: 14px;
-   margin-left: 5%;
-
-}
-
-
-@media (min-width: 769px) {
-  #textDiv {
-    font-size: 18px;
-    margin-left: 5%;
-
-  }
-}
-
-
-/* #region Testar nybildhantering för behandlingar här */
-
-
-.image-wrapper {
-  width: 100%;
-  height: 70vh; /* set the height to 30% of the viewport height */
+.info-card {
+  background: white;
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--grey-medium);
+}
+
+.card-header {
+  background: var(--gradient-secondary);
+  color: white;
+  padding: 2rem;
   text-align: center;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card-header h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 768px) {
-  .image-wrapper {
+.treatment-name {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--grey-medium);
+}
+
+.info-item:last-of-type {
+  border-bottom: none;
+}
+
+.info-item .label {
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+.info-item .value {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.price {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.payment-info {
+  background: var(--grey-light);
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  text-align: center;
+  color: var(--text-medium);
+  font-size: 0.9rem;
+}
+
+.book-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--gradient-secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(74, 85, 104, 0.3);
+  color: white;
+}
+
+/* Features Section */
+.features-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background: var(--grey-light);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--grey-medium);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.feature-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.feature-text {
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.feature-text a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.feature-text a:hover {
+  text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 80px 0;
+  background: var(--grey-light);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.accordion {
+  border: none;
+}
+
+.accordion-item {
+  background: white;
+  border: 1px solid var(--grey-medium);
+  border-radius: 15px !important;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-button {
+  background: white;
+  border: none;
+  padding: 1.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
+  border-radius: 15px !important;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--gradient-secondary);
+  color: white;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.accordion-body {
+  padding: 1.5rem 2rem;
+  background: var(--grey-light);
+  color: var(--text-medium);
+  line-height: 1.7;
+}
+
+.accordion-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-body li {
+  padding: 0.5rem 0;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 2rem;
+  }
+
+  .section-header .section-title {
+    font-size: 2.2rem;
+  }
+
+  .treatment-hero {
     height: 50vh;
-  }
-
-}
-
-/* #endregion */
-
-
-
-/* MobileDevice mode below */
-
-@media (max-width: 1000px) {
-
-  #hairPic {
-    width: 100%;;
-    height: 100%;
-    margin-left: 0%;
-  }
-
-
-  #behandlingsRubrik
-  {
-    margin-top: 0%;
-    margin-left: 0%;
-  }
-
-  .container1{  
-    margin-left: 0%;
-  }
-
-  
-
-  #miniRubrik{
-    font-size: 22px;
-  }
-
-  .nav-links
-  {
-
-    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
-    border-radius: 10px;
-
-  }
-
-}
-
-
-
-/* #region BlurAnimation för behandlingar samt  fortsättning textinnehåll */
-
-
-.container
-{
-    width: 100%;
-}
-
-
-#infoCard
-{
-  margin-top: 10%;  
-  height: fit-content;
-  color: #616466;
-  text-align: center;
-  margin-left: 5%;
-}
-
-
-#infocardBooka
-{
-  
-    /*Button design på infocard*/
-  background-color: rgb(60, 224, 60);
-  border-radius: 100px;
-  box-shadow: rgba(118, 118, 118, 0.2) 0 -25px 18px -14px inset,
-    rgba(132, 132, 132, 0.15) 0 1px 2px,
-    rgba(110, 110, 110, 0.15) 0 2px 4px,
-    rgba(118, 119, 119, 0.15) 0 4px 8px,
-    rgba(133, 134, 134, 0.15) 0 8px 16px,
-    rgba(146, 146, 146, 0.15) 0 16px 32px;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-  padding: 7px 20px;
-  text-decoration: none;
-  transition: all 250ms;
-  border:0;
-  font-size: 12px; /* adjust as needed */
-}
-#infocardBooka:hover
-{
-  background-color:#cfcfcf;
-
-
-}
-
-#shortH2
-{
-  margin-left: 5%;
-}
-
-
-#blueText
-{
-  color:#000000;
-}
-
-#shortAbout
-{
-    margin-left: 0%;
-} 
-
-
-
-
-
-
-#shortSection
-{
-    margin-top: 2%;
-    width: 100%;
-    
-}
-
-#shortTextAbout {
-  width: 100%;
-  top: 10px;
-  animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-
-@keyframes text-focus-in {
-  0% {
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0px);
-    opacity: 1;
+    min-height: 400px;
   }
 }
-
-/* #endregion */
-
-
-
-/* #region Informationsbilder funnnyimage från lifetime */
-
-
-.row {
-  width: 100%;
-  padding-bottom: 50px;
-}
-
-.funnyImage {
-  width: 20%;
-  height: auto;
-}
-
-.funnyImageTextDiv {
-  margin-top: 10%;
-  text-align: center;
-}
-
-#konsultationstext {
-  margin-left: 2%;
-}
-
-.funnyimageText {
-  font-size: 14px;
-}
-
-
-
-
-
-
-/* Media query for big screens */
-@media only screen and (min-width: 1200px) {
-  .funnyImage {
-    width: 20%; /* Adjust the width to your desired size for big screens */
-  }
-}
-
-
-#avbokningsBtn
-{
-  background-color: #616466;
-  font-size: 15px;
-  margin-left: 0%;
-
-}
-#avbokaBtnText
-{
-  font-size: 12px;
-  margin-left: 0%;
-}
-
-
-
-
-
-
-.accordion{
-  padding-bottom: 50px;
-  width: 70%;
-  margin-left: 17%;
-}
-
-
-
-
-.accordion-button:not(.collapsed){
-  color:inherit;
-  background: #616466;
-  color: aliceblue;
-  text-decoration: none;
-}
-
-
-
-
-#bokaSneaky
-{
-  text-decoration: none;
-}
-
-#bokaSneaky:hover{
-
-  font-size: large;
-  color: blue;
-
-}
-
-
-footer{ 
-  margin-top: 0%;
-  width:100%;
-
-}
-
-
-
-/* #endregion */
 
 /* Phone link styles */
 .phone-link {

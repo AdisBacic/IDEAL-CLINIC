@@ -2,44 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/2025logo.png">
     <title>Priser</title>
-    <link rel="stylesheet" href="styles/priserstyles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/priserstyles.css">
 
     <script src="./js/app.js" defer></script>
     <script src="./js/behandlingar.js" defer></script>
-
-
-    <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-HZuXMlz/2k7CJ/6G9V7NlY6UjhKzlUuJ6GrdeVSKuLKglZK2QZuG1I9CB7VvSp6/mk+x6yIwDwzU6bRzKjSfrA==" crossorigin="anonymous" />
-
-  <!-- Bootstrap JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-kmCEv+RdrnW8HpLUMjw28SwMkZENp90piASBcNlBz9XhjvDrcnz2yzawTmFTdGjimL80h+n3ndqgJrDtpxStlw==" crossorigin="anonymous"></script>
-
 
   </head>
 
   <body>
 
+      <div class="intro">
+        <p class="logo-header">
+            <span class="logo">Ideal Clinic</span>
+            <span class="logo"></span>
+        </p>
+        <div class="snowfall"></div>
+      </div>
+
       <header>
-        <a href="index.html" id="MainLogo" class="logoNav">Ideal Clinic</a>
+        <div class="logo-container">
+          <img src="./images/2025logo.png" alt="Ideal Clinic Logo" class="company-logo">
+          <a href="index.html" id="MainLogo">Ideal Clinic</a>
+        </div>
         <div class="hamburger-on"></div>
         <ul class="nav-links">
           <li class="dropdown">
-            <a id="bokaText" href="#" class="dropdown-toggle"> Boka </a>
+            <a id="bokaText" href="#" class="dropdown-toggle">Boka</a>
             <ul class="dropdown-menu">
               <li><a href="https://www.bokadirekt.se/places/ideal-clinic-50596">Västerås</a></li>
               <li><a href="https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696">Stockholm</a></li>
             </ul>
           </li>
-          <li><a href="index.html">Behandlingar </a></li>
-          <li><a href="#">Priser </a></li>
+          <li><a href="index.html#treatments-section">Behandlingar </a></li>
+          <li> <a href = "priser.html" >Priser</a> </li>
           <li><a href="https://www.neostrata.se/#clinic=2606&link=9f23739e">Webbshop</a></li>
           <li><a href="omoss.html">Om oss </a></li>
           <li><a href="kontakt.html">Kontakt </a></li>
@@ -67,9 +73,45 @@
       <img src="./images/Tandblekning.png" alt="Description of image">
     </div>
 
-      <div id="prisrubrik">Våra priser:</div>
+    <section id="linkBar">
+      <div class="containera">
+        <div class="">
+          <div class="col" id="links">
+            <a href="https://www.facebook.com/profile.php?id=100089815122494"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/idealclinic.se/"><i class="bi bi-instagram"></i></a>
+            <a href="tel:010-333-3553" class="phone-link" onclick="handlePhoneClick(event)">
+              <i class="bi bi-telephone-fill"></i>
+            </a>
+            <a href="mailto:info@idealclinic.se">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="konsultationRubrik">Konsultationer</div>
+    <section class="pricing-hero">
+      <div class="container">
+        <div class="pricing-header">
+          <h1 class="section-title">Våra priser</h1>
+          <p class="section-subtitle">Transparenta priser för alla våra behandlingar</p>
+          <div class="booking-notice">
+            <i class="bi bi-info-circle"></i>
+            <p>Alla bokningslänkar nedan är förinställda för <strong>Västerås</strong>. För bokning i Stockholm, använd <strong>Boka-knappen</strong> i menyn och välj Stockholm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="pricing-category-title">
+            <i class="bi bi-calendar-check"></i>
+            Konsultationer
+          </h2>
+          <p class="pricing-category-subtitle">Kostnadsfria konsultationer enligt nya skönhetslagen</p>
+        </div>
 
 
 
@@ -159,8 +201,18 @@
             </div>
         </div>
     </div>
-    </div>
-    <div class="behandlingarRubrik">Behandlingar</div>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="pricing-category-title">
+            <i class="bi bi-heart-pulse"></i>
+            Behandlingar
+          </h2>
+          <p class="pricing-category-subtitle">Professionella estetiska behandlingar</p>
+        </div>
 
     <div class="accordion" id="accordionExample">
     <div class="accordion-item">
@@ -896,7 +948,8 @@
       </div>
     </div>
 
-  </div>
+      </div>
+    </section>
       <!-- #endregion -->
 
 

@@ -2,31 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/2025logo.png">
     <title>Om oss</title>
-    <link rel="stylesheet" href="styles/omstyles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/omstyles.css">
 
   
 
 
-    <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-HZuXMlz/2k7CJ/6G9V7NlY6UjhKzlUuJ6GrdeVSKuLKglZK2QZuG1I9CB7VvSp6/mk+x6yIwDwzU6bRzKjSfrA==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Bootstrap JavaScript -->
+    <script src="./js/app.js" defer></script>
+    <script src="./js/behandlingar.js" defer></script>
+
   </head>
   
   <body>
-    
+
+      <div class="intro">
+        <p class="logo-header">
+            <span class="logo">Ideal Clinic</span>
+            <span class="logo"></span>
+        </p>
+        <div class="snowfall"></div>
+      </div>
 
       <header>
-        <a href="index.html" id="MainLogo" class="logoNav">Ideal Clinic</a>
+        <div class="logo-container">
+          <img src="./images/2025logo.png" alt="Ideal Clinic Logo" class="company-logo">
+          <a href="index.html" id="MainLogo">Ideal Clinic</a>
+        </div>
         <div class="hamburger-on"></div>
           <ul class="nav-links">
             <li class="dropdown">
@@ -36,11 +49,11 @@
                 <li><a href="https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696">Stockholm</a></li>
               </ul>
             </li>
-            <li><a href="index.html">Behandlingar</a></li>
-            <li><a href="priser.html">Priser</a></li>
+            <li><a href="index.html#treatments-section">Behandlingar </a></li>
+            <li> <a href = "priser.html" >Priser</a> </li>
             <li><a href="https://www.neostrata.se/#clinic=2606&link=9f23739e">Webbshop</a></li>
-            <li><a href="omoss.html">Om oss</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="omoss.html">Om oss </a></li>
+            <li><a href="kontakt.html">Kontakt </a></li>
             <li><a href="https://www.injectorsacademy.se">Akademi </a></li>
 
           </ul>
@@ -57,208 +70,187 @@
         </div>
       </div>
 
+      <!-- Team Section -->
+      <section class="team-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Vårt team</h2>
+            <p class="section-subtitle">Möt våra legitimerade specialister som skapar naturliga resultat</p>
+          </div>
 
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-          <h1 class="display-4 font-weight-normal">Om oss på</h1>
-          <h1 class="display-4 font-weight-normal" id ="lustig">Ideal Clinic</h1>
+          <div class="team-grid">
+            <!-- Team Member 1: Elias -->
+            <div class="team-card">
+              <div class="team-image">
+                <img src="images/EliasK.jpeg" alt="Elias - Legitimerad Sjuksköterska">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Elias</h3>
+                <p class="team-title">Legitimerad Sjuksköterska</p>
+                <p class="team-description">
+                  Expert inom estetiska injektionsbehandlingar med års erfarenhet. Specialiserad på att leverera naturliga resultat med Botox och fillers som förstärker din naturliga skönhet.
+                </p>
+                <div class="team-credentials">
+                  <div class="credential">
+                    <i class="bi bi-award"></i>
+                    <span>Legitimerad sjuksköterska</span>
+                  </div>
+                  <div class="credential">
+                    <i class="bi bi-star"></i>
+                    <span>5+ års expertis</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <p class="lead font-weight-normal">- där skönhet blir till konst.</p>
+            <!-- Team Member 2: Wuod -->
+            <div class="team-card">
+              <div class="team-image">
+                <img src="images/WuodNyaste.jpg" alt="Wuod - Hudterapeut">
+              </div>
+              <div class="team-info">
+                <h3 class="team-name">Wuod</h3>
+                <p class="team-title">Hudterapeut</p>
+                <p class="team-description">
+                  En begåvad hudterapeut med passion för att vårda och förbättra hudens hälsa. Specialiserad på att skapa personliga behandlingar som ger strålande hud med naturlig lyster.
+                </p>
+                <div class="team-credentials">
+                  <div class="credential">
+                    <i class="bi bi-heart"></i>
+                    <span>Certifierad hudterapeut</span>
+                  </div>
+                  <div class="credential">
+                    <i class="bi bi-stars"></i>
+                    <span>Personlig omsorg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="product-device box-shadow d-none d-md-block"></div>
-        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
-      </div>
+      </section>
 
-      <section id="linkBar">
-        <div class="containera">
-          <div class="">
-            <div class="col" id="links">
-              <a href="https://www.facebook.com/profile.php?id=100089815122494"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/idealclinic.se/"><i class="bi bi-instagram"></i></a>
-              <a href="tel:010-333-3553" class="phone-link" onclick="handlePhoneClick(event)">
-                <i class="bi bi-telephone-fill"></i>
-              </a>
+      <!-- Testimonials Section -->
+      <section class="testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Vad våra kunder säger</h2>
+            <p class="section-subtitle">Läs om upplevelser från våra nöjda kunder</p>
+          </div>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Den mest professionellaste behandlare i hela Västerås. Elias är väldigt seriös, kunnig, trevlig mm. Elias ser alltid en helhet hos mig. Återkommer bara till honom i fortsättningen 🌺"
+                </p>
+                <div class="testimonial-author">
+                  <strong>Jaha T.</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Elias är grym! Otroligt proffsig och samtidigt så snäll och avslappnad. Alltid nöjd när jag lämnar! 👍"
+                </p>
+                <div class="testimonial-author">
+                  <strong>Malin E.</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Woud är grym! Alltid nöjd efter mina behandlingar hos henne. Ni kan känna er trygg hos henne😊"
+                </p>
+                <div class="testimonial-author">
+                  <strong>Hamida H.</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Kanonbra bemötande av Wuod, alltid så trevlig! Jag är väldigt nöjd med mina behandlingar!"
+                </p>
+                <div class="testimonial-author">
+                  <strong>Issis M.</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Proffsig! Känner mig alltid trygg med att få bästa resultat hos Elias."
+                </p>
+                <div class="testimonial-author">
+                  <strong>Sandra R.</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Jätte nöjd, super trevlig personal och jätte fint bemötande mot kunder, bra service. Kan varmt rekommendera alla."
+                </p>
+                <div class="testimonial-author">
+                  <strong>Zakaria K.</strong>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
 
-      <div class="reviewBox">
-        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
-
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Jaha T. 
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                  </h5>
-                  <p class="card-text">
-                    "Den mest professionellaste behandlare i hela Västerås. Elias är väldigt seriös, kunnig, trevlig mm. Elias ser alltid en helhet hos mig. Återkommer bara till honom i fortsättningen 🌺"
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Malin E. 
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-
-                  </h5>
-                  <p class="card-text">
-                    "Elias är grym! Otroligt proffsig och samtidigt så snäll och avslappnad. Alltid nöjd när jag lämnar! 👍"
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Sandra R.
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                  </h5>
-                  <p class="card-text">
-                    "Proffsig! Känner mig alltid trygg med att få bästa resultat hos Elias."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="">Next</span>
-          </button>
-        </div>
-      </div>
-      
-
-
-
-  
-      <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        
-      
-
-        <div class="bg-dark fade-in mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="width: 100%;">
-          <div class="my-3 py-3">
-            <h2 class="display-5">Elias</h2>
-            <p>Leg. Sjuksköterska</p>
-            <br>
-            <p class="lead">Med års erfarenhet och en skarp blick för detaljer har han blivit känd för sin förmåga att leverera naturliga resultat med hjälp av injektioner av både Botox och fillers. Dessa behandlingar förbättrar patienternas drag utan att se artificiella eller överdrivna ut, och har gjort honom till en eftertraktad expert inom området. <br> <br> En av hans mest populära behandlingar inkluderar injektioner av Botox, som han administrerar med precision och omsorg för att uppnå optimala resultat. Genom att avslappna muskler kan Botoxinjektioner icke-invasivt släta ut rynkor och fina linjer i ansiktet, vilket skapar en mer ungdomlig och uppfriskad utstrålning. <br><br>Utöver Botox har Elias även en framstående skicklighet inom fillers. Med lika noggrannhet och expertis använder han fillers för att återställa volym och kontur till ansiktet. Genom att noggrant anpassa varje behandling efter patientens individuella behov, tar han hänsyn till deras unika ansiktsstruktur och önskade resultat. Det resulterande utseendet är en subtil men märkbar förbättring som ger patienterna ökad självförtroende och trygghet. <br><br>Elias har skapat sig en enastående rykte för att leverera skräddarsydda resultat som förstärker naturlig skönhet med hjälp av både Botox och fillers. Hans förmåga att kombinera dessa två behandlingar på ett harmoniskt sätt gör honom till en erkänd auktoritet inom skönhetsvård och ger hans patienter enastående estetiska förbättringar.</p>
-          </div>
-        </div>
-
-        <div class="bg-dark fade-in mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="width: 100%;">
-          <div class="my-3 py-3">
-            <img class="images" src="images/EliasK.jpeg" alt="">
-          </div>
-        </div>
-
-      </div>
-
-      <div class="reviewBox">
-        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Hamida H. 
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                    </h5>
-                    <p class="card-text">
-                      "Woud är grym! Alltid nöjd efter mina behandlingar hos henne. Ni kan känna er trygg hos henne😊"
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Issis M. 
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-
-                    </h5>
-                    <p class="card-text">
-                      "Kanonbra bemötande av Wuod, alltid så trevlig! Jag är väldigt nöjd med mina behandlingar!"
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Zakaria K.
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                    </h5>
-                    <p class="card-text">
-                      "Jätte nöjd, super trevlig personal och jätte fint bemötande mot kunder, bra service. Kan varmt rekommendera alla."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="">Next</span>
-            </button>
-          </div>
-        </div>
-
-
-    
-
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-
-          <div class="bg-light fade-in mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="width: 100%;">
-            <div class="my-3 p-3">
-              <h2 class="display-5">Wuod</h2>
-              <p>Hudterapeut</p>
-              <br>
-              <p class="lead">En begåvad hudterapeut på Ideal Clinic, Wuod har en passion för att vårda och förbättra hudens hälsa. Med en unik förmåga att anpassa sig till varje patients individuella behov och önskemål, skapar hon en personlig och omsorgsfull upplevelse. Wuod är känd för sin expertis inom hudvård och hennes förmåga att skapa en strålande hud med en naturlig lyster. Hon strävar alltid efter att ge sina kunder den bästa möjliga vården och resultat som överträffar förväntningarna. Med sin lugnande närvaro och professionella rådgivning får Wuod sina patienter att känna sig trygga och förtroendeingivna. Hennes dedikation till yrket och önskan att få människor att känna sig vackra inifrån och ut gör henne till en älskad och uppskattad hudterapeut.</p>
-            </div>
-          </div>
-
-          <div class="bg-light fade-in mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="width: 100%;">
-            <div class="my-3 p-3">
-              <img class="images" src="images/WuodNyaste.jpg" alt="">
-            </div>
-          </div>
-      </div>
- </div>
     
 
       
@@ -272,7 +264,6 @@
       <!--Boostrap animation länk -->
       <script src="./js/app.js" defer></script>
       <script src="./js/behandlingar.js" defer></script>
-      <script src="./js/omoss.js" defer></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>

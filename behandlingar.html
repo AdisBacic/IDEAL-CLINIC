@@ -2,32 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Behandlingar</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/2025logo.png">
+    <title>Behandlingar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles/behandlingarstyles.css">
+
     <script src="./js/app.js" defer></script>
     <script src="./js/behandlingar.js" defer></script>
-    <link rel="stylesheet" href="./styles/behandlingarstyles.css">
 </head>
 <body>
 
+      <div class="intro">
+        <p class="logo-header">
+            <span class="logo">Ideal Clinic</span>
+            <span class="logo"></span>
+        </p>
+        <div class="snowfall"></div>
+      </div>
+
 <header>
-        <a href="index.html" id="MainLogo" class="logoNav">Ideal Clinic</a>
+        <div class="logo-container">
+          <img src="./images/2025logo.png" alt="Ideal Clinic Logo" class="company-logo">
+          <a href="index.html" id="MainLogo">Ideal Clinic</a>
+        </div>
         <div class="hamburger-on"></div>
         <ul class="nav-links">
           <li class="dropdown">
-            <a id="bokaText" href="#" class="dropdown-toggle"> Boka </a>
+            <a id="bokaText" href="#" class="dropdown-toggle">Boka</a>
             <ul class="dropdown-menu">
               <li><a href="https://www.bokadirekt.se/places/ideal-clinic-50596">Västerås</a></li>
               <li><a href="https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696">Stockholm</a></li>
             </ul>
           </li>
-          <li><a href="index.html">Behandlingar </a></li>
-          <li><a href="priser.html">Priser </a></li>
+          <li><a href="index.html#treatments-section">Behandlingar </a></li>
+          <li> <a href = "priser.html" >Priser</a> </li>
           <li><a href="https://www.neostrata.se/#clinic=2606&link=9f23739e">Webbshop</a></li>
           <li><a href="omoss.html">Om oss </a></li>
           <li><a href="kontakt.html">Kontakt </a></li>
@@ -46,95 +62,131 @@
         </div>
       </div>
 
-          <div class="container1">
-              <img id ="hairPic" src="" alt="">
-              <h5 id = "behandlingsRubrik"></h5>
-          </div>
-
-          <section id="shortSection">
-              <div class="container">
-                <div class="row">
-                  
-                  <div class="col-md-8" id = "shortAboutCol">
-                    <table>
-                      <div id="shortAbout">                      
-                        <div id="shortTextAbout">
-                            <h2 id="shortH2">
-                                <span id="blueText">  <p id ="miniRubrik"></p></span>
-                              </h2>
-                              <br>
-                                <div id = "textDiv">
-                                      <p id="pshortText"></p>
-                                      <br>
-                                      <p id ="miniRubrik2"></p>
-                                      <p id ="firststyckeText"></p>
-                                      <p id ="miniRubrik3"></p>
-                                      <p id ="secondstyckeText"></p>
-                                      <h6 id ="miniRubrik4"></h6>
-                                      <p id ="thirdstyckeText"></p>
-                                      <br>
-                                      <h6 id ="miniRubrik5"></h6>
-                                      <p id = "fourthstyckeText"></p>
-                                </div>
-                            </div>
-                       </div>
-                    </table>
-                  </div>
-
-                  <div class="col-md-4" id="shortAboutDol">
-                    <table>
-                        <div id = "infoCard"class="card" style="width: 20rem;">
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item" id ="informationomRubrik"><h4>Information om:</h4><h6 id ="informationOm"></h6> </li>
-                            <li class="list-group-item">Åldersgräns: 18</li>
-                            <li class="list-group-item" id ="InfoCardPrice">Pris: från 1500kr</li>
-                            <li class="list-group-item">Köp nu, betala sen! Via Qliro</li>
-                            <li class="list-group-item"><a id ="infocardBooka" href="https://www.bokadirekt.se/places/ideal-clinic-50596#book">Boka</a></li>
-
-                          </ul>
-                        </div>
-                    </table>
-                </div>
+          <!-- Hero Section -->
+          <section class="treatment-hero">
+            <div class="hero-image-container">
+              <img id="hairPic" src="" alt="" class="hero-image">
+              <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+              <h1 id="behandlingsRubrik" class="hero-title"></h1>
+              <div class="hero-breadcrumb">
+                <a href="index.html">Hem</a> / <span>Behandlingar</span> / <span id="current-treatment"></span>
               </div>
+            </div>
           </section>
 
-          <div class="row">
+          <!-- Main Content Section -->
+          <section class="treatment-content">
+            <div class="container">
+              <div class="content-grid">
 
-            <div class="col-md-4">
-              <table>
-                <div class ="funnyImageTextDiv">
-                  <img  class ="funnyImage" src="./images/EstimeradTid.png" alt="">
-                  <p>Estimerad tid</p>
-                  <p class = "funnyimageText" id ="EstimeradTidText"></p>
+                <!-- Main Content Area -->
+                <div class="main-content">
+                  <div class="treatment-overview">
+                    <h2 class="section-title">
+                      <span id="miniRubrik" class="accent-text"></span>
+                    </h2>
+
+                    <div class="content-section">
+                      <p id="pshortText" class="lead-text"></p>
+
+                      <div class="content-blocks">
+                        <div class="content-block">
+                          <h3 id="miniRubrik2" class="block-title"></h3>
+                          <p id="firststyckeText" class="block-text"></p>
+                        </div>
+
+                        <div class="content-block">
+                          <h3 id="miniRubrik3" class="block-title"></h3>
+                          <p id="secondstyckeText" class="block-text"></p>
+                        </div>
+
+                        <div class="content-block">
+                          <h3 id="miniRubrik4" class="block-title"></h3>
+                          <p id="thirdstyckeText" class="block-text"></p>
+                        </div>
+
+                        <div class="content-block">
+                          <h3 id="miniRubrik5" class="block-title"></h3>
+                          <p id="fourthstyckeText" class="block-text"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </table>
-            </div>
 
-            <div class="col-md-4">
-              <table>
-                <div class ="funnyImageTextDiv">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                  <div class="info-card">
+                    <div class="card-header">
+                      <h4>Behandlingsinformation</h4>
+                      <p id="informationOm" class="treatment-name"></p>
+                    </div>
 
-                    <img class ="funnyImage" src="./images/KostandsfriKonsultation.png" alt="">
-                    <p>Konstandsfri konsultation</p>
-                    <!-- lägg href här t boka.se på boka -->
-                    <p class = "funnyimageText" id ="konsultationstext">För kostnadsfri konsultation vänligen kontakta oss på 010-333-3553 eller klicka på <a id ="bokaSneaky"href="https://www.bokadirekt.se/places/ideal-clinic-50596">Boka</a></p>
+                    <div class="card-content">
+                      <div class="info-item">
+                        <span class="label">Åldersgräns:</span>
+                        <span class="value">18 år</span>
+                      </div>
+
+                      <div class="info-item price-item">
+                        <span class="label">Pris:</span>
+                        <span id="InfoCardPrice" class="value price">från 1500kr</span>
+                      </div>
+
+                      <div class="payment-info">
+                        <span>Köp nu, betala sen! Via Qliro</span>
+                      </div>
+
+                      <a id="infocardBooka" href="https://www.bokadirekt.se/places/ideal-clinic-50596#book" class="book-btn">
+                        Boka behandling
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </table>
+              </div>
             </div>
-            <div class="col-md-4">
-              <table>
-                <div class ="funnyImageTextDiv">                
-                  <img class ="funnyImage" src="./images/VissteduAtt.png" alt="">
-                  <p>Visste du att?</p>
-                  <p class = "funnyimageText" id ="vissteduAtt"></p>                
+          </section>
+
+          <!-- Features Section -->
+          <section class="features-section">
+            <div class="container">
+              <div class="features-grid">
+                <div class="feature-card">
+                  <div class="feature-content">
+                    <h3>Estimerad tid</h3>
+                    <p id="EstimeradTidText" class="feature-text"></p>
+                  </div>
                 </div>
-              </table>
+
+                <div class="feature-card">
+                  <div class="feature-content">
+                    <h3>Kostnadsfri konsultation</h3>
+                    <p id="konsultationstext">För kostnadsfri konsultation vänligen kontakta oss på <a href="tel:010-333-3553">010-333-3553</a> eller <a id="bokaSneaky" href="https://www.bokadirekt.se/places/ideal-clinic-50596">boka online</a></p>
+                  </div>
+                </div>
+
+                <div class="feature-card">
+                  <div class="feature-content">
+                    <h3>Visste du att?</h3>
+                    <p id="vissteduAtt" class="feature-text"></p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
 
-          <!-- #region Accordion -->
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <div class="container">
+              <div class="section-header">
+                <h2 class="section-title">Vanliga frågor</h2>
+                <p class="section-subtitle">Hitta svar på de mest förekommande frågorna om behandlingen</p>
+              </div>
 
-        <div class="accordion" id="accordionExample">
+              <div class="faq-container">
+                <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button id = "dragspel1Rubrik" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -503,10 +555,10 @@
 
             </div>
           </div>
-        </div>
-
-      </div>
-              <!-- #endregion -->
+                </div>
+              </div>
+            </div>
+          </section>
             
       <footer class="bg-dark text-white-50 text-start">
         &copy; 2025 Ideal Clinic | All rights reserved. 

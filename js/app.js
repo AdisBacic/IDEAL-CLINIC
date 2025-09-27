@@ -77,28 +77,100 @@ var options = {
 var toast = new bootstrap.Toast(toastEl, options);
 toast.show();
 
-// Dropdown functionality for mobile
+// Enhanced dropdown functionality for all views
 document.addEventListener("DOMContentLoaded", function() {
   const dropdownToggle = document.querySelector(".dropdown-toggle");
   const dropdown = document.querySelector(".dropdown");
+  const navLinks = document.querySelector(".nav-links");
+  const hamburger = document.querySelector(".hamburger-on");
 
   if (dropdownToggle && dropdown) {
     dropdownToggle.addEventListener("click", function(e) {
       e.preventDefault();
+      e.stopPropagation();
 
-      // Only toggle on mobile (when hamburger menu is visible)
-      if (window.innerWidth <= 999) {
-        dropdown.classList.toggle("active");
-      }
+      // Toggle dropdown for both mobile and desktop
+      dropdown.classList.toggle("active");
     });
 
     // Close dropdown when clicking outside
     document.addEventListener("click", function(e) {
-      if (!dropdown.contains(e.target)) {
+      if (!dropdown.contains(e.target) && !dropdownToggle.contains(e.target)) {
         dropdown.classList.remove("active");
       }
     });
   }
+
+
+  // Close mobile menu when clicking outside
+  if (navLinks && hamburger) {
+    document.addEventListener("click", function(e) {
+      // Check if menu is open and click is outside of nav-links and hamburger
+      if (navLinks.classList.contains("show-navlinks")) {
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+          // Close the menu
+          navLinks.classList.remove("show-navlinks");
+          hamburger.classList.remove("hamburger-off");
+          hamburger.classList.add("hamburger-on");
+
+          // Reset any divs that were hidden
+          const div = document.getElementById("hideMe");
+          const pic = document.getElementById("mainPic");
+          if (div && pic) {
+            div.style.display = "block";
+            pic.style.position = "relative";
+          }
+        }
+      }
+    });
+
+    // Prevent clicks inside the menu from closing it
+    navLinks.addEventListener("click", function(e) {
+      e.stopPropagation();
+    });
+  }
+});
+
+// Enhanced scroll animations
+function initScrollAnimations() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Add animation classes to elements
+  const animateElements = document.querySelectorAll('.treatment-card, .law-header, .law-details, .section-title, .section-subtitle');
+
+  animateElements.forEach((el, index) => {
+    el.classList.add('animate-on-scroll');
+    el.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(el);
+  });
+}
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', initScrollAnimations);
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
 });
 
 //Kod för nav
@@ -116,25 +188,23 @@ const navLinks = document.querySelector(".nav-links");
 let hamburgerOpen = false;
 
 hamburger.addEventListener("click", function () {
-  if (!hamburgerOpen) {
-    navLinks.classList.toggle("show-navlinks");
-    hamburger.classList.toggle("hamburger-off");
+  // Toggle menu visibility
+  navLinks.classList.toggle("show-navlinks");
+  hamburger.classList.toggle("hamburger-off");
+  hamburger.classList.toggle("hamburger-on");
 
-    //Kod för knapparna, gömmer sig när hamburgarmenyn öppnas.
-    if (div.style.display === "none") {
-      div.style.display = "block";
+  // Update hamburger state
+  hamburgerOpen = navLinks.classList.contains("show-navlinks");
 
-      //Om hamburgaren inte är på så kommer bilden att hamna under hamburgarmenyn, dvs dess prop ändras.
-      pic.style.position = "relative";
-    } else {
+  // Handle elements that exist on specific pages
+  if (div && pic) {
+    if (hamburgerOpen) {
       div.style.display = "none";
-
-      //Om hamburgaren är öppen så blir containern static.
       pic.style.position = "static";
+    } else {
+      div.style.display = "block";
+      pic.style.position = "relative";
     }
-  } else {
-    hamburger.classList.remove("show-navlinks");
-    hamburger.classList.remove("hamburger-off");
   }
 });
 

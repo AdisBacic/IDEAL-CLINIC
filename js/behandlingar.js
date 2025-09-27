@@ -11,6 +11,14 @@ for (var i = 0; i < behandlingsvardeElements.length; i++) {
 var params = new URLSearchParams(window.location.search);
 var treatment = params.get("treatment");
 
+// Update breadcrumb with current treatment
+if (treatment) {
+  var currentTreatmentElement = document.getElementById('current-treatment');
+  if (currentTreatmentElement) {
+    currentTreatmentElement.textContent = treatment;
+  }
+}
+
 var hairPic = document.getElementById('hairPic');
 
 var toastBody = document.querySelector('.toast-body');
