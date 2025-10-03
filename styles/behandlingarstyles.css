@@ -978,35 +978,129 @@ header ul li a:hover::after {
     font-size: 2.5rem;
   }
 
+  .treatment-content {
+    padding: 100px 0 60px 0;
+  }
+
   .content-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 0 10px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .sidebar {
     position: static;
     order: -1;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .info-card {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card-header {
+    padding: 1.5rem;
+  }
+
+  .card-header h4 {
+    font-size: 1.3rem;
+  }
+
+  .treatment-name {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .info-item {
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
+  }
+
+  .book-btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
   }
 
   .main-content {
-    padding: 2rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .treatment-overview {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    word-wrap: break-word;
+  }
+
+  .lead-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .content-block {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .block-title {
+    font-size: 1.2rem;
+  }
+
+  .block-text {
+    font-size: 0.95rem;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
+    padding: 0 15px;
   }
 
   .feature-card {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .section-header .section-title {
     font-size: 2.2rem;
   }
 
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
   .treatment-hero {
     height: 50vh;
     min-height: 400px;
+  }
+
+  .faq-container {
+    padding: 0 15px;
+  }
+
+  .accordion-button {
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .accordion-body {
+    padding: 1.2rem 1.5rem;
   }
 }
 
