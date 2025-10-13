@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/2025logo.png">
+    <title>Boka - Ideal Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background:
+          linear-gradient(135deg,
+            #1a2332 0%,
+            #1f2938 10%,
+            #243140 20%,
+            #1a2332 30%,
+            #1c2735 40%,
+            #1e2a39 50%,
+            #1a2332 60%,
+            #212d3d 70%,
+            #1a2332 80%,
+            #1f2938 90%,
+            #1a2332 100%);
+        padding: 40px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 900px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .logo-container {
+        margin-bottom: 50px;
+        animation: fadeInDown 0.8s ease-out;
+      }
+
+      .logo-container img {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15));
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .header-section {
+        margin-bottom: 50px;
+        animation: fadeInUp 0.8s ease-out 0.1s backwards;
+      }
+
+      .main-heading {
+        font-size: 2.5rem;
+        font-weight: 100;
+        color: #d4af37;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+      }
+
+      .sub-heading {
+        font-size: 0.95rem;
+        font-weight: 100;
+        color: #d4af37;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+      }
+
+      .decorative-border {
+        width: 300px;
+        height: 2px;
+        margin: 0 auto;
+        position: relative;
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
+      }
+
+      .decorative-border::before,
+      .decorative-border::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background: #d4af37;
+        border-radius: 50%;
+      }
+
+      .decorative-border::before {
+        left: -15px;
+      }
+
+      .decorative-border::after {
+        right: -15px;
+      }
+
+      .decorative-border .center-ornament {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background: #d4af37;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px #1a2332, 0 0 0 5px #d4af37;
+      }
+
+      .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        animation: fadeInUp 0.8s ease-out 0.3s backwards;
+      }
+
+      .location-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .booking-button {
+        padding: 22px 60px;
+        font-size: 1.1rem;
+        font-weight: 200;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        width: 280px;
+        text-align: center;
+      }
+
+      .booking-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+      }
+
+      .booking-button:hover::before {
+        width: 400px;
+        height: 400px;
+      }
+
+      .booking-button.location {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        color: #1a2332;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .booking-button.location:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5),
+                    0 0 0 1px rgba(212, 175, 55, 0.6);
+        background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+      }
+
+      .booking-button.home {
+        background: transparent;
+        color: #d4af37;
+        border: 1.0px solid #d4af37;
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+      }
+
+      .booking-button.home:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        background: rgba(212, 175, 55, 0.1);
+        border-color: #f4d03f;
+        color: #f4d03f;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .logo-container img {
+          max-width: 200px;
+        }
+
+        .main-heading {
+          font-size: 2rem;
+          letter-spacing: 1.5px;
+        }
+
+        .sub-heading {
+          font-size: 0.85rem;
+          letter-spacing: 2px;
+        }
+
+        .decorative-border {
+          width: 250px;
+        }
+
+        .location-buttons {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .booking-button {
+          padding: 20px 40px;
+          font-size: 1.2rem;
+          min-width: 250px;
+        }
+
+        .buttons-container {
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 20px;
+        }
+
+        .logo-container {
+          margin-bottom: 30px;
+        }
+
+        .logo-container img {
+          max-width: 160px;
+        }
+
+        .header-section {
+          margin-bottom: 30px;
+        }
+
+        .main-heading {
+          font-size: 1.6rem;
+          letter-spacing: 1px;
+        }
+
+        .sub-heading {
+          font-size: 0.75rem;
+          letter-spacing: 1.5px;
+        }
+
+        .decorative-border {
+          width: 200px;
+        }
+
+        .booking-button {
+          padding: 18px 30px;
+          font-size: 1rem;
+          min-width: 200px;
+        }
+
+        .booking-button.location {
+          min-width: 220px;
+        }
+
+        .booking-button.home {
+          min-width: 240px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <img src="./images/ideal2025logo.jpeg" alt="Ideal Clinic Logo">
+      </div>
+
+      <div class="header-section">
+        <h1 class="main-heading">Välj din klinik</h1>
+        <p class="sub-heading">Välj den ort som passar dig bäst för behandling och bokning.</p>
+        <div class="decorative-border">
+          <div class="center-ornament"></div>
+        </div>
+      </div>
+
+      <div class="buttons-container">
+        <div class="location-buttons">
+          <a href="https://www.bokadirekt.se/places/ideal-clinic-50596" class="booking-button location">
+            Västerås
+          </a>
+
+          <a href="https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696" class="booking-button location">
+            Stockholm
+          </a>
+        </div>
+
+        <a href="index.html" class="booking-button home">
+          Hemsida
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
