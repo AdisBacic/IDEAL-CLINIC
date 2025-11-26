@@ -172,6 +172,8 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    min-width: 240px;
+    text-align: center;
 }
 
 .hero-btn.primary {
@@ -196,6 +198,77 @@ h1, h2, h3, h4, h5, h6 {
     background: white;
     color: var(--primary);
     transform: translateY(-3px);
+}
+
+/* Hero Boka Button Dropdown */
+.hero-btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-btn-wrapper .hero-btn {
+    padding: 1.2rem 2.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.hero-buttons > .hero-btn,
+.hero-buttons > .hero-btn-wrapper {
+    flex: 0 1 auto;
+}
+
+.hero-boka-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    min-width: 200px;
+    z-index: 1000;
+    animation: fadeInDropdown 0.3s ease-out;
+}
+
+.hero-boka-dropdown.show {
+    display: block;
+}
+
+.hero-boka-option {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--grey-medium);
+}
+
+.hero-boka-option:last-child {
+    border-bottom: none;
+}
+
+.hero-boka-option:hover {
+    background: var(--gradient-primary);
+    color: white;
+    padding-left: 2rem;
+}
+
+@keyframes fadeInDropdown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
@@ -229,9 +302,20 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
     }
 
+    .hero-btn-wrapper {
+        order: -1;
+        width: 100%;
+        max-width: 280px;
+    }
+
     .hero-btn {
         width: 100%;
         max-width: 280px;
+    }
+
+    .hero-boka-dropdown {
+        width: 100%;
+        min-width: auto;
     }
 }
 /* #endregion */

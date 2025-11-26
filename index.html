@@ -60,6 +60,13 @@
             <h1 class="hero-title">Välkommen till Ideal Clinic</h1>
             <p class="hero-subtitle">Professionell estetisk behandling med legitimerad sjukvårdspersonal</p>
             <div class="hero-buttons">
+              <div class="hero-btn-wrapper">
+                <button class="hero-btn primary" id="heroBokaBtn">Boka</button>
+                <div class="hero-boka-dropdown" id="heroBokaDropdown">
+                  <a href="https://www.bokadirekt.se/places/ideal-clinic-50596" class="hero-boka-option">Västerås</a>
+                  <a href="https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696" class="hero-boka-option">Stockholm</a>
+                </div>
+              </div>
               <a href="#treatments-section" class="hero-btn primary">Våra behandlingar</a>
               <a href="#nyalagenAnchor" class="hero-btn secondary">Nya skönhetslagen</a>
             </div>
@@ -519,6 +526,33 @@
               this.style.backgroundColor = 'transparent';
             }
           });
+        });
+      </script>
+
+      <!-- Hero Boka Dropdown Script -->
+      <script>
+        // Toggle dropdown when Boka button is clicked
+        document.getElementById('heroBokaBtn').addEventListener('click', function(e) {
+          e.stopPropagation();
+          var dropdown = document.getElementById('heroBokaDropdown');
+          dropdown.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+          var dropdown = document.getElementById('heroBokaDropdown');
+          var bokaBtn = document.getElementById('heroBokaBtn');
+
+          if (!bokaBtn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove('show');
+          }
+        });
+
+        // Close dropdown when clicking ESC key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            document.getElementById('heroBokaDropdown').classList.remove('show');
+          }
         });
       </script>
 
