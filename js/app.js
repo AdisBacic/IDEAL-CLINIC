@@ -35,32 +35,6 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//Snofallefffect
-
-// const snowfall = document.querySelector('.snowfall');
-
-// function createSnowflake() {
-//     const snowflake = document.createElement('div');
-//     snowflake.classList.add('snowflake');
-//     snowflake.style.left = Math.random() * 100 + 'vw';
-//     snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
-//     snowflake.style.opacity = Math.random();
-//     snowflake.style.width = snowflake.style.height = Math.random() * 10 + 5 + 'px';
-
-//     snowfall.appendChild(snowflake);
-
-//     setTimeout(() => {
-//         snowflake.remove();
-//     }, 5000);
-// }
-
-// setInterval(createSnowflake, 200);
-
-  
-
-
-
-
 
 
 
@@ -209,31 +183,20 @@ hamburger.addEventListener("click", function () {
 });
 
 
-//Kod för att ta bort text efter att kontaktformuläret är skickat.
-
+// Contact form reset after submission (only on kontakt page)
 document.addEventListener("DOMContentLoaded", function() {
-  // Check if form data is present in sessionStorage
-  if (sessionStorage.getItem("formSubmitted")) {
-    // Clear form fields
-    document.getElementById("contact").reset();
+  var contactForm = document.getElementById("contact");
+  if (!contactForm) return;
 
-    // Remove form data from sessionStorage
+  if (sessionStorage.getItem("formSubmitted")) {
+    contactForm.reset();
     sessionStorage.removeItem("formSubmitted");
   }
+
+  contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    contactForm.submit();
+    sessionStorage.setItem("formSubmitted", true);
+  });
 });
-
-document.getElementById("contact").addEventListener("submit", function(event) {
-  // Prevent the form from submitting immediately
-  event.preventDefault();
-
-  // Submit the form
-  document.getElementById("contact").submit();
-
-  // Store form submission flag in sessionStorage
-  sessionStorage.setItem("formSubmitted", true);
-});
-
-
-
-
 
