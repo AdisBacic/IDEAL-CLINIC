@@ -44,12 +44,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
 //Toaster för start!
 var toastEl = document.getElementById('toast-example');
-var options = {
-  autohide: true,
-  delay: 8000 // 8 sekunder innan den försvinner.
-};
-var toast = new bootstrap.Toast(toastEl, options);
-toast.show();
+if (toastEl) {
+  var options = {
+    autohide: true,
+    delay: 8000 // 8 sekunder innan den försvinner.
+  };
+  var toast = new bootstrap.Toast(toastEl, options);
+  toast.show();
+}
 
 // Enhanced dropdown functionality for all views
 document.addEventListener("DOMContentLoaded", function() {
@@ -134,52 +136,52 @@ function initScrollAnimations() {
 document.addEventListener('DOMContentLoaded', initScrollAnimations);
 
 // Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
   });
 });
 
 //Kod för nav
+document.addEventListener("DOMContentLoaded", function() {
+  const header = document.querySelector("header");
+  const hamburger = document.querySelector(".hamburger-on");
+  const div = document.getElementById("hideMe");
+  const pic = document.getElementById("mainPic");
+  const navLinks = document.querySelector(".nav-links");
+  let hamburgerOpen = false;
 
-const header = document.querySelector("header");
-const hamburger = document.querySelector(".hamburger-on");
+  if (!hamburger || !navLinks) return;
 
-// const btns = document.querySelectorAll(".btn");
+  hamburger.addEventListener("click", function () {
+    // Toggle menu visibility
+    navLinks.classList.toggle("show-navlinks");
+    hamburger.classList.toggle("hamburger-off");
+    hamburger.classList.toggle("hamburger-on");
 
-const div = document.getElementById("hideMe");
+    // Update hamburger state
+    hamburgerOpen = navLinks.classList.contains("show-navlinks");
 
-const pic = document.getElementById("mainPic");
-
-const navLinks = document.querySelector(".nav-links");
-let hamburgerOpen = false;
-
-hamburger.addEventListener("click", function () {
-  // Toggle menu visibility
-  navLinks.classList.toggle("show-navlinks");
-  hamburger.classList.toggle("hamburger-off");
-  hamburger.classList.toggle("hamburger-on");
-
-  // Update hamburger state
-  hamburgerOpen = navLinks.classList.contains("show-navlinks");
-
-  // Handle elements that exist on specific pages
-  if (div && pic) {
-    if (hamburgerOpen) {
-      div.style.display = "none";
-      pic.style.position = "static";
-    } else {
-      div.style.display = "block";
-      pic.style.position = "relative";
+    // Handle elements that exist on specific pages
+    if (div && pic) {
+      if (hamburgerOpen) {
+        div.style.display = "none";
+        pic.style.position = "static";
+      } else {
+        div.style.display = "block";
+        pic.style.position = "relative";
+      }
     }
-  }
+  });
 });
 
 

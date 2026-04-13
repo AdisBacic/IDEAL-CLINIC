@@ -21,10 +21,6 @@ const SITE_CONFIG = {
 };
 
 const NAV_LINKS = [
-  { type: 'dropdown', label: 'Boka', items: [
-    { label: 'Västerås', href: SITE_CONFIG.bookingVasteras },
-    { label: 'Stockholm', href: SITE_CONFIG.bookingStockholm },
-  ]},
   { label: 'Behandlingar', href: 'index.html#treatments-section' },
   { label: 'Priser', href: 'priser.html' },
   { label: 'Hårtransplantation', href: 'https://idealhair.se/' },
@@ -33,24 +29,23 @@ const NAV_LINKS = [
   { label: 'Akademi', href: 'https://www.injectorsacademy.se' },
 ];
 
+const NAV_CTA = {
+  type: 'dropdown',
+  label: 'Boka konsultation',
+  items: [
+    { label: 'Västerås', href: SITE_CONFIG.bookingVasteras },
+    { label: 'Stockholm', href: SITE_CONFIG.bookingStockholm },
+  ]
+};
+
 // ─── Header ──────────────────────────────────────────────────────────────────
 function renderHeader() {
   const el = document.getElementById('site-header');
   if (!el) return;
 
-  // On the index page, "Behandlingar" links to an anchor; on other pages it links to index.html#
   const isIndex = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
 
   const navItems = NAV_LINKS.map(link => {
-    if (link.type === 'dropdown') {
-      const dropdownItems = link.items.map(item =>
-        `<li><a href="${item.href}">${item.label}</a></li>`
-      ).join('');
-      return `<li class="dropdown">
-        <a id="bokaText" href="#" class="dropdown-toggle">${link.label}</a>
-        <ul class="dropdown-menu">${dropdownItems}</ul>
-      </li>`;
-    }
     let href = link.href;
     if (link.label === 'Behandlingar' && isIndex) {
       href = '#treatments-section';
@@ -58,16 +53,34 @@ function renderHeader() {
     return `<li><a href="${href}">${link.label}</a></li>`;
   }).join('\n');
 
+  const ctaDropdownItems = NAV_CTA.items.map(item =>
+    `<li><a href="${item.href}">${item.label}</a></li>`
+  ).join('');
+
+  const mobileBookingItems = NAV_CTA.items.map(item =>
+    `<li class="mobile-booking-item"><a href="${item.href}">Boka — ${item.label}</a></li>`
+  ).join('');
+
   el.innerHTML = `
     <header>
       <div class="logo-container">
-        <img src="./images/2025logo.png" alt="Ideal Clinic Logo" class="company-logo">
-        <a href="index.html" id="MainLogo">Ideal Clinic</a>
+        <a href="index.html" id="MainLogo">
+          <span class="logo-main">IDEAL CLINIC</span>
+        </a>
+      </div>
+      <nav class="nav-center">
+        <ul class="nav-links">
+          ${navItems}
+          ${mobileBookingItems}
+        </ul>
+      </nav>
+      <div class="nav-cta-wrapper">
+        <div class="dropdown">
+          <a href="#" id="bokaText" class="nav-cta-btn dropdown-toggle">${NAV_CTA.label}</a>
+          <ul class="dropdown-menu">${ctaDropdownItems}</ul>
+        </div>
       </div>
       <div class="hamburger-on"></div>
-      <ul class="nav-links">
-        ${navItems}
-      </ul>
     </header>`;
 }
 
@@ -102,8 +115,11 @@ function renderFooter() {
 
   const year = new Date().getFullYear();
   el.innerHTML = `
-    <footer class="bg-dark text-white-50 text-start">
-      &copy; ${year} Ideal Clinic | All rights reserved.
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-brand">IDEAL CLINIC</span>
+        <span class="footer-copy">&copy; ${year} Ideal Clinic. All rights reserved.</span>
+      </div>
     </footer>`;
 }
 
