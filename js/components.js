@@ -8,10 +8,9 @@
 
 // ─── Configuration ───────────────────────────────────────────────────────────
 const SITE_CONFIG = {
-  phone: '010-333-3553',
-  phoneFull: 'tel:010-333-3553',
+  phone: '010-129 78 52',
+  phoneFull: 'tel:+46101297852',
   email: 'info@idealclinic.se',
-  address: 'Smedjegatan 7, 722 13 Västerås',
   bookingVasteras: 'https://www.bokadirekt.se/places/ideal-clinic-50596',
   bookingStockholm: 'https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696',
   instagram: 'https://www.instagram.com/idealclinic.se/',
@@ -25,6 +24,30 @@ const SITE_CONFIG = {
   gaId: 'G-B4SEPMXTJT',
   metaPixelId: '1221241009892785',
 };
+
+// Both clinics, in one place. The contact blocks and the map switchers on
+// index.html and kontakt.html are all driven from here.
+const LOCATIONS = [
+  {
+    city: 'Västerås',
+    street: 'Smedjegatan 7',
+    postal: '722 13 Västerås',
+    query: 'Smedjegatan 7, 722 13 Västerås',
+    booking: SITE_CONFIG.bookingVasteras,
+  },
+  {
+    city: 'Stockholm',
+    street: 'Observatoriegatan 5',
+    postal: '113 29 Stockholm',
+    query: 'Observatoriegatan 5, 113 29 Stockholm',
+    booking: SITE_CONFIG.bookingStockholm,
+  },
+];
+
+function mapEmbedUrl(location) {
+  return 'https://maps.google.com/maps?q=' + encodeURIComponent(location.query) +
+         '&t=&z=16&ie=UTF8&iwloc=&output=embed';
+}
 
 const NAV_LINKS = [
   { label: 'Behandlingar', href: 'index.html#treatments-section' },
@@ -116,6 +139,83 @@ function renderLinkBar() {
         </div>
       </div>
     </section>`;
+}
+
+// ─── Contact blocks & maps ───────────────────────────────────────────────────
+// Driven from LOCATIONS so the two clinics only ever have to be edited once.
+function renderContact() {
+  var el = document.getElementById('site-contact');
+  if (!el) return;
+
+  var variant = el.getAttribute('data-contact-variant') || 'index';
+  var tel = SITE_CONFIG.phoneFull;
+  var phone = SITE_CONFIG.phone;
+  var mail = SITE_CONFIG.email;
+
+  if (variant === 'kontakt') {
+    el.innerHTML =
+      '<ul class="list-group">' +
+        LOCATIONS.map(function (l) {
+          return '<li class="list-group-item">' +
+                   '<span class="fw-bold">' + l.city + ':</span> ' +
+                   l.street + ', ' + l.postal +
+                 '</li>';
+        }).join('') +
+        '<li class="list-group-item"><span class="fw-bold">Telefon:</span> ' +
+          '<a href="' + tel + '">' + phone + '</a></li>' +
+        '<li class="list-group-item"><span class="fw-bold">Email:</span> ' +
+          '<a href="mailto:' + mail + '">' + mail + '</a></li>' +
+      '</ul>';
+    return;
+  }
+
+  el.innerHTML =
+    '<ul class="info-list">' +
+      LOCATIONS.map(function (l) {
+        return '<li>' +
+                 '<i class="bi bi-geo-alt-fill"></i>' +
+                 '<div>' +
+                   '<strong>' + l.city + '</strong>' +
+                   '<span>' + l.street + ', ' + l.postal + '</span>' +
+                 '</div>' +
+               '</li>';
+      }).join('') +
+      '<li>' +
+        '<i class="bi bi-telephone-fill"></i>' +
+        '<div><strong>Telefon</strong><a href="' + tel + '">' + phone + '</a></div>' +
+      '</li>' +
+      '<li>' +
+        '<i class="bi bi-envelope-fill"></i>' +
+        '<div><strong>Email</strong><a href="mailto:' + mail + '">' + mail + '</a></div>' +
+      '</li>' +
+    '</ul>';
+}
+
+function renderMap() {
+  var el = document.getElementById('site-map');
+  if (!el) return;
+
+  var tabs = LOCATIONS.map(function (l, i) {
+    return '<button type="button" class="ic-map-tab' + (i === 0 ? ' is-active' : '') + '"' +
+           ' data-map-index="' + i + '"' +
+           ' aria-pressed="' + (i === 0 ? 'true' : 'false') + '">' + l.city + '</button>';
+  }).join('');
+
+  el.innerHTML =
+    '<div class="ic-map" data-map-switch>' +
+      '<div class="ic-map-tabs" role="group" aria-label="Välj klinik">' + tabs + '</div>' +
+      '<div class="map-wrapper">' +
+        '<iframe data-map-frame src="' + mapEmbedUrl(LOCATIONS[0]) + '"' +
+        ' title="Karta till Ideal Clinic ' + LOCATIONS[0].city + '"' +
+        ' allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
+      '</div>' +
+    '</div>';
+
+  // the urls the switcher flips between
+  el.querySelector('[data-map-switch]').dataset.mapUrls =
+    JSON.stringify(LOCATIONS.map(function (l) {
+      return { url: mapEmbedUrl(l), city: l.city };
+    }));
 }
 
 // ─── Reviews ─────────────────────────────────────────────────────────────────
@@ -413,6 +513,8 @@ function initCookieConsent() {
 document.addEventListener('DOMContentLoaded', function() {
   renderHeader();
   renderLinkBar();
+  renderContact();
+  renderMap();
   renderReviews();
   renderFooter();
   renderCookieConsent();
