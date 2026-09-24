@@ -12,11 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/facelift.css" />
     <script src="./js/components.js" defer></script>
     <script src="./js/app.js" defer></script>
     <script src="./js/behandlingar.js" defer></script>
+    <script src="./js/facelift.js" defer></script>
   </head>
 
   <body>
@@ -55,9 +57,28 @@
 
       <div id="site-linkbar"></div>
 
+      <section class="ic-stats" aria-label="Ideal Clinic i siffror">
+        <div class="ic-stats-inner">
+          <div class="ic-stat">
+            <p class="ic-stat-value"><span data-count="4.9" data-decimals="1" data-duration="1.6">0,0</span> av 5</p>
+            <p class="ic-stat-label">Snittbetyg på Bokadirekt</p>
+          </div>
+          <div class="ic-stat-sep" aria-hidden="true"></div>
+          <div class="ic-stat">
+            <p class="ic-stat-value"><span data-count="2343" data-duration="2">0</span>+</p>
+            <p class="ic-stat-label">Omdömen från våra kunder</p>
+          </div>
+          <div class="ic-stat-sep" aria-hidden="true"></div>
+          <div class="ic-stat">
+            <p class="ic-stat-value">2</p>
+            <p class="ic-stat-label">Kliniker — Västerås &amp; Stockholm</p>
+          </div>
+        </div>
+      </section>
+
       <section id="nyalagenAnchor" class="beauty-law-section">
         <div class="container">
-          <div class="beauty-law-content">
+          <div class="beauty-law-content" data-reveal>
             <div class="law-header">
               <div class="law-icon">
                 <i class="bi bi-shield-check"></i>
@@ -82,15 +103,18 @@
 
       <section id="treatments-section" class="treatments-section">
         <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Våra behandlingar</h2>
-            <p class="section-subtitle">Professionella estetiska behandlingar för alla dina behov</p>
+          <div class="ic-head" data-reveal>
+            <span class="ic-eyebrow">Behandlingar</span>
+            <h2 class="ic-title">Våra <em>behandlingar</em></h2>
+            <p class="ic-lede">Sex behandlingsfamiljer, utförda av legitimerad sjukvårdspersonal. Välj den som passar ditt mål — vi vägleder dig resten av vägen.</p>
+            <div class="ic-rule"></div>
           </div>
 
-          <div class="treatments-grid">
-            <div class="treatment-card" data-category="spanst">
+          <div class="treatments-grid" data-reveal-group="0.08">
+            <div class="treatment-card" data-category="spanst" data-reveal>
+              <span class="ic-card-num" aria-hidden="true">01</span>
               <div class="card-icon">
-                <i class="bi bi-lightning"></i>
+                <i class="bi bi-magic"></i>
               </div>
               <h3 class="card-title">Spänst</h3>
               <ul class="card-list">
@@ -101,9 +125,10 @@
               <div class="card-gradient"></div>
             </div>
 
-            <div class="treatment-card" data-category="lyster">
+            <div class="treatment-card" data-category="lyster" data-reveal>
+              <span class="ic-card-num" aria-hidden="true">02</span>
               <div class="card-icon">
-                <i class="bi bi-gem"></i>
+                <i class="bi bi-brightness-high"></i>
               </div>
               <h3 class="card-title">Lyster</h3>
               <ul class="card-list">
@@ -114,9 +139,10 @@
               <div class="card-gradient"></div>
             </div>
 
-            <div class="treatment-card" data-category="kontur">
+            <div class="treatment-card" data-category="kontur" data-reveal>
+              <span class="ic-card-num" aria-hidden="true">03</span>
               <div class="card-icon">
-                <i class="bi bi-palette"></i>
+                <i class="bi bi-vector-pen"></i>
               </div>
               <h3 class="card-title">Kontur</h3>
               <ul class="card-list">
@@ -127,9 +153,10 @@
               <div class="card-gradient"></div>
             </div>
 
-            <div class="treatment-card" data-category="har">
+            <div class="treatment-card" data-category="har" data-reveal>
+              <span class="ic-card-num" aria-hidden="true">04</span>
               <div class="card-icon">
-                <i class="bi bi-scissors"></i>
+                <i class="bi bi-lightning-charge"></i>
               </div>
               <h3 class="card-title">Hår</h3>
               <ul class="card-list">
@@ -139,9 +166,10 @@
               <div class="card-gradient"></div>
             </div>
 
-            <div class="treatment-card" data-category="kropp">
+            <div class="treatment-card" data-category="kropp" data-reveal>
+              <span class="ic-card-num" aria-hidden="true">05</span>
               <div class="card-icon">
-                <i class="bi bi-person"></i>
+                <i class="bi bi-person-standing"></i>
               </div>
               <h3 class="card-title">Kropp</h3>
               <ul class="card-list">
@@ -152,9 +180,10 @@
               <div class="card-gradient"></div>
             </div>
 
-            <div class="treatment-card" data-category="ovrigt">
+            <div class="treatment-card" data-category="ovrigt" data-reveal>
+              <span class="ic-card-num" aria-hidden="true">06</span>
               <div class="card-icon">
-                <i class="bi bi-plus-circle"></i>
+                <i class="bi bi-flower1"></i>
               </div>
               <h3 class="card-title">Övrigt</h3>
               <ul class="card-list">
@@ -168,6 +197,11 @@
           </div>
         </div>
       </section>
+
+      <div id="site-reviews"
+           data-reviews-variant="home"
+           data-reviews-eyebrow="Omdömen"
+           data-reviews-lede="Över tvåtusen kunder i Västerås och Stockholm har lämnat betyg på Bokadirekt. Här är några av dem."></div>
 
       <div class="container text-center" id="footerDiv">
         <div class="row justify-content-center align-items-center">
