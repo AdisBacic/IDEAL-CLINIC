@@ -577,6 +577,70 @@ footer { background: var(--ic-navy-deep); }
 }
 .footer-copy { font-size: .8rem; color: rgba(255,255,255,.55); }
 
+/* ── Mobile drawer: keep the close button readable ────────────────────── */
+/* Legacy paints the X with --text-dark, which is invisible against the dark
+   drawer, and on the landing page the scrolled header also shifted out from
+   under the user's thumb. While the drawer is open, pin the bar to its clear
+   full-width state and force the X light. */
+body.ic-menu-open header.ic-header--overlay.ic-scrolled {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  height: 72px;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+body.ic-menu-open .hamburger-off::before,
+body.ic-menu-open .hamburger-off::after,
+body.ic-menu-open header.ic-header--overlay.ic-scrolled .hamburger-off::before,
+body.ic-menu-open header.ic-header--overlay.ic-scrolled .hamburger-off::after {
+  background: #fff;
+}
+
+/* lift the wordmark above the drawer so the header row stays whole */
+body.ic-menu-open .logo-container { position: relative; z-index: 1004; }
+body.ic-menu-open .logo-main,
+body.ic-menu-open header.ic-header--overlay.ic-scrolled .logo-main { color: #fff; }
+body.ic-menu-open .logo-sub,
+body.ic-menu-open header.ic-header--overlay.ic-scrolled .logo-sub { color: rgba(255,255,255,.6); }
+
+/* ── Clinic map switcher ──────────────────────────────────────────────── */
+.ic-map { display: flex; flex-direction: column; }
+.ic-map-tabs { display: flex; gap: .5rem; flex-wrap: wrap; }
+.ic-map-tab {
+  border: 1px solid var(--ic-line);
+  background: var(--ic-bg);
+  color: var(--ic-text-muted);
+  border-radius: var(--ic-radius-pill);
+  padding: .4rem 1.05rem;
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .3s var(--ic-ease), color .3s var(--ic-ease),
+              border-color .3s var(--ic-ease);
+}
+.ic-map-tab:hover { color: var(--ic-text); border-color: var(--ic-text-faint); }
+.ic-map-tab.is-active {
+  background: var(--ic-navy);
+  border-color: var(--ic-navy);
+  color: #fff;
+}
+.ic-map .map-wrapper { border-radius: var(--ic-radius-sm); }
+.ic-map .map-wrapper iframe { border: 0; display: block; }
+
+/* ── Contact list: two clinics ────────────────────────────────────────── */
+.info-card .info-list li strong { display: block; }
+#site-contact .list-group-item a { color: var(--ic-navy); text-decoration: none; }
+#site-contact .list-group-item a:hover { text-decoration: underline; }
+
 /* ── Reduced motion ────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
