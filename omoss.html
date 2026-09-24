@@ -11,11 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="styles/omstyles.css">
     <script src="./js/components.js" defer></script>
     <script src="./js/app.js" defer></script>
+    <link rel="stylesheet" href="./styles/facelift.css" />
+    <script src="./js/facelift.js" defer></script>
   </head>
 
   <body>
@@ -47,8 +49,8 @@
             <p class="section-subtitle">Möt våra legitimerade specialister som skapar naturliga resultat</p>
           </div>
 
-          <div class="team-grid">
-            <div class="team-card">
+          <div class="team-grid" data-reveal-group="0.1">
+            <div class="team-card" data-reveal>
               <div class="team-image">
                 <img src="images/elias_ny_omoss.jpeg" alt="Elias - Legitimerad Sjuksköterska">
               </div>
@@ -71,7 +73,7 @@
               </div>
             </div>
 
-            <div class="team-card">
+            <div class="team-card" data-reveal>
               <div class="team-image">
                 <img src="images/WuodNyaste.jpg" alt="Wuod - Hudterapeut">
               </div>
@@ -98,76 +100,11 @@
       </section>
 
       <!-- Testimonials Section -->
-      <section class="testimonials-section">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Vad våra kunder säger</h2>
-            <p class="section-subtitle">Läs om upplevelser från våra nöjda kunder</p>
-          </div>
-
-          <div class="testimonials-grid">
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p class="testimonial-text">"Den mest professionellaste behandlare i hela Västerås. Elias är väldigt seriös, kunnig, trevlig mm. Elias ser alltid en helhet hos mig. Återkommer bara till honom i fortsättningen"</p>
-                <div class="testimonial-author"><strong>Jaha T.</strong></div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p class="testimonial-text">"Elias är grym! Otroligt proffsig och samtidigt så snäll och avslappnad. Alltid nöjd när jag lämnar!"</p>
-                <div class="testimonial-author"><strong>Malin E.</strong></div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p class="testimonial-text">"Woud är grym! Alltid nöjd efter mina behandlingar hos henne. Ni kan känna er trygg hos henne"</p>
-                <div class="testimonial-author"><strong>Hamida H.</strong></div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p class="testimonial-text">"Kanonbra bemötande av Wuod, alltid så trevlig! Jag är väldigt nöjd med mina behandlingar!"</p>
-                <div class="testimonial-author"><strong>Issis M.</strong></div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p class="testimonial-text">"Proffsig! Känner mig alltid trygg med att få bästa resultat hos Elias."</p>
-                <div class="testimonial-author"><strong>Sandra R.</strong></div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p class="testimonial-text">"Jätte nöjd, super trevlig personal och jätte fint bemötande mot kunder, bra service. Kan varmt rekommendera alla."</p>
-                <div class="testimonial-author"><strong>Zakaria K.</strong></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div id="site-reviews"
+           data-reviews-variant="about"
+           data-reviews-eyebrow="Omdömen"
+           data-reviews-heading="Vad våra <em>kunder</em> säger"
+           data-reviews-lede="Samma kliniker, samma team — här är fler röster från Västerås och Stockholm."></div>
 
       <div id="site-footer"></div>
 

@@ -16,6 +16,12 @@ const SITE_CONFIG = {
   bookingStockholm: 'https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696',
   instagram: 'https://www.instagram.com/idealclinic.se/',
   facebook: 'https://www.facebook.com/profile.php?id=100089815122494',
+  rating: {
+    score: 4.9,
+    // Bokadirekt ratings, both clinics combined (Västerås 1144 + Stockholm 1199).
+    // Re-check occasionally and bump — these only ever go up.
+    count: 2343,
+  },
   gaId: 'G-B4SEPMXTJT',
   metaPixelId: '1221241009892785',
 };
@@ -26,7 +32,6 @@ const NAV_LINKS = [
   { label: 'Hårtransplantation', href: 'https://idealhair.se/' },
   { label: 'Om oss', href: 'omoss.html' },
   { label: 'Kontakt', href: 'kontakt.html' },
-  { label: 'Akademi', href: 'https://www.injectorsacademy.se' },
 ];
 
 const NAV_CTA = {
@@ -106,6 +111,135 @@ function renderLinkBar() {
         </div>
       </div>
     </section>`;
+}
+
+// ─── Reviews ─────────────────────────────────────────────────────────────────
+// Single source of truth for customer reviews. These were previously hard-coded
+// into omoss.html; they now feed both the landing-page carousel and the about
+// page, so a review only ever has to be edited in one place.
+//
+// To add a new one from Bokadirekt: append an object below and bump
+// SITE_CONFIG.rating.count. Nothing else needs to change.
+const REVIEWS = [
+  {
+    text: 'Den mest professionellaste behandlare i hela Västerås. Elias är väldigt seriös, kunnig, trevlig mm. Elias ser alltid en helhet hos mig. Återkommer bara till honom i fortsättningen',
+    author: 'Jaha T.',
+    clinic: 'Västerås',
+    stars: 5,
+  },
+  {
+    text: 'Elias är grym! Otroligt proffsig och samtidigt så snäll och avslappnad. Alltid nöjd när jag lämnar!',
+    author: 'Malin E.',
+    clinic: 'Västerås',
+    stars: 5,
+  },
+  {
+    text: 'Woud är grym! Alltid nöjd efter mina behandlingar hos henne. Ni kan känna er trygg hos henne',
+    author: 'Hamida H.',
+    clinic: 'Stockholm',
+    stars: 5,
+  },
+  {
+    text: 'Kanonbra bemötande av Wuod, alltid så trevlig! Jag är väldigt nöjd med mina behandlingar!',
+    author: 'Issis M.',
+    clinic: 'Stockholm',
+    stars: 5,
+  },
+  {
+    text: 'Proffsig! Känner mig alltid trygg med att få bästa resultat hos Elias.',
+    author: 'Sandra R.',
+    clinic: 'Västerås',
+    stars: 5,
+  },
+  {
+    text: 'Jätte nöjd, super trevlig personal och jätte fint bemötande mot kunder, bra service. Kan varmt rekommendera alla.',
+    author: 'Zakaria K.',
+    clinic: 'Västerås',
+    stars: 5,
+  },
+];
+
+// Each surface leads with a different review so the two pages do not read
+// as a copy of one another.
+const REVIEW_ORDER = {
+  home:  [0, 1, 2, 3, 4, 5],
+  about: [4, 2, 5, 0, 3, 1],
+};
+
+function starsMarkup(n) {
+  var out = '';
+  for (var i = 0; i < n; i++) out += '<i class="bi bi-star-fill"></i>';
+  return out;
+}
+
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+
+function renderReviews() {
+  var el = document.getElementById('site-reviews');
+  if (!el) return;
+
+  var variant = el.getAttribute('data-reviews-variant') || 'home';
+  var order = REVIEW_ORDER[variant] || REVIEW_ORDER.home;
+  var heading = el.getAttribute('data-reviews-heading') || 'Vad våra kunder säger';
+  var eyebrow = el.getAttribute('data-reviews-eyebrow') || 'Omdömen';
+  var lede = el.getAttribute('data-reviews-lede') || '';
+
+  var score = SITE_CONFIG.rating.score;
+  var count = SITE_CONFIG.rating.count.toLocaleString('sv-SE');
+
+  var cards = order.map(function (i) {
+    var r = REVIEWS[i];
+    if (!r) return '';
+    return (
+      '<article class="ic-review">' +
+        '<div class="ic-review-mark" aria-hidden="true">&ldquo;</div>' +
+        '<div class="ic-review-stars" role="img" aria-label="' + r.stars + ' av 5 stjärnor">' +
+          starsMarkup(r.stars) +
+        '</div>' +
+        '<p class="ic-review-text">' + escapeHtml(r.text) + '</p>' +
+        '<div class="ic-review-author">' + escapeHtml(r.author) + '</div>' +
+        '<div class="ic-review-meta">Ideal Clinic ' + escapeHtml(r.clinic) + '</div>' +
+      '</article>'
+    );
+  }).join('');
+
+  el.innerHTML =
+    '<section class="ic-section ic-reviews">' +
+      '<div class="ic-shell">' +
+        '<div class="ic-head" data-reveal>' +
+          '<span class="ic-eyebrow">' + escapeHtml(eyebrow) + '</span>' +
+          '<h2 class="ic-title">' + heading + '</h2>' +
+          (lede ? '<p class="ic-lede">' + escapeHtml(lede) + '</p>' : '') +
+          '<div class="ic-rule"></div>' +
+        '</div>' +
+
+        '<div class="ic-rating" data-reveal>' +
+          '<div class="ic-rating-stars" role="img" aria-label="' + String(score).replace('.', ',') + ' av 5 i snittbetyg">' +
+            starsMarkup(5) +
+          '</div>' +
+          '<p class="ic-rating-text">' +
+            '<strong><span data-count="' + score + '" data-decimals="1" data-duration="1.6">0,0</span> av 5</strong>' +
+            ' · <span data-count="' + SITE_CONFIG.rating.count + '" data-duration="2">0</span> omdömen på ' +
+            '<a class="ic-rating-link" href="' + SITE_CONFIG.bookingVasteras + '" target="_blank" rel="noopener noreferrer">Bokadirekt</a>' +
+          '</p>' +
+        '</div>' +
+
+        '<div class="ic-carousel" data-carousel tabindex="0" role="region" aria-label="Omdömen från våra kunder" data-reveal>' +
+          '<div class="ic-viewport" data-carousel-viewport>' +
+            '<div class="ic-track" data-carousel-track>' + cards + '</div>' +
+          '</div>' +
+          '<div class="ic-carousel-controls">' +
+            '<button type="button" class="ic-arrow" data-carousel-prev aria-label="Föregående omdömen"><i class="bi bi-chevron-left"></i></button>' +
+            '<div class="ic-dots" data-carousel-dots></div>' +
+            '<button type="button" class="ic-arrow" data-carousel-next aria-label="Nästa omdömen"><i class="bi bi-chevron-right"></i></button>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</section>';
 }
 
 // ─── Footer ──────────────────────────────────────────────────────────────────
@@ -274,6 +408,7 @@ function initCookieConsent() {
 document.addEventListener('DOMContentLoaded', function() {
   renderHeader();
   renderLinkBar();
+  renderReviews();
   renderFooter();
   renderCookieConsent();
 });
