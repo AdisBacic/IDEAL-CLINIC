@@ -101,6 +101,10 @@ header .logo-sub {
 /* desktop: links and the booking button share the right-hand side */
 @media screen and (min-width: 1000px) {
   header .nav-links { margin-left: auto; gap: 0; }
+
+  /* drawer-only rows — legacy hides .mobile-booking-item the same way */
+  header .nav-links > li.ic-drawer-label,
+  header .nav-links > li.ic-drawer-foot { display: none !important; }
   header ul li a {
     font-size: .72rem;
     letter-spacing: .15em;
@@ -641,6 +645,309 @@ body.ic-menu-open header.ic-header--overlay.ic-scrolled .logo-sub { color: rgba(
 #site-contact .list-group-item a { color: var(--ic-navy); text-decoration: none; }
 #site-contact .list-group-item a:hover { text-decoration: underline; }
 
+/* ── Hero booking buttons ──────────────────────────────────────────────── */
+/* Two booking routes now sit one above the other, so the row layout is
+   replaced with a stack and every button shares a width. */
+.hero-buttons {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .8rem;
+}
+.hero-buttons .hero-btn {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  letter-spacing: .12em;
+}
+@media (max-width: 600px) {
+  .hero-buttons .hero-btn { max-width: none; font-size: .74rem; padding: .95rem 1.1rem; }
+}
+
+/* ── Toast ─────────────────────────────────────────────────────────────── */
+.ic-toast-wrap {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1100;
+  width: min(384px, calc(100vw - 2rem));
+}
+
+/* Bootstrap hides `.toast:not(.show)` and forces display:block on `.show`,
+   so the flex layout has to be claimed back at matching specificity. */
+.ic-toast.show { display: flex; }
+.ic-toast {
+  gap: .95rem;
+  align-items: flex-start;
+  max-width: none;
+  padding: 1.1rem 1.15rem 1.15rem;
+  background: var(--ic-bg);
+  border: 1px solid var(--ic-line);
+  border-radius: var(--ic-radius);
+  box-shadow: var(--ic-shadow-lift);
+  font-size: .9rem;
+  animation: icToastIn .55s var(--ic-ease) both;
+}
+@keyframes icToastIn {
+  from { opacity: 0; transform: translateY(14px) scale(.985); }
+  to   { opacity: 1; transform: none; }
+}
+
+.ic-toast-icon {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--ic-radius-pill);
+  background: var(--toast-bg, var(--ic-bg-tint));
+  color: var(--toast-fg, var(--ic-navy));
+}
+.ic-toast-icon i { font-size: 1.05rem; color: var(--toast-fg, var(--ic-navy)); }
+
+.ic-toast[data-tone="amber"] { --toast-fg: var(--ic-amber); --toast-bg: var(--ic-amber-bg); }
+.ic-toast[data-tone="rose"]  { --toast-fg: var(--ic-rose);  --toast-bg: var(--ic-rose-bg); }
+.ic-toast[data-tone="sage"]  { --toast-fg: var(--ic-sage);  --toast-bg: var(--ic-sage-bg); }
+.ic-toast[data-tone="sky"]   { --toast-fg: var(--ic-sky);   --toast-bg: var(--ic-sky-bg); }
+
+.ic-toast-content { flex: 1; min-width: 0; }
+.ic-toast-title {
+  margin: 0 0 .25rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--ic-text);
+  line-height: 1.3;
+}
+.ic-toast .ic-toast-body {
+  padding: 0;
+  font-size: .86rem;
+  line-height: 1.6;
+  color: var(--ic-text-muted);
+}
+.ic-toast .ic-toast-body a { color: var(--toast-fg, var(--ic-navy)); }
+.ic-toast-action {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .6rem;
+  font-size: .76rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--toast-fg, var(--ic-navy));
+}
+.ic-toast-action i { font-size: .8rem; transition: transform .3s var(--ic-ease); }
+.ic-toast-action:hover { color: var(--toast-fg, var(--ic-navy)); }
+.ic-toast-action:hover i { transform: translateX(3px); }
+
+.ic-toast-close {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  margin: -.2rem -.25rem 0 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--ic-radius-pill);
+  background: transparent;
+  color: var(--ic-text-faint);
+  cursor: pointer;
+  transition: background-color .25s var(--ic-ease), color .25s var(--ic-ease);
+}
+.ic-toast-close i { font-size: 1rem; color: inherit; }
+.ic-toast-close:hover { background: var(--ic-bg-tint); color: var(--ic-text); }
+
+/* ── Cookie re-open control ────────────────────────────────────────────── */
+/* Moved to bottom-left: it used to sit under the toast in the same corner. */
+.ic-cookie-btn-wrap { position: fixed; left: 1rem; bottom: 1rem; z-index: 1090; }
+.ic-cookie-btn {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ic-line);
+  border-radius: var(--ic-radius-pill);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--ic-text-muted);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(26,35,50,.10);
+  transition: color .3s var(--ic-ease), border-color .3s var(--ic-ease),
+              transform .3s var(--ic-ease);
+}
+.ic-cookie-btn i { font-size: 1rem; color: inherit; }
+.ic-cookie-btn:hover { color: var(--ic-navy); border-color: var(--ic-text-faint); transform: translateY(-1px); }
+
+/* ── Address links ─────────────────────────────────────────────────────── */
+.ic-address-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .4rem;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .3s var(--ic-ease), border-color .3s var(--ic-ease);
+}
+.ic-address-link i { font-size: .68rem; opacity: .45; transition: opacity .3s var(--ic-ease); }
+.ic-address-link:hover { color: var(--ic-navy); border-bottom-color: currentColor; }
+.ic-address-link:hover i { opacity: .9; }
+
+/* ── Mobile drawer ─────────────────────────────────────────────────────── */
+@media screen and (max-width: 999px) {
+  header .nav-links {
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    height: 100dvh;
+    padding: 104px 1.6rem 2.25rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: linear-gradient(180deg, #1A2332 0%, #141C28 100%);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    animation: none;
+  }
+
+  /* entrance stagger, re-run every time the drawer opens */
+  header .nav-links > li { opacity: 0; transform: translateY(14px); animation: none; margin: 0; }
+  header .nav-links.show-navlinks > li {
+    animation: icDrawerItemIn .5s var(--ic-ease) forwards;
+  }
+  header .nav-links.show-navlinks > li:nth-child(1) { animation-delay: .04s; }
+  header .nav-links.show-navlinks > li:nth-child(2) { animation-delay: .08s; }
+  header .nav-links.show-navlinks > li:nth-child(3) { animation-delay: .12s; }
+  header .nav-links.show-navlinks > li:nth-child(4) { animation-delay: .16s; }
+  header .nav-links.show-navlinks > li:nth-child(5) { animation-delay: .20s; }
+  header .nav-links.show-navlinks > li:nth-child(6) { animation-delay: .26s; }
+  header .nav-links.show-navlinks > li:nth-child(7) { animation-delay: .30s; }
+  header .nav-links.show-navlinks > li:nth-child(8) { animation-delay: .34s; }
+  header .nav-links.show-navlinks > li:nth-child(9) { animation-delay: .40s; }
+
+  @keyframes icDrawerItemIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* primary links — booking rows and the footer have their own treatment */
+  header .nav-links > li:not(.mobile-booking-item):not(.ic-drawer-foot):not(.ic-drawer-label) > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: .95rem 0;
+    margin: 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.42rem;
+    font-weight: 400;
+    letter-spacing: .01em;
+    text-transform: none;
+    color: rgba(255,255,255,.82);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    transition: color .3s var(--ic-ease), padding-left .3s var(--ic-ease);
+  }
+  header .nav-links > li > a::after { display: none; }
+  header .nav-links > li:not(.mobile-booking-item):not(.ic-drawer-foot) > a:hover,
+  header .nav-links > li:not(.mobile-booking-item):not(.ic-drawer-foot) > a:active { color: #fff; padding-left: .35rem; }
+  header .nav-links > li > a.ic-active { color: #fff; }
+  header .nav-links > li > a.ic-active::before {
+    content: "";
+    width: 3px;
+    height: 1.1em;
+    margin-right: .7rem;
+    border-radius: 2px;
+    background: var(--ic-amber);
+  }
+
+  /* booking block */
+  .ic-drawer-label {
+    padding: 1.85rem 0 .85rem;
+    font-size: .64rem;
+    font-weight: 600;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.38);
+  }
+  header .nav-links > li.mobile-booking-item { margin-bottom: .6rem; }
+  header .nav-links > li.mobile-booking-item > a {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    padding: .95rem 1.1rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: var(--ic-radius-sm);
+    background: rgba(255,255,255,.04);
+    transition: background-color .3s var(--ic-ease), border-color .3s var(--ic-ease);
+  }
+  header .nav-links > li.mobile-booking-item > a span { flex: 1; text-align: left; }
+  header .nav-links > li.mobile-booking-item > a i:first-child { font-size: .95rem; opacity: .6; }
+  header .nav-links > li.mobile-booking-item > a i:last-child { font-size: .85rem; opacity: .55; }
+  header .nav-links > li.mobile-booking-item > a:hover,
+  header .nav-links > li.mobile-booking-item > a:active {
+    background: rgba(255,255,255,.1);
+    border-color: rgba(255,255,255,.3);
+    padding-left: 1.1rem;
+  }
+
+  /* footer: contact + social */
+  .ic-drawer-foot {
+    margin-top: auto;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  header .nav-links > li.ic-drawer-foot > a.ic-drawer-contact,
+  .ic-drawer-contact {
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: .85rem;
+    font-weight: 400;
+    border-bottom: 0;
+    align-items: center;
+    gap: .65rem;
+    padding: 0;
+    font-size: .85rem;
+    letter-spacing: .02em;
+    text-transform: none;
+    color: rgba(255,255,255,.62);
+    text-decoration: none;
+    transition: color .3s var(--ic-ease);
+  }
+  .ic-drawer-contact i { font-size: .95rem; opacity: .55; color: inherit; }
+  .ic-drawer-contact:hover { color: #fff; }
+  .ic-drawer-social { display: flex; gap: .6rem; margin-top: .85rem; }
+  .ic-drawer-social a {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: var(--ic-radius-pill);
+    color: rgba(255,255,255,.75);
+    text-decoration: none;
+    transition: background-color .3s var(--ic-ease), color .3s var(--ic-ease),
+                border-color .3s var(--ic-ease);
+  }
+  .ic-drawer-social a i { font-size: 1rem; color: inherit; }
+  .ic-drawer-social a:hover {
+    background: rgba(255,255,255,.1);
+    border-color: rgba(255,255,255,.34);
+    color: #fff;
+  }
+
+  /* the toast should not cover the drawer */
+  body.ic-menu-open .ic-toast-wrap,
+  body.ic-menu-open .ic-cookie-btn-wrap { display: none; }
+}
+
 /* ── Reduced motion ────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
@@ -648,4 +955,7 @@ body.ic-menu-open header.ic-header--overlay.ic-scrolled .logo-sub { color: rgba(
   .treatments-section .treatment-card,
   .team-section .team-card,
   .testimonials-section .testimonial-card { transition: none; }
+  .ic-toast { animation: none; }
+  header .nav-links > li,
+  header .nav-links.show-navlinks > li { opacity: 1; transform: none; animation: none; }
 }

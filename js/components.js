@@ -49,6 +49,12 @@ function mapEmbedUrl(location) {
          '&t=&z=16&ie=UTF8&iwloc=&output=embed';
 }
 
+// Opens the Google Maps app on mobile and maps.google.com elsewhere.
+function mapsLink(location) {
+  return 'https://www.google.com/maps/search/?api=1&query=' +
+         encodeURIComponent('Ideal Clinic, ' + location.query);
+}
+
 const NAV_LINKS = [
   { label: 'Behandlingar', href: 'index.html#treatments-section' },
   { label: 'Priser', href: 'priser.html' },
@@ -85,9 +91,29 @@ function renderHeader() {
     `<li><a href="${item.href}">${item.label}</a></li>`
   ).join('');
 
-  const mobileBookingItems = NAV_CTA.items.map(item =>
-    `<li class="mobile-booking-item"><a href="${item.href}">Boka — ${item.label}</a></li>`
-  ).join('');
+  // The drawer gets more than a link list: a labelled booking section and a
+  // contact footer, so the mobile menu is a real panel rather than five
+  // centred links floating in the dark.
+  const mobileBookingItems =
+    `<li class="ic-drawer-label" aria-hidden="true"><span>Boka konsultation</span></li>` +
+    NAV_CTA.items.map(item =>
+      `<li class="mobile-booking-item"><a href="${item.href}">` +
+        `<i class="bi bi-geo-alt"></i><span>${item.label}</span>` +
+        `<i class="bi bi-arrow-right"></i>` +
+      `</a></li>`
+    ).join('') +
+    `<li class="ic-drawer-foot">
+      <a class="ic-drawer-contact" href="${SITE_CONFIG.phoneFull}">
+        <i class="bi bi-telephone"></i><span>${SITE_CONFIG.phone}</span>
+      </a>
+      <a class="ic-drawer-contact" href="mailto:${SITE_CONFIG.email}">
+        <i class="bi bi-envelope"></i><span>${SITE_CONFIG.email}</span>
+      </a>
+      <div class="ic-drawer-social">
+        <a href="${SITE_CONFIG.instagram}" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="${SITE_CONFIG.facebook}" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      </div>
+    </li>`;
 
   // The landing page has a full-bleed hero, so its header starts clear and only
   // solidifies on scroll. Every other page keeps the solid bar from the top.
@@ -141,6 +167,47 @@ function renderLinkBar() {
     </section>`;
 }
 
+// ─── Toast ───────────────────────────────────────────────────────────────────
+// One designed notice for every page. Each page had grown its own markup —
+// different structure, different inline styles, a gradient header on one and a
+// bare Bootstrap header on the others. They all render through here now.
+//
+// Keeps `id="toast-example"` (app.js shows it) and `.toast-body`
+// (behandlingar.js writes the per-treatment message into it).
+function renderToast() {
+  var el = document.getElementById('site-toast');
+  if (!el) return;
+
+  var icon  = el.getAttribute('data-toast-icon') || 'bi-info-circle';
+  var tone  = el.getAttribute('data-toast-tone') || 'navy';
+  var title = el.getAttribute('data-toast-title') || '';
+  var body  = el.getAttribute('data-toast-body') || '';
+  var href  = el.getAttribute('data-toast-link');
+  var label = el.getAttribute('data-toast-link-label') || '';
+
+  var action = href
+    ? '<a class="ic-toast-action" href="' + href + '"' +
+      (/^https?:/.test(href) ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' +
+      escapeHtml(label) + '<i class="bi bi-arrow-right"></i></a>'
+    : '';
+
+  el.innerHTML =
+    '<div class="ic-toast-wrap">' +
+      '<div class="ic-toast toast" id="toast-example" data-tone="' + tone + '"' +
+        ' role="alert" aria-live="polite" aria-atomic="true">' +
+        '<span class="ic-toast-icon"><i class="bi ' + icon + '"></i></span>' +
+        '<div class="ic-toast-content">' +
+          (title ? '<p class="ic-toast-title">' + escapeHtml(title) + '</p>' : '') +
+          '<div class="toast-body ic-toast-body">' + body + '</div>' +
+          action +
+        '</div>' +
+        '<button type="button" class="ic-toast-close" data-bs-dismiss="toast" aria-label="Stäng">' +
+          '<i class="bi bi-x"></i>' +
+        '</button>' +
+      '</div>' +
+    '</div>';
+}
+
 // ─── Contact blocks & maps ───────────────────────────────────────────────────
 // Driven from LOCATIONS so the two clinics only ever have to be edited once.
 function renderContact() {
@@ -158,7 +225,12 @@ function renderContact() {
         LOCATIONS.map(function (l) {
           return '<li class="list-group-item">' +
                    '<span class="fw-bold">' + l.city + ':</span> ' +
-                   l.street + ', ' + l.postal +
+                   '<a class="ic-address-link" href="' + mapsLink(l) + '"' +
+                   ' target="_blank" rel="noopener noreferrer"' +
+                   ' title="Öppna i Google Maps">' +
+                     l.street + ', ' + l.postal +
+                     '<i class="bi bi-box-arrow-up-right"></i>' +
+                   '</a>' +
                  '</li>';
         }).join('') +
         '<li class="list-group-item"><span class="fw-bold">Telefon:</span> ' +
@@ -176,7 +248,12 @@ function renderContact() {
                  '<i class="bi bi-geo-alt-fill"></i>' +
                  '<div>' +
                    '<strong>' + l.city + '</strong>' +
-                   '<span>' + l.street + ', ' + l.postal + '</span>' +
+                   '<a class="ic-address-link" href="' + mapsLink(l) + '"' +
+                   ' target="_blank" rel="noopener noreferrer"' +
+                   ' title="Öppna i Google Maps">' +
+                     l.street + ', ' + l.postal +
+                     '<i class="bi bi-box-arrow-up-right"></i>' +
+                   '</a>' +
                  '</div>' +
                '</li>';
       }).join('') +
@@ -404,9 +481,9 @@ function renderCookieConsent() {
       </div>
     </div>
 
-    <div style="position: fixed; bottom: 10px; right: 10px; z-index: 9998;">
-      <button id="reopenCookieSettings" style="display: none; background-color: rgba(26, 35, 50, 0.9); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 10px 14px; border-radius: 50%; cursor: pointer; font-size: 24px; font-family: 'Poppins', sans-serif; line-height: 1; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.2);" title="Cookie-inställningar">
-        🍪
+    <div class="ic-cookie-btn-wrap">
+      <button id="reopenCookieSettings" class="ic-cookie-btn" style="display: none;" title="Cookie-inställningar" aria-label="Cookie-inställningar">
+        <i class="bi bi-shield-check"></i>
       </button>
     </div>`;
 
@@ -509,8 +586,16 @@ function initCookieConsent() {
   });
 }
 
+// The toast renders immediately rather than on DOMContentLoaded: app.js reaches
+// for #toast-example and behandlingar.js for .toast-body at deferred-script
+// time, which is before DOMContentLoaded fires. Deferred scripts run after
+// parsing, so the placeholder is already in the DOM by the time we get here.
+renderToast();
+
 // ─── Initialize all shared components ────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
+  // fallback for the non-deferred case, where the placeholder wasn't parsed yet
+  if (!document.getElementById('toast-example')) renderToast();
   renderHeader();
   renderLinkBar();
   renderContact();

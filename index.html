@@ -43,13 +43,8 @@
             <h1 class="hero-title">Precision i varje <em>behandling.</em></h1>
             <p class="hero-subtitle">Medicinsk estetik utförd av legitimerad sjukvårdspersonal för naturliga, långsiktiga resultat.</p>
             <div class="hero-buttons">
-              <div class="hero-btn-wrapper">
-                <button class="hero-btn primary" id="heroBokaBtn">Boka din privata konsultation</button>
-                <div class="hero-boka-dropdown" id="heroBokaDropdown">
-                  <a href="https://www.bokadirekt.se/places/ideal-clinic-50596" class="hero-boka-option">Västerås</a>
-                  <a href="https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696" class="hero-boka-option">Stockholm</a>
-                </div>
-              </div>
+              <a href="https://www.bokadirekt.se/places/ideal-clinic-vasteras-50596" class="hero-btn primary">Boka konsultation injektion</a>
+              <a href="https://www.bokadirekt.se/places/ideal-clinic-stockholm-132696" class="hero-btn primary">Boka konsultation hårtransplantation</a>
               <a href="#treatments-section" class="hero-btn secondary">Se våra behandlingar</a>
             </div>
           </div>
@@ -283,26 +278,6 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
       <div id="site-cookie-consent"></div>
-
-      <!-- Hero Boka Dropdown Script -->
-      <script>
-        document.getElementById('heroBokaBtn').addEventListener('click', function(e) {
-          e.stopPropagation();
-          document.getElementById('heroBokaDropdown').classList.toggle('show');
-        });
-        document.addEventListener('click', function(e) {
-          var dropdown = document.getElementById('heroBokaDropdown');
-          var bokaBtn = document.getElementById('heroBokaBtn');
-          if (!bokaBtn.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.classList.remove('show');
-          }
-        });
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape') {
-            document.getElementById('heroBokaDropdown').classList.remove('show');
-          }
-        });
-      </script>
 
   </body>
 </html>
