@@ -235,12 +235,103 @@
     Array.prototype.forEach.call(document.querySelectorAll('[data-carousel]'), initCarousel);
   }
 
+  /* ── Mobile menu: scroll lock + a close button that stays put ──────── */
+  /* The drawer is a fixed full-screen panel, but the page underneath kept
+     scrolling behind it. On the landing page that re-triggered the header's
+     scrolled state mid-menu, which repainted the X dark navy on a dark navy
+     panel — it looked like the close button had vanished. Lock the page while
+     the drawer is open and pin the header's appearance for the duration. */
+  function initMobileMenu() {
+    var nav = document.querySelector('.nav-links');
+    if (!nav) return;
+
+    var locked = false;
+
+    function lock() {
+      if (locked) return;
+      locked = true;
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+      document.body.classList.add('ic-menu-open');
+    }
+    function unlock() {
+      if (!locked) return;
+      locked = false;
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      document.body.classList.remove('ic-menu-open');
+    }
+    function sync() {
+      if (nav.classList.contains('show-navlinks')) lock();
+      else unlock();
+    }
+
+    // app.js owns the toggle, so watch the class rather than fighting it for
+    // the click handler — this also catches the click-outside close path.
+    new MutationObserver(sync).observe(nav, { attributes: true, attributeFilter: ['class'] });
+    sync();
+
+    // Close from anywhere, restoring the button to its hamburger state so it
+    // never shows an X over a closed drawer.
+    function close() {
+      if (!nav.classList.contains('show-navlinks')) return;
+      nav.classList.remove('show-navlinks');
+      var burger = document.querySelector('.hamburger-off, .hamburger-on');
+      if (burger) {
+        burger.classList.remove('hamburger-off');
+        burger.classList.add('hamburger-on');
+      }
+      unlock();
+    }
+
+    // Tapping a link left the drawer open on same-page anchors.
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('a')) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+
+    // Resizing up to desktop hides the drawer via CSS; make sure we let go too.
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 1000) close();
+    });
+  }
+
+  /* ── Clinic map switcher ───────────────────────────────────────────── */
+  function initMapSwitch() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-map-switch]'), function (root) {
+      var frame = root.querySelector('[data-map-frame]');
+      var tabs = Array.prototype.slice.call(root.querySelectorAll('.ic-map-tab'));
+      var urls;
+      try { urls = JSON.parse(root.dataset.mapUrls || '[]'); } catch (err) { urls = []; }
+      if (!frame || !urls.length) return;
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var i = parseInt(tab.getAttribute('data-map-index'), 10);
+          if (!urls[i]) return;
+          frame.src = urls[i].url;
+          frame.title = 'Karta till Ideal Clinic ' + urls[i].city;
+          tabs.forEach(function (t) {
+            var on = t === tab;
+            t.classList.toggle('is-active', on);
+            t.setAttribute('aria-pressed', String(on));
+          });
+        });
+      });
+    });
+  }
+
   /* ── Boot ──────────────────────────────────────────────────────────── */
   function boot() {
     applyStagger();
     initReveal();
     initCounters();
     initHeader();
+    initMobileMenu();
+    initMapSwitch();
     initCarousels();
   }
 
