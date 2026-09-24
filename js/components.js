@@ -66,11 +66,16 @@ function renderHeader() {
     `<li class="mobile-booking-item"><a href="${item.href}">Boka — ${item.label}</a></li>`
   ).join('');
 
+  // The landing page has a full-bleed hero, so its header starts clear and only
+  // solidifies on scroll. Every other page keeps the solid bar from the top.
+  const headerClass = isIndex ? 'ic-header--overlay' : '';
+
   el.innerHTML = `
-    <header>
+    <header class="${headerClass}">
       <div class="logo-container">
         <a href="index.html" id="MainLogo">
           <span class="logo-main">IDEAL CLINIC</span>
+          <span class="logo-sub">Västerås &amp; Stockholm</span>
         </a>
       </div>
       <nav class="nav-center">
